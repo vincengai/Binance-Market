@@ -4,6 +4,7 @@ class Api::UsersController < ApplicationController
     @user.cash_balance = 1000
 
     if @user.save
+      #howdy
       login(@user)
       render "api/users/show"
     else
