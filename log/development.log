@@ -1,0 +1,2588 @@
+  [1m[35m (241.7ms)[0m  [1m[35mCREATE DATABASE "binance_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (72.7ms)[0m  [1m[35mCREATE DATABASE "binance_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (34.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "binance_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (35.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "binance_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (73.0ms)[0m  [1m[35mCREATE DATABASE "binance_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (72.5ms)[0m  [1m[35mCREATE DATABASE "binance_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-01-06 18:39:57 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-06 18:43:32 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 237ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 5, expected 1)):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3755932164817942263_70110388787920'
+Started POST "/__web_console/repl_sessions/6637c3ffab6c2ab24a6aab2dc5544afa/trace" for ::1 at 2020-01-06 18:44:08 -0800
+Started GET "/" for ::1 at 2020-01-06 18:44:08 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3755932164817942263_70110430583000'
+Started GET "/" for ::1 at 2020-01-06 18:44:50 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3755932164817942263_70110435083460'
+Started GET "/" for ::1 at 2020-01-06 18:44:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3755932164817942263_70110429973720'
+Started GET "/" for ::1 at 2020-01-06 18:48:17 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3755932164817942263_70110401264480'
+Started GET "/" for ::1 at 2020-01-06 18:48:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3755932164817942263_70110436580820'
+Started GET "/" for ::1 at 2020-01-06 18:49:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3755932164817942263_70110435852380'
+Started GET "/" for ::1 at 2020-01-06 18:50:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3755932164817942263_70110402719220'
+Started GET "/" for ::1 at 2020-01-06 18:50:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3755932164817942263_70110434398820'
+Started GET "/" for ::1 at 2020-01-06 18:50:03 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3755932164817942263_70110390944920'
+Started GET "/" for ::1 at 2020-01-06 18:50:03 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3755932164817942263_70110402260320'
+Started GET "/" for ::1 at 2020-01-06 18:50:55 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3755932164817942263_70110402952780'
+Started GET "/" for ::1 at 2020-01-06 18:50:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3755932164817942263_70110429891700'
+Started GET "/" for ::1 at 2020-01-06 18:52:03 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 234ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3719673364710811456_70335229965020'
+Started GET "/" for ::1 at 2020-01-06 18:52:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3719673364710811456_70335263490800'
+Started GET "/" for ::1 at 2020-01-06 18:52:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Vince/Desktop/binance/app/assets/config
+  /Users/Vince/Desktop/binance/app/assets/images
+  /Users/Vince/Desktop/binance/app/assets/javascripts
+  /Users/Vince/Desktop/binance/app/assets/stylesheets
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/Vince/Desktop/binance/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3719673364710811456_70335231090620'
+Started GET "/" for ::1 at 2020-01-06 18:57:10 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 2267ms (Views: 2264.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (71.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20200107074106)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "state" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107074106_create_users.rb:3
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/migrate/20200107074106_create_users.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20200107074106)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "username" character varying NOT NULL, "state" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107074106_create_users.rb:3
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/migrate/20200107074106_create_users.rb:13
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/migrate/20200107074106_create_users.rb:14
+  [1m[36mActiveRecord::SchemaMigration Create (6.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107074106"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-07 07:48:04.769010"], ["updated_at", "2020-01-07 07:48:04.769010"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20200107074921)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "coins" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "opening_price" float NOT NULL, "lowest_price" float NOT NULL, "highest_price" float NOT NULL, "closing_price" float NOT NULL, "volume" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107074921_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107074921"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateWallets (20200107075116)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (51.7ms)[0m  [1m[35mCREATE TABLE "wallets" ("id" bigserial primary key, "symbol" character varying NOT NULL, "name" character varying NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107075116_create_wallets.rb:3
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_wallets_on_user_id" ON "wallets"  ("user_id")[0m
+  ↳ db/migrate/20200107075116_create_wallets.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107075116"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateWalletTransactions (20200107075341)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "wallet_transactions" ("id" bigserial primary key, "wallet_id" integer NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "price" float NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107075341_create_wallet_transactions.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_wallet_id" ON "wallet_transactions"  ("wallet_id")[0m
+  ↳ db/migrate/20200107075341_create_wallet_transactions.rb:13
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_user_id" ON "wallet_transactions"  ("user_id")[0m
+  ↳ db/migrate/20200107075341_create_wallet_transactions.rb:14
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107075341"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateWatchLists (20200107075623)
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "watch_lists" ("id" bigserial primary key, "user_id" integer NOT NULL, "stock_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:3
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_user_id" ON "watch_lists"  ("user_id")[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:9
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_coin_id" ON "watch_lists"  ("coin_id")[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateWatchLists (20200107075623)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "watch_lists" ("id" bigserial primary key, "user_id" integer NOT NULL, "coin_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:3
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_user_id" ON "watch_lists"  ("user_id")[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_coin_id" ON "watch_lists"  ("coin_id")[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:10
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_watch_lists_on_coin_id_and_user_id" ON "watch_lists"  ("coin_id", "user_id")[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:11
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107075623"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (4.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-01-07 09:33:04 -0800
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 75ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Users (20200107174212)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Users (20200107174212)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Users (20200107174212)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Users (20200107174212)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Users (20200107174212)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "username" character varying NOT NULL, "state" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107174212_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (73.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "binance_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (47.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "binance_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (221.6ms)[0m  [1m[35mCREATE DATABASE "binance_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (101.7ms)[0m  [1m[35mCREATE DATABASE "binance_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE DATABASE "binance_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "binance_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (3.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "coins" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (43.5ms)[0m  [1m[35mCREATE TABLE "coins" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "opening_price" float NOT NULL, "lowest_price" float NOT NULL, "highest_price" float NOT NULL, "closing_price" float NOT NULL, "volume" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (18.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "username" character varying NOT NULL, "state" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "wallet_transactions" CASCADE[0m
+  ↳ db/schema.rb:44
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "wallet_transactions" ("id" bigserial primary key, "wallet_id" integer NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "price" float NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:44
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_user_id" ON "wallet_transactions"  ("user_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_wallet_id" ON "wallet_transactions"  ("wallet_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "wallets" CASCADE[0m
+  ↳ db/schema.rb:57
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "wallets" ("id" bigserial primary key, "symbol" character varying NOT NULL, "name" character varying NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:57
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_wallets_on_user_id" ON "wallets"  ("user_id")[0m
+  ↳ db/schema.rb:57
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_lists" CASCADE[0m
+  ↳ db/schema.rb:67
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "watch_lists" ("id" bigserial primary key, "user_id" integer NOT NULL, "coin_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:67
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_watch_lists_on_coin_id_and_user_id" ON "watch_lists"  ("coin_id", "user_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_coin_id" ON "watch_lists"  ("coin_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_user_id" ON "watch_lists"  ("user_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200107075623)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200107074921),
+(20200107075341),
+(20200107075116);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-07 17:48:48.042456"], ["updated_at", "2020-01-07 17:48:48.042456"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (3.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "coins" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (52.5ms)[0m  [1m[35mCREATE TABLE "coins" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "opening_price" float NOT NULL, "lowest_price" float NOT NULL, "highest_price" float NOT NULL, "closing_price" float NOT NULL, "volume" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "username" character varying NOT NULL, "state" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "wallet_transactions" CASCADE[0m
+  ↳ db/schema.rb:44
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "wallet_transactions" ("id" bigserial primary key, "wallet_id" integer NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "price" float NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:44
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_user_id" ON "wallet_transactions"  ("user_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_wallet_id" ON "wallet_transactions"  ("wallet_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "wallets" CASCADE[0m
+  ↳ db/schema.rb:57
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE TABLE "wallets" ("id" bigserial primary key, "symbol" character varying NOT NULL, "name" character varying NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:57
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_wallets_on_user_id" ON "wallets"  ("user_id")[0m
+  ↳ db/schema.rb:57
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_lists" CASCADE[0m
+  ↳ db/schema.rb:67
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "watch_lists" ("id" bigserial primary key, "user_id" integer NOT NULL, "coin_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:67
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_watch_lists_on_coin_id_and_user_id" ON "watch_lists"  ("coin_id", "user_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_coin_id" ON "watch_lists"  ("coin_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_user_id" ON "watch_lists"  ("user_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (19.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200107075623)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200107074921),
+(20200107075341),
+(20200107075116);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-07 17:48:48.420101"], ["updated_at", "2020-01-07 17:48:48.420101"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (2.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-01-07 17:48:48.431101"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Users (20200107174212)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "username" character varying NOT NULL, "state" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107174212_users.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (83.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "binance_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (49.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "binance_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (254.0ms)[0m  [1m[35mCREATE DATABASE "binance_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (122.5ms)[0m  [1m[35mCREATE DATABASE "binance_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (32.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20200107074921)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "coins" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "opening_price" float NOT NULL, "lowest_price" float NOT NULL, "highest_price" float NOT NULL, "closing_price" float NOT NULL, "volume" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107074921_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107074921"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateWallets (20200107075116)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "wallets" ("id" bigserial primary key, "symbol" character varying NOT NULL, "name" character varying NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107075116_create_wallets.rb:3
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_wallets_on_user_id" ON "wallets"  ("user_id")[0m
+  ↳ db/migrate/20200107075116_create_wallets.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107075116"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateWalletTransactions (20200107075341)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "wallet_transactions" ("id" bigserial primary key, "wallet_id" integer NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "price" float NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107075341_create_wallet_transactions.rb:3
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_wallet_id" ON "wallet_transactions"  ("wallet_id")[0m
+  ↳ db/migrate/20200107075341_create_wallet_transactions.rb:13
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_user_id" ON "wallet_transactions"  ("user_id")[0m
+  ↳ db/migrate/20200107075341_create_wallet_transactions.rb:14
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107075341"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateWatchLists (20200107075623)
+  [1m[35m (5.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "watch_lists" ("id" bigserial primary key, "user_id" integer NOT NULL, "coin_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:3
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_user_id" ON "watch_lists"  ("user_id")[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:9
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_coin_id" ON "watch_lists"  ("coin_id")[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:10
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_watch_lists_on_coin_id_and_user_id" ON "watch_lists"  ("coin_id", "user_id")[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:11
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107075623"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to Users (20200107174212)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "username" character varying NOT NULL, "state" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107174212_users.rb:3
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/migrate/20200107174212_users.rb:13
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/migrate/20200107174212_users.rb:14
+  [1m[36mActiveRecord::SchemaMigration Create (5.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107174212"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-07 17:53:31.685689"], ["updated_at", "2020-01-07 17:53:31.685689"]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (58.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "binance_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (45.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "binance_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (219.8ms)[0m  [1m[35mCREATE DATABASE "binance_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (92.9ms)[0m  [1m[35mCREATE DATABASE "binance_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE DATABASE "binance_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "binance_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "coins" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (42.6ms)[0m  [1m[35mCREATE TABLE "coins" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "opening_price" float NOT NULL, "lowest_price" float NOT NULL, "highest_price" float NOT NULL, "closing_price" float NOT NULL, "volume" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (20.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "username" character varying NOT NULL, "state" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "wallet_transactions" CASCADE[0m
+  ↳ db/schema.rb:44
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "wallet_transactions" ("id" bigserial primary key, "wallet_id" integer NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "price" float NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:44
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_user_id" ON "wallet_transactions"  ("user_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_wallet_id" ON "wallet_transactions"  ("wallet_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "wallets" CASCADE[0m
+  ↳ db/schema.rb:57
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "wallets" ("id" bigserial primary key, "symbol" character varying NOT NULL, "name" character varying NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:57
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_wallets_on_user_id" ON "wallets"  ("user_id")[0m
+  ↳ db/schema.rb:57
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_lists" CASCADE[0m
+  ↳ db/schema.rb:67
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "watch_lists" ("id" bigserial primary key, "user_id" integer NOT NULL, "coin_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:67
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_watch_lists_on_coin_id_and_user_id" ON "watch_lists"  ("coin_id", "user_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_coin_id" ON "watch_lists"  ("coin_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_user_id" ON "watch_lists"  ("user_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200107174212)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200107074921),
+(20200107075341),
+(20200107075116),
+(20200107075623);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-07 17:56:01.434243"], ["updated_at", "2020-01-07 17:56:01.434243"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (2.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "coins" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (40.1ms)[0m  [1m[35mCREATE TABLE "coins" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "opening_price" float NOT NULL, "lowest_price" float NOT NULL, "highest_price" float NOT NULL, "closing_price" float NOT NULL, "volume" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "username" character varying NOT NULL, "state" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "wallet_transactions" CASCADE[0m
+  ↳ db/schema.rb:44
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "wallet_transactions" ("id" bigserial primary key, "wallet_id" integer NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "price" float NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:44
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_user_id" ON "wallet_transactions"  ("user_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_wallet_id" ON "wallet_transactions"  ("wallet_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "wallets" CASCADE[0m
+  ↳ db/schema.rb:57
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "wallets" ("id" bigserial primary key, "symbol" character varying NOT NULL, "name" character varying NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:57
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_wallets_on_user_id" ON "wallets"  ("user_id")[0m
+  ↳ db/schema.rb:57
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_lists" CASCADE[0m
+  ↳ db/schema.rb:67
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "watch_lists" ("id" bigserial primary key, "user_id" integer NOT NULL, "coin_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:67
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_watch_lists_on_coin_id_and_user_id" ON "watch_lists"  ("coin_id", "user_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_coin_id" ON "watch_lists"  ("coin_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_user_id" ON "watch_lists"  ("user_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200107174212)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200107074921),
+(20200107075341),
+(20200107075116),
+(20200107075623);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-07 17:56:01.686058"], ["updated_at", "2020-01-07 17:56:01.686058"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-01-07 17:56:01.690846"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Users (20200107175626)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "username" character varying NOT NULL, "cash_balance" float NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107175626_users.rb:3
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (61.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "binance_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (45.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "binance_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (199.5ms)[0m  [1m[35mCREATE DATABASE "binance_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (108.8ms)[0m  [1m[35mCREATE DATABASE "binance_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "coins" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "coins" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "opening_price" float NOT NULL, "lowest_price" float NOT NULL, "highest_price" float NOT NULL, "closing_price" float NOT NULL, "volume" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "username" character varying NOT NULL, "state" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "wallet_transactions" CASCADE[0m
+  ↳ db/schema.rb:44
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "wallet_transactions" ("id" bigserial primary key, "wallet_id" integer NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "price" float NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:44
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_user_id" ON "wallet_transactions"  ("user_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_wallet_id" ON "wallet_transactions"  ("wallet_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "wallets" CASCADE[0m
+  ↳ db/schema.rb:57
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "wallets" ("id" bigserial primary key, "symbol" character varying NOT NULL, "name" character varying NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:57
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_wallets_on_user_id" ON "wallets"  ("user_id")[0m
+  ↳ db/schema.rb:57
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_lists" CASCADE[0m
+  ↳ db/schema.rb:67
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "watch_lists" ("id" bigserial primary key, "user_id" integer NOT NULL, "coin_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:67
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_watch_lists_on_coin_id_and_user_id" ON "watch_lists"  ("coin_id", "user_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_coin_id" ON "watch_lists"  ("coin_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_user_id" ON "watch_lists"  ("user_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (17.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200107174212)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200107074921),
+(20200107075341),
+(20200107075116),
+(20200107075623);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-07 17:56:53.621561"], ["updated_at", "2020-01-07 17:56:53.621561"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "coins" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "coins" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "opening_price" float NOT NULL, "lowest_price" float NOT NULL, "highest_price" float NOT NULL, "closing_price" float NOT NULL, "volume" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "username" character varying NOT NULL, "state" character varying NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "wallet_transactions" CASCADE[0m
+  ↳ db/schema.rb:44
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "wallet_transactions" ("id" bigserial primary key, "wallet_id" integer NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "price" float NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:44
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_user_id" ON "wallet_transactions"  ("user_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_wallet_id" ON "wallet_transactions"  ("wallet_id")[0m
+  ↳ db/schema.rb:44
+  [1m[35m (4.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "wallets" CASCADE[0m
+  ↳ db/schema.rb:57
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "wallets" ("id" bigserial primary key, "symbol" character varying NOT NULL, "name" character varying NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:57
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_wallets_on_user_id" ON "wallets"  ("user_id")[0m
+  ↳ db/schema.rb:57
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "watch_lists" CASCADE[0m
+  ↳ db/schema.rb:67
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "watch_lists" ("id" bigserial primary key, "user_id" integer NOT NULL, "coin_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:67
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_watch_lists_on_coin_id_and_user_id" ON "watch_lists"  ("coin_id", "user_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_coin_id" ON "watch_lists"  ("coin_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_user_id" ON "watch_lists"  ("user_id")[0m
+  ↳ db/schema.rb:67
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200107174212)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200107074921),
+(20200107075341),
+(20200107075116),
+(20200107075623);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (15.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-07 17:56:53.879213"], ["updated_at", "2020-01-07 17:56:53.879213"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-01-07 17:56:53.890272"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Users (20200107175626)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "username" character varying NOT NULL, "cash_balance" float NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107175626_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (68.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "binance_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (46.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "binance_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (232.9ms)[0m  [1m[35mCREATE DATABASE "binance_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (96.1ms)[0m  [1m[35mCREATE DATABASE "binance_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE "binance_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "binance_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (26.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCoins (20200107074921)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "coins" ("id" bigserial primary key, "name" character varying NOT NULL, "symbol" character varying NOT NULL, "opening_price" float NOT NULL, "lowest_price" float NOT NULL, "highest_price" float NOT NULL, "closing_price" float NOT NULL, "volume" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107074921_create_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (3.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107074921"]]
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateWallets (20200107075116)
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "wallets" ("id" bigserial primary key, "symbol" character varying NOT NULL, "name" character varying NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107075116_create_wallets.rb:3
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_wallets_on_user_id" ON "wallets"  ("user_id")[0m
+  ↳ db/migrate/20200107075116_create_wallets.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (5.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107075116"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateWalletTransactions (20200107075341)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "wallet_transactions" ("id" bigserial primary key, "wallet_id" integer NOT NULL, "user_id" integer NOT NULL, "wallet_address" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "price" float NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107075341_create_wallet_transactions.rb:3
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_wallet_id" ON "wallet_transactions"  ("wallet_id")[0m
+  ↳ db/migrate/20200107075341_create_wallet_transactions.rb:13
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_wallet_transactions_on_user_id" ON "wallet_transactions"  ("user_id")[0m
+  ↳ db/migrate/20200107075341_create_wallet_transactions.rb:14
+  [1m[36mActiveRecord::SchemaMigration Create (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107075341"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateWatchLists (20200107075623)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "watch_lists" ("id" bigserial primary key, "user_id" integer NOT NULL, "coin_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:3
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_user_id" ON "watch_lists"  ("user_id")[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_watch_lists_on_coin_id" ON "watch_lists"  ("coin_id")[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:10
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_watch_lists_on_coin_id_and_user_id" ON "watch_lists"  ("coin_id", "user_id")[0m
+  ↳ db/migrate/20200107075623_create_watch_lists.rb:11
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107075623"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-07 17:58:39.443494"], ["updated_at", "2020-01-07 17:58:39.443494"]]
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Users (20200107175922)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (20.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "username" character varying NOT NULL, "cash_balance" float NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200107175922_users.rb:3
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/migrate/20200107175922_users.rb:13
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/migrate/20200107175922_users.rb:14
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200107175922"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7390359822401690295)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-01-07 10:31:51 -0800
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 1615ms (Views: 1596.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/show" for ::1 at 2020-01-07 10:32:11 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/show"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/users" for ::1 at 2020-01-07 10:32:23 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/users" for ::1 at 2020-01-07 10:40:34 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/users/show" for ::1 at 2020-01-07 10:40:54 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/show"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/users/show" for ::1 at 2020-01-07 11:16:40 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/show"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-07 11:16:46 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1682ms (Views: 1671.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:17:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 459ms (Views: 431.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:17:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 1772ms (Views: 1744.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:20:55 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 2710ms (Views: 2687.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:34:11 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 3557ms (Views: 3519.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:34:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 353ms (Views: 334.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:36:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 2333ms (Views: 2284.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:37:55 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 1890ms (Views: 1873.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:48:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 2655ms (Views: 2618.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:49:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 1544ms (Views: 1525.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:49:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 409ms (Views: 397.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:51:11 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 1762ms (Views: 1734.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:52:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (140.5ms)
+Completed 200 OK in 3360ms (Views: 3352.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 13:37:39 -0800
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Vince/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 2229ms (Views: 2225.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 13:39:28 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Users/Vince/Desktop/binance/frontend/components/navbars/navbar_container.js" for ::1 at 2020-01-07 13:39:51 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Users/Vince/Desktop/binance/frontend/components/navbars/navbar_container.js"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-07 13:40:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 13:41:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 121ms (Views: 118.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 13:41:32 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 138ms (Views: 135.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 13:45:54 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 807ms (Views: 805.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 13:46:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 820ms (Views: 817.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 13:47:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 614ms (Views: 611.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 13:47:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 960ms (Views: 957.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:01:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1005ms (Views: 1001.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:01:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:05:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 943ms (Views: 939.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:10:26 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 986ms (Views: 983.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:11:45 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 73ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:13:51 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 90ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:17:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 956ms (Views: 952.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:17:47 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:19:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 880ms (Views: 877.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:27:54 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1025ms (Views: 1022.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:28:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:57:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1176ms (Views: 1173.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:57:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1294ms (Views: 1290.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:58:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 920ms (Views: 917.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:59:42 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 984ms (Views: 982.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:59:47 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:59:48 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 14:59:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:01:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:01:03 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:01:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:01:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:01:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:01:52 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:01:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 912ms (Views: 910.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:03:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1848ms (Views: 1844.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:03:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3300ms (Views: 3298.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:04:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:04:03 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:04:42 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1040ms (Views: 1037.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:05:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 978ms (Views: 975.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:07:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1186ms (Views: 1183.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:08:46 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 924ms (Views: 919.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:08:55 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:08:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 867ms (Views: 865.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:09:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:09:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:09:35 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:09:37 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 882ms (Views: 880.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:12:09 -0800
+Started GET "/" for ::1 at 2020-01-07 15:12:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 64ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:17:42 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 926ms (Views: 924.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:21:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1088ms (Views: 1083.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:27:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 877ms (Views: 875.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:28:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1174ms (Views: 1170.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:29:14 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:29:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1517ms (Views: 1514.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:29:24 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user" for ::1 at 2020-01-07 15:29:25 -0800
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-07 15:33:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1066ms (Views: 1059.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user" for ::1 at 2020-01-07 15:34:03 -0800
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-07 15:34:54 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2586ms (Views: 2582.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user" for ::1 at 2020-01-07 15:34:59 -0800
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/user" for ::1 at 2020-01-07 15:35:11 -0800
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-07 15:38:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 73ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user" for ::1 at 2020-01-07 15:38:36 -0800
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/user" for ::1 at 2020-01-07 15:41:58 -0800
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/user" for ::1 at 2020-01-07 15:41:59 -0800
+  
+ActionController::RoutingError (uninitialized constant Api):
+  
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
