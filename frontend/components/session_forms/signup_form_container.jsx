@@ -8,14 +8,14 @@ const mapStateToProps = (state, ownProps) => {
     return ({
         errors: state.errors.session,
         formType: 'Sign Up',
-        navLink: <Link to="/signup">Sign Up</Link>,
+        navLink: <Link to="/signup">Register</Link>,
     });
 };
 
 const mapDispatchToProps = (dispatch) => {
     return ({
         action: (user) => dispatch(signup(user)),
-        // clearErrors: () => dispatch(clearErrors()),
+        clearErrors: () => dispatch(clearErrors()),
         demoLogin: (user) => dispatch(login(user))
     });
 };

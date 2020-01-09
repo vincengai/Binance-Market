@@ -8,13 +8,13 @@ import LoginFormContainer from './session_forms/login_form_container';
 const App = () => (
     <div>
         <header>
-        <h1>Binance Market</h1>
         <NavBarContainer />
         </header>
         
         <Switch>
             <Route exact path="/login" component={LoginFormContainer} />
             <Route exact path="/signup" component={SignupFormContainer} />
+            {/* <Route exact path="/" component={HomePage} */}
         </Switch>
     </div>
 );

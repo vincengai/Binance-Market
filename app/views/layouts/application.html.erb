@@ -8,7 +8,9 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-
+    <script type="text/javascript">
+      window.imageUrl = { binanceLogo: "<%=image_url("binance-logo.png") %>" }
+    </script>
   <body>
     <%= yield %>
   </body>

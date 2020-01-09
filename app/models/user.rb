@@ -3,12 +3,12 @@ class User < ApplicationRecord
   attr_reader :password
 
 
-  validates :email, :username, :session_token, uniqueness: true, presence: true 
-  validates :password_digest, :first_name, :last_name, presence: true
+  validates :username, :session_token, uniqueness: true, presence: true 
+  validates :password_digest, presence: true
   validates :password, length: { minimum: 6 }, allow_nil: true
 
   after_initialize :ensure_session_token
-  after_create :generate_wallets
+  # after_create :generate_wallets
 
 
   has_many :wallets,
@@ -61,7 +61,5 @@ class User < ApplicationRecord
     end
     self.session_token
   end
-
-
 
 end

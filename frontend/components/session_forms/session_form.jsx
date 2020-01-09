@@ -4,51 +4,72 @@ class LoginForm extends React.Component{
     constructor(props) {
         super(props);
         this.state = {									
-            email: "",
+            username: "",
             password: "",
-        }
+        };
+
+        this.demoUser = {
+            username: 'demo_user@gmail.com',
+            password: '12345678'
+        };
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoLogin = this.demoLogin.bind(this);
     };
 
-    demoLogin() {
+    demoLogin(e) {
         e.preventDefault();
-        let demoUser = {
-            email: 'demo_user@gmail.com',
-            password: '12345678'
-        };
-        this.props.demoLogin(demoUser); 					
-    }
+        const demoUser = Object.assign({}, demoUser)
+        this.props.action(demoUser); 					
+    };
+
 
    handleSubmit(e) {
        e.preventDefault();
-       this.props.action(this.state)
+       const user = Object.assign({}, this.state);
+       this.props.action(user)
+           .then( this.props.history.push("/"))
+
    };
 
    update(field) {
        return e => this.setState({ [field]: e.currentTarget.value })
    };
 
+    // renderErrors() {
+    //     let errors = this.props.errors.join('.');
+
+    //     if (errors.length == 0) return null;
+
+    //         window.setTimeout(() => this.props.clearErrors(), 5000);
+
+    //     return (
+    //         <p className="sign-in-error">
+    //             <a className="close" onClick={() => this.props.clearErrors()}>x</a>
+    //             {errors}
+    //         </p>
+    //     );
+    // }
 
     render() {
-       const { action } = this.props;
 
        return (
+        
             <div className="login-form-container">
+               <h2 className='login-title'>{this.props.formType}</h2>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
 
+
                     <div className="login-form">
-                            <br />
-                        <label>Username:
+                       {/* {this.renderErrors()} */}
+                        <label>Username
                                 <input type="text"
                                 value={this.state.username}
                                 onChange={this.update('username')}
                                 className="login-input"
                                  />
                         </label>
-                            <br />
-                        <label>Password:
+                        <label>Password
                                  <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
@@ -56,14 +77,15 @@ class LoginForm extends React.Component{
                                 />
                         </label>
                         <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} />
                     </div>
-                   <button className="demo-login" onClick={this.demoLogin}>Demo</button>
-
+                        <input className="session-submit" type="submit" value={this.props.formType} />
                 </form>
+                   <button className="demo-login" onClick={this.demoLogin}>Demo</button>
             </div>
         );
     }
 };
 
 export default LoginForm; 
+
+
