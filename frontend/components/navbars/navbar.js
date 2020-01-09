@@ -67,12 +67,12 @@ class navBar extends React.Component {
                                 <li>
                                     <a
                                         href="https://github.com/vincengai/FullStack-Project-"
-                                        target="_blank" className="nav-word">Github</a>
+                                        target="_blank">Github</a>
                                 </li>
                                 <li>
                                     <a
                                         href="https://www.linkedin.com/in/vince-ngai/"
-                                    target="_blank" className="nav-word">LinkedIn</a>
+                                    target="_blank">LinkedIn</a>
                                 </li>
                             </ul>
                         </div>
