@@ -9,15 +9,39 @@
    margin-top: 100px;
 }
 
+.login-form-container > .login-input {
+  display: flex;
+  justify-content: center;
+}
+
  .login-form {
    display: flex;
    justify-content: center;
-   flex-direction: column;
+  //  flex-direction: row;
  }
 
  .login-form-box {
-   outline: 1px solid black;
-   padding: 20px;
+  //  width: 500px;
+  //  height: auto;
+  //  box-sizing: border-box;
+  //  outline: 1px solid black;
+  //  padding: 20px;
+  width: 500px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  justify-content: center;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
  }
 
- 
+ .session-submit {
+  justify-content: center;
+  background-color: #F0B90B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+ }

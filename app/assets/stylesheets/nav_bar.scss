@@ -3,11 +3,7 @@ div#nav-container {
     background-color: #1E2126;
     box-sizing: border-box;
     position: relative; 
-    height: 70px; 
-
-}
-
-.nav-word {
+    height: 70px;
     font-family: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
 }
 
@@ -26,7 +22,7 @@ div#nav-container {
     // flex-grow: 1;
 }
 
-#nav-container {           
+#nav-container {
     display: flex;
 }
 
@@ -39,8 +35,9 @@ div#nav-container {
 div.nav-section {
     ul {
         list-style-type: none;
-        font-size: 13px;
+        font-size: 1em;
         display: flex;
+        margin: auto 1em;
         padding-left: 0;
         li a{
             text-transform: uppercase;
@@ -60,13 +57,29 @@ div.nav-section {
 }
 
 #nav-left {
-        flex-grow: 1;
-        display: flex; 
+    flex-grow: 1;
+    display: flex; 
 }
-
-
 
 .nav-selected {
     border: 2px solid white;
     border-radius: 2px;
+}
+
+#nav-right {
+    margin: auto 1em;
+    div {
+        display: flex;
+            li a {
+                text-transform: uppercase;
+                padding: 8px;
+                font-size: 1em;
+                text-decoration: none;
+                color: white;
+                margin-left: 0px;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
 }

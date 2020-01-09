@@ -66,7 +66,7 @@ class navBar extends React.Component {
                             <ul>
                                 <li>
                                     <a
-                                        href="https://github.com/vincengai/FullStack-Project-"
+                                        href="https://github.com/vincengai/Binance-Market-"
                                         target="_blank" className="nav-word">Github</a>
                                 </li>
                                 <li>
