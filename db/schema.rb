@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_08_190624) do
+ActiveRecord::Schema.define(version: 2020_01_09_223329) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,11 +18,6 @@ ActiveRecord::Schema.define(version: 2020_01_08_190624) do
   create_table "coins", force: :cascade do |t|
     t.string "name", null: false
     t.string "symbol", null: false
-    t.float "opening_price", null: false
-    t.float "lowest_price", null: false
-    t.float "highest_price", null: false
-    t.float "closing_price", null: false
-    t.integer "volume", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -61,6 +56,7 @@ ActiveRecord::Schema.define(version: 2020_01_08_190624) do
     t.string "wallet_address", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "coin_id"
     t.index ["user_id"], name: "index_wallets_on_user_id"
   end
 

@@ -1,0 +1,32 @@
+.splash-container {
+    width: 100%;
+    height: 90ch;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0px 0px;
+    text-align: center; 
+    color:white;
+  }
+  
+  .splash-sent {
+    position:absolute;
+    // line-height: 28px;
+    top: 100px; 
+    left: 30px;
+    text-size-adjust: 100%;
+    font-size: 250%,;
+    font-family: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
+  // display: inline-block;
+  // color: white;
+}
+  
+  .splash-logo {
+    height: 40%;
+    width: 100%;
+    margin: 00px; 
+    justify-content: center;
+    background-image: url('steller.gif');
+    background-size: cover;
+    // text-align: center; 
+}
