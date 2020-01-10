@@ -9,7 +9,6 @@ const receiveCurrentPrice = (data) => ({
     price: data.display.symbol.usd.price
 });
 
-
 export const fetchCurrentPrice = (data) => {
     return CryptoMarket.fetchCurrentPrice(symbol)
         .then( 
