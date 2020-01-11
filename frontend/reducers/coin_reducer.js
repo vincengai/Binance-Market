@@ -7,7 +7,7 @@ const coinReducer = (oldState={}, action) => {
 
     switch(action.type) {
         case RECEIVE_PRICE:
-            newState[action.payload.symbol] = action.payload
+            newState[action.symbol] = action.price
             return newState;
         default: 
             return oldState;

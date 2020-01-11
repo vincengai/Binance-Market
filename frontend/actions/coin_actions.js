@@ -6,13 +6,14 @@ export const RECEIVE_PRICE = 'RECEIVE_PRICE';
 
 const receiveCurrentPrice = (data) => ({
     type: RECEIVE_PRICE,
+    symbol: data.display.symbol,
     price: data.display.symbol.usd.price
 });
 
 export const fetchCurrentPrice = (data) => {
     return CryptoMarket.fetchCurrentPrice(symbol)
         .then( 
-            (data) => dispatchEvent(receiveCurrentPrice(data)), 
+            (data) => dispatch(receiveCurrentPrice(data)), 
             (error) => dispatch(receiveErrors(error.responseJSON))
         )
 };
