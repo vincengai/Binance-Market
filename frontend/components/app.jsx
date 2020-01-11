@@ -4,12 +4,13 @@ import { Route, Switch } from 'react-router-dom';
 import SignupFormContainer from './session_forms/signup_form_container';
 import LoginFormContainer from './session_forms/login_form_container';
 import Splash from './splash';
+import Foot from './footer';
 
 
 const App = () => (
     <div>
         <header>
-        <NavBarContainer />
+            <NavBarContainer />
         </header>
         
         <Switch>
@@ -17,6 +18,10 @@ const App = () => (
             <Route exact path="/signup" component={SignupFormContainer} />
             <Route exact path="/" component={Splash} />
         </Switch>
+
+        <footer>
+            <Foot />
+        </footer>
     </div>
 );
 

@@ -5,10 +5,6 @@ class Coin < ApplicationRecord
     foreign_key: :coin_id,
     class_name: :Wallet
 
-
-    def 
-
-    end
     
 
 end
