@@ -19,8 +19,8 @@
   // line-height: 28px;
   font-size: 23px;
   font-style: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
-  top: 240px; 
-  left: 45px;
+  top: 30%;
+  left: 3%;
   width: 295px;
   height: 40px;
   box-sizing: border-box;
@@ -36,7 +36,9 @@
 
   .splash-sent {
     position:absolute;
-    // line-height: 28px;
+    line-height: 40px;
+    top: 8%;
+    left: 3%;
     // justify-content: center;
     // align-items: center;
     text-size-adjust: 100%;
@@ -48,24 +50,24 @@
   position: absolute;
   font-size: 100%;
   color: rgb(120, 120, 120);
-  top: 110px; 
-  left: 30px;
+  top: 18%;
+  left: 3%;
 }
   
 .splash-subsent2 {
   position: absolute;
   font-size: 100%;
   color: rgb(255, 255, 255);
-  top: 200px; 
-  left: 45px;
+  top: 25%;
+  left: 3%;
 }
 
 .splash-subsent3 {
   position: absolute;
   font-size: 100%;
   color: rgb(255, 255, 255);
-  top: 200px; 
-  left: 500px;
+  top: 25%; 
+  left: 30%
 }
 
   .splash-logo {
