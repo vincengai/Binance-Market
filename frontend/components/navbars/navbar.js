@@ -21,9 +21,6 @@ class navBar extends React.Component {
                     <Link to="/dashboard">Wallet</Link>
                 </li>
                 <li>
-                    <Link to="/">Market</Link>
-                </li>
-                <li>
                     <Link onClick={this.props.logout} to="/">Sign Out</Link>
                 </li>
             </div>
@@ -33,9 +30,6 @@ class navBar extends React.Component {
     renderLoggedOutTabs() {
         return (
             <div>
-                <li>
-                    <Link to="/">Market</Link>
-                </li>
                 <li>
                     <Link to="/login">Sign In</Link>
                 </li>
@@ -88,11 +82,3 @@ class navBar extends React.Component {
 };
 
 export default navBar; 
-
-// render() {
-//     if (this.props.currentUser) {
-//         return this.renderLoggedInTabs();
-//     } else {
-//         return this.renderLoggedOutTabs();
-//     }
-// }

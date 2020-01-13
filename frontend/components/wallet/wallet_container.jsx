@@ -5,9 +5,45 @@ import WalletForm from './wallet_form';
 import { receiveCurrentPrice } from '../app/'
 
 
-const CRYPTOCURRENCIES = {
-    // ...
-}
+const SYMBOLS = [
+        'BTC',
+        'ETH',
+        'BNB',
+        'BCH',
+        'LTC',
+        'EOS',
+        'LINK',
+        'XLM',
+        'XTZ',
+        'DASH',
+        'ETC',
+        'USDC',
+        'ZEC',
+        'BAT',
+        'ZRX',
+        'REP',
+        'DAI'
+];
+  
+const NAMES = [
+        'Bitcoin',
+        'Ethereum',
+        'BNB',
+        'Bitcoin Cash',
+        'Litecoin',
+        'EOS',
+        'Chainlink',
+        'Stellar Lumens',
+        'Tezos',
+        'Dash',
+        'Ethereum Classic',
+        'USD Coin',
+        'Zcash',
+        'Basic Attention Token',
+        '0x',
+        'Augur',
+        'Dai'
+];
 
 const mapStateToProps = (state) => {
     return ({
@@ -15,7 +51,7 @@ const mapStateToProps = (state) => {
 
     })
 };
-
+ 
 const mapDispatchToProps = (dispatch) => {
     return ({
         receiveCurrentPrice: (data) => dispatch(receiveCurrentPrice(data))
