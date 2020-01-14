@@ -1,23 +1,19 @@
-import  CryptoMarket  from '../util/coin_api_util';
+import  * as CryptoMarket from '../util/coin_api_util';
 
-export const RECEIVE_PRICE = 'RECEIVE_PRICE';
+export const RECEIVE_COINS_INFOS = 'RECEIVE_COINS_INFOS';
 
 
-
-const receiveCurrentPrice = (data) => ({
-    type: RECEIVE_PRICE,
-    symbol: data.display.symbol,
-    price: data.display.symbol.usd.price
-});
-
-export const fetchCurrentPrice = (data) => {
-    return CryptoMarket.fetchCurrentPrice(symbol)
-        .then( 
-            (data) => dispatch(receiveCurrentPrice(data)), 
-            (error) => dispatch(receiveErrors(error.responseJSON))
-        )
+const receiveCoinsInfos = (data) => {
+    // debugger
+    return {
+        type: RECEIVE_COINS_INFOS,
+        data
+    }
 };
 
-
-// either filter in your actions
-
+export const fetchCoinsInfo = () => dispatch => {
+    return CryptoMarket.fetchCoinsInfo()
+        .then( 
+            (data) => dispatch(receiveCoinsInfos(data)), 
+        )
+};

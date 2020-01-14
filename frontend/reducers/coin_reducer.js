@@ -1,14 +1,14 @@
-import { RECEIVE_PRICE } from '../actions/coin_actions';
+import { RECEIVE_COINS_INFOS } from '../actions/coin_actions';
 
 
 const coinReducer = (oldState={}, action) => {
     Object.freeze(oldState);
     let newState = Object.assign({}, oldState)
-
+    
     switch(action.type) {
-        case RECEIVE_PRICE:
-            newState[action.symbol] = action.price
-            return newState;
+        case RECEIVE_COINS_INFOS:
+            console.log(action.data);
+            return action.data;
         default: 
             return oldState;
     }
