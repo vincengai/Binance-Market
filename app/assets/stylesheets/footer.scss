@@ -10,10 +10,9 @@
     clear: both;
     text-align: center; 
     color:white;
-    // vertical-align: bottom;
-    // box-sizing: border-box;
-    // display:flex; 
-    flex-direction: column;
+    display:flex; 
+    flex-direction: row;
+    
 }
 .footer-sent {
     position:absolute;
@@ -29,7 +28,7 @@
 }
 
 .footer-submit {
-color: rgb(33, 40, 51);
+// color: rgb(33, 40, 51);
     margin-right: 24px;
     background-color: rgb(240, 185, 11);
     display: inline-flex;
@@ -52,9 +51,18 @@ color: rgb(33, 40, 51);
     overflow: hidden;
     transition: all 0.2s ease 0s;
     outline: none;
-    border-width: initial;
+    border-width: 30px;
     border-style: none;
     border-color: initial;
     border-image: initial;
-
+  justify-content: center;
+  background-color: #F0B90B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 14%;
+  height: 20%;
+  font-size: 1em;
 }

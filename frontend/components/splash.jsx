@@ -17,12 +17,15 @@ class Splash extends React.Component {
                     <h3 className="splash-subsent">Trade Bitcoin, BNB, and hundreds of other cryptocurrencies in minutes. </h3>
                     <h3 className="splash-subsent2">I want to spend</h3>
                     <h3 className="splash-subsent3">I want to buy</h3>
+                    
 
+                    <img src={window.imageUrl.advertise} className="ad-logo"/>
                     <NavLink to="/">
                         <div className="splash-logo"></div>
                     </NavLink>
 
                     <input type="number" placeholder="Enter amount" className="splash-amount"/>
+                    <input type="number" placeholder="Enter amount" className="splash-buy"/>
                 </div>
                 <CryptoIndexContainer />
             </div>

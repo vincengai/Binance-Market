@@ -1,0 +1,132 @@
+* {
+    font-size: 18px;
+}
+
+.table-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
+  width: 80%;
+}
+
+.flex-table-header {
+    display: flex;
+    // position: absolute;
+    margin-top: 0%;
+    width: 80%;
+    height: 20%;
+    justify-content: space-around;
+}
+
+.flex-row-first {
+    padding-left: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 18px;
+}
+
+.flex-row {
+    padding-left: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 18px;
+}
+
+.flex-table-row {
+    display: flex;
+    // position: absolute;
+    width: 80%;
+    height: 90ch;
+    justify-content: space-between;
+    text-align: center;
+    align-content: flex-start;
+    
+}
+
+.table-column {
+    display: flex; 
+    width: 80%;
+    height: 100vh;
+    text-align: left;
+    // justify-content: left;
+    // border-bottom: 5px solid red;
+    height: 400px;
+}
+
+.flex-table-name {
+    padding-left: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 18px;
+    line-height: 23px;
+    width: 25%;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 40px;
+    border-collapse:collapse;
+    border-top-color:rgb(242, 242, 242);
+    border-top-style:solid;
+    border-top-width:0.994318px;
+    color:rgb(0, 0, 0);
+    cursor:pointer;
+    display:table-cell;
+    text-align: left;
+}
+.flex-table-price {
+    width: 25%;
+    padding-bottom: 30px;
+    text-align: left;
+    height: 40px;
+    border-collapse:collapse;
+    border-top-color:rgb(242, 242, 242);
+    border-top-style:solid;
+    border-top-width:0.994318px;
+    color:rgb(0, 0, 0);
+    cursor:pointer;
+    display:table-cell;
+
+}
+
+.flex-table-24hChange {
+    padding-left: 16px;
+    padding-top: 4px; 
+    padding-bottom: 4px; 
+    font-size: 18px;
+    line-height: 23px;
+    width: 25%;
+    color: rgb(112, 168, 0);
+    // justify-content: center;
+    padding-bottom: 30px;
+    text-align: left;
+    height: 40px;
+    border-collapse:collapse;
+    border-top-color:rgb(242, 242, 242);
+    border-top-style:solid;
+    border-top-width:0.994318px;
+    color:rgb(0, 0, 0);
+    cursor:pointer;
+    display:table-cell;
+}   
+
+.flex-table-markets {
+   padding-left: 16px;
+    padding-top: 4px; 
+    padding-bottom: 4px; 
+    font-size: 18px;
+    line-height: 23px;
+    width: 25%;
+    padding-bottom: 30px;
+    text-align: left;
+    height: 40px;
+    border-collapse:collapse;
+    border-top-color:rgb(242, 242, 242);
+    border-top-style:solid;
+    border-top-width:0.994318px;
+    color:rgb(0, 0, 0);
+    cursor:pointer;
+    display:table-cell;
+}
+
+.table-column div {
+    text-align: center;
+}

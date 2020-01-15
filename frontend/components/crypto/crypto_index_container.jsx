@@ -5,23 +5,7 @@ import CryptoIndex from './crypto_index';
 import { fetchCoinsInfo } from '../../actions/coin_actions'
 // import fetchCurrentPrice from '../../util/coin_api_util';
 
-const SYMBOLS = [
-        'BTC',
-        'ETH',
-        'BNB',
-        'XRP',
-        'BCH',
-        'LTC',
-];
 
-const NAME = [
-    'Bitcoin',
-    'Ethereum',
-    'BNB',
-    'Ripple',
-    'Bitcoin Cash',
-    'Litecoin'
-];
 
 const mapStateToProps = (state) => {
     // debugger

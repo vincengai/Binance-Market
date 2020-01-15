@@ -6,8 +6,6 @@
 //     Probable Image_URL
 
     
-
-
 // Get all the info for ALL the coins 
 export const fetchCoinsInfo = () => {
     // Key: FTC.DISPLAY.<Name_of_Coin>.USD.PRICE
@@ -19,3 +17,10 @@ export const fetchCoinsInfo = () => {
 };
 
 // BTC,ETH,BCH,BNB,LTC,TRX,XRP,XLM,DASH,ONT,NEO,IOTA
+
+export const fetchCoinInfo = () => {
+    return $.ajax ({
+        url: `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${symbol}&tsyms=USD,EUR`,
+        method: 'GET'
+    })
+}

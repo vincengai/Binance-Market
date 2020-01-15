@@ -1,4 +1,4 @@
-import { RECEIVE_COINS_INFOS } from '../actions/coin_actions';
+import { RECEIVE_COINS_INFOS, RECEIVE_COIN_INFO } from '../actions/coin_actions';
 
 
 const coinReducer = (oldState={}, action) => {
@@ -7,8 +7,9 @@ const coinReducer = (oldState={}, action) => {
     
     switch(action.type) {
         case RECEIVE_COINS_INFOS:
-            console.log(action.data);
             return action.data;
+        case RECEIVE_COIN_INFO:
+            return action.data; 
         default: 
             return oldState;
     }
