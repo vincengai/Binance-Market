@@ -8,7 +8,6 @@ import CryptoShowContainer from './crypto/crypto_show_container';
 import Splash from './splash';
 import Foot from './footer';
 
-
 const App = () => (
     <div>
         <header>
@@ -24,7 +23,7 @@ const App = () => (
         </Switch>
 
         <footer>
-            <Foot />
+            <Foot/>
         </footer>
     </div>
 );

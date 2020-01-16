@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Loader } from 'react-loader';
 
 class CryptoIndex extends React.Component {
     constructor(props) {
@@ -74,9 +73,7 @@ class CryptoIndex extends React.Component {
                     </div>
 
                     <div className="flex-table-24hChange">
-                        {/* <div> */}
                             {this.day24Change()}
-                        {/* </div> */}
                     </div>
 
                     <div className="flex-table-markets">
@@ -93,8 +90,6 @@ class CryptoIndex extends React.Component {
                         <div><img src={window.imageUrl.graphC} className='c-graph' /></div>
                     </div>
                 </div>
-
-
             </div>
         
         )

@@ -1,5 +1,5 @@
 import React from 'react';
-import RechartContainer from '../chart/rechart_container'
+// import RechartContainer from '../chart/rechart_container'
 
 class CryptoShow extends React.Component {
     constructor(props) {
@@ -14,7 +14,6 @@ class CryptoShow extends React.Component {
     
     componentDidMount() {
         const symb = this.props.match.params.symbol
-        // console.log('componentDidMounttttt')
         this.props.fetchCoinInfo(symb)
     };
 
@@ -122,10 +121,6 @@ class CryptoShow extends React.Component {
                             </div>
                         </div>
                     </div> 
-                </div>
-
-                <div className='FAKE-graph'>
-                    
                 </div>
             </div>
         )

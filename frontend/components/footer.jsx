@@ -3,12 +3,14 @@ import { Link, NavLink, Route } from 'react-router-dom';
 
 
 class Foot extends React.Component {
+    constructor(props) {
+        super(props);
 
-    handleSubmit(e) {
-        e.preventDefault();
-        const user = Object.assign({}, this.state);
-        this.props.action(user)
-            .then(() => this.props.history.push("/coins"))
+        this.changePage = this.changePage.bind(this);
+    };
+
+    changePage(){
+         this.props.history.push("/coins")
 
     };
 
@@ -16,9 +18,8 @@ class Foot extends React.Component {
         return (
             <div className="footer-container">
                 <h1 className='footer-sent'> Start Trading Now</h1> 
-
-                {/* <form action=""></form>
-                <input className="footer-submit" type="submit" value='Trade Now' /> */}
+                
+                <NavLink className="footer-submit" to="/coins">Trade Now</NavLink>
             </div>
         )
     }
