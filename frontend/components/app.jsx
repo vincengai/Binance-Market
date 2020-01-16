@@ -18,8 +18,8 @@ const App = () => (
         <Switch>
             <Route exact path="/login" component={LoginFormContainer} />
             <Route exact path="/signup" component={SignupFormContainer} />
-            <Route exact path="/dashboard" component={CryptoIndexContainer} />
-            <Route exact path="/dashboard/:coinName" component={CryptoShowContainer} />
+            <Route exact path="/coins" component={CryptoIndexContainer} />
+            <Route exact path="/coins/:symbol" component={CryptoShowContainer} />
             <Route exact path="/" component={Splash} />
         </Switch>
 

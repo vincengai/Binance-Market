@@ -8,28 +8,52 @@ class LoginForm extends React.Component{
             password: "",
         };
 
-        this.demoUser = {
-            username: 'demo@login.com',
-            password: '123456'
-        };
-
+        this.totalTimer = 0;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoLogin = this.demoLogin.bind(this);
     };
 
-    demoLogin(e) {
-        e.preventDefault();
-        const demoUser = Object.assign({}, this.demoUser)
-        this.props.action(demoUser)
-            .then( this.props.history.push("/")) 					
-    };
+    demoLogin() {
+        const demoUser = {
+            username: 'demo@login.com',
+            password: '123456'
+        };
+
+        this.state = demoUser;
+        const intervalLength = 75;
+        const timer = demoUser.username.length * intervalLength;
+        this.totalTimer = timer + (demoUser.password.length * intervalLength) + 1000;
+
+        this.typeInputInfo("username", demoUser.username, intervalLength);
+        setTimeout(() => this.typeInputInfo("password", demoUser.password, intervalLength), timer)
+    }
+
+    typeInputInfo(field, value, intervalLength) {
+        let incrementedValue = "";
+        setInterval(() => {
+            if (value.length > 0) {
+                incrementedValue += value.slice(0, 1);
+                value = value.slice(1);
+                this.setState({ [field]: incrementedValue });
+            } else {
+                clearInterval();
+            }
+        }, intervalLength);
+    }    
+    // demoLogin(e) {
+    //     e.preventDefault();
+    //     const demoUser = Object.assign({}, this.demoUser)
+    //     this.props.action(demoUser)
+    //         .then( this.props.history.push("/")) 					
+    // };
 
    handleSubmit(e) {
        e.preventDefault();
        const user = Object.assign({}, this.state);
-       this.props.action(user)
-           .then( () => this.props.history.push("/"))
-
+        console.log
+       setTimeout( () => 
+                        this.props.action(user)
+                            .then( () => this.props.history.push("/")), this.totalTimer)
    };
 
 
@@ -40,7 +64,7 @@ class LoginForm extends React.Component{
     renderErrors() {
         let errors = this.props.errors.join('.');
         
-        window.setTimeout(() => this.props.clearErrors(), 5000);
+        // window.setTimeout(() => this.props.clearErrors(), 5000);
 
         if (errors.length === 0) return null; 
             return (
@@ -78,8 +102,8 @@ class LoginForm extends React.Component{
                             </label>
                             <br />
                             <input className="session-submit" type="submit" value={this.props.formType} />
+                      <button className="demo-login" onClick={this.demoLogin}>Demo</button>
                     </form>
-                    <button className="demo-login" onClick={this.demoLogin}>Demo</button>
                 </div>
             </div>
         );

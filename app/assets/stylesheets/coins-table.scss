@@ -4,13 +4,18 @@
 
 .table-container {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
-  width: 80%;
+  background-color: #FFF;
+  width: 70%;
+  display: flex; 
+  box-sizing: border-box;
+  margin: 0 auto;
+  color: rgb(132, 142, 156);
+  flex-direction: column;
 }
 
 .flex-table-header {
     display: flex;
-    // position: absolute;
-    margin-top: 0%;
+    margin: 0 auto; 
     width: 80%;
     height: 20%;
     justify-content: space-around;
@@ -20,7 +25,7 @@
     padding-left: 32px;
     padding-top: 16px;
     padding-bottom: 16px;
-    font-size: 18px;
+    display: flex;
 }
 
 .flex-row {
@@ -28,11 +33,11 @@
     padding-top: 16px;
     padding-bottom: 16px;
     font-size: 18px;
+    display: flex;
 }
 
 .flex-table-row {
     display: flex;
-    // position: absolute;
     width: 80%;
     height: 90ch;
     justify-content: space-between;
@@ -44,89 +49,109 @@
 .table-column {
     display: flex; 
     width: 80%;
-    height: 100vh;
+    box-sizing: border-box;
     text-align: left;
-    // justify-content: left;
-    // border-bottom: 5px solid red;
-    height: 400px;
+    margin: 0 auto;
 }
 
-.flex-table-name {
-    padding-left: 32px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    font-size: 18px;
+.flex-table-markets,
+.flex-table-price,
+.flex-table-24hChange {
     line-height: 23px;
     width: 25%;
-    padding-bottom: 30px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    height: 40px;
     border-collapse:collapse;
     border-top-color:rgb(242, 242, 242);
     border-top-style:solid;
     border-top-width:0.994318px;
     color:rgb(0, 0, 0);
+    flex-shrink: 1;
     cursor:pointer;
     display:table-cell;
     text-align: left;
+    max-height: inherit;
+    > div {
+        padding: 15px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
 }
-.flex-table-price {
-    width: 25%;
-    padding-bottom: 30px;
-    text-align: left;
-    height: 40px;
-    border-collapse:collapse;
-    border-top-color:rgb(242, 242, 242);
-    border-top-style:solid;
-    border-top-width:0.994318px;
-    color:rgb(0, 0, 0);
-    cursor:pointer;
-    display:table-cell;
 
+.flex-table-name {
+    line-height: 23px;
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-collapse:collapse;
+    border-top-color:rgb(242, 242, 242);
+    border-top-style:solid;
+    border-top-width:0.994318px;
+    color:rgb(0, 0, 0);
+    flex-shrink: 1;
+    cursor:pointer;
+    display:table-cell;
+    text-align: left;
+    max-height: inherit;
+    > div {
+        padding: 15px;
+        margin-bottom: -1px;
+        margin-top: 3px;
+        font-size: 20px;
+    }
 }
+
+.flex-name {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    height: 30px;
+}
+
 
 .flex-table-24hChange {
-    padding-left: 16px;
-    padding-top: 4px; 
-    padding-bottom: 4px; 
-    font-size: 18px;
-    line-height: 23px;
-    width: 25%;
     color: rgb(112, 168, 0);
-    // justify-content: center;
-    padding-bottom: 30px;
-    text-align: left;
-    height: 40px;
-    border-collapse:collapse;
-    border-top-color:rgb(242, 242, 242);
-    border-top-style:solid;
-    border-top-width:0.994318px;
-    color:rgb(0, 0, 0);
-    cursor:pointer;
-    display:table-cell;
-}   
-
-.flex-table-markets {
-   padding-left: 16px;
-    padding-top: 4px; 
-    padding-bottom: 4px; 
-    font-size: 18px;
-    line-height: 23px;
-    width: 25%;
-    padding-bottom: 30px;
-    text-align: left;
-    height: 40px;
-    border-collapse:collapse;
-    border-top-color:rgb(242, 242, 242);
-    border-top-style:solid;
-    border-top-width:0.994318px;
-    color:rgb(0, 0, 0);
-    cursor:pointer;
-    display:table-cell;
 }
 
 .table-column div {
     text-align: center;
+}
+
+.flex-table-img1 {
+    position: absolute;
+    height: 38px; 
+    width: 38px;
+    top: 73%;
+    left: 24%;
+}
+.flex-table-img2 {
+    position: absolute;
+    height: 38px; 
+    width: 38px;
+    top: 102%;
+    left: 24%;
+}
+
+
+#c-icon {
+    width: 37px; 
+    height: 37px;
+    margin-right: 20px;
+    margin-bottom: 3px;
+}
+
+#c-icon3{
+    width: 31px; 
+    height: 31px;
+    margin-right: 20px;
+}
+
+#btc-div {
+    display:flex; 
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+
 }

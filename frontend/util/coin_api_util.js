@@ -18,7 +18,7 @@ export const fetchCoinsInfo = () => {
 
 // BTC,ETH,BCH,BNB,LTC,TRX,XRP,XLM,DASH,ONT,NEO,IOTA
 
-export const fetchCoinInfo = () => {
+export const fetchCoinInfo = (symbol) => {
     return $.ajax ({
         url: `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${symbol}&tsyms=USD,EUR`,
         method: 'GET'

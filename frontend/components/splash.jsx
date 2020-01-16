@@ -11,6 +11,7 @@ const COINS = [
 class Splash extends React.Component {
     render() {
         return (
+            <div>
             <div className="splash-page">
                 <div className="splash-container">
                     <h1 className="splash-sent">The World's Most Mediocre<br/>Cryptocurrency Exchange</h1> 
@@ -26,6 +27,9 @@ class Splash extends React.Component {
 
                     <input type="number" placeholder="Enter amount" className="splash-amount"/>
                     <input type="number" placeholder="Enter amount" className="splash-buy"/>
+                </div>
+        
+             {/* <a href="https://www.binance.com/en/support/articles/360038836151"> <h3>Binance Instant Buy One Month Fee Discount 01-15</h3></a> */}
                 </div>
                 <CryptoIndexContainer />
             </div>

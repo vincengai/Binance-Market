@@ -6,7 +6,6 @@ import { fetchCoinsInfo } from '../../actions/coin_actions'
 // import fetchCurrentPrice from '../../util/coin_api_util';
 
 
-
 const mapStateToProps = (state) => {
     // debugger
     return {

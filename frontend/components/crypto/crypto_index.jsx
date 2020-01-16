@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
 
 class CryptoIndex extends React.Component {
     constructor(props) {
@@ -6,32 +7,20 @@ class CryptoIndex extends React.Component {
         // debugger
         this.currentPrice = this.currentPrice.bind(this);
         this.day24Change = this.day24Change.bind(this);
+        this.directShow = this.directShow.bind(this);
+
     };
 
     componentDidMount() {
-        // debugger
         this.props.fetchCoinsInfo();
     }
     
-    // coin24hChange() {
-    //     let coinsArr = Object.values(this.props.coins);
-        
-    //     let change24hArray = coinsArr.map((coinObj, i) => {
-    //         return coinObj.USD.CHANGE24HOUR;
-    //     });
-
-    //     return change24hArray;
-    // }
-
     currentPrice() {
         let coinsArr = Object.values(this.props.coins);
         return (
             coinsArr.map( (coinObj, i) => {
                 return (
-                        <div key={i}>
-                            <div>{coinObj.USD.PRICE} </div>
-                            {/* <div>{coinObj.USD.CHANGEPCTHOUR} </div> */}
-                        </div>
+                        <div key={i}>{coinObj.USD.PRICE} </div>
                 )
             })
         )
@@ -42,41 +31,42 @@ class CryptoIndex extends React.Component {
         return (
             coinsArr.map((coinObj, i) => {
                 return (
-                    <div key={i}>
-                        <div>{coinObj.USD.CHANGEPCTHOUR} </div>
-                    </div>
+                        <div key={i}>{coinObj.USD.CHANGEPCTHOUR} </div>
                 )
             })
         )
     }
-    
+
+    directShow(symbol) {
+        this.props.history.push(`/coins/${symbol}`)
+    }
+
     render() {
-        // const { symbols } = this.props;
-        // debugger
         if (this.props.coins === undefined) return null;
 
         return (
             <div className="table-container">
-                <div className="flex-table-header" role="rowgroup">
-                    <div className="flex-row-first" role="columnheader">Name</div>
-                    <div className="flex-row" role="columnheader">Last Price</div>
-                    <div className="flex-row" role="columnheader">24h Change</div>
-                    <div className="flex-row" role="columnheader">Markets</div>
+                <div className="flex-table-header">
+                    <div className="flex-row-first">Name</div>
+                    <div className="flex-row">Last Price</div>
+                    <div className="flex-row">24h Change</div>
+                    <div className="flex-row">Markets</div>
                 </div> 
 
-                <div className='table-column' >
+
+                <div className='table-column'>
                     <div className="flex-table-name">
-                        <div>BTC</div>
-                        <div>ETH</div>
-                        <div>BCH</div>
-                        <div>BNB</div>
-                        <div>LTC</div>
-                        <div>TRX</div>
-                        <div>XRP</div>
-                        <div>XLM</div>
-                        <div>DASH</div>
-                        <div>ONT</div>
-                        <div>NEO</div>
+                        <div id='btc-div'><img src={window.imageUrl.BTC} id='c-icon' /><Link to="/coins/BTC" className="flex-name">BTC</Link></div>
+                        <div id='btc-div'><img src={window.imageUrl.BNB} id='c-icon3' /><Link to="/coins/ETH" className="flex-name">ETH</Link></div>
+                        <div id='btc-div'><img src={window.imageUrl.BCH} id='c-icon3'/><Link to="/coins/BCH" className="flex-name">BCH</Link></div>
+                        <div id='btc-div'><img src={window.imageUrl.BNB} id='c-icon3' /><Link to="/coins/BNB" className="flex-name">BNB</Link></div>
+                        <div id='btc-div'><img src={window.imageUrl.LTC} id='c-icon3'/><Link to="/coins/LTC" className="flex-name">LTC</Link></div>
+                        <div id='btc-div'><img src={window.imageUrl.TRX} id='c-icon3'/><Link to="/coins/TRX" className="flex-name">TRX</Link></div>
+                        <div id='btc-div'><img src={window.imageUrl.XRP} id='c-icon3'/><Link to="/coins/XRP" className="flex-name">XRP</Link></div>
+                        <div id='btc-div'><img src={window.imageUrl.XLM} id='c-icon3'/><Link to="/coins/XLM" className="flex-name">XLM</Link></div>
+                        <div id='btc-div'><img src={window.imageUrl.DASH} id='c-icon3'/><Link to="/coins/DASH" className="flex-name">DASH</Link></div>
+                        <div id='btc-div'><img src={window.imageUrl.ONT} id='c-icon3'/><Link to="/coins/ONT" className="flex-name">ONT</Link></div>
+                        <div id='btc-div'><img src={window.imageUrl.NEO} id='c-icon3'/><Link to="/coins/NEO" className="flex-name">NEO</Link></div>
                     </div> 
 
                     <div className="flex-table-price"> 
@@ -88,9 +78,10 @@ class CryptoIndex extends React.Component {
                     </div>
 
                     <div className="flex-table-markets">
-                        ERRO
+                        Err.
                     </div>
                 </div>
+
 
             </div>
         
