@@ -24,3 +24,10 @@ export const fetchCoinInfo = (symbol) => {
         method: 'GET'
     })
 }
+
+export const fetch30DayInfo = (symbol) => {
+    return $.ajax ({
+        url: `https://min-api.cryptocompare.com/data/v2/histoday?fsym=${symbol}&tsym=USD&limit=30`,
+        method: 'GET'
+    })
+}

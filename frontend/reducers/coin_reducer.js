@@ -1,4 +1,4 @@
-import { RECEIVE_COINS_INFOS, RECEIVE_COIN_INFO } from '../actions/coin_actions';
+import { RECEIVE_COINS_INFOS, RECEIVE_COIN_INFO, RECEIVE_30DAY_INFO } from '../actions/coin_actions';
 
 
 const coinReducer = (oldState={}, action) => {
@@ -10,6 +10,8 @@ const coinReducer = (oldState={}, action) => {
             return action.data;
         case RECEIVE_COIN_INFO:
             return action.data; 
+        case RECEIVE_30DAY_INFO:
+            return action.payload; 
         default: 
             return oldState;
     }

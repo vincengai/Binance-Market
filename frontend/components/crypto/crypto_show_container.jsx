@@ -4,20 +4,6 @@ import { Link } from 'react-router-dom';
 import CryptoShow from './crypto_show';
 import { fetchCoinInfo } from '../../actions/coin_actions';
 
-// const SYMBOLS = [
-//     BTC,
-//     ETH,
-//     BCH,
-//     BNB,
-//     LTC,
-//     TRX,
-//     XRP,
-//     XLM,
-//     DASH,
-//     ONT,
-//     NEO,
-// ];
-
 const mapStateToProps = (state, ownProps) => {
     return {
         coin: ownProps.match.params.symbol,

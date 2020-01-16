@@ -1,3 +1,31 @@
 // Place all the styles related to the coin controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.flex-row {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#show-text {
+    color: black;
+}
+.show-header {
+    flex-grow: 1;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.head-name {
+    align-items: center;
+};
+
+#h-icon {
+    width: 37px; 
+    height: 37px;
+    margin-right: 20px;
+    margin-bottom: 1px;
+}

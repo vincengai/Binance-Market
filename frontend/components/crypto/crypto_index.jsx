@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { Loader } from 'react-loader';
 
 class CryptoIndex extends React.Component {
     constructor(props) {
         super(props);
         // debugger
-        this.currentPrice = this.currentPrice.bind(this);
         this.day24Change = this.day24Change.bind(this);
         this.directShow = this.directShow.bind(this);
 
@@ -57,9 +57,9 @@ class CryptoIndex extends React.Component {
                 <div className='table-column'>
                     <div className="flex-table-name">
                         <div id='btc-div'><img src={window.imageUrl.BTC} id='c-icon' /><Link to="/coins/BTC" className="flex-name">BTC</Link></div>
-                        <div id='btc-div'><img src={window.imageUrl.BNB} id='c-icon3' /><Link to="/coins/ETH" className="flex-name">ETH</Link></div>
+                        <div id='btc-div'><img src={window.imageUrl.ETH} id='c-icon3' /><Link to="/coins/ETH" className="flex-name">ETH</Link></div>
                         <div id='btc-div'><img src={window.imageUrl.BCH} id='c-icon3'/><Link to="/coins/BCH" className="flex-name">BCH</Link></div>
-                        <div id='btc-div'><img src={window.imageUrl.BNB} id='c-icon3' /><Link to="/coins/BNB" className="flex-name">BNB</Link></div>
+                        <div id='btc-div'><img src={window.imageUrl.BNB} id='c-icon2' /><Link to="/coins/BNB" className="flex-name">BNB</Link></div>
                         <div id='btc-div'><img src={window.imageUrl.LTC} id='c-icon3'/><Link to="/coins/LTC" className="flex-name">LTC</Link></div>
                         <div id='btc-div'><img src={window.imageUrl.TRX} id='c-icon3'/><Link to="/coins/TRX" className="flex-name">TRX</Link></div>
                         <div id='btc-div'><img src={window.imageUrl.XRP} id='c-icon3'/><Link to="/coins/XRP" className="flex-name">XRP</Link></div>
@@ -70,15 +70,27 @@ class CryptoIndex extends React.Component {
                     </div> 
 
                     <div className="flex-table-price"> 
-                        {this.currentPrice()} 
+                            {this.currentPrice()} 
                     </div>
 
                     <div className="flex-table-24hChange">
-                        {this.day24Change()}
+                        {/* <div> */}
+                            {this.day24Change()}
+                        {/* </div> */}
                     </div>
 
                     <div className="flex-table-markets">
-                        Err.
+                        <div><img src={window.imageUrl.graphA} className='c-graph' /></div>
+                        <div><img src={window.imageUrl.graphB} className='c-graph' /></div>
+                        <div><img src={window.imageUrl.graphC} className='c-graph' /></div>
+                        <div><img src={window.imageUrl.graphA} className='c-graph' /></div>
+                        <div><img src={window.imageUrl.graphB} className='c-graph' /></div>
+                        <div><img src={window.imageUrl.graphC} className='c-graph' /></div>
+                        <div><img src={window.imageUrl.graphA} className='c-graph' /></div>
+                        <div><img src={window.imageUrl.graphB} className='c-graph' /></div>
+                        <div><img src={window.imageUrl.graphC} className='c-graph' /></div>
+                        <div><img src={window.imageUrl.graphA} className='c-graph' /></div>
+                        <div><img src={window.imageUrl.graphC} className='c-graph' /></div>
                     </div>
                 </div>
 
