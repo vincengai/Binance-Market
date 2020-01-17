@@ -11,7 +11,6 @@ class Foot extends React.Component {
 
     changePage(){
          this.props.history.push("/coins")
-
     };
 
     render() {

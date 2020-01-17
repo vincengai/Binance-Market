@@ -50,12 +50,11 @@ class LoginForm extends React.Component{
    handleSubmit(e) {
        e.preventDefault();
        const user = Object.assign({}, this.state);
-        console.log
+
        setTimeout( () => 
                         this.props.action(user)
                             .then( () => this.props.history.push("/")), this.totalTimer)
    };
-
 
    update(field) {
        return e => this.setState({ [field]: e.currentTarget.value })
