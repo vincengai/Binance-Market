@@ -68,7 +68,7 @@ class CryptoShow extends React.Component {
         const symbol = this.props.match.params.symbol
 
         this.props.fetchCoinInfo(symbol)
-        
+
         // Make sure to Add in parts in Regards to the Rechart 
         // if ( this.state.dataPeriod === '' ) {
             // this.get1DayPrices(symbol);
@@ -149,7 +149,7 @@ class CryptoShow extends React.Component {
         return {
             min,
             max,
-            prices
+        
         }
     };
 
@@ -184,7 +184,7 @@ class CryptoShow extends React.Component {
             return this.setState({
                 data: response.data.Data.Data, // Might need to go in one more level
                 // ["1W"]: response.data.Data.Data, // Might need to go in one more level 
-                "timePeriodActive": "weel"
+                "timePeriodActive": "week"
             });
         });
     }
@@ -231,40 +231,13 @@ class CryptoShow extends React.Component {
         let path = obj[coin];
 
         let symbol = this.props.match.params.symbol
-        let { min, max, data} = this.calculateData(); 
+        let { min, max } = this.calculateData(); 
 
-        
 
         return (    
             <div>
-                <LineChart width={570} height={245} data={data}>
-                    {/* <Tooltip content={<CustomTooltip payload={payload} />} offset={-65} animationDuration={100} />  */}
 
-                    <YAxis hide={true} domain={min, max} />
-                    <Line
-                        type="monotone"
-                        dataKey="close"
-                        stroke="#8884d8"
-                        dot={false}
-                        activeDot={false}
-                    />
-                    <Line
-                        type="monotone"
-                        dataKey="open"
-                        stroke="82ca9d"
-                        dot={false}
-                        activeDot={false}
-                    />
-                </LineChart>  
-  
-                 <div id="timeframe">
-                    <ul id="time-periods">
-                        <li className={this.state.dataActive} onClick={() => this.get1DayPrices(symbol)}> 1D </li>
-                        <li className={this.state.dataActive} onClick={() => this.get1WeekPrices(symbol)}> 1W </li>
-                        <li className={this.state.dataActive} onClick={() => this.get1MonthPrices(symbol)}> 1M </li>
-                        <li className={this.state.dataActive} onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
-                    </ul>
-                </div>
+
 
                 <div className='show-page'>
                     <div className="show-header">
@@ -305,6 +278,38 @@ class CryptoShow extends React.Component {
                         </div> 
                     </div>
                 </div>
+
+                <div className="linechart">
+                    <LineChart width={570} height={245} data={this.state.data}>
+                        {/* <Tooltip content={<CustomTooltip />} offset={-50} animationDuration={100} />  */}
+
+                        <YAxis domain={min, max} />
+                        <Line
+                            type="monotone"
+                            dataKey="close"
+                            stroke="#8884d8"
+                            dot={false}
+                            activeDot={false}
+                        />
+                        <Line
+                            type="monotone"
+                            dataKey="open"
+                            stroke="#FF8C00"
+                            dot={false}
+                            activeDot={false}
+                        />
+                    </LineChart>
+                </div>
+
+                    <div id="timeframe">
+                        <ul id="time-periods">
+                            <li className={this.state.dataActive} onClick={() => this.get1DayPrices(symbol)}> 1D </li>
+                            <li className={this.state.dataActive} onClick={() => this.get1WeekPrices(symbol)}> 1W </li>
+                            <li className={this.state.dataActive} onClick={() => this.get1MonthPrices(symbol)}> 1M </li>
+                            <li className={this.state.dataActive} onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
+                        </ul>
+                    </div>
+
             </div>
         )
     }
