@@ -1,7 +1,9 @@
 import React from 'react';
 import { fetch1DayInfo } from '../../util/coin_api_util';
-
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+import {
+    LineChart, Line, XAxis, YAxis, Tooltip
+} from 'recharts';
+// import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 // import RechartContainer from '../chart/rechart_container'
 
 class CustomTooltip extends React.Component {
@@ -66,7 +68,7 @@ class CryptoShow extends React.Component {
         const symbol = this.props.match.params.symbol
 
         this.props.fetchCoinInfo(symbol)
-
+        
         // Make sure to Add in parts in Regards to the Rechart 
         // if ( this.state.dataPeriod === '' ) {
             // this.get1DayPrices(symbol);
@@ -83,8 +85,6 @@ class CryptoShow extends React.Component {
     // };
 
     // Methods used for Top Bar Container
-
-
     price() {
         let coinArr = Object.values(this.props.coinInfo);
 
@@ -135,8 +135,22 @@ class CryptoShow extends React.Component {
 
     // Methods for ReChart Info
 
-    calculateData(data) {
+    calculateData() {
+        let data = this.state.data;
+        const prices = [];
+
+        for (let i = 0; i < data.length; i++) {
+            prices.push(parseFloat(data[i].close))
+        }
+
+        const min = Math.min(...prices);
+        const max = Math.max(...prices);
         
+        return {
+            min,
+            max,
+            prices
+        }
     };
 
     get1DayPrices(symbol) {
@@ -149,6 +163,7 @@ class CryptoShow extends React.Component {
 
         fetch1DayInfo(symbol).then ( (response) => {
             
+
             return this.setState({
                 data: response.data.Data.Data,
                 "timePeriodActive": "day"
@@ -208,37 +223,6 @@ class CryptoShow extends React.Component {
         });
     }
 
-    // handleClick() {
-    //     switch (this.state.timePeriodActive) {
-    //         case "day":
-    //             this.setState({
-    //                 dataPeriod: "1D",
-    //                 dataActive: 'day-active'
-    //             });
-    //             break;
-
-    //         case "week":
-    //             this.setState({
-    //                 dataPeriod: "1W",
-    //                 dataActive: 'week-active'
-    //             });
-    //             break;
-
-    //         case "month":
-    //             this.setState({
-    //                 dataPeriod: "1M",
-    //                 dataActive: 'month-active'
-    //             });
-    //             break;
-
-    //         case "year":
-    //             this.setState({
-    //                 dataPeriod: "1Y",
-    //                 dataActive: 'year-active'
-    //             });
-    //             break;
-    //     }
-    // }
     
     render() {
         if (this.props.coinInfo === undefined) return null;
@@ -246,33 +230,34 @@ class CryptoShow extends React.Component {
         let obj = window.imageUrl;
         let path = obj[coin];
 
-        
         let symbol = this.props.match.params.symbol
+        let { min, max, data} = this.calculateData(); 
+
+        
 
         return (    
             <div>
-                <LineChart width={570} height={245} data={this.state.data}>
-                    {/* <Tooltip content={<CustomTooltip payload={payload} />} offset={-65} animationDuration={100} /> */}
+                <LineChart width={570} height={245} data={data}>
+                    {/* <Tooltip content={<CustomTooltip payload={payload} />} offset={-65} animationDuration={100} />  */}
 
-                    <XAxis dataKey="name" />
-                    <YAxis type="number" domain={['dataMin - 5', 'dataMax + 5']} />
+                    <YAxis hide={true} domain={min, max} />
                     <Line
                         type="monotone"
                         dataKey="close"
                         stroke="#8884d8"
                         dot={false}
-                        activeDot={{ r: 5 }}
+                        activeDot={false}
                     />
                     <Line
                         type="monotone"
                         dataKey="open"
                         stroke="82ca9d"
                         dot={false}
-                        activeDot={{ r: 5 }}
+                        activeDot={false}
                     />
-                </LineChart> 
+                </LineChart>  
   
-                <div id="timeframe">
+                 <div id="timeframe">
                     <ul id="time-periods">
                         <li className={this.state.dataActive} onClick={() => this.get1DayPrices(symbol)}> 1D </li>
                         <li className={this.state.dataActive} onClick={() => this.get1WeekPrices(symbol)}> 1W </li>
@@ -280,6 +265,7 @@ class CryptoShow extends React.Component {
                         <li className={this.state.dataActive} onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
                     </ul>
                 </div>
+
                 <div className='show-page'>
                     <div className="show-header">
                         <div className='head-name'><img src={path} id='h-icon'/>{this.props.coin}</div>
