@@ -1,7 +1,5 @@
 // import { connect } from 'react-redux';
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import GraphRechart from './rechart';
+// import GraphRechart from './coin_rechart';
 // import { fetch30DayInfo } from '../../actions/coin_actions'
 
 // const mapStateToProps = (state, ownProps) => ({

@@ -5,15 +5,24 @@ class CryptoIndex extends React.Component {
     constructor(props) {
         super(props);
         // debugger
+        this.currentPrice = this.currentPrice.bind(this);
         this.day24Change = this.day24Change.bind(this);
         this.directShow = this.directShow.bind(this);
 
+        // this.interval = false; 
     };
 
     componentDidMount() {
         this.props.fetchCoinsInfo();
+
+        // TRIED TO SET INTERVAL, BUT DOESNT WORK . NANI TF 
+        // this.interval = window.setInterval( () => this.currentPrice(), 1000);
     }
     
+    // componentWillUnmount() {
+    //     if (this.interval) window.clearInterval(this.interval);
+    // }
+
     currentPrice() {
         let coinsArr = Object.values(this.props.coins);
         return (
@@ -29,9 +38,15 @@ class CryptoIndex extends React.Component {
         let coinsArr = Object.values(this.props.coins);
         return (
             coinsArr.map((coinObj, i) => {
-                return (
-                        <div key={i}>{coinObj.USD.CHANGEPCTHOUR} </div>
-                )
+                if ( Math.sign(coinObj.USD.CHANGEPCTHOUR) === -1 ) {
+                    return (
+                            <div className="negativepct" key={i}>{coinObj.USD.CHANGEPCTHOUR}% </div>
+                    )
+                } else {
+                    return (
+                        <div className="positivepct" key={i}> {coinObj.USD.CHANGEPCTHOUR}% </div>
+                    )
+                }
             })
         )
     }

@@ -40,12 +40,6 @@ class LoginForm extends React.Component{
             }
         }, intervalLength);
     }    
-    // demoLogin(e) {
-    //     e.preventDefault();
-    //     const demoUser = Object.assign({}, this.demoUser)
-    //     this.props.action(demoUser)
-    //         .then( this.props.history.push("/")) 					
-    // };
 
    handleSubmit(e) {
        e.preventDefault();
@@ -63,7 +57,6 @@ class LoginForm extends React.Component{
     renderErrors() {
         let errors = this.props.errors.join('.');
         
-        // window.setTimeout(() => this.props.clearErrors(), 5000);
 
         if (errors.length === 0) return null; 
             return (
