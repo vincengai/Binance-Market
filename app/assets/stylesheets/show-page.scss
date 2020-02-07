@@ -1,9 +1,25 @@
+.table-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
+  background-color: #FFF;
+  width: 70%;
+  display: flex; 
+  box-sizing: border-box;
+  margin: 0 auto;
+  color: rgb(132, 142, 156);
+  flex-direction: column;
+}
+
 .linechart {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
-  width: 570px;
-  height: 245px;
+  width: 600px;
+  height: 445px;
 }
 
 #timeframe {
-    display: flex; 
+    padding: 10px 32px;
+    border-top: 1px solid #eceff1;
+    border-bottom: 1px solid #eceff1;
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
 }

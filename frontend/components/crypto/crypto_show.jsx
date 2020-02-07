@@ -279,8 +279,15 @@ class CryptoShow extends React.Component {
                     </div>
                 </div>
 
+                <div id="timeframe">
+                        <li className={this.state.dataActive} onClick={() => this.get1DayPrices(symbol)}> 1D </li>
+                        <li className={this.state.dataActive} onClick={() => this.get1WeekPrices(symbol)}> 1W </li>
+                        <li className={this.state.dataActive} onClick={() => this.get1MonthPrices(symbol)}> 1M </li>
+                        <li className={this.state.dataActive} onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
+                </div>
+                
                 <div className="linechart">
-                    <LineChart width={570} height={245} data={this.state.data}>
+                    <LineChart width={600} height={445} data={this.state.data}>
                         {/* <Tooltip content={<CustomTooltip />} offset={-50} animationDuration={100} />  */}
 
                         <YAxis domain={min, max} />
@@ -288,27 +295,21 @@ class CryptoShow extends React.Component {
                             type="monotone"
                             dataKey="close"
                             stroke="#8884d8"
+                            strokeWidth={2}
                             dot={false}
                             activeDot={false}
                         />
-                        <Line
+                        {/* <Line
                             type="monotone"
                             dataKey="open"
                             stroke="#FF8C00"
                             dot={false}
                             activeDot={false}
-                        />
+                        /> */}
                     </LineChart>
                 </div>
 
-                    <div id="timeframe">
-                        <ul id="time-periods">
-                            <li className={this.state.dataActive} onClick={() => this.get1DayPrices(symbol)}> 1D </li>
-                            <li className={this.state.dataActive} onClick={() => this.get1WeekPrices(symbol)}> 1W </li>
-                            <li className={this.state.dataActive} onClick={() => this.get1MonthPrices(symbol)}> 1M </li>
-                            <li className={this.state.dataActive} onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
-                        </ul>
-                    </div>
+
 
             </div>
         )
