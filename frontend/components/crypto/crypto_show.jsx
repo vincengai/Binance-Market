@@ -239,11 +239,15 @@ class CryptoShow extends React.Component {
 
 
 
-                <div className='show-page'>
+                <div>
+                    
                     <div className="show-header">
-                        <div className='head-name'><img src={path} id='h-icon'/>{this.props.coin}</div>
+                        <div className='head-name'><img src={path} id='h-icon'/></div>
+                        <div>{this.props.coin}</div>
                         <div>{this.price()}</div>
+
                     </div>
+            
 
                     <div className="table-container">
                         <div className="flex-table-header">
@@ -299,18 +303,9 @@ class CryptoShow extends React.Component {
                             dot={false}
                             activeDot={false}
                         />
-                        {/* <Line
-                            type="monotone"
-                            dataKey="open"
-                            stroke="#FF8C00"
-                            dot={false}
-                            activeDot={false}
-                        /> */}
+
                     </LineChart>
                 </div>
-
-
-
             </div>
         )
     }
