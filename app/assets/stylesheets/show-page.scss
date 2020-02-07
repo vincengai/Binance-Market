@@ -7,12 +7,14 @@
   margin: 0 auto;
   color: rgb(132, 142, 156);
   flex-direction: column;
+  left: 33%; 
 }
 
 .linechart {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
   width: 600px;
   height: 445px;
+  left: 33%; 
 }
 
 #timeframe {

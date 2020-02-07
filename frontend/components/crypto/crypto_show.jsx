@@ -290,7 +290,7 @@ class CryptoShow extends React.Component {
                     <LineChart width={600} height={445} data={this.state.data}>
                         {/* <Tooltip content={<CustomTooltip />} offset={-50} animationDuration={100} />  */}
 
-                        <YAxis domain={min, max} />
+                        <YAxis hide={true} />
                         <Line
                             type="monotone"
                             dataKey="close"
