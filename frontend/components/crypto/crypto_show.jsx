@@ -163,11 +163,9 @@ class CryptoShow extends React.Component {
 
         fetch1DayInfo(symbol).then ( (response) => {
             
-
             return this.setState({
                 data: response.data.Data.Data,
                 "timePeriodActive": "day"
-                // ["1D"]: response.data.Data.Data, // Might need to go in one more level 
             });
         });
     }
@@ -237,75 +235,74 @@ class CryptoShow extends React.Component {
         return (    
             <div>
 
-
-
-                <div>
-                    
-                    <div className="show-header">
+                   <div className="show-header">
                         <div className='head-name'><img src={path} id='h-icon'/></div>
                         <div>{this.props.coin}</div>
                         <div>{this.price()}</div>
 
                     </div>
-            
 
-                    <div className="table-container">
+                <div className="outter-most-show">
+                 
+
+                    <div className="show-table-container">
                         <div className="flex-table-header">
                             <div className="flex-row"> Market Cap
-                                <div id='show-text'>
+                                <div className='show-text'>
                                     {this.marketCap()}
                                 </div>
                             </div>
                             
                             <div className="flex-row">24h Vol(Global)
-                                <div id='show-text'>
+                                <div className='show-text'>
                                     {this.volume()}
                                 </div>
                             </div>
 
                             <div className="flex-row">Circulating Supply
-                                <div id='show-text'>
+                                <div className='show-text'>
                                     {this.supply()}
                                 </div>
                             </div>
                             <div className="flex-row">Issue Date
-                                <div id='show-text'>
+                                <div className='show-text'>
                                     2008-10-31
                                 </div>
                             </div>
 
                             <div className="flex-row">Issue Price
-                                <div id='show-text'>
+                                <div className='show-text'>
                                     {this.price()}
                                 </div>
                             </div>
                         </div> 
                     </div>
+
+                    <div className="timeframe">
+                            <li className="timeframe-list" onClick={() => this.get1DayPrices(symbol)}> 1D </li>
+                            <li className="timeframe-list" onClick={() => this.get1WeekPrices(symbol)}> 1W </li>
+                            <li className="timeframe-list" onClick={() => this.get1MonthPrices(symbol)}> 1M </li>
+                            <li className="timeframe-list" onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
+                    </div>
+                    
+                    <div className="linechart">
+                        <LineChart width={550} height={405} data={this.state.data}>
+                            {/* <Tooltip content={<CustomTooltip />} offset={-50} animationDuration={100} />  */}
+
+                            <YAxis hide={true} />
+                            <Line
+                                type="monotone"
+                                dataKey="close"
+                                stroke="#8884d8"
+                                strokeWidth={2}
+                                dot={false}
+                                activeDot={false}
+                            />
+
+                        </LineChart>
+                    </div>
                 </div>
 
-                <div id="timeframe">
-                        <li className={this.state.dataActive} onClick={() => this.get1DayPrices(symbol)}> 1D </li>
-                        <li className={this.state.dataActive} onClick={() => this.get1WeekPrices(symbol)}> 1W </li>
-                        <li className={this.state.dataActive} onClick={() => this.get1MonthPrices(symbol)}> 1M </li>
-                        <li className={this.state.dataActive} onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
-                </div>
-                
-                <div className="linechart">
-                    <LineChart width={600} height={445} data={this.state.data}>
-                        {/* <Tooltip content={<CustomTooltip />} offset={-50} animationDuration={100} />  */}
-
-                        <YAxis hide={true} />
-                        <Line
-                            type="monotone"
-                            dataKey="close"
-                            stroke="#8884d8"
-                            strokeWidth={2}
-                            dot={false}
-                            activeDot={false}
-                        />
-
-                    </LineChart>
-                </div>
             </div>
         )
     }
