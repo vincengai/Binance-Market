@@ -1,4 +1,8 @@
 class Api::CoinController < ApplicationController
+    def news 
+        @news = Coin.fetch_current_news()
+    end 
+
     def index 
         @coins = Coin.all
     end
