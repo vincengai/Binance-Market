@@ -70,12 +70,9 @@ class CryptoShow extends React.Component {
         this.props.fetchCoinInfo(symbol)
 
         // Make sure to Add in parts in Regards to the Rechart 
-        // if ( this.state.dataPeriod === '' ) {
-            // this.get1DayPrices(symbol);
-            // this.get1WeekPrices(symbol);
-            // this.get1MonthPrices(symbol);
-            // this.get1YearPrices(symbol);
-        // }
+        if ( this.state.dataPeriod === '' ) {
+            this.get1YearPrices(symbol);
+        }
         
         
     };
@@ -286,17 +283,31 @@ class CryptoShow extends React.Component {
                     </div>
                     
                     <div className="linechart">
-                        <LineChart width={550} height={405} data={this.state.data}>
+                        <LineChart width={550} height={405} data={this.state.data} margin={{
+                            top: 0, right: 0, left: 0, bottom: 0
+                        }} cursor="crosshair">
                             {/* <Tooltip content={<CustomTooltip />} offset={-50} animationDuration={100} />  */}
 
-                            <YAxis hide={true} />
+                            <XAxis
+                                hide={true}
+                                tickLine={false} />
+                            <YAxis
+                                hide={true}
+                                domain={[dataMin => (dataMin * 0.80), dataMax => (dataMax * 1.05)]} />
+                            <Tooltip
+                                cursor={false}
+                                labelStyle={{ display: 'none' }}
+                            />
+
                             <Line
                                 type="monotone"
                                 dataKey="close"
                                 stroke="#8884d8"
-                                strokeWidth={2}
+                                activeDot={{ r:5 }}
+                                strokeWidth={1.7}
                                 dot={false}
                                 activeDot={false}
+                                name="$"
                             />
 
                         </LineChart>

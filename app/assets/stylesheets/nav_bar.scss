@@ -13,13 +13,7 @@ div#nav-container {
     img {
         width: 11rem;
     }
-    // height: 80px;
-    // background-size: cover;
-    // width: 5px;
-    // display: flex;
-    // padding-left: 0;
-    // align-items: left;
-    // flex-grow: 1;
+
 }
 
 #nav-container {
@@ -64,8 +58,16 @@ div.nav-section {
 .nav-selected {
     border: 2px solid white;
     border-radius: 2px;
+   
 }
 
+.nav-word {
+     text-decoration: none; 
+    
+    &:hover {
+    text-decoration: underline;
+    }
+}
 #nav-right {
     margin: auto 1em;
     div {
