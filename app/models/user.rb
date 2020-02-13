@@ -44,6 +44,67 @@ class User < ApplicationRecord
     self.session_token
   end
 
+  # Wallet Porfotlio Etc. 
+
+  def generate_wallets
+      currencies = [
+        'BTC', 'ETH', 'BCH', 'BNB', 'LTC', 'TRX', 'XRP',
+        'XLM', 'DASH', 'ONT', 'NEO' ]
+
+        currencies.each do |symb|
+          Wallet.create(
+            :symbol => symbol,
+            :user_id => self.id,
+            :total_value => 0.00,
+            :wallet_address => SecureRandom.hex(16)
+          )
+        end
+  end
+
+
+  def get_portfolio
+      # Get all wallets for Current User , Returns an Array of Obj. 
+      wallets = Wallet.where(user_id: self.id)  # Returns [ { id: 1, symbol: 'BTC', 'total_value': 1}, ]
+
+      portfolio = {}
+
+      # Iterate thru all the wallets(symbol), and initialize a new Key if the value is > 0
+      wallets.each_with_index do |ele, i|
+        wallet = wallets[i]
+        symbol = wallet.symbol
+
+        if wallet.total_value > 0
+          portfolio[symbol] = wallet.total_value
+        end
+      end
+
+    return portfolio
+  end
+
+  #Returns array of wallets that belong to user 
+  def get_wallets
+    Wallet.where(user_id: self.id)
+  end
+
+  # Purpose of selling, therefore Quantity Will be NEGATIVE. 
+  def has_enough_funds(symbol, quantity) 
+    portfolio = self.get_portfolio
+
+    # Because quantity comes in as a NEGATIVE number
+    quantity = quantity * -1 
+
+    # Check if the quantity provided does not succeed Quantity in Portfolio Wallet 
+    if ( (portfolio[symbol] == nil) or (portfolio[symbol] < quantity))
+        return false 
+    end
+    
+    return true   
+  end
+
+
+
+
+  
   private
 
   def ensure_session_token
