@@ -14,22 +14,21 @@ class Api::WalletTransactionsController < ApplicationController
       correct_user = logged_in? && (user_id == transaction_params[:user_id].to_i)
 
       if quantity > 0 # Buy Function because quantity given is POSITIVE
-
+        
+        # If there aren't enough funds
         if correct_user && (current_user.cash_balance < total_price)
           render json: ["Not Enough Funds to Complete Transaction"], status: 401
+
+        # If the quantity requested is sub zero 
         elsif correct_user && (quantity <= 0)
           render json: ["Cryptocurrency must be greater than 0"], status: 422
         end
       end
     end
 
-    def update 
-      if correct_user && (current_user.cash_balance >= total_price)
 
-        wallet = Wallet.get_wallet(user_id, symbol)
-    end
+
     private
-
     def transaction_params 
       params.require(:transaction).permit(:user_id, :symbol, :quantity, :price)
     end
