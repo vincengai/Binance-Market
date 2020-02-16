@@ -87,7 +87,7 @@ class User < ApplicationRecord
   end
 
   # Purpose of selling, therefore Quantity Will be NEGATIVE. 
-  def has_enough_funds(symbol, quantity) 
+  def has_enough_coins(symbol, quantity) 
     portfolio = self.get_portfolio
 
     # Because quantity comes in as a NEGATIVE number
