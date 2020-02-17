@@ -10,14 +10,14 @@ export const receiveBuyCoin = ( tradeInfo ) => {
         type: RECEIVE_BUY_INFO,
         data: tradeInfo 
     }
-}
+};
 
 export const receiveSellCoin = ( tradeInfo ) => {
     return {
         type: RECEIVE_SELL_INFO,
         data: tradeInfo 
     }
-}
+};
 
 // Thunk Action Creators 
 
