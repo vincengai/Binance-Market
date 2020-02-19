@@ -47,10 +47,10 @@ class Api::WalletTransactionsController < ApplicationController
             transaction: currend_user.wallet_transactions  # POJO listing of everything inside the table
           }
 
-        else 
-          # IF you can't buy, (not enough funds)
-          render json: ["Insufficient Funds to Complete the Transaction"], status: 401
-        end
+          else 
+            # IF you can't buy, (not enough funds)
+            render json: ["Insufficient Funds to Complete the Transaction"], status: 401
+          end
 
       else quantity < 0 # AKA you're selling instead of buying...
         
@@ -82,12 +82,13 @@ class Api::WalletTransactionsController < ApplicationController
           }
 
         else 
-          render json: ["Insufficient Funds to Complete the Transaction"], status: 401
+            render json: ["Insufficient Funds to Complete the Transaction"], status: 401
         end
+      end  
+
         # If the quantity requested is sub zero 
-        if correct_user && (quantity <= 0)
+      if correct_user && (quantity <= 0)
           render json: ["Cryptocurrency must be greater than 0"], status: 422
-        end
       end
 
     end
