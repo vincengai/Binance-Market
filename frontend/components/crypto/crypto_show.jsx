@@ -3,6 +3,7 @@ import { fetch1DayInfo } from '../../util/coin_api_util';
 import {
     LineChart, Line, XAxis, YAxis, Tooltip
 } from 'recharts';
+
 // import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 // import RechartContainer from '../chart/rechart_container'
 
@@ -47,7 +48,9 @@ class CryptoShow extends React.Component {
             "data": [],
             "dataPeriod": '',
             "dataActive": '',
-            fade: false 
+            modalOn: false,
+            fade: false
+            
         }
 
         // All for the Top Container
@@ -62,6 +65,10 @@ class CryptoShow extends React.Component {
         this.get1MonthPrices = this.get1MonthPrices.bind(this);
         this.get1YearPrices = this.get1YearPrices.bind(this);
 
+        // All for Modal Info 
+        this.triggerModal = this.triggerModal.bind(this);
+        this.renderModal = this.renderModal.bind(this);
+        this.hideModal = this.hideModal.bind(this);
     };
     
     componentDidMount() {
@@ -69,7 +76,6 @@ class CryptoShow extends React.Component {
 
         this.props.fetchCoinInfo(symbol)
 
-        // Make sure to Add in parts in Regards to the Rechart 
         if ( this.state.dataPeriod === '' ) {
             this.get1YearPrices(symbol);
         }
@@ -218,7 +224,45 @@ class CryptoShow extends React.Component {
         });
     }
 
-    
+    // Modal 
+
+    triggerModal() {
+        const state = getState();
+
+        // If user is NOT logged in, redirect to Sign Up Page
+        if (state.session.id == null) {
+            alert('You must be signed in to trade');
+            this.props.history.push('/signup');
+        } else {																						// If user IS logged in, 
+            // Toggle local state of modal to true
+            this.setState({
+                modalOn: true,
+                symbolClicked: symbol,
+                priceClicked: price
+            });
+        }
+    }
+
+
+    renderModal() {
+        const symbol = this.props.coin;
+        const price = this.state.price;
+
+        if (this.state.modalOn) {
+            return <TradeModal symbol={symbol} toggleModal={this.hideModal} price={price} />
+        } else {
+            return null;
+        }
+    }
+
+    hideModal() {
+        this.setState({
+            modalOn: false
+        });
+    }
+
+
+
     render() {
         if (this.props.coinInfo === undefined) return null;
         let { coin } = this.props;
@@ -281,6 +325,10 @@ class CryptoShow extends React.Component {
                             <li className="timeframe-list" onClick={() => this.get1MonthPrices(symbol)}> 1M </li>
                             <li className="timeframe-list" onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
                     </div>
+
+                    <div className="tradeButton">
+                        {this.renderModal()}
+                    </div>
                     
                     <div className="linechart">
                         <LineChart width={550} height={405} data={this.state.data} margin={{
@@ -312,6 +360,7 @@ class CryptoShow extends React.Component {
 
                         </LineChart>
                     </div>
+
                 </div>
 
             </div>

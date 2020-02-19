@@ -21,14 +21,14 @@ export const receiveSellCoin = ( tradeInfo ) => {
 
 // Thunk Action Creators 
 
-export const fetchBuyCoinInfo = (buyInfo) => dispatch => {
+export const buyCoin = (buyInfo) => dispatch => {
     return Transaction_Util.buyCoin(buyInfo)
         .then( 
             (response) => dispatch(receiveBuyCoin(response))
         )
 };
 
-export const fetchSellCoinInfo = (sellInfo) => dispatch => {
+export const sellCoin = (sellInfo) => dispatch => {
     return Transaction_Util.sellCoin(sellInfo)
         .then( 
             (response) => dispatch(receiveSellCoin(response))
