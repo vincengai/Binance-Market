@@ -83,9 +83,9 @@ class Api::WalletTransactionsController < ApplicationController
 
         else 
           render json: ["Insufficient Funds to Complete the Transaction"], status: 401
-
+        end
         # If the quantity requested is sub zero 
-        elsif correct_user && (quantity <= 0)
+        if correct_user && (quantity <= 0)
           render json: ["Cryptocurrency must be greater than 0"], status: 422
         end
       end
