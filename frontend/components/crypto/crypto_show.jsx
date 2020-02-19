@@ -285,13 +285,11 @@ class CryptoShow extends React.Component {
                             <li className="timeframe-list" onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
                     </div>
 
+                    
                     <div className="transactionBox">
-                       
+                        <button onClick={() => this.props.openModal('buy')}> Transaction</button>
                     </div>
                     
-                    <div className="modelBox">
-                        <Modal />
-                    </div>
 
                     <div className="linechart">
                         <LineChart width={550} height={405} data={this.state.data} margin={{

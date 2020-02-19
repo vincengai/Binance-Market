@@ -28,11 +28,10 @@ function Modal({ modal, closeModal }) {
 }
 
 const mapState = state => {
-    // return {
-    //     modal: state.modal
-    // };
-    console.log(state, 'hello')
-    return null; 
+    return {
+        modal: state.ui.modal
+    };
+
 };
 
 const mapDispatch = dispatch => {
