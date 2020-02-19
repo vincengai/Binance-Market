@@ -7,9 +7,11 @@ import CryptoIndexContainer from './crypto/crypto_index_container';
 import CryptoShowContainer from './crypto/crypto_show_container';
 import Splash from './splash';
 import Foot from './footer';
+import Modal from '../components/crypto/modal';
 
 const App = () => (
     <div>
+        <Modal />
         <header>
             <NavBarContainer />
         </header>

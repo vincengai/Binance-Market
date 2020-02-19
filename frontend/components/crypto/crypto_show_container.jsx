@@ -9,6 +9,7 @@ import {
     fetch1MonthInfo,
     fetch1YearInfo
  } from '../../actions/coin_actions';
+import {openModal} from '../../actions/modal_actions'; 
 
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -24,6 +25,7 @@ const mapDispatchToProps = (dispatch) => {
         fetch1WeekInfo: (symbol) => dispatch(fetch1WeekInfo(symbol)),
         fetch1MonthInfo: (symbol) => dispatch(fetch1MonthInfo(symbol)),
         fetch1YearInfo: (symbol) => dispatch(fetch1YearInfo(symbol)),
+        openModal: (modal) => dispatch(openModal(modal))
     };
 };
 

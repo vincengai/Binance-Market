@@ -289,6 +289,10 @@ class CryptoShow extends React.Component {
                        
                     </div>
                     
+                    <div className="modelBox">
+                        <Modal />
+                    </div>
+
                     <div className="linechart">
                         <LineChart width={550} height={405} data={this.state.data} margin={{
                             top: 0, right: 0, left: 0, bottom: 0
