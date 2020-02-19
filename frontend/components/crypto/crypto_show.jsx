@@ -65,10 +65,6 @@ class CryptoShow extends React.Component {
         this.get1MonthPrices = this.get1MonthPrices.bind(this);
         this.get1YearPrices = this.get1YearPrices.bind(this);
 
-        // All for Modal Info 
-        this.triggerModal = this.triggerModal.bind(this);
-        this.renderModal = this.renderModal.bind(this);
-        this.hideModal = this.hideModal.bind(this);
     };
     
     componentDidMount() {
@@ -224,43 +220,6 @@ class CryptoShow extends React.Component {
         });
     }
 
-    // Modal 
-
-    triggerModal() {
-        const state = getState();
-
-        // If user is NOT logged in, redirect to Sign Up Page
-        if (state.session.id == null) {
-            alert('You must be signed in to trade');
-            this.props.history.push('/signup');
-        } else {																						// If user IS logged in, 
-            // Toggle local state of modal to true
-            this.setState({
-                modalOn: true,
-                symbolClicked: symbol,
-                priceClicked: price
-            });
-        }
-    }
-
-
-    renderModal() {
-        const symbol = this.props.coin;
-        const price = this.state.price;
-
-        if (this.state.modalOn) {
-            return <TradeModal symbol={symbol} toggleModal={this.hideModal} price={price} />
-        } else {
-            return null;
-        }
-    }
-
-    hideModal() {
-        this.setState({
-            modalOn: false
-        });
-    }
-
 
 
     render() {
@@ -326,8 +285,8 @@ class CryptoShow extends React.Component {
                             <li className="timeframe-list" onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
                     </div>
 
-                    <div className="tradeButton">
-                        {this.renderModal()}
+                    <div className="transactionBox">
+                       
                     </div>
                     
                     <div className="linechart">
