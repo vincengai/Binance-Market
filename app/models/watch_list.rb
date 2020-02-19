@@ -1,6 +1,6 @@
 class WatchList < ApplicationRecord
     validates :user_id, :coin_id, presence: true 
-    validates :coin_id, uniqueness { scope: :user_id, 
+    validates :coin_id, uniqueness { scope: :user_id }
     message: "User already has this coin in their watchlist"}
 
     belongs_to :user,
