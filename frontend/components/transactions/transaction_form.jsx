@@ -1,14 +1,27 @@
 import React from 'react';
 
 class TransactionForm extends React.Component {
+    constructor(props) {
+        super(props);
+
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+
     render() {
         return (
-            <div>  SHALOOOOM </div>
+            <div className="widget-trade"> 
+                <div> Sell </div>
+                <div> Buy</div>
+                {/* <div onClick={this.props.handleClick("sell")}> Sell </div>
+                <div onClick={this.props.handleClick("buy")}> Buy</div> */}
+            </div>
         )
+
         // let { transaction_type } = this.state;
-        
-        
         // let imageSource = window[this.state.symbol];
+
+
         // return (
         //     <div className='widget-trade'>
         //         <div className='trade-top'>
