@@ -53,3 +53,10 @@ export const fetch1YearInfo = (symbol) => {
     })
 }
 
+export const fetchNews = (symbol) => {
+    return $.ajax ({
+        url: `https://min-api.cryptocompare.com/data/v2/news/?categories=${symbol}&api_key={7ad59177d6eecaad1ff76289dedcc3eaab4919b64401df4affc91e8a3be9196f}`,
+        method: 'GET'
+    })
+}
+

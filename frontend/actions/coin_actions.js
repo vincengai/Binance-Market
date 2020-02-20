@@ -7,12 +7,19 @@ export const RECEIVE_1WEEK_INFO = 'RECEIVE_1WEEK_INFO';
 export const RECEIVE_1MONTH_INFO = 'RECEIVE_1MONTH_INFO';
 export const RECEIVE_1YEAR_INFO = 'RECEIVE_1YEAR_INFO';
 export const RECEIVE_1DAY_INFO = 'RECEIVE_1DAY_INFO';
+export const RECEIVE_NEWS_INFO = 'RECEIVE_NEWS_INFO';
 
 // ACTION CREATORS
-const receive30DayInfo = (payload) => {
+const receiveNewsInfo = (data) => {
+    return {
+        type: RECEIVE_NEWS_INFO,
+        data
+    }
+}
+const receive30DayInfo = (data) => {
     return {
         type: RECEIVE_30DAY_INFO,
-        payload
+        data
     }
 };
 
@@ -58,10 +65,17 @@ const receiveCoinInfo = (symbol, data) => {
 };
 
 // THUNK ACTION CREATORS
+export const fetchNewsInfo = (symbol) => dispatch => {
+    return CryptoMarket.fetchNews(symbol)
+        .then( 
+            (data) => dispatch(receiveNewsInfo, data)
+        )   
+}
+
 export const fetch30DayInfo = (symbol) => dispatch => {
     return CryptoMarket.fetch30DayInfo(symbol)
         .then(
-            (payload) => dispatch(receive30DayInfo(symbol, payload))
+            (data) => dispatch(receive30DayInfo(symbol, data))
         )
 };
 
