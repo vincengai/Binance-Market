@@ -49,8 +49,7 @@ class CryptoShow extends React.Component {
             "dataActive": '',
             modalOn: false,
             fade: false,
-            news: []
-            
+            news: []   
         }
 
         // All for the Top Container
