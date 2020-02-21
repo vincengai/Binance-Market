@@ -3,7 +3,6 @@ import { fetch1DayInfo } from '../../util/coin_api_util';
 import {
     LineChart, Line, XAxis, YAxis, Tooltip
 } from 'recharts';
-
 // import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 // import RechartContainer from '../chart/rechart_container'
 
@@ -49,7 +48,8 @@ class CryptoShow extends React.Component {
             "dataPeriod": '',
             "dataActive": '',
             modalOn: false,
-            fade: false
+            fade: false,
+            news: []
             
         }
 
@@ -65,6 +65,9 @@ class CryptoShow extends React.Component {
         this.get1MonthPrices = this.get1MonthPrices.bind(this);
         this.get1YearPrices = this.get1YearPrices.bind(this);
 
+        // News
+        this.getNews = this.getNews.bind(this);
+
     };
     
     componentDidMount() {
@@ -74,14 +77,28 @@ class CryptoShow extends React.Component {
 
         if ( this.state.dataPeriod === '' ) {
             this.get1YearPrices(symbol);
+            // this.getNews(symbol);
         }
         
         
     };
 
     // componentDidUnmount() {
-        // Remove Ajax Fetches when we click outside of the price page, preventing from max API Calls
+    //     Remove Ajax Fetches when we click outside of the price page, preventing from max API Calls
     // };
+
+    getNews(symbol) {
+        let { fetchNewsInfo } = this.props;
+ 
+        
+        // console.log(response, 'thisisthenews')
+        fetchNewsInfo(symbol).then( (response) => {
+            return this.setState({
+                news:response.Data.slice(0,4) // Slide up til 5 to grab 5 top articles 
+            });
+        });
+    }
+
 
     // Methods used for Top Bar Container
     price() {
@@ -223,7 +240,38 @@ class CryptoShow extends React.Component {
 
 
     render() {
+        
+            // News Articles to be rendered, code Snippet taken from Coin-space
+        const newsArticles = this.state.news.map((article, idx) => {		// loop over array of 4 article objects, return an array of <li>'s
+
+            let date = new Date(article.published_on * 1000);		//=> Sun Jan 18 1970 21:48:07 GMT-0500 (Eastern Standard Time)		date object!
+            date = date.toString().slice(4, 10);								//=> 'Jan 18'
+            let body = article.body.slice(0, 130) + '...';
+            let { source, title, imageurl, guid } = article;
+
+            return (
+                <li key={idx} className="news-li">
+                    <a href={guid}><h4 key={title} className="news-title">{title}</h4></a>
+                    <div key={idx + 1} className="news-item">
+
+                        <div key={idx + 2} className="news-left">
+                            <a href={guid}><p key={idx + 3} className="news-body">{body}</p></a>
+                            <p key={idx + 4} className="news-source">{source}</p>
+                            <p key={idx + 5} className="news-date">{date}</p>
+                            <p key={idx + 6} className="news-symbol">{symbol}</p>
+                        </div>
+                        <div key={idx + 7} className="news-right">
+                            <a href={guid}><img key={imageurl} src={imageurl} alt="article-image" className="news-image" /></a>
+                        </div>
+                    </div>
+                </li>
+            );
+        });
+
+        //////////////
         if (this.props.coinInfo === undefined) return null;
+        ///////////////
+
         let { coin } = this.props;
         let obj = window.imageUrl;
         let path = obj[coin];
@@ -320,6 +368,13 @@ class CryptoShow extends React.Component {
                             />
 
                         </LineChart>
+                    </div>
+
+                    <div id="news-container">
+                        <h2 id="news-header">Top Stories</h2>
+                        <ul className="news">
+                            {newsArticles}
+                        </ul>
                     </div>
 
                 </div>
