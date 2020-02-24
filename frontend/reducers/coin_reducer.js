@@ -12,18 +12,18 @@ const coinReducer = (oldState={}, action) => {
             return action.data; 
         case CoinAction.RECEIVE_30DAY_INFO:
             return action.data; 
-        case CoinAction.RECEIVE_1WEEK_INFO:
-            return action.data;
-        case CoinAction.RECEIVE_1WEEK_INFO:
-            return action.data;
-        case CoinAction.RECEIVE_1MONTH_INFO:
-            return action.data;
-        case CoinAction.RECEIVE_1YEAR_INFO:
-            return action.data;
-        case CoinAction.RECEIVE_1DAY_INFO:
-            return action.data;
-        case CoinAction.RECEIVE_NEWS_INFO:
-            return action.data;
+        // case CoinAction.RECEIVE_1WEEK_INFO:
+        //     return action.data;
+        // case CoinAction.RECEIVE_1WEEK_INFO:
+        //     return action.data;
+        // case CoinAction.RECEIVE_1MONTH_INFO:
+        //     return action.data;
+        // case CoinAction.RECEIVE_1YEAR_INFO:
+        //     return action.data;
+        // case CoinAction.RECEIVE_1DAY_INFO:
+        //     return action.data;
+        // case CoinAction.RECEIVE_NEWS_INFO:
+        //     return action.data;
         default: 
             return oldState;
     }

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import CryptoShow from './crypto_show';
 import { 
     fetchCoinInfo,
-    fetchCoinsInfo,
     fetch1DayInfo,
     fetch1WeekInfo,
     fetch1MonthInfo,
@@ -23,7 +22,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchCoinInfo: (symbol) => dispatch(fetchCoinInfo(symbol)),
-        fetchCoinsInfo: (symbol) => dispatch(fetchCoinsInfo(symbol)),
         fetch1DayInfo: (symbol) => dispatch(fetch1DayInfo(symbol)),
         fetch1WeekInfo: (symbol) => dispatch(fetch1WeekInfo(symbol)),
         fetch1MonthInfo: (symbol) => dispatch(fetch1MonthInfo(symbol)),
