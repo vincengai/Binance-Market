@@ -80,7 +80,6 @@ export const fetch30DayInfo = (symbol) => dispatch => {
 };
 
 export const fetchCoinInfo = (symbol) => dispatch => {
-    // debugger
     return CryptoMarket.fetchCoinInfo(symbol) 
         .then(
             (data) => dispatch(receiveCoinInfo(symbol, data))

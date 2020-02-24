@@ -65,7 +65,7 @@ class CryptoShow extends React.Component {
         this.get1YearPrices = this.get1YearPrices.bind(this);
 
         // News
-        this.getNews = this.getNews.bind(this);
+        // this.getNews = this.getNews.bind(this);
 
     };
     
@@ -73,6 +73,7 @@ class CryptoShow extends React.Component {
         const symbol = this.props.match.params.symbol
 
         this.props.fetchCoinInfo(symbol)
+        this.props.fetchCoinsInfo(symbol)
 
         if ( this.state.dataPeriod === '' ) {
             this.get1YearPrices(symbol);
@@ -86,17 +87,17 @@ class CryptoShow extends React.Component {
     //     Remove Ajax Fetches when we click outside of the price page, preventing from max API Calls
     // };
 
-    getNews(symbol) {
-        let { fetchNewsInfo } = this.props;
+    // getNews(symbol) {
+    //     let { fetchNewsInfo } = this.props;
  
         
-        // console.log(response, 'thisisthenews')
-        fetchNewsInfo(symbol).then( (response) => {
-            return this.setState({
-                news:response.Data.slice(0,4) // Slide up til 5 to grab 5 top articles 
-            });
-        });
-    }
+    //     // console.log(response, 'thisisthenews')
+    //     fetchNewsInfo(symbol).then( (response) => {
+    //         return this.setState({
+    //             news:response.Data.slice(0,4) // Slide up til 5 to grab 5 top articles 
+    //         });
+    //     });
+    // }
 
 
     // Methods used for Top Bar Container

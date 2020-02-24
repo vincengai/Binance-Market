@@ -4,7 +4,7 @@ import { NavLink, Link } from 'react-router-dom';
 class CryptoIndex extends React.Component {
     constructor(props) {
         super(props);
-        // debugger
+        
         this.currentPrice = this.currentPrice.bind(this);
         this.day24Change = this.day24Change.bind(this);
         this.directShow = this.directShow.bind(this);

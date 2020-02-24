@@ -7,7 +7,6 @@ import { fetchCoinsInfo } from '../../actions/coin_actions'
 
 
 const mapStateToProps = (state) => {
-    // debugger
     return {
         coins: state.entities.coins.DISPLAY
     }
