@@ -1,5 +1,4 @@
 import React from 'react';
-import { fetch1DayInfo } from '../../util/coin_api_util';
 import {
     LineChart, Line, XAxis, YAxis, Tooltip
 } from 'recharts';
@@ -67,6 +66,9 @@ class CryptoShow extends React.Component {
         // News
         // this.getNews = this.getNews.bind(this);
 
+        //Modal
+        this.openSelectModal = this.openSelectModal.bind(this);
+
     };
     
     componentDidMount() {
@@ -77,10 +79,10 @@ class CryptoShow extends React.Component {
 
         if ( this.state.dataPeriod === '' ) {
             this.get1YearPrices(symbol);
-            this.get1WeekPrices(symbol);
-            this.get1MonthPrices(symbol);
-            this.get1DayPrices(symbol);
             // this.getNews(symbol);
+            // this.get1WeekPrices(symbol);
+            // this.get1MonthPrices(symbol);
+            // this.get1DayPrices(symbol);
         }
         
         
@@ -90,18 +92,11 @@ class CryptoShow extends React.Component {
     //     Remove Ajax Fetches when we click outside of the price page, preventing from max API Calls
     // };
 
-    // getNews(symbol) {
-    //     let { fetchNewsInfo } = this.props;
- 
-        
-    //     // console.log(response, 'thisisthenews')
-    //     fetchNewsInfo(symbol).then( (response) => {
-    //         return this.setState({
-    //             news:response.Data.slice(0,4) // Slide up til 5 to grab 5 top articles 
-    //         });
-    //     });
-    // }
 
+
+    openSelectModal() {
+        this.props.openModal();
+    }
 
     // Methods used for Top Bar Container
     price() {
@@ -172,6 +167,17 @@ class CryptoShow extends React.Component {
         }
     };
 
+    // getNews(symbol) {
+        // let { fetchNewsInfo } = this.props;
+
+        
+        // fetchNewsInfo(symbol).then( (response) => {
+        //     return this.setState({
+        //         news: response.data.Data.slice(0, 4) // Slide up til 5 to grab 5 top articles 
+        //     });
+        // });
+    // }
+
     get1DayPrices(symbol) {
         let {fetch1DayInfo}  = this.props;
 
@@ -180,8 +186,10 @@ class CryptoShow extends React.Component {
             dataActive: 'day-active'
         });
 
+        // console.log(response, 'thisisthenews')
         fetch1DayInfo(symbol).then ( (response) => {
             
+
             return this.setState({
                 data: response.data.Data.Data,
                 "timePeriodActive": "day"
@@ -272,7 +280,9 @@ class CryptoShow extends React.Component {
         // });
 
         //////////////
+        // if (this.props.fetchNewsInfo === undefined) return null;
         if (this.props.coinInfo === undefined) return null;
+        // if (this.props.openModal === undefined) return null;
         ///////////////
 
         let { coin } = this.props;
@@ -338,7 +348,7 @@ class CryptoShow extends React.Component {
 
                     
                     <div className="transactionBox">
-                        <button onClick={() => this.props.openModal('buy')}> Transaction</button>
+                        <button onClick={this.openSelectModal}> Transaction</button>
                     </div>
                     
 

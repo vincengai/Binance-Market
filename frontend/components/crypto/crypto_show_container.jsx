@@ -8,7 +8,7 @@ import {
     fetch1WeekInfo,
     fetch1MonthInfo,
     fetch1YearInfo,
-    fetchNewsInfo
+    // fetchNewsInfo
  } from '../../actions/coin_actions';
 import {openModal} from '../../actions/modal_actions'; 
 
@@ -26,7 +26,7 @@ const mapDispatchToProps = (dispatch) => {
         fetch1WeekInfo: (symbol) => dispatch(fetch1WeekInfo(symbol)),
         fetch1MonthInfo: (symbol) => dispatch(fetch1MonthInfo(symbol)),
         fetch1YearInfo: (symbol) => dispatch(fetch1YearInfo(symbol)),
-        fetchNewsInfo: (symbol) => dispatch(fetchNewsInfo(symbol)),
+        // fetchNewsInfo: (symbol) => dispatch(fetchNewsInfo(symbol)),
         openModal: (modal) => dispatch(openModal(modal))
         
     };

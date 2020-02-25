@@ -5,11 +5,6 @@ class Coin < ApplicationRecord
     has_many :transactions
     has_many :watchlists 
 
-    def self.fetch_current_news()
-        url = 'https://min-api.cryptocompare.com/data/v2/news/?lang=EN'
-        response = Faraday.get url
-        values = JSON.parse(response.body)
-    end
 
 
     # Convert Frontend API Calls to the Backend
