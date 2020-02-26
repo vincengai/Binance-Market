@@ -2,7 +2,7 @@
 
 [Live Site](http://coinbase-appacademy.herokuapp.com/)
 
-<img src="https://imgur.com/WxQ64Iw"></img>
+![home](https://github.com/vincengai/Binance-Market/blob/master/app/assets/images/homepage.png)
 
 ## About
 
