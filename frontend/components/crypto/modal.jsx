@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import TransactionContainer from '../transactions/transaction_container';
 
 function Modal({ modal, closeModal }) {
+    console.log(modal)
     if (!modal) {
         return null;
     }

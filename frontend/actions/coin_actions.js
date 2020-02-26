@@ -65,12 +65,15 @@ const receiveCoinInfo = (symbol, data) => {
 };
 
 // THUNK ACTION CREATORS
-// export const fetchNewsInfo = (symbol) => dispatch => {
-//     return CryptoMarket.fetchNews(symbol)
-//         .then( 
-//             (data) => dispatch(receiveNewsInfo, data)
-//         )   
-// }
+export const fetchNewsInfo = (symbol) => dispatch => {
+    return CryptoMarket.fetchNews(symbol)
+        .then( 
+            (data) => {
+                // console.log(data)
+                return dispatch(receiveNewsInfo(data.Data))
+            }
+        )   
+}
 
 export const fetch30DayInfo = (symbol) => dispatch => {
     return CryptoMarket.fetch30DayInfo(symbol)

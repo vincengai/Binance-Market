@@ -64,7 +64,7 @@ class CryptoShow extends React.Component {
         this.get1YearPrices = this.get1YearPrices.bind(this);
 
         // News
-        // this.getNews = this.getNews.bind(this);
+        this.getNews = this.getNews.bind(this);
 
         //Modal
         this.openSelectModal = this.openSelectModal.bind(this);
@@ -79,7 +79,8 @@ class CryptoShow extends React.Component {
 
         if ( this.state.dataPeriod === '' ) {
             this.get1YearPrices(symbol);
-            // this.getNews(symbol);
+            this.getNews(symbol)
+            // console.log(this.getNews)
             // this.get1WeekPrices(symbol);
             // this.get1MonthPrices(symbol);
             // this.get1DayPrices(symbol);
@@ -95,7 +96,7 @@ class CryptoShow extends React.Component {
 
 
     openSelectModal() {
-        this.props.openModal();
+        this.props.openModal('buy');
     }
 
     // Methods used for Top Bar Container
@@ -167,16 +168,19 @@ class CryptoShow extends React.Component {
         }
     };
 
-    // getNews(symbol) {
-        // let { fetchNewsInfo } = this.props;
+    getNews(symbol) {
+        let { fetchNewsInfo } = this.props;
 
         
-        // fetchNewsInfo(symbol).then( (response) => {
-        //     return this.setState({
-        //         news: response.data.Data.slice(0, 4) // Slide up til 5 to grab 5 top articles 
-        //     });
-        // });
-    // }
+        fetchNewsInfo(symbol).then( (response) => {
+            // debugger
+            if (response.data) {
+                return this.setState({
+                    news: response.data.slice(0, 4) // Slide up til 5 to grab 5 top articles 
+                });
+            }
+        });
+    }
 
     get1DayPrices(symbol) {
         let {fetch1DayInfo}  = this.props;
@@ -252,32 +256,33 @@ class CryptoShow extends React.Component {
 
     render() {
         
-            // News Articles to be rendered, code Snippet taken from Coin-space
-        // const newsArticles = this.state.news.map((article, idx) => {		// loop over array of 4 article objects, return an array of <li>'s
+        // News Articles to be rendered, code Snippet taken from Coin-space
+        console.log(this.state.news)
+        const newsArticles = this.state.news.map((article, idx) => {		// loop over array of 4 article objects, return an array of <li>'s
 
-        //     let date = new Date(article.published_on * 1000);		//=> Sun Jan 18 1970 21:48:07 GMT-0500 (Eastern Standard Time)		date object!
-        //     date = date.toString().slice(4, 10);								//=> 'Jan 18'
-        //     let body = article.body.slice(0, 130) + '...';
-        //     let { source, title, imageurl, guid } = article;
+            let date = new Date(article.published_on * 1000);		//=> Sun Jan 18 1970 21:48:07 GMT-0500 (Eastern Standard Time)		date object!
+            date = date.toString().slice(4, 10);								//=> 'Jan 18'
+            let body = article.body.slice(0, 130) + '...';
+            let { source, title, imageurl, guid } = article;
 
-        //     return (
-        //         <li key={idx} className="news-li">
-        //             <a href={guid}><h4 key={title} className="news-title">{title}</h4></a>
-        //             <div key={idx + 1} className="news-item">
+            return (
+                <li key={idx} className="news-li">
+                    <a href={guid}><h4 key={title} className="news-title">{title}</h4></a>
+                    <div key={idx + 1} className="news-item">
 
-        //                 <div key={idx + 2} className="news-left">
-        //                     <a href={guid}><p key={idx + 3} className="news-body">{body}</p></a>
-        //                     <p key={idx + 4} className="news-source">{source}</p>
-        //                     <p key={idx + 5} className="news-date">{date}</p>
-        //                     <p key={idx + 6} className="news-symbol">{symbol}</p>
-        //                 </div>
-        //                 <div key={idx + 7} className="news-right">
-        //                     <a href={guid}><img key={imageurl} src={imageurl} alt="article-image" className="news-image" /></a>
-        //                 </div>
-        //             </div>
-        //         </li>
-        //     );
-        // });
+                        <div key={idx + 2} className="news-left">
+                            <a href={guid}><p key={idx + 3} className="news-body">{body}</p></a>
+                            <p key={idx + 4} className="news-source">{source}</p>
+                            <p key={idx + 5} className="news-date">{date}</p>
+                            <p key={idx + 6} className="news-symbol">{symbol}</p>
+                        </div>
+                        <div key={idx + 7} className="news-right">
+                            <a href={guid}><img key={imageurl} src={imageurl} alt="article-image" className="news-image" /></a>
+                        </div>
+                    </div>
+                </li>
+            );
+        });
 
         //////////////
         // if (this.props.fetchNewsInfo === undefined) return null;
@@ -385,9 +390,9 @@ class CryptoShow extends React.Component {
 
                     <div id="news-container">
                         <h2 id="news-header">Top Stories</h2>
-                        {/* <ul className="news">
+                        <ul className="news">
                             {newsArticles}
-                        </ul> */}
+                        </ul>
                     </div>
 
                 </div>

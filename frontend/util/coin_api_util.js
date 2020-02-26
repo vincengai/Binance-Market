@@ -54,10 +54,10 @@ export const fetch1YearInfo = (symbol) => {
 }
 
 
-// export const fetchNews = (symbol) => {
-//     return $.ajax({
-//         url: `https://min-api.cryptocompare.com/data/v2/news/?categories=${symbol}`,
-//         method: 'GET'
-//     })
-// }
+export const fetchNews = (symbol) => {
+    return $.ajax({
+        url: `https://min-api.cryptocompare.com/data/v2/news/?categories=${symbol}`,
+        method: 'GET'
+    })
+}
 

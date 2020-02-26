@@ -22,8 +22,8 @@ const coinReducer = (oldState={}, action) => {
         //     return action.data;
         // case CoinAction.RECEIVE_1DAY_INFO:
         //     return action.data;
-        // case CoinAction.RECEIVE_NEWS_INFO:
-        //     return action.data;
+        case CoinAction.RECEIVE_NEWS_INFO:
+            return action.data;
         default: 
             return oldState;
     }
