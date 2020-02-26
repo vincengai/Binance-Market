@@ -21,6 +21,6 @@
 * Fetches realtime data on crypto assets. 
 * Fundementally, the API GET request is done through the frontend.
 * Parses through the information before rendering the information. 
-![image](https://github.com/vincengai/Binance-Market/tree/master/app/assets/parse_methods.png)
+![image](https://github.com/vincengai/Binance-Market/blob/master/app/assets/images/parse_methods.png)
 
 
