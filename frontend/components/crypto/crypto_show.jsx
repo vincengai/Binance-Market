@@ -354,9 +354,7 @@ class CryptoShow extends React.Component {
                     </div>
 
                     
-                    <div className="transactionBox">
-                        <button onClick={this.openSelectModal}> Transaction</button>
-                    </div>
+                    <button onClick={this.openSelectModal} className="trans-button"> Transaction</button>
                     
 
                     <div className="linechart-news">    
@@ -392,7 +390,7 @@ class CryptoShow extends React.Component {
                         </div>
 
                         <div className="news-container">
-                            <h2 id="news-header">Top Stories</h2>
+                            <div className="news-header">Top Stories</div>
                             <ul className="news">
                                 {newsArticles}
                             </ul>
