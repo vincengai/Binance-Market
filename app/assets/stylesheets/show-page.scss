@@ -69,18 +69,14 @@
 }
 
 .timeframe-list:hover {
-  background-color: #1E2126;
+  background-color: rgb(240, 185, 11);
   color: white; 
 }
 
-// .timeframe-list:active {
-//   background-color: #1E2126;
-//   color: white; 
-// }
+.timeframe-list-active {
+  background-color: rgb(240, 185, 11);
+}
 
-// .linechart-news {
-  // display: flex; 
-// }
 
 .trans-button {
   text-decoration: none;
