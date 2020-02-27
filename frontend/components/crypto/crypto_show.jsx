@@ -74,6 +74,7 @@ class CryptoShow extends React.Component {
     componentDidMount() {
         const symbol = this.props.match.params.symbol
 
+        // this.props.fetchNewsInfo(symbol)
         this.props.fetchCoinInfo(symbol)
         // this.props.fetchCoinsInfo(symbol)
 
@@ -257,7 +258,7 @@ class CryptoShow extends React.Component {
     render() {
         
         // News Articles to be rendered, code Snippet taken from Coin-space
-        console.log(this.state.news)
+        // console.log(this.state.news)
         const newsArticles = this.state.news.map((article, idx) => {		// loop over array of 4 article objects, return an array of <li>'s
 
             let date = new Date(article.published_on * 1000);		//=> Sun Jan 18 1970 21:48:07 GMT-0500 (Eastern Standard Time)		date object!
@@ -287,6 +288,7 @@ class CryptoShow extends React.Component {
         //////////////
         // if (this.props.fetchNewsInfo === undefined) return null;
         if (this.props.coinInfo === undefined) return null;
+        if (this.state.news.length === 0) return null; 
         // if (this.props.openModal === undefined) return null;
         ///////////////
 
