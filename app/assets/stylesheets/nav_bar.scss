@@ -1,6 +1,6 @@
 div#nav-container {
     padding: 0px 0px;
-    background-color: #1E2126;
+    background-color: #12161C;
     box-sizing: border-box;
     position: relative; 
     height: 70px;
@@ -15,7 +15,11 @@ div#nav-container {
     }
 
 }
-
+.cur-comp-link {
+    text-decoration: none;
+    display:flex;
+    justify-content: center;
+}
 #nav-container {
     display: flex;
 }

@@ -20,7 +20,7 @@
   // line-height: 28px;
   font-size: 23px;
   font-style: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
-  top: 63%;
+  top: 75%;
   left: 10%;
   width: 265px;
   height: 40px;
@@ -40,7 +40,7 @@
   // line-height: 28px;
   font-size: 23px;
   font-style: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
-  top: 63%;
+  top: 75%;
   left: 33%;
   width: 265px;
   height: 40px;
@@ -57,47 +57,48 @@
 
   .splash-sent {
     position:absolute;
-    line-height: 40px;
-    top: 8%;
+    line-height: 60px;
+    top: 17%;
     left: 10%;
     // justify-content: center;
     // align-items: center;
     text-size-adjust: 100%;
-    font-size: 250%;
+    font-size: 55px;
     font-family: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
 }
 
 .splash-subsent {
   position: absolute;
-  font-size: 100%;
+  font-size: 19px;
   color: rgb(120, 120, 120);
-  top: 29%;
+  top: 55%;
   left: 10%;
 }
   
 .splash-subsent2 {
   position: absolute;
-  font-size: 100%;
+  font-size: 15px;
   color: rgb(255, 255, 255);
-  top: 50%;
+  top: 66%;
   left: 10%;
 }
 
 .splash-subsent3 {
   position: absolute;
-  font-size: 100%;
+  font-size: 15px;
   color: rgb(255, 255, 255);
-  top: 50%; 
+  top: 66%; 
   left: 33%
 }
 
   .splash-logo {
-    height: 360px;
+    height: 400px;
     width: 100%;
     margin: 00px; 
     justify-content: center;
-    background-image: asset-url('steller.gif');
-    background-size: cover;
+    background-color: rgb(11, 14, 17);
+    // background-image: asset-url('steller.gif');
+    // background-size: cover;
     // position: absolute;
     text-align: center; 
     z-index: 1;

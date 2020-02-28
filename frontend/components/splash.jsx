@@ -14,10 +14,10 @@ class Splash extends React.Component {
             <div>
             <div className="splash-page">
                 <div className="splash-container">
-                    <h1 className="splash-sent">The World's Most Trustworthy<br/>Cryptocurrency Exchange</h1> 
-                    <h3 className="splash-subsent">Trade Bitcoin, BNB, and hundreds of other cryptocurrencies in minutes. </h3>
-                    <h3 className="splash-subsent2">I want to spend</h3>
-                    <h3 className="splash-subsent3">I want to buy</h3>
+                    <div className="splash-sent">The World's Most Trustworthy<br/>Cryptocurrency Exchange</div> 
+                    <div className="splash-subsent">Trade Bitcoin, BNB, and hundreds of other cryptocurrencies in minutes. </div>
+                    <div className="splash-subsent2">I want to spend</div>
+                    <div className="splash-subsent3">I want to buy</div>
                     
 
                     <img src={window.imageUrl.advertise} className="ad-logo"/>
@@ -29,8 +29,10 @@ class Splash extends React.Component {
                     <input type="number" placeholder="Enter amount" className="splash-buy"/>
                 </div>
         
-             {/* <a href="https://www.binance.com/en/support/articles/360038836151"> <h3>Binance Instant Buy One Month Fee Discount 01-15</h3></a> */}
                 </div>
+                <a href="https://www.binance.com/en/support/articles/360038836151"><div className="cur-comp-link">Need help investing? Come checkout Currency Compare</div></a>
+
+
                 <CryptoIndexContainer />
             </div>
 
