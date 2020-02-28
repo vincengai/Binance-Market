@@ -72,22 +72,21 @@ class CryptoShow extends React.Component {
     };
     
     componentDidMount() {
-        const symbol = this.props.match.params.symbol
-
+        const symbol = this.props.match.params.symbol;
+        
         // this.props.fetchNewsInfo(symbol)
-        this.props.fetchCoinInfo(symbol)
         // this.props.fetchCoinsInfo(symbol)
 
         if ( this.state.dataPeriod === '' ) {
+            this.props.fetchCoinInfo(symbol);
             this.get1YearPrices(symbol);
-            this.getNews(symbol)
+            this.getNews(symbol);
             // console.log(this.getNews)
-            // this.get1WeekPrices(symbol);
-            // this.get1MonthPrices(symbol);
-            // this.get1DayPrices(symbol);
-        }
-        
-        
+            this.get1WeekPrices(symbol);
+            this.get1MonthPrices(symbol);
+            this.get1DayPrices(symbol);
+
+        }   
     };
 
     // componentDidUnmount() {
