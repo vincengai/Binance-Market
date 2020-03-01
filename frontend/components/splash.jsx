@@ -11,24 +11,24 @@ const COINS = [
 class Splash extends React.Component {
     render() {
         return (
-            <div>
             <div className="splash-page">
                 <div className="splash-container">
                     <div className="splash-sent">The World's Most Trustworthy<br/>Cryptocurrency Exchange</div> 
                     <div className="splash-subsent">Trade Bitcoin, BNB, and hundreds of other cryptocurrencies in minutes. </div>
-                    <div className="splash-subsent2">I want to spend</div>
-                    <div className="splash-subsent3">I want to buy</div>
-                    <NavLink className="buy-button" to="/coins/BTC">Buy BTC</NavLink>
+                  
+                        <div className="splash-subsent2">I want to spend</div>
+                        <div className="splash-subsent3">I want to buy</div>
 
                     <img src={window.imageUrl.advertise} className="ad-logo"/>
                     <NavLink to="/">
                         <div className="splash-logo"></div>
                     </NavLink>
-
-                    <input type="number" placeholder="Enter amount" className="splash-amount"/>
-                    <input type="number" placeholder="Enter amount" className="splash-buy"/>
-                </div>
-        
+                
+                    <div className="transaction-line">
+                        <input type="number" placeholder="Enter amount" className="splash-amount"/>
+                        <input type="number" placeholder="Enter amount" className="splash-buy"/>
+                        <NavLink className="buy-button" to="/coins/BTC">Buy BTC</NavLink>
+                    </div>
                 </div>
                 <a href="https://www.binance.com/en/support/articles/360038836151"><div className="cur-comp-link">Need help investing? Come checkout Currency Compare</div></a>
 

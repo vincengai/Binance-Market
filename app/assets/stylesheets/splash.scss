@@ -16,7 +16,7 @@
 
 .splash-amount {
   box-shadow: rgba(163, 78, 78, 0.1) 0px 0px 10px;
-  position:absolute;
+  // position:absolute;
   // line-height: 28px;
   font-size: 23px;
   font-style: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
@@ -36,7 +36,7 @@
 }
 .splash-buy {
   box-shadow: rgba(163, 78, 78, 0.1) 0px 0px 10px;
-  position:absolute;
+  // position:absolute;
   // line-height: 28px;
   font-size: 23px;
   font-style: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
@@ -125,10 +125,10 @@
   flex-direction: column;
   margin-bottom: 10px;
   padding: 10px 20px;
-    padding-top: 10px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
   // left: 33%; 
 }
 
@@ -144,34 +144,17 @@
   background-color: #F0B90B;
   color: white;
   padding: 14px 20px;
-  // margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 9%;
   height: fit-content;
   font-size: 1em;
-  bottom: -23%;
-  left: 52%;
-  top: 73%;
-  // margin-right: 24px;
-  // background-color: rgb(240, 185, 11);
-  // display: inline-flex;
-  // align-items: center;
-  // -webkit-box-pack: center;
-  // text-overflow: ellipsis;
-  // white-space: nowrap;
-  // -webkit-appearance: none;
-  // text-align: center;
-  // user-select: none;
-  // cursor: pointer;
-  // font-size: 14px;
-  // padding: 11px 28px;
-  // overflow: hidden;
-  // transition: all 0.2s ease 0s;
-  // outline: none;
-  // border-width: 30px;
-  // border-style: none;
-  // border-color: initial;
-  // border-image: initial;
-  // justify-content: center;
+  // bottom: -23%;
+  // left: 52%;
+  // top: 70%;
+}
+
+.transaction-line {
+  display: flex; 
+  justify-content: space-around;
 }
