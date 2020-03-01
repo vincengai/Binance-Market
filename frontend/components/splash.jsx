@@ -18,7 +18,7 @@ class Splash extends React.Component {
                     <div className="splash-subsent">Trade Bitcoin, BNB, and hundreds of other cryptocurrencies in minutes. </div>
                     <div className="splash-subsent2">I want to spend</div>
                     <div className="splash-subsent3">I want to buy</div>
-                    
+                    <NavLink className="buy-button" to="/coins/BTC">Buy BTC</NavLink>
 
                     <img src={window.imageUrl.advertise} className="ad-logo"/>
                     <NavLink to="/">
