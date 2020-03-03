@@ -81,10 +81,9 @@ class CryptoShow extends React.Component {
             this.props.fetchCoinInfo(symbol);
             this.get1YearPrices(symbol);
             this.getNews(symbol);
-            // console.log(this.getNews)
-            this.get1WeekPrices(symbol);
-            this.get1MonthPrices(symbol);
-            this.get1DayPrices(symbol);
+            // this.get1WeekPrices(symbol);
+            // this.get1MonthPrices(symbol);
+            // this.get1DayPrices(symbol);
 
         }   
     };
@@ -164,7 +163,6 @@ class CryptoShow extends React.Component {
         return {
             min,
             max,
-        
         }
     };
 

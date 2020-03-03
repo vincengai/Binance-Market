@@ -5,21 +5,73 @@ class TransactionForm extends React.Component {
         super(props);
 
         this.state = {
-            units: ''
+            units: '',
+            order_type: 'buy',
+            price: '0.00',
+            submitted: ''
         };
-        // this.handleClick = this.handleClick.bind(this);
-        // this.update = this.update.bind(this);
+
+        this.currentPrice = this.currentPrice.bind(this);
+        this.updateType = this.updateType.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    update(e) {
+        this.setState({ num_shares: e.target.value });
+        this.updateCost(e.target.value);
+    }
+
+    updateType(order_type) {
+        // being buying / selling 
+        this.setState({ order_type });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.setState({ submitted: true });
+
+        let { coin, num_shares, order_type, currPrice } = this.state;
+
+        let transaction = {
+            coin,
+            num_shares: parseInt(num_shares),
+            order_type,
+            price: currPrice
+        };
+
+        this.props.createTransaction(transaction)
+            .fail(() => this.setState({ submitted: '' }));
     }
 
 
-    update(field) {
-        return e => this.setState({
-            [field]: e.currentTarget.value
-        });
+    updateCost(num_shares) {
+        if (num_shares === '') {
+            num_shares = '0';
+            this.setState({ cost: '0.00' });
+        } else {
+            let cost = Math.round((parseFloat(num_shares) * parseFloat(this.state.currPrice)) * 100) / 100;
+            this.setState({ cost });
+        }
     }
 
 
+    currentPrice() {
+        let coinArr = Object.values(this.props.coinInfo);
 
+        return (
+            coinArr.map((coinObj, i) => {
+                return (
+                    <div key={i}> {coinObj.USD.PRICE} </div>
+                )
+            })
+        )
+    }
+
+    
+    
+    
+    
+    
     render() {
         return (
             // <div className="trade-widget">
@@ -60,11 +112,13 @@ class TransactionForm extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <button type='button'>
+
+                    <div className='button'>
                         hello{/* {transaction_type.slice(0, 1).toUpperCase().concat(transaction_type.slice(1))} {this.state.name} */}
-                    </button>
+                    </div>
                 </div>
-                <div className='trade-bottom'>
+                <div className='trade-bottom'> 
+                    {this.currentPrice}
                 </div>
             </div>
     )};
