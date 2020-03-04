@@ -61,6 +61,20 @@ class User < ApplicationRecord
         end
   end
 
+  def shares_owned(coin_id) 
+    transactions.where(coin_id: coin_id).reduce(0) do |shares, transaction|
+      if transaction.type == 'buy'
+        shares + transaction.quantity
+      else
+        shares - transaction.quantity
+      end
+    end
+  end
+
+
+  def calculate_buying_power 
+
+  end
 
   def get_portfolio
       # Get all wallets for Current User , Returns an Array of Obj. 

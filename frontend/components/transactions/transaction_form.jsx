@@ -8,6 +8,7 @@ class TransactionForm extends React.Component {
             units: '',
             order_type: 'buy',
             price: '0.00',
+            name: name,
             submitted: ''
         };
 
@@ -88,12 +89,10 @@ class TransactionForm extends React.Component {
 
             <div className='widget-trade'>
                 <div className='trade-top'>
-                    {/* <div className='active' onClick={this.handleOrderClick("buy")}>Buy</div>
-                    <div onClick={this.handleOrderClick("sell")}>Sell</div>
-                    <div onClick={this.handleOrderClick("convert")}>Convert</div>  */}
-
-                     <div>Sell</div>
-                     <div> Buy </div>
+                    <h3>
+                        <a className={this.state.order_type === 'buy' ? 'active' : ''} onClick={() => this.updateType('buy')}>Buy {`${coin.ticker}`}</a>
+                        {this.renderSellButton()}
+                    </h3>
                 </div>
                 <div className='trade-middle'>
                     <input type="number" placeholder='0 units' minLength='1' onChange={this.update('units')} />

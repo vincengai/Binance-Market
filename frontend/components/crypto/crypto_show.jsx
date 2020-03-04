@@ -73,7 +73,7 @@ class CryptoShow extends React.Component {
     
     componentDidMount() {
         const symbol = this.props.match.params.symbol;
-        
+        // console.log(this.props, 'checking for props')
         // this.props.fetchNewsInfo(symbol)
         // this.props.fetchCoinsInfo(symbol)
 
