@@ -25,11 +25,11 @@ class Api::WalletTransactionsController < ApplicationController
       transaction_amount = @transaction.price * @transaction.quantity
       shares_owned = current_user.shared_owned(@transaction.coin_id)
 
-      if transaction_amount > current_user.calculate_buying_power
+      # if transaction_amount > current_user.calculate_buying_power
 
+      # end
 
-
-
+    end
 
 
     #   # Check if the proper user is logged in 
