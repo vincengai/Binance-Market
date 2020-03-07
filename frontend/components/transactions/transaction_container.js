@@ -22,7 +22,7 @@ const mapStateToProps = (state, ownProps) => {
     
 
     return {
-        // coin: ownProps.location.pathname.slice(7)
+        coin: ownProps.match.params.symbol,
         cashBalance,
         portfolio,
         userId

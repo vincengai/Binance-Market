@@ -5,6 +5,7 @@ class TransactionForm extends React.Component {
         super(props);
 
         this.state = {
+            num_shares: '',
             units: '',
             order_type: 'buy',
             price: '0.00',
@@ -18,8 +19,8 @@ class TransactionForm extends React.Component {
     }
 
     update(e) {
-        this.setState({ num_shares: e.target.value });
-        this.updateCost(e.target.value);
+        // this.setState({ num_shares: e.target.value });
+        // this.updateCost(e.target.value);
     }
 
     updateType(order_type) {
@@ -74,6 +75,8 @@ class TransactionForm extends React.Component {
     
     
     render() {
+        let coin = this.props.match.params.symbol
+
         return (
             // <div className="trade-widget">
             //     <div className="trade-top"> 
@@ -90,8 +93,8 @@ class TransactionForm extends React.Component {
             <div className='widget-trade'>
                 <div className='trade-top'>
                     <h3>
-                        <a className={this.state.order_type === 'buy' ? 'active' : ''} onClick={() => this.updateType('buy')}>Buy {`${coin.ticker}`}</a>
-                        {this.renderSellButton()}
+                        <a className={this.state.order_type === 'buy' ? 'active' : ''} onClick={() => this.updateType('buy')}>Buy {`${coin}`}</a>
+                        {/* {this.renderSellButton()} */}
                     </h3>
                 </div>
                 <div className='trade-middle'>
