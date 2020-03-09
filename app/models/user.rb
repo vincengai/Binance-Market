@@ -49,7 +49,7 @@ class User < ApplicationRecord
   def generate_wallets
       currencies = [
         'BTC', 'ETH', 'BCH', 'BNB', 'LTC', 'TRX', 'XRP',
-        'XLM', 'DASH', 'ONT', 'NEO' ]
+        'XLM', 'DASH', 'ONT', 'NEO']
 
         currencies.each do |symb|
           Wallet.create(
@@ -72,9 +72,9 @@ class User < ApplicationRecord
   end
 
 
-  def calculate_buying_power 
+  # def calculate_buying_power 
 
-  end
+  # end
 
   def get_portfolio
       # Get all wallets for Current User , Returns an Array of Obj. 

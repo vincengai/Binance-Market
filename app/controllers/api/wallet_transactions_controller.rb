@@ -9,7 +9,7 @@ class Api::WalletTransactionsController < ApplicationController
 
     def create
       # When the POJO is passed in from the frontend, Key into the POJO to grab
-      # THe information that needs to be updated
+      # The information that needs to be updated
       quantity = transaction_params[:quantity].to_f  # Float, quantity will be Positive or Negative(sell)
       symbol = transaction_params[:symbol]
       price = transaction_params[:price]
@@ -56,14 +56,14 @@ class Api::WalletTransactionsController < ApplicationController
           )
 
           #4) Return the updated User's cash_balance, portfolio, and transactions listing
-          @wallet_transaction_save
+          @wallet_transaction.save
 
           render json: {
-            id: currend_user.id,
-            email: email,
-            cash_balance: cash_balance,  # Overal total 
+            id: current_user.id,
+            email: current_user.email,
+            cash_balance: current_user.cash_balance,  # Overal total 
             portfolio: current_user.get_portfolio,  # POJO of coins & their amounts
-            transaction: currend_user.wallet_transactions  # POJO listing of everything inside the table
+            transaction: current_user.wallet_transactions  # POJO listing of everything inside the table
           }
 
         else 
@@ -78,26 +78,26 @@ class Api::WalletTransactionsController < ApplicationController
            wallet = Wallet.get_wallet(user_id, symbol)
            wallet.update_value(quantity)
 
-           current_user.cash_balance = current_user.cash_balance + total_price
+           current_user.cash_balance = current_user.cash_balance + (total_price * -1)
            current_user.save 
 
         # Because you're selling you will need to create a new Transaction 
           @wallet_transaction = WalletTransaction.new( 
-            user_id: user_id, 
-            wallet_id: wallet_id, 
-            type: 'SELL',
+            wallet_id: wallet.id, 
+            user_id: current_user.id, 
             price: price,
             quantity: quantity
+            type: 'SELL',
           )
 
           @wallet_transaction.save
 
          render json: {
-            id: currend_user.id,
-            email: email,
-            cash_balance: cash_balance,  # Overal total 
+            id: current_user.id,
+            email: current_user.email,
+            cash_balance: current_user.cash_balance,  # Overal total 
             portfolio: current_user.get_portfolio,  # POJO of coins & their amounts
-            transaction: currend_user.wallet_transactions  # POJO listing of everything inside the table
+            transaction: current_user.wallet_transactions  # POJO listing of everything inside the table
           }
 
         else 
