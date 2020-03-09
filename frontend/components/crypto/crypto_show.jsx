@@ -247,6 +247,7 @@ class CryptoShow extends React.Component {
         });
 
         fetch1YearInfo(symbol).then ( (response) => {
+            console.log(response)
             return this.setState({
                 data: response.data.Data.Data, // Might need to go in one more level
                 // ["1Y"]: response.data.Data.Data,
@@ -357,7 +358,7 @@ class CryptoShow extends React.Component {
 
                     
                     <button onClick={this.openSelectModal} className="trans-button"> Transaction</button>
-                    
+                                        
 
                     <div className="linechart-news">    
                         <div className="linechart">
