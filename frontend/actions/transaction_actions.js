@@ -28,16 +28,16 @@ export const sellCoin = (sellInfo) => dispatch => {
 
 // Action Creators => Hits the User Reducer
 
-export const receiveBuyCoin = ( tradeInfo ) => {
+export const receiveBuyCoin = ( userData ) => {
     return {
         type: RECEIVE_BUY_INFO,
-        data: tradeInfo 
+        data: userData 
     }
 };
 
-export const receiveSellCoin = ( tradeInfo ) => {
+export const receiveSellCoin = ( userData ) => {
     return {
         type: RECEIVE_SELL_INFO,
-        data: tradeInfo 
+        data: userData 
     }
 };
