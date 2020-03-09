@@ -86,8 +86,8 @@ class Api::WalletTransactionsController < ApplicationController
             wallet_id: wallet.id, 
             user_id: current_user.id, 
             price: price,
-            quantity: quantity
-            type: 'SELL',
+            quantity: quantity,
+            type: 'SELL'
           )
 
           @wallet_transaction.save
