@@ -84,16 +84,13 @@ class CryptoShow extends React.Component {
             // this.get1WeekPrices(symbol);
             // this.get1MonthPrices(symbol);
             // this.get1DayPrices(symbol);
-
         }   
     };
 
-    // componentDidUnmount() {
-    //     Remove Ajax Fetches when we click outside of the price page, preventing from max API Calls
-    // };
-
 
     componentWillUnmount() {
+        const symbol = this.props.match.params.symbol;
+
         this.props.fetchCoinInfo(symbol);
         this.get1YearPrices(symbol);
         this.getNews(symbol);
