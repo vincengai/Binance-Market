@@ -149,18 +149,7 @@ class TransactionForm extends React.Component {
         let coin = this.props.match.params.symbol
 
         return (
-            // <div className="trade-widget">
-            //     <div className="trade-top"> 
-            //         <div> Sell </div>
-            //         <div> Buy </div>
-            //     </div>
-
-            //     <div className="trade-middle">
-            //         <input type="number" placeholder='0 units' minLength='1' onChange={this.update('units')} />
-            //     </div> 
-
-            // </div>        
-
+  
             <div className='widget-trade'>
                 <div className='trade-top'>
                     <h3>
@@ -186,8 +175,9 @@ class TransactionForm extends React.Component {
                         </div>
                     </div>
 
-                    <div className='button'>
-                        hello{/* {transaction_type.slice(0, 1).toUpperCase().concat(transaction_type.slice(1))} {this.state.name} */}
+                    <div className='modal-button'>
+                        <button className='button' onClick={this.handleBuy}>BUY</button>
+                        <button className='button' onClick={this.handleSell}>SELL</button>
                     </div>
                 </div>
                 <div className='trade-bottom'> 
