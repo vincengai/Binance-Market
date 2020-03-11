@@ -4,18 +4,26 @@ class TransactionForm extends React.Component {
     constructor(props) {
         super(props);
 
+        // let symbol = 'BTC';
+        // let name = 'Bitcoin';
+
         this.state = {
-            num_shares: '',
-            units: '',
-            order_type: 'buy',
-            price: '0.00',
-            name: name,
-            submitted: ''
+            symbol: this.props.coin,
+            quantity: "Quantity",
+            price: ''
         };
 
-        this.currentPrice = this.currentPrice.bind(this);
+        this.handleBuy = this.handleBuy.bind(this);
+        this.handleSell = this.handleSell.bind(this);
+        this.onChangeSymbol = this.onChangeSymbol.bind(this);
+        this.onChangeQuantity = this.onChangeQuantity.bind(this);
+        this.hasEnoughCash = this.hasEnoughCash.bind(this);
+        this.hasEnoughQuantity = this.hasEnoughQuantity.bind(this);
+        this.price = this.price.bind(this);
+        // this.currentPrice = this.currentPrice.bind(this);
         this.updateType = this.updateType.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.update = this.update.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     update(e) {
@@ -25,55 +33,118 @@ class TransactionForm extends React.Component {
 
     updateType(order_type) {
         // being buying / selling 
-        this.setState({ order_type });
+        // this.setState({ order_type });
+    }
+    
+    onChangeSymbol(event) {
+        this.setState({
+            symbol: event.taget.value
+        });
+    }
+    
+    onChangeQuantity(event) {
+        this.setState({
+            quantity: event.target.value
+        });
+    }
+    
+    price() {
+        let coinArr = Object.values(this.props.coinInfo);
+
+        coinArr.map((coinObj, i) => {
+            this.setState({
+                price: coinObj.USD.PRICE
+            });
+        })
     }
 
-    handleSubmit(e) {
-        e.preventDefault();
-        this.setState({ submitted: true });
+    handleBuy() {
+        const {symbol, quantity, price} = this.state;
 
-        let { coin, num_shares, order_type, currPrice } = this.state;
+        let {userId} = this.props; 
 
-        let transaction = {
-            coin,
-            num_shares: parseInt(num_shares),
-            order_type,
-            price: currPrice
+        // Need to find PRICE FOOR SYMBOL WOOT WOOT MARCH 10, 6:04PM 
+        // WOOT WOOT CONTINUE FROM HERE 
+
+        if (isNaN(price)) {   // if price is a string ex. "$ 8,000.00", remove $ and ','
+            price = Number(price.slice(1).split(',').join(''));
+        }
+
+        const purchaseData = {
+            user_id: userId,
+            symbol: symbol,
+            quantity: quantity,
+            price: price
         };
 
-        this.props.createTransaction(transaction)
-            .fail(() => this.setState({ submitted: '' }));
-    }
+        // Display error if quantity is not a number or negative
+        if (isNaN(quantity) || Number(quantity) <= 0) {
+            alert('Please enter a valid quantity');
 
-
-    updateCost(num_shares) {
-        if (num_shares === '') {
-            num_shares = '0';
-            this.setState({ cost: '0.00' });
+        } else if (this.hasEnoughCash()) {                            // Validate that user cash balance is sufficient 
+            this.props.buyCurrency(purchaseData);                       // Send POST (create new wallet transaction) to backend
+            alert(`${quantity} ${symbol} was added to your account!`);
+            this.props.toggleModal();                                   // close modal
         } else {
-            let cost = Math.round((parseFloat(num_shares) * parseFloat(this.state.currPrice)) * 100) / 100;
-            this.setState({ cost });
+            alert('You do not have enough buying power!');
         }
     }
 
+    hasEnoughCash() {
+        let { price, cashBalance } = this.props;
+        const quantity = Number(this.state.quantity);
 
-    currentPrice() {
-        let coinArr = Object.values(this.props.coinInfo);
+        if (isNaN(price)) {   // if price is a string ex. "$ 8,000.00", remove $ and ','
+            price = Number(price.slice(1).split(',').join(''));
+        }
 
-        return (
-            coinArr.map((coinObj, i) => {
-                return (
-                    <div key={i}> {coinObj.USD.PRICE} </div>
-                )
-            })
-        )
+        // Compute total purchase value = price * quantity
+        const totalPurchaseValue = price * quantity;
+        // debugger
+
+        // Check if user has enough cash to cover totalPurchaseValue
+        return (cashBalance >= totalPurchaseValue);
     }
 
-    
-    
-    
-    
-    
+
+    handleSell() {
+        const { symbol, quantity, price } = this.state;
+        let { userId } = this.props;
+
+        if (isNaN(price)) {   // if price is a string ex. "$ 8,000.00", remove $ and ','
+            price = Number(price.slice(1).split(',').join(''));
+        }
+        // debugger
+
+        const saleData = {
+            user_id: userId,
+            symbol: symbol,
+            quantity: Number(quantity) * -1.0,
+            price: price
+        };
+
+        if (isNaN(quantity) || Number(quantity) <= 0) {
+            alert('Please enter a valid quantity');
+            // debugger
+        } else if (this.hasEnoughQuantity()) {                            // Validate that user has enough crypto to sell
+            this.props.sellCurrency(saleData);                              // Send POST (create new wallet transaction) to backend
+            alert(`${quantity} ${symbol} was sold from your account!`);
+            this.props.toggleModal();                                       // close modal
+        } else {
+            alert('You do not have enough to sell!');
+        }
+    }
+
+    hasEnoughQuantity() {
+        const { symbol, portfolio } = this.props;
+        const quantity = Number(this.state.quantity);
+        // debugger
+
+        // check if user has enough quantity to sell
+        return Number(portfolio[symbol]) >= quantity;
+    }
+
+
     render() {
         let coin = this.props.match.params.symbol
 

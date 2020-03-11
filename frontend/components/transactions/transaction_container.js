@@ -22,6 +22,7 @@ const mapStateToProps = (state, ownProps) => {
     
 
     return {
+        coinInfo: state.entities.coins.DISPLAY,
         coin: ownProps.match.params.symbol,
         cashBalance,
         portfolio,
