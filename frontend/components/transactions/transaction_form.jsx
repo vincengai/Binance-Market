@@ -86,7 +86,7 @@ class TransactionForm extends React.Component {
             alert(`${quantity} ${symbol} was added to your account!`);
             this.props.toggleModal();                                   // close modal
         } else {
-            alert('You do not have enough buying power!');
+            alert('You do not have enough funding!');
         }
     }
 
