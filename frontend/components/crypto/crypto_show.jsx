@@ -74,11 +74,16 @@ class CryptoShow extends React.Component {
     componentDidMount() {
         const symbol = this.props.match.params.symbol;
         // console.log(this.props, 'checking for props')
-        // this.props.fetchNewsInfo(symbol)
-        // this.props.fetchCoinsInfo(symbol)
-
+        this.props.fetchNewsInfo(symbol)
+        this.props.fetchCoinInfo(symbol)
+        
         if ( this.state.dataPeriod === '' ) {
+            
             this.props.fetchCoinInfo(symbol);
+            // this.props.fetch1YearInfo(symbol);
+            // this.props.fetchNewsInfo(symbol);
+            // this.props.openModal(symbol);
+                    
             this.get1YearPrices(symbol);
             this.getNews(symbol);
             // this.get1WeekPrices(symbol);
@@ -87,6 +92,9 @@ class CryptoShow extends React.Component {
         }   
     };
 
+    componentDidUpdate() {
+        //
+    }
 
     componentWillUnmount() {
         const symbol = this.props.match.params.symbol;
@@ -288,7 +296,7 @@ class CryptoShow extends React.Component {
         //////////////
         // if (this.props.fetchNewsInfo === undefined) return null;
         if (this.props.coinInfo === undefined) return null;
-        if (this.state.news.length === 0) return null; 
+        if (this.state.dataPeriod === '') return null; 
         // if (this.props.openModal === undefined) return null;
         ///////////////
 
@@ -354,7 +362,7 @@ class CryptoShow extends React.Component {
                     </div>
 
                     
-                    <button onClick={this.openSelectModal} className="trans-button"> Transaction</button>
+                    {/* <button onClick={this.openSelectModal} className="trans-button"> Transaction</button> */}
                                         
 
                     <div className="linechart-news">    
