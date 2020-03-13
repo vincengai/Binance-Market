@@ -42,6 +42,7 @@ class CryptoShow extends React.Component {
             // "1W": [],
             // "1M": [],
             // "1Y": [],
+            coin: this.props.coin,
             "timePeriodActive": '',
             "data": [],
             "dataPeriod": '',
@@ -74,10 +75,25 @@ class CryptoShow extends React.Component {
     
 
     componentDidMount() {
-        const symbol = this.props.match.params.symbol;
+        // const symbol = this.props.match.params.symbol;
 
-        const promises = [this.props.fetchCoinInfo(symbol), this.props.fetchNewsInfo(symbol)]
-        Promise.all(promises).then(() => this.setState({ readyToRender: true }))
+        // const promises = [this.props.fetchCoinInfo(symbol), this.props.fetchNewsInfo(symbol)]
+        // Promise.all(promises).then(() => this.setState({ readyToRender: true, crypto: symbol}))
+        this.props.fetchNewsInfo(this.props.coin)
+        this.props.fetch1YearInfo(this.props.coin)
+        this.props.fetchCoinInfo(this.props.coin).then( () => this.setState({readyToRender: true}))
+    }
+
+    componentDidUpdate() {
+        
+        if (this.props.coin !== this.state.coin) {
+            this.setState({
+                coin: this.props.coin
+            })
+            this.props.fetchCoinInfo(this.props.coin)
+            this.props.fetchNewsInfo(this.props.coin)
+            this.props.fetch1YearInfo(this.props.coin)
+        }
     }
     
     openSelectModal() {
@@ -337,7 +353,7 @@ class CryptoShow extends React.Component {
                     </div>
 
                     
-                    {/* <button onClick={this.openSelectModal} className="trans-button"> Transaction</button> */}
+                    <button onClick={this.openSelectModal} className="trans-button"> Transaction</button>
                                         
 
                     <div className="linechart-news">    
