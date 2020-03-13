@@ -48,7 +48,8 @@ class CryptoShow extends React.Component {
             "dataActive": '',
             modalOn: false,
             fade: false,
-            news: []   
+            news: [],
+            readyToRender: false
         }
 
         // All for the Top Container
@@ -71,37 +72,12 @@ class CryptoShow extends React.Component {
 
     };
     
+
     componentDidMount() {
         const symbol = this.props.match.params.symbol;
-        // console.log(this.props, 'checking for props')
-        this.props.fetchNewsInfo(symbol)
-        this.props.fetchCoinInfo(symbol)
-        
-        if ( this.state.dataPeriod === '' ) {
-            
-            this.props.fetchCoinInfo(symbol);
-            // this.props.fetch1YearInfo(symbol);
-            // this.props.fetchNewsInfo(symbol);
-            // this.props.openModal(symbol);
-                    
-            this.get1YearPrices(symbol);
-            this.getNews(symbol);
-            // this.get1WeekPrices(symbol);
-            // this.get1MonthPrices(symbol);
-            // this.get1DayPrices(symbol);
-        }   
-    };
 
-    componentDidUpdate() {
-        //
-    }
-
-    componentWillUnmount() {
-        const symbol = this.props.match.params.symbol;
-
-        this.props.fetchCoinInfo(symbol);
-        this.get1YearPrices(symbol);
-        this.getNews(symbol);
+        const promises = [this.props.fetchCoinInfo(symbol), this.props.fetchNewsInfo(symbol)]
+        Promise.all(promises).then(() => this.setState({ readyToRender: true }))
     }
     
     openSelectModal() {
@@ -200,8 +176,6 @@ class CryptoShow extends React.Component {
 
         // console.log(response, 'thisisthenews')
         fetch1DayInfo(symbol).then ( (response) => {
-            
-
             return this.setState({
                 data: response.data.Data.Data,
                 "timePeriodActive": "day"
@@ -295,6 +269,7 @@ class CryptoShow extends React.Component {
 
         //////////////
         // if (this.props.fetchNewsInfo === undefined) return null;
+        if (!this.state.readyToRender) return null; 
         if (this.props.coinInfo === undefined) return null;
         if (this.state.dataPeriod === '') return null; 
         // if (this.props.openModal === undefined) return null;
