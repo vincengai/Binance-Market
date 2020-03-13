@@ -8,6 +8,7 @@ import {
 class CustomTooltip extends React.Component {
 
     render() {
+        if (!this.props.active || !this.props.payload) return null;
         const { active } = this.props || {};
         if (active) {
             const { payload } = this.props || [{}];
@@ -28,14 +29,14 @@ class CustomTooltip extends React.Component {
                 </div>
             );
         }
-        return null;
+        // return null;
     }
 }
 
 class CryptoShow extends React.Component {
     constructor(props) {
         super(props);
-        
+
         this.state = {
             currentPrice: '',
             // "1D": [],
@@ -72,20 +73,18 @@ class CryptoShow extends React.Component {
         this.openSelectModal = this.openSelectModal.bind(this);
 
     };
-    
+
 
     componentDidMount() {
-        // const symbol = this.props.match.params.symbol;
-
-        // const promises = [this.props.fetchCoinInfo(symbol), this.props.fetchNewsInfo(symbol)]
-        // Promise.all(promises).then(() => this.setState({ readyToRender: true, crypto: symbol}))
+        this.getNews(this.props.coin)
+        this.props.fetchCoinInfo(this.props.coin)
         this.props.fetchNewsInfo(this.props.coin)
-        this.props.fetch1YearInfo(this.props.coin)
-        this.props.fetchCoinInfo(this.props.coin).then( () => this.setState({readyToRender: true}))
+        // const promises = [this.props.fetchCoinInfo(this.props.coin), this.props.fetchNewsInfo(this.props.coin)]
+        // Promise.all(promises).then(() => this.setState({ readyToRender: true}))
     }
 
     componentDidUpdate() {
-        
+
         if (this.props.coin !== this.state.coin) {
             this.setState({
                 coin: this.props.coin
@@ -95,7 +94,7 @@ class CryptoShow extends React.Component {
             this.props.fetch1YearInfo(this.props.coin)
         }
     }
-    
+
     openSelectModal() {
         this.props.openModal('buy');
     }
@@ -105,7 +104,7 @@ class CryptoShow extends React.Component {
         let coinArr = Object.values(this.props.coinInfo);
 
         return (
-            coinArr.map( (coinObj, i) => {
+            coinArr.map((coinObj, i) => {
                 return (
                     <div key={i}> {coinObj.USD.PRICE} </div>
                 )
@@ -127,7 +126,7 @@ class CryptoShow extends React.Component {
 
     volume() {
         let coinArr = Object.values(this.props.coinInfo);
-        
+
         return (
             coinArr.map((coinObj, i) => {
                 return (
@@ -161,7 +160,7 @@ class CryptoShow extends React.Component {
 
         const min = Math.min(...prices);
         const max = Math.max(...prices);
-        
+
         return {
             min,
             max,
@@ -171,8 +170,8 @@ class CryptoShow extends React.Component {
     getNews(symbol) {
         let { fetchNewsInfo } = this.props;
 
-        
-        fetchNewsInfo(symbol).then( (response) => {
+
+        fetchNewsInfo(symbol).then((response) => {
             // debugger
             if (response.data) {
                 return this.setState({
@@ -183,7 +182,7 @@ class CryptoShow extends React.Component {
     }
 
     get1DayPrices(symbol) {
-        let {fetch1DayInfo}  = this.props;
+        let { fetch1DayInfo } = this.props;
 
         this.setState({
             dataPeriod: "1D",
@@ -191,7 +190,7 @@ class CryptoShow extends React.Component {
         });
 
         // console.log(response, 'thisisthenews')
-        fetch1DayInfo(symbol).then ( (response) => {
+        fetch1DayInfo(symbol).then((response) => {
             return this.setState({
                 data: response.data.Data.Data,
                 "timePeriodActive": "day"
@@ -200,14 +199,14 @@ class CryptoShow extends React.Component {
     }
 
     get1WeekPrices(symbol) {
-        let {fetch1WeekInfo}  = this.props;
+        let { fetch1WeekInfo } = this.props;
 
         this.setState({
             dataPeriod: "1W",
             dataActive: 'week-active'
         });
 
-        fetch1WeekInfo(symbol).then ( (response) => {
+        fetch1WeekInfo(symbol).then((response) => {
             return this.setState({
                 data: response.data.Data.Data, // Might need to go in one more level
                 // ["1W"]: response.data.Data.Data, // Might need to go in one more level 
@@ -224,7 +223,7 @@ class CryptoShow extends React.Component {
             dataActive: 'month-active'
         });
 
-        fetch1MonthInfo(symbol).then ( (response) => {
+        fetch1MonthInfo(symbol).then((response) => {
             return this.setState({
                 data: response.data.Data.Data, // Might need to go in one more level
                 // ["1M"]: response.data.Data.Data,
@@ -234,14 +233,14 @@ class CryptoShow extends React.Component {
     }
 
     get1YearPrices(symbol) {
-        let { fetch1YearInfo } = this.props; 
+        let { fetch1YearInfo } = this.props;
 
         this.setState({
             dataPeriod: "1Y",
             dataActive: 'year-active'
         });
 
-        fetch1YearInfo(symbol).then ( (response) => {
+        fetch1YearInfo(symbol).then((response) => {
             console.log(response)
             return this.setState({
                 data: response.data.Data.Data, // Might need to go in one more level
@@ -254,7 +253,7 @@ class CryptoShow extends React.Component {
 
 
     render() {
-        
+
         // News Articles to be rendered, code Snippet taken from Coin-space
         // console.log(this.state.news)
         const newsArticles = this.state.news.map((article, idx) => {		// loop over array of 4 article objects, return an array of <li>'s
@@ -282,12 +281,18 @@ class CryptoShow extends React.Component {
                 </li>
             );
         });
+        // debugger;
 
         //////////////
         // if (this.props.fetchNewsInfo === undefined) return null;
-        if (!this.state.readyToRender) return null; 
+        // if (!this.state.readyToRender) return null;
+        if (this.props.coinInfo === undefined) {
+            console.log('PROBLEM 2')
+            // debugger;
+            return null;
+        }
         if (this.props.coinInfo === undefined) return null;
-        if (this.state.dataPeriod === '') return null; 
+        // if (this.state.dataPeriod === '') return null; 
         // if (this.props.openModal === undefined) return null;
         ///////////////
 
@@ -296,21 +301,21 @@ class CryptoShow extends React.Component {
         let path = obj[coin];
 
         let symbol = this.props.match.params.symbol
-        let { min, max } = this.calculateData(); 
+        let { min, max } = this.calculateData();
 
 
-        return (    
+        return (
             <div>
 
-                   <div className="show-header">
-                        <div className='head-name'><img src={path} id='h-icon'/></div>
-                        <div>{this.props.coin}</div>
-                        <div>{this.price()}</div>
+                <div className="show-header">
+                    <div className='head-name'><img src={path} id='h-icon' /></div>
+                    <div>{this.props.coin}</div>
+                    <div>{this.price()}</div>
 
-                    </div>
+                </div>
 
                 <div className="outter-most-show">
-                 
+
 
                     <div className="show-table-container">
                         <div className="flex-table-header">
@@ -319,7 +324,7 @@ class CryptoShow extends React.Component {
                                     {this.marketCap()}
                                 </div>
                             </div>
-                            
+
                             <div className="flex-row">24h Vol(Global)
                                 <div className='show-text'>
                                     {this.volume()}
@@ -342,24 +347,24 @@ class CryptoShow extends React.Component {
                                     {this.price()}
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
 
                     <div className="timeframe">
-                            <li className="timeframe-list" onClick={() => this.get1DayPrices(symbol)}> 1D </li>
-                            <li className="timeframe-list" onClick={() => this.get1WeekPrices(symbol)}> 1W </li>
-                            <li className="timeframe-list" onClick={() => this.get1MonthPrices(symbol)}> 1M </li>
-                            <li className="timeframe-list" onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
+                        <li className="timeframe-list" onClick={() => this.get1DayPrices(symbol)}> 1D </li>
+                        <li className="timeframe-list" onClick={() => this.get1WeekPrices(symbol)}> 1W </li>
+                        <li className="timeframe-list" onClick={() => this.get1MonthPrices(symbol)}> 1M </li>
+                        <li className="timeframe-list" onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
                     </div>
 
-                    
-                    <button onClick={this.openSelectModal} className="trans-button"> Transaction</button>
-                                        
 
-                    <div className="linechart-news">    
+                    <button onClick={this.openSelectModal} className="trans-button"> Transaction</button>
+
+
+                    <div className="linechart-news">
                         <div className="linechart">
-                            <LineChart width={550} height={405} data={this.state.data} margin={{top: 0, right: 0, left: 0, bottom: 0}} cursor="crosshair">
-                                <Tooltip content={<CustomTooltip />} offset={-50} animationDuration={100} /> 
+                            <LineChart width={550} height={405} data={this.state.data} margin={{ top: 0, right: 0, left: 0, bottom: 0 }} cursor="crosshair">
+                                <Tooltip content={<CustomTooltip />} offset={-50} animationDuration={100} />
 
                                 <XAxis
                                     hide={true}
@@ -376,7 +381,7 @@ class CryptoShow extends React.Component {
                                     type="monotone"
                                     dataKey="close"
                                     stroke="#8884d8"
-                                    activeDot={{ r:5 }}
+                                    activeDot={{ r: 5 }}
                                     strokeWidth={1.7}
                                     dot={false}
                                     activeDot={false}
