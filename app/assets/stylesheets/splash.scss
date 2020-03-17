@@ -16,7 +16,7 @@
 
 .splash-amount {
   box-shadow: rgba(163, 78, 78, 0.1) 0px 0px 10px;
-  // position:absolute;
+  position:absolute;
   // line-height: 28px;
   font-size: 23px;
   font-style: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
@@ -36,7 +36,7 @@
 }
 .splash-buy {
   box-shadow: rgba(163, 78, 78, 0.1) 0px 0px 10px;
-  // position:absolute;
+  position:absolute;
   // line-height: 28px;
   font-size: 23px;
   font-style: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
@@ -143,15 +143,15 @@
   border-radius: 3px;
   background-color: #F0B90B;
   color: white;
-  padding: 14px 20px;
+  padding: 12px 20px;
   border: none;
   cursor: pointer;
   width: 9%;
   height: fit-content;
   font-size: 1em;
   // bottom: -23%;
-  // left: 52%;
-  // top: 70%;
+  left: 52%;
+  top: 74%;
 }
 
 .transaction-line {
