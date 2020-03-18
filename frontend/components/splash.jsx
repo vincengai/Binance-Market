@@ -28,7 +28,7 @@ class Splash extends React.Component {
                         <input type="number" placeholder="Enter amount" className="splash-buy"/>
                         <NavLink className="buy-button" to="/coins/BTC">Buy BTC</NavLink>
                 </div>
-                <a href="https://www.binance.com/en/support/articles/360038836151"><div className="cur-comp-link">Need help investing? Come checkout Currency Compare</div></a>
+                <a href="https://vincengai.github.io/Currency-Compare/"><div className="cur-comp-link">Need help investing? Come checkout Currency Compare</div></a>
 
 
                 <CryptoIndexContainer />
