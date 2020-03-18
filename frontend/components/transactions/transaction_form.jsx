@@ -146,12 +146,13 @@ class TransactionForm extends React.Component {
 
     render() {
         let coin = this.props.match.params.symbol
-
+        let obj = window.imageUrl;
+        let path = obj[coin];
         return (
   
             <div className='widget-trade'>
+                    <div className='head-name'><img src={path} id='h-icon' /></div>
                 <div className='trade-top'>
-                    
                     <h3>
                         <a className={this.state.order_type === 'buy' ? 'active' : ''} onClick={() => this.updateType('buy')}>Buy {`${coin}`}</a>
                         {/* {this.renderSellButton()} */}
