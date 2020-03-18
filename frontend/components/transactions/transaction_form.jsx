@@ -100,7 +100,6 @@ class TransactionForm extends React.Component {
 
         // Compute total purchase value = price * quantity
         const totalPurchaseValue = price * quantity;
-        // debugger
 
         // Check if user has enough cash to cover totalPurchaseValue
         return (cashBalance >= totalPurchaseValue);

@@ -53,6 +53,12 @@ export const fetch1YearInfo = (symbol) => {
     })
 }
 
+export const fetchCurrentPrice = (symbol) => {
+    return $.ajax({
+        method: "GET",
+        url: `https://min-api.cryptocompare.com/data/price?fsym=${symbol}&tsyms=USD`
+    });
+}
 
 export const fetchNews = (symbol) => {
     return $.ajax({
@@ -61,3 +67,9 @@ export const fetchNews = (symbol) => {
     })
 }
 
+export const fetchCurrencyInfo = (symbols) => {   // 360 days, daily prices
+    return $.ajax({
+        method: 'GET',
+        url: `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${symbols}&tsyms=USD&api_key={7ad59177d6eecaad1ff76289dedcc3eaab4919b64401df4affc91e8a3be9196f}`
+    })
+}

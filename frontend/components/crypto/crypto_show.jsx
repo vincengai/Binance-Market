@@ -438,6 +438,7 @@ import React from 'react';
 import {
     LineChart, Line, XAxis, YAxis, Tooltip
 } from 'recharts';
+import { fetchCurrentPrice, fetchCurrencyInfo} from '../../util/coin_api_util';
 // import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 // import RechartContainer from '../chart/rechart_container'
 
@@ -475,10 +476,13 @@ class CryptoShow extends React.Component {
 
         this.state = {
             currentPrice: '',
-            // "1D": [],
-            // "1W": [],
-            // "1M": [],
-            // "1Y": [],
+            "1D": [],
+            "1W": [],
+            "1M": [],
+            "1Y": [],
+            marketCap: '',
+            volume24HRS: '',
+            supply: '',
             coin: this.props.coin,
             "timePeriodActive": '',
             "data": [],
@@ -491,10 +495,7 @@ class CryptoShow extends React.Component {
         }
 
         // All for the Top Container
-        this.price = this.price.bind(this);
-        this.volume = this.volume.bind(this);
-        this.marketCap = this.marketCap.bind(this);
-        this.supply = this.supply.bind(this);
+        this.updateCurrencyInfo = this.updateCurrencyInfo.bind(this);
 
         // All for the ReChart Info 
         this.get1DayPrices = this.get1DayPrices.bind(this);
@@ -509,86 +510,62 @@ class CryptoShow extends React.Component {
         this.openSelectModal = this.openSelectModal.bind(this);
     };
 
+   componentDidUpdate(prevProps) {
+        let {coin} = this.props;
+        if (prevProps.coin !== coin) {
+            this.getCurrentprice();
+            this.updateCurrencyInfo();
+            this.get1MonthPrices(coin);
 
-    componentDidMount() {
-        this.getNews(this.props.coin)
-        this.props.fetchCoinInfo(this.props.coin) // can chain .then and setState afterwards
-                                                    // 
-        this.props.fetchNewsInfo(this.props.coin)
-        // const promises = [this.props.fetchCoinInfo(this.props.coin), this.props.fetchNewsInfo(this.props.coin)]
-        // Promise.all(promises).then(() => this.setState({ readyToRender: true}))
-    }
-
-    componentDidUpdate() {
-        if (this.props.coin !== this.state.coin) {
-            this.setState({
-                coin: this.props.coin
-            })
-            this.props.fetchCoinInfo(this.props.coin)
-            this.props.fetchNewsInfo(this.props.coin)
-            this.props.fetch1YearInfo(this.props.coin)
         }
     }
 
-    componentWillUpdate(nextProps){
-            // Compare the current state w/ next state
-            
-            // Conditional if this.props.SOMETHING !== nextProps.SOMETHING
-                // then you would setState
+    componentDidMount() {
+        let { coin } = this.props;
+
+        if (this.state.timePeriodActive != "month") {
+            this.getCurrentprice()
+            this.get1MonthPrices(coin); 
+            this.updateCurrencyInfo();
+            this.getNews();
+        }
     }
+    
 
     openSelectModal() {
         this.props.openModal('buy');
     }
 
     // Methods used for Top Bar Container
-    price() {
-        let coinArr = Object.values(this.props.coinInfo);
 
-        return (
-            coinArr.map((coinObj, i) => {
-                return (
-                    <div key={i}> {coinObj.USD.PRICE} </div>
-                )
-            })
-        )
+    getCurrentprice() {
+       let {coin} = this.props;
+       
+        fetchCurrentPrice(coin).then(
+            (response) => {
+                return this.setState({
+                    currentPrice: response.USD			// old for API that gets average price from multiple exchanges
+                });
+            }
+        );
     }
 
-    supply() {
-        let coinArr = Object.values(this.props.coinInfo);
+    updateCurrencyInfo() {
+        let { coin } = this.props;
 
-        return (
-            coinArr.map((coinObj, i) => {
-                return (
-                    <div key={i}> {coinObj.USD.SUPPLY} </div>
-                )
-            })
-        )
+
+        fetchCurrencyInfo(coin).then(
+            (response) => {
+                return this.setState({
+                    currentPrice: response.DISPLAY[coin].USD.PRICE,
+                    marketCap: response.DISPLAY[coin].USD.MKTCAP,
+                    volume24HRS: response.DISPLAY[coin].USD.TOTALVOLUME24HTO,
+                    supply: response.DISPLAY[coin].USD.SUPPLY
+                });
+            }
+        );
     }
 
-    volume() {
-        let coinArr = Object.values(this.props.coinInfo);
-
-        return (
-            coinArr.map((coinObj, i) => {
-                return (
-                    <div key={i}>{coinObj.USD.TOPTIERVOLUME24HOUR} ({coinObj.USD.TOPTIERVOLUME24HOURTO})</div>
-                )
-            })
-        )
-    }
-
-    marketCap() {
-        let coinArr = Object.values(this.props.coinInfo);
-
-        return (
-            coinArr.map((coinObj, i) => {
-                return (
-                    <div key={i}>{coinObj.USD.MKTCAP}</div>
-                )
-            })
-        )
-    }
 
     // Methods for ReChart Info
 
@@ -612,28 +589,27 @@ class CryptoShow extends React.Component {
     getNews(symbol) {
         let { fetchNewsInfo } = this.props;
 
-
         fetchNewsInfo(symbol).then((response) => {
-            // 
-            if (response.data) {
+            // if (response.data) {
                 return this.setState({
                     news: response.data.slice(0, 4) // Slide up til 5 to grab 5 top articles 
                 });
             }
-        });
+        )
     }
 
     get1DayPrices(symbol) {
         let { fetch1DayInfo } = this.props;
 
-        this.setState({
-            dataPeriod: "1D",
-            dataActive: 'day-active'
-        });
+        // this.setState({
+        //     dataPeriod: "1D",
+        //     dataActive: 'day-active'
+        // });
 
         // console.log(response, 'thisisthenews')
         fetch1DayInfo(symbol).then((response) => {
             return this.setState({
+                ["1D"]: response.data.Data.Data,
                 data: response.data.Data.Data,
                 "timePeriodActive": "day"
             });
@@ -643,15 +619,15 @@ class CryptoShow extends React.Component {
     get1WeekPrices(symbol) {
         let { fetch1WeekInfo } = this.props;
 
-        this.setState({
-            dataPeriod: "1W",
-            dataActive: 'week-active'
-        });
+        // this.setState({
+        //     dataPeriod: "1W",
+        //     dataActive: 'week-active'
+        // });
 
         fetch1WeekInfo(symbol).then((response) => {
             return this.setState({
+                ["1W"]: response.data.Data.Data,
                 data: response.data.Data.Data, // Might need to go in one more level
-                // ["1W"]: response.data.Data.Data, // Might need to go in one more level 
                 "timePeriodActive": "week"
             });
         });
@@ -660,15 +636,15 @@ class CryptoShow extends React.Component {
     get1MonthPrices(symbol) {
         let { fetch1MonthInfo } = this.props;
 
-        this.setState({
-            dataPeriod: "1M",
-            dataActive: 'month-active'
-        });
+        // this.setState({
+        //     dataPeriod: "1M",
+        //     dataActive: 'month-active'
+        // });
 
         fetch1MonthInfo(symbol).then((response) => {
             return this.setState({
+                ["1M"]: response.data.Data.Data,
                 data: response.data.Data.Data, // Might need to go in one more level
-                // ["1M"]: response.data.Data.Data,
                 "timePeriodActive": "month"
             });
         });
@@ -677,16 +653,15 @@ class CryptoShow extends React.Component {
     get1YearPrices(symbol) {
         let { fetch1YearInfo } = this.props;
 
-        this.setState({
-            dataPeriod: "1Y",
-            dataActive: 'year-active'
-        });
+        // this.setState({
+        //     dataPeriod: "1Y",
+        //     dataActive: 'year-active'
+        // });
 
         fetch1YearInfo(symbol).then((response) => {
-            console.log(response)
             return this.setState({
+                ["1Y"]: response.data.Data.Data,
                 data: response.data.Data.Data, // Might need to go in one more level
-                // ["1Y"]: response.data.Data.Data,
                 "timePeriodActive": "year"
             });
         });
@@ -697,7 +672,6 @@ class CryptoShow extends React.Component {
     render() {
 
         // News Articles to be rendered, code Snippet taken from Coin-space
-        // console.log(this.state.news)
         const newsArticles = this.state.news.map((article, idx) => {		// loop over array of 4 article objects, return an array of <li>'s
 
             let date = new Date(article.published_on * 1000);		//=> Sun Jan 18 1970 21:48:07 GMT-0500 (Eastern Standard Time)		date object!
@@ -728,14 +702,6 @@ class CryptoShow extends React.Component {
         //////////////
         // if (this.props.fetchNewsInfo === undefined) return null;
         // if (!this.state.readyToRender) return null;
-        if (this.props.coinInfo === undefined) {
-            console.log('PROBLEM 2')
-            ;
-            return null;
-        }
-        if (this.props.coinInfo === undefined) return null;
-        // if (this.state.dataPeriod === '') return null; 
-        // if (this.props.openModal === undefined) return null;
         ///////////////
 
         let { coin } = this.props;
@@ -752,7 +718,7 @@ class CryptoShow extends React.Component {
                 <div className="show-header">
                     <div className='head-name'><img src={path} id='h-icon' /></div>
                     <div>{this.props.coin}</div>
-                    <div>{this.price()}</div>
+                    <div>{this.state.currentPrice}</div>
 
                 </div>
 
@@ -763,19 +729,19 @@ class CryptoShow extends React.Component {
                         <div className="flex-table-header">
                             <div className="flex-row"> Market Cap
                                 <div className='show-text'>
-                                    {this.marketCap()}
+                                    {this.state.marketCap}
                                 </div>
                             </div>
 
                             <div className="flex-row">24h Vol(Global)
                                 <div className='show-text'>
-                                    {this.volume()}
+                                    {this.state.volume24HRS}
                                 </div>
                             </div>
 
                             <div className="flex-row">Circulating Supply
                                 <div className='show-text'>
-                                    {this.supply()}
+                                    {this.state.supply}
                                 </div>
                             </div>
                             <div className="flex-row">Issue Date
@@ -786,7 +752,7 @@ class CryptoShow extends React.Component {
 
                             <div className="flex-row">Issue Price
                                 <div className='show-text'>
-                                    {this.price()}
+                                    {this.state.currentPrice}
                                 </div>
                             </div>
                         </div>
