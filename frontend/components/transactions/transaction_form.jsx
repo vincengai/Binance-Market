@@ -151,6 +151,7 @@ class TransactionForm extends React.Component {
   
             <div className='widget-trade'>
                 <div className='trade-top'>
+                    
                     <h3>
                         <a className={this.state.order_type === 'buy' ? 'active' : ''} onClick={() => this.updateType('buy')}>Buy {`${coin}`}</a>
                         {/* {this.renderSellButton()} */}
