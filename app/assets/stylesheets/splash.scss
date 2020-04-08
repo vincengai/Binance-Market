@@ -82,7 +82,18 @@
   top: 66%;
   left: 10%;
 }
+.current-compare {
+  text-decoration: none;
+}
+.cur-comp-link {
+  text-decoration: none;
+  font-size: large;
+  color: #787878;
+}
 
+// .cur-comp-link:hover {
+//   te: yellow; 
+// }
 .splash-subsent3 {
   position: absolute;
   font-size: 15px;
@@ -114,10 +125,15 @@
     // z-index: 2;
 }
 
+.megaphone {
+  width: 30px;
+  padding-right:12px;
+  padding-bottom: 12px;
+}
 .table-container {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
   background-color: #FFF;
-  width: 70%;
+  width: 80%;
   display: flex; 
   box-sizing: border-box;
   margin: 0 auto;

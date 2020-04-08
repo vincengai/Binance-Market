@@ -11,30 +11,51 @@ const COINS = [
 class Splash extends React.Component {
     render() {
         return (
-            <div className="splash-page">
-                <div className="splash-container">
-                    <div className="splash-sent">The World's Most Trustworthy<br/>Cryptocurrency Exchange</div> 
-                    <div className="splash-subsent">Trade Bitcoin, BNB, and hundreds of other cryptocurrencies in minutes. </div>
-                  
-                        <div className="splash-subsent2">I want to spend</div>
-                        <div className="splash-subsent3">I want to buy</div>
+          <div className="splash-page">
+            <div className="splash-container">
+              <div className="splash-sent">
+                The World's Most Trustworthy
+                <br />
+                Cryptocurrency Exchange
+              </div>
+              <div className="splash-subsent">
+                Trade Bitcoin, BNB, and hundreds of other cryptocurrencies in
+                minutes.{" "}
+              </div>
 
-                    <img src={window.imageUrl.advertise} className="ad-logo"/>
-                    <NavLink to="/">
-                        <div className="splash-logo"></div>
-                    </NavLink>
-                
-                        <input type="number" placeholder="Enter amount" className="splash-amount"/>
-                        <input type="number" placeholder="Enter amount" className="splash-buy"/>
-                        <NavLink className="buy-button" to="/coins/BTC">Buy BTC</NavLink>
-                </div>
-                <a href="https://vincengai.github.io/Currency-Compare/"><div className="cur-comp-link">Need help investing? Come checkout Currency Compare</div></a>
+              <div className="splash-subsent2">I want to spend</div>
+              <div className="splash-subsent3">I want to buy</div>
 
+              <img src={window.imageUrl.advertise} className="ad-logo" />
+              <NavLink to="/">
+                <div className="splash-logo"></div>
+              </NavLink>
 
-                <CryptoIndexContainer />
+              <input
+                type="number"
+                placeholder="Enter amount"
+                className="splash-amount"
+              />
+              <input
+                type="number"
+                placeholder="Enter amount"
+                className="splash-buy"
+              />
+              <NavLink className="buy-button" to="/coins/BTC">
+                Buy BTC
+              </NavLink>
             </div>
 
-        )}
+            <a href="https://vincengai.github.io/Currency-Compare/" className="currency-compare">
+              <div className="cur-comp-link">
+                <img src={window.imageUrl.megaphone} className="megaphone" />
+                Need help investing? Come checkout Currency Compare{" "}
+              </div>
+            </a>
+
+            <CryptoIndexContainer />
+          </div>
+        );}
 };
 
 export default Splash; 

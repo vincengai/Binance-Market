@@ -8,7 +8,7 @@ class TransactionForm extends React.Component {
         // let name = 'Bitcoin';
 
         this.state = {
-            symbol: this.props.coin,
+            symbol: 'BTC',
             quantity: "Quantity",
             price: ''
         };
@@ -145,16 +145,17 @@ class TransactionForm extends React.Component {
 
 
     render() {
-        let coin = this.props.match.params.symbol
+        // let {coin} = this.props
         let obj = window.imageUrl;
-        let path = obj[coin];
+        let path = obj[this.state.symbol];
+
         return (
   
             <div className='widget-trade'>
                     <div className='head-name'><img src={path} id='h-icon' /></div>
                 <div className='trade-top'>
                     <h3>
-                        <a className={this.state.order_type === 'buy' ? 'active' : ''} onClick={() => this.updateType('buy')}>Buy {`${coin}`}</a>
+                        <a className={this.state.order_type === 'buy' ? 'active' : ''} onClick={() => this.updateType('buy')}>Buy {`${this.state.symbol}`}</a>
                         {/* {this.renderSellButton()} */}
                     </h3>
                 </div>
@@ -171,7 +172,7 @@ class TransactionForm extends React.Component {
                         </p>
                         <div>
                             <div>
-                                {/* <img src={imageSource} /> */}
+                                <img src={path} />
                             </div>
                         </div>
                     </div>

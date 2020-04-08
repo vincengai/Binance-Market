@@ -14,20 +14,20 @@ const mapStateToProps = (state, ownProps) => {
     
     const userId = state.session.id;
     let cashBalance, portfolio;
+    console.log(state)
+    // console.log(ownProps.transaction)
 
-        // if (userId) {
-            // cashBalance = state.entities.user[userId].cash_balance || {},
-            // portfolio = state.entities.user[userId].portfolio
-        // }
-    
+    if (userId) {   // if userId exists
+        cashBalance = state.entities.users[userId].cash_balance || {};
+        portfolio = state.entities.users[userId].portfolio || {};
+    }
 
-    return {
-        coinInfo: state.entities.coins.DISPLAY,
-        coin: ownProps.match.params.symbol,
+    return ({
+        coin: 
         cashBalance,
         portfolio,
         userId
-    }
+    });
 }
 
 const mapDispatchToProps = (dispatch) => {
