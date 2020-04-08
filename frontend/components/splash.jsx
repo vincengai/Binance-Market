@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink, Route } from 'react-router-dom';
-import CryptoIndexContainer from './crypto/crypto_index_container';
-
+// import CryptoIndexContainer from './crypto/crypto_index_container';
+import CryptoSplashIndexContainer from './crypto/crypto_splash_index_constainer';
 // 
 
 const COINS = [
@@ -52,8 +52,7 @@ class Splash extends React.Component {
                 Need help investing? Come checkout Currency Compare
               </div>
             </a>
-
-            <CryptoIndexContainer />
+            <CryptoSplashIndexContainer />
           </div>
         );}
 };
