@@ -48,7 +48,7 @@ class Splash extends React.Component {
 
             <a href="https://vincengai.github.io/Currency-Compare/" className="currency-compare">
               <div className="cur-comp-link">
-                <img src={window.imageUrl.megaphone} className="megaphone" />
+                <img src={window.imageUrl.megaphone} className='megaphone' />
                 Need help investing? Come checkout Currency Compare{" "}
               </div>
             </a>
