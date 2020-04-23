@@ -8,14 +8,9 @@ import { buyCoin, sellCoin } from '../../actions/transaction_actions'
 import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
-    // console.log(state.entities.coins.RAW[0], 'hello')
-    // console.log(ownProps.location.pathname.slice(7), 'tester')
-    // console.log(state.session.id, 'I am logged in!!')
-    
     const userId = state.session.id;
     let cashBalance, portfolio;
     console.log(state)
-    // console.log(ownProps.transaction)
 
     if (userId) {   // if userId exists
         cashBalance = state.entities.users[userId].cash_balance || {};
