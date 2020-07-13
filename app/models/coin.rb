@@ -2,9 +2,7 @@ class Coin < ApplicationRecord
     validates :name, :symbol, presence: true
     validates :symbol, uniqueness: true
     has_many :watchlists
-    has_many :transactions
-    has_many :watchlists 
-
+    
 
     # Convert Frontend API Calls to the Backend
     # def self.fetch_current_value(symbols)

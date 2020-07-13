@@ -9,7 +9,9 @@ class Wallet < ApplicationRecord
     foreign_key: :user_id,
     class_name: :User
 
-    belongs_to :coin
+    has_many :wallet_transactions,
+        foreign_key: :wallet_id,
+        class_name: :WalletTransactions 
 
  # # This will help find the proper wallet to update
     def self.get_wallet(user_id, symbol)
