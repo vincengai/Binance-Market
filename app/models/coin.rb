@@ -6,7 +6,6 @@ class Coin < ApplicationRecord
     has_many :watchlists 
 
 
-
     # Convert Frontend API Calls to the Backend
     # def self.fetch_current_value(symbols)
     #     url = 'https://min-api.cryptocompare.com/data/pricemulti?fsyms='

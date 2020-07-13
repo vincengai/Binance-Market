@@ -204,13 +204,9 @@ class TransactionForm extends React.Component {
     constructor(props) {
         super(props);
 
-        // let symbol = 'BTC';
-        // let name = 'Bitcoin';
-
         this.state = {
-            symbol: 'BTC',
+            symbol: this.props.symbol,
             quantity: "Quantity",
-            price: ''
         };
 
         this.handleBuy = this.handleBuy.bind(this);
@@ -219,11 +215,6 @@ class TransactionForm extends React.Component {
         this.onChangeQuantity = this.onChangeQuantity.bind(this);
         this.hasEnoughCash = this.hasEnoughCash.bind(this);
         this.hasEnoughQuantity = this.hasEnoughQuantity.bind(this);
-        this.price = this.price.bind(this);
-        // this.currentPrice = this.currentPrice.bind(this);
-        this.updateType = this.updateType.bind(this);
-        this.update = this.update.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     update(e) {
