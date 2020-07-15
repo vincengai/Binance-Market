@@ -10,7 +10,6 @@ import {withRouter} from 'react-router-dom';
 const mapStateToProps = (state, ownProps) => {
     const userId = state.session.id;
     let cashBalance, portfolio;
-    // console.log(state)
 
     if (userId) {   // if userId exists
         cashBalance = state.entities.users[userId].cash_balance || {};
@@ -18,7 +17,7 @@ const mapStateToProps = (state, ownProps) => {
     }
 
     return ({
-        coin: 
+        // coin: 
         cashBalance,
         portfolio,
         userId

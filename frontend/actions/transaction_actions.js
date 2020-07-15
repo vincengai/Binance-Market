@@ -10,7 +10,7 @@ export const buyCoin = (buyInfo) => dispatch => {
     return Transaction_Util.buyCoin(buyInfo)
         .then( 
             (response) => {
-                return dispatch(receiveBuyCoin(response))
+                return dispatch(receiveBuyCoin(response))      // ? response == { id: 17, email: 'demo@gmail.com', cash_balance: 3000, portfolio: {'BTC': 1} }
             }
         )
 };
@@ -26,9 +26,9 @@ export const sellCoin = (sellInfo) => dispatch => {
     
 
 
-// Action Creators => Hits the User Reducer
+// Action Creators => Hits the Users Reducers
 
-export const receiveBuyCoin = ( userData ) => {
+export const receiveBuyCoin = (userData) => {  // ? userData == { id: 17, email: 'demo@gmail.com', cash_balance: 3000, portfolio: {'BTC': 1} }
     return {
         type: RECEIVE_BUY_INFO,
         data: userData 

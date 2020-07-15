@@ -9,7 +9,7 @@ export default (state = [], action) => {
 
     switch (action.type) {
         case RECEIVE_SESSION_ERRORS:
-            return action.errors;
+            return [].concat(action.errors);
         case CLEAR_ERRORS:
             action.errors = [];
             return action.errors;
