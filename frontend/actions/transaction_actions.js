@@ -4,7 +4,7 @@ export const RECEIVE_BUY_INFO = 'RECEIVE_BUY_INFO';
 export const RECEIVE_SELL_INFO = 'RECEIVE_SELL_INFO';
 
 
-// Thunk Action Creators 
+// Thunk Action Creators or THUNK middleware ?
 
 export const buyCoin = (buyInfo) => dispatch => {
     return Transaction_Util.buyCoin(buyInfo)

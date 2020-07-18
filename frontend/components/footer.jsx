@@ -16,9 +16,9 @@ class Foot extends React.Component {
     render() {
         return (
             <div className="footer-container">
-                <h1 className='footer-sent'> Start Trading Now</h1> 
+                <h1 className='footer-sent'> Vince Ngai</h1> 
                 
-                <NavLink className="footer-submit" to="/coins">Trade Now</NavLink>
+                <NavLink className="footer-submit" to="/coins">Portfolio (in the works)</NavLink>
             </div>
         )
     }

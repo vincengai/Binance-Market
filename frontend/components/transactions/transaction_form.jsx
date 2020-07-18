@@ -257,7 +257,7 @@ class TransactionForm extends React.Component {
         // Need to find PRICE FOOR SYMBOL WOOT WOOT MARCH 10, 6:04PM 
         // WOOT WOOT CONTINUE FROM HERE 
 
-        console.log(price, ' this is the preprice')
+        console.log(this.props.symbol, ' this is the props.symbol')
 
         if (isNaN(price)) {   // if price is a string ex. "$ 8,000.00", remove $ and ','
             price = Number(price.slice(1).split(',').join(''));
