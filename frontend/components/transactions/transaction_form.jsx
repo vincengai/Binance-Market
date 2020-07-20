@@ -329,7 +329,8 @@ class TransactionForm extends React.Component {
     }
 
     hasEnoughQuantity() {
-        const { symbol, portfolio } = this.props;
+        const { portfolio } = this.props;
+        const { symbol } = this.state; 
         const quantity = Number(this.state.quantity);
         // debugger
 

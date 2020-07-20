@@ -8,6 +8,13 @@ const coinReducer = (oldState={}, action) => {
     switch(action.type) {
         case CoinAction.RECEIVE_COINS_INFOS:
             return action.data;
+
+            // CORRECT
+            //newState = merge({},
+            //    oldState,
+            //  { [action.payload.symbol]: action.payload })
+            // newState == {price: 11645.05, changePct24HR: -1.0162682825865141}
+
         case CoinAction.RECEIVE_COIN_INFO:
             return action.data; 
         case CoinAction.RECEIVE_30DAY_INFO:
