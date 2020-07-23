@@ -85,7 +85,7 @@
 //             alert('Please enter a valid quantity');
 
 //         } else if (this.hasEnoughCash()) {                            // Validate that user cash balance is sufficient 
-//             this.props.buyCurrency(purchaseData);                       // Send POST (create new wallet transaction) to backend
+//             this.props.buyCoin(purchaseData);                       // Send POST (create new wallet transaction) to backend
 //             alert(`${quantity} ${symbol} was added to your account!`);
 //             this.props.toggleModal();                                   // close modal
 //         } else {
@@ -207,6 +207,7 @@ class TransactionForm extends React.Component {
         this.state = {
             symbol: this.props.symbol,
             quantity: "Quantity",
+            price: "0"
         };
 
         this.handleBuy = this.handleBuy.bind(this);
@@ -215,6 +216,18 @@ class TransactionForm extends React.Component {
         this.onChangeQuantity = this.onChangeQuantity.bind(this);
         this.hasEnoughCash = this.hasEnoughCash.bind(this);
         this.hasEnoughQuantity = this.hasEnoughQuantity.bind(this);
+    }
+
+    componentDidMount() {
+        // console.log(this.state.symbol)
+        this.props.fetchCoinInfo(this.state.symbol).then( (result) => {
+            let display = result.data.DISPLAY
+            let coin = display[this.state.symbol]
+
+            this.setState({
+                price:  coin.USD.PRICE
+            })
+        })
     }
 
     update(e) {
@@ -239,15 +252,15 @@ class TransactionForm extends React.Component {
         });
     }
 
-    price() {
-        let coinArr = Object.values(this.props.coinInfo);
+    // price() {
+    //     let coinArr = Object.values(this.props.coinInfo);
 
-        coinArr.map((coinObj, i) => {
-            this.setState({
-                price: coinObj.USD.PRICE
-            });
-        })
-    }
+    //     coinArr.map((coinObj, i) => {
+    //         this.setState({
+    //             price: coinObj.USD.PRICE
+    //         });
+    //     })
+    // }
 
     handleBuy() {
         const {symbol, quantity, price} = this.state;
@@ -257,11 +270,14 @@ class TransactionForm extends React.Component {
         // Need to find PRICE FOOR SYMBOL WOOT WOOT MARCH 10, 6:04PM 
         // WOOT WOOT CONTINUE FROM HERE 
 
-        console.log(this.props.symbol, ' this is the props.symbol')
+        // console.log(price, ' this is the pricee')
 
-        if (isNaN(price)) {   // if price is a string ex. "$ 8,000.00", remove $ and ','
-            price = Number(price.slice(1).split(',').join(''));
-            console.log(price, "this is the price broski")
+        if (isNaN(price) && price !== undefined) {   // if price is a string ex. "$ 8,000.00", remove $ and ','
+        debugger
+            this.setState({
+                price: Number(price.slice(1).split(',').join(''))
+            })
+
         }
 
         const purchaseData = {
@@ -276,7 +292,7 @@ class TransactionForm extends React.Component {
             alert('Please enter a valid quantity');
 
         } else if (this.hasEnoughCash()) {                            // Validate that user cash balance is sufficient 
-            this.props.buyCurrency(purchaseData);                       // Send POST (create new wallet transaction) to backend
+            this.props.buyCoin(purchaseData);                       // Send POST (create new wallet transaction) to backend
             alert(`${quantity} ${symbol} was added to your account!`);
             this.props.toggleModal();                                   // close modal
         } else {

@@ -10,13 +10,15 @@ const mapStateToProps = (state, ownProps) => {
     const userId = state.session.id;
     let cashBalance, portfolio;
 
+    let symbol = state.ui.modal.symbol
+
     if (userId) {   // if userId exists
         cashBalance = state.entities.users[userId].cash_balance || {};
         portfolio = state.entities.users[userId].portfolio || {};
     }
 
     return ({
-        // coin: 
+        symbol, 
         cashBalance,
         portfolio,
         userId

@@ -8,7 +8,7 @@ function Modal({ modal, closeModal }) {
         return null;
     }
     let component;
-    switch (modal) {
+    switch (modal.modalType) {
         case 'buy':
             component = <TransactionContainer />;
             break;

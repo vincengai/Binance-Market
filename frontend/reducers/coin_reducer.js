@@ -7,7 +7,7 @@ const coinReducer = (oldState={}, action) => {
     
     switch(action.type) {
         case CoinAction.RECEIVE_COINS_INFOS:
-            return action.data;
+            return action.data; 
 
             // CORRECT
             //newState = merge({},

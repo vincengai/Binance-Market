@@ -533,7 +533,7 @@ class CryptoShow extends React.Component {
     
 
     openSelectModal() {
-        this.props.openModal('buy');
+        this.props.openModal({symbol: this.state.coin, modalType: 'buy'});
     }
 
     // Methods used for Top Bar Container
