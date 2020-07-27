@@ -66,11 +66,9 @@
 //         // Need to find PRICE FOOR SYMBOL WOOT WOOT MARCH 10, 6:04PM 
 //         // WOOT WOOT CONTINUE FROM HERE 
 
-//         console.log(price, ' this is the preprice')
 
 //         if (isNaN(price)) {   // if price is a string ex. "$ 8,000.00", remove $ and ','
 //             price = Number(price.slice(1).split(',').join(''));
-//             console.log(price, "this is the price broski")
 //         }
 
 //         const purchaseData = {
@@ -207,7 +205,7 @@ class TransactionForm extends React.Component {
         this.state = {
             symbol: this.props.symbol,
             quantity: "Quantity",
-            price: "0"
+            price: 0
         };
 
         this.handleBuy = this.handleBuy.bind(this);
@@ -219,7 +217,6 @@ class TransactionForm extends React.Component {
     }
 
     componentDidMount() {
-        // console.log(this.state.symbol)
         this.props.fetchCoinInfo(this.state.symbol).then( (result) => {
             let display = result.data.DISPLAY
             let coin = display[this.state.symbol]
@@ -266,50 +263,46 @@ class TransactionForm extends React.Component {
         const {symbol, quantity, price} = this.state;
 
         let {userId} = this.props; 
-
-        // Need to find PRICE FOOR SYMBOL WOOT WOOT MARCH 10, 6:04PM 
-        // WOOT WOOT CONTINUE FROM HERE 
-
-        // console.log(price, ' this is the pricee')
+        let intPrice = price; 
 
         if (isNaN(price) && price !== undefined) {   // if price is a string ex. "$ 8,000.00", remove $ and ','
-        debugger
-            this.setState({
-                price: Number(price.slice(1).split(',').join(''))
-            })
+            intPrice = Number(price.slice(1).split(',').join(''))
 
-        }
+            this.setState({
+                price: intPrice
+        })}
 
         const purchaseData = {
             user_id: userId,
             symbol: symbol,
             quantity: quantity,
-            price: price
+            price: intPrice      
         };
-
-        // Display error if quantity is not a number or negative
+    
+            // Display error if quantity is not a number or negative
         if (isNaN(quantity) || Number(quantity) <= 0) {
             alert('Please enter a valid quantity');
 
-        } else if (this.hasEnoughCash()) {                            // Validate that user cash balance is sufficient 
+        } else if (this.hasEnoughCash(intPrice)) {                            // Validate that user cash balance is sufficient 
             this.props.buyCoin(purchaseData);                       // Send POST (create new wallet transaction) to backend
             alert(`${quantity} ${symbol} was added to your account!`);
-            this.props.toggleModal();                                   // close modal
+            this.props.closeModal();                                   // close modal
         } else {
             alert('You do not have enough funding!');
         }
     }
+        
 
-    hasEnoughCash() {
-        let { price, cashBalance } = this.props;
+    hasEnoughCash(intPrice) {
+        let { cashBalance } = this.props;
         const quantity = Number(this.state.quantity);
 
-        if (isNaN(price)) {   // if price is a string ex. "$ 8,000.00", remove $ and ','
-            price = Number(price.slice(1).split(',').join(''));
-        }
+        // if (isNaN(intPrice)) {   // if price is a string ex. "$ 8,000.00", remove $ and ','
+        //     intPrice = Number(intPrice.slice(1).split(',').join(''));
+        // }
 
         // Compute total purchase value = price * quantity
-        const totalPurchaseValue = price * quantity;
+        const totalPurchaseValue = intPrice * quantity;
 
         // Check if user has enough cash to cover totalPurchaseValue
         return (cashBalance >= totalPurchaseValue);
@@ -320,8 +313,10 @@ class TransactionForm extends React.Component {
         const { symbol, quantity, price } = this.state;
         let { userId } = this.props;
 
-        if (isNaN(price)) {   // if price is a string ex. "$ 8,000.00", remove $ and ','
-            price = Number(price.slice(1).split(',').join(''));
+        if (isNaN(price) && price !== undefined) {   // if price is a string ex. "$ 8,000.00", remove $ and ','
+            this.setState({
+                price: Number(price.slice(1).split(',').join(''))
+            })
         }
         // debugger
 

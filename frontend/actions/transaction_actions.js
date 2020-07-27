@@ -8,8 +8,9 @@ export const RECEIVE_SELL_INFO = 'RECEIVE_SELL_INFO';
 
 export const buyCoin = (buyInfo) => dispatch => {
     return Transaction_Util.buyCoin(buyInfo)
-        .then( 
-            (response) => {
+    .then( 
+        (response) => {
+            console.log(response, "actions response")
                 return dispatch(receiveBuyCoin(response))      // ? response == { id: 17, email: 'demo@gmail.com', cash_balance: 3000, portfolio: {'BTC': 1} }
             }
         )

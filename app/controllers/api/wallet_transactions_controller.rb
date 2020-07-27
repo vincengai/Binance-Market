@@ -7,29 +7,15 @@ class Api::WalletTransactionsController < ApplicationController
       @transaction = Transaction.find(params[:id])
     end
 
+
     def create
       # When the POJO is passed in from the frontend, Key into the POJO to grab
       # The information that needs to be updated
       quantity = transaction_params[:quantity].to_f  # Float, quantity will be Positive or Negative(sell)
       symbol = transaction_params[:symbol]
-      price = transaction_params[:price]
+      price = transaction_params[:price].to_f
       total_price = quantity * price 
       user_id = current_user.id
-
-      # @transaction = Transaction.new(transaction_params)
-      # @coin = Coin.find_by(symbol: params[:transaction][:symbol])
-      # @transaction.coin_id = @coin.id
-      # @transaction.user_id = current_user.id
-      # @transaction.transaction_date = Time.now
-
-      # transaction_amount = @transaction.price * @transaction.quantity
-      # shares_owned = current_user.shared_owned(@transaction.coin_id)
-
-      # if transaction_amount > current_user.calculate_buying_power
-
-      # end
-
-
 
       # Check if the proper user is logged in 
       correct_user = logged_in? && (user_id == transaction_params[:user_id].to_i)
@@ -40,7 +26,9 @@ class Api::WalletTransactionsController < ApplicationController
         if correct_user && (current_user.cash_balance >= total_price)
           #1) Grab proper wallet w/ methods defined in the Wallet Model
           wallet = Wallet.get_wallet(user_id, symbol)
-          wallet.update_value(quantity)
+          if wallet == nil 
+            Wallet.new(user_id, symbol, name) # figure out the parameters 
+            wallet.update_value(quantity)     # update_value quantity of said symbol
 
           #2) Because we are Buying, change Current_balance)
           current_user.cash_balance = current_user.cash_balance - total_price
@@ -57,7 +45,8 @@ class Api::WalletTransactionsController < ApplicationController
 
           #4) Return the updated User's cash_balance, portfolio, and transactions listing
           @wallet_transaction.save
-
+          debugger
+          
           render json: {
             id: current_user.id,
             email: current_user.email,

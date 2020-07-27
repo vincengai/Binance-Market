@@ -1,5 +1,5 @@
 class Wallet < ApplicationRecord
-    validates :user_id, :coin_id, :symbol, :name, presence: true 
+    validates :user_id, :currency_symbol, :name, presence: true 
 
     # has_many :coins, 
     # foreign_key: :coin_id,
@@ -15,7 +15,7 @@ class Wallet < ApplicationRecord
 
  # # This will help find the proper wallet to update
     def self.get_wallet(user_id, symbol)
-        wallet = Wallet.find_by(user_id: user_id, symbol: symbol)
+        wallet = Wallet.find_by(user_id: user_id, currency_symbol: symbol)
     end
 
     # # Quantity because transactions are in BTC

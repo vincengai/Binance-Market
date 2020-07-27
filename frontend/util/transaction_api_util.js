@@ -8,7 +8,7 @@ export const buyCoin = (tradeInfo) => {
     return $.ajax({
         method: 'POST',
         url: 'api/wallet_transactions',
-        data: { tradeInfo }
+        data: { transaction: tradeInfo } // tradeInfo under the key of transaction
         // transaction = {user_id: 1, symbol: 'BTC', quantity: '1.0', price: '5000.0'}
     });
 }
@@ -20,7 +20,7 @@ export const sellCoin = (tradeInfo) => {
     return $.ajax ({
     method: 'POST',
     url: 'api/wallet_transactions',
-    data: { tradeInfo }
+    data: { transaction: tradeInfo }
         // transaction = {user_id: 1, symbol: 'BTC', quantity: '-1.0', price: '5000'.0}
     });
 }

@@ -9,14 +9,18 @@ import { fetchCoinInfo } from '../../actions/coin_actions';
 const mapStateToProps = (state, ownProps) => {
     const userId = state.session.id;
     let cashBalance, portfolio;
-
     let symbol = state.ui.modal.symbol
 
+    
+    // debugger
     if (userId) {   // if userId exists
         cashBalance = state.entities.users[userId].cash_balance || {};
         portfolio = state.entities.users[userId].portfolio || {};
     }
 
+    // {id: 1,
+    // username: demo@gmail}
+    
     return ({
         symbol, 
         cashBalance,
