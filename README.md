@@ -2,12 +2,11 @@
 
 [Live Site](http://coinbase-appacademy.herokuapp.com/)
 
-![home](https://github.com/vincengai/Binance-Market/blob/master/app/assets/images/homepage.png)
-
 ## About
 
-[Binance] is inspired by Binance, a global cryptocurency exchange site that provides a platform for trading over 100 cryptocurrencies. [Binance] is a risk-free site allowing users to navigate the site safely navigating through current cryptocurrency pricing. 
+Binance-XChange is inspired by Binance, a digital currency brokerage exchange that provides users a platform to buy, sell, and reserach various digital assets such as: Bitcoin, Ethereum, and Lite Coin. Binance-XChange is a risk-free site allowing users to navigate the site safely navigating through current cryptocurrency pricing. Binance-Xchange users may execute or sell market orders, track currency news and prices over multiple timeframes.
 
+![home](https://github.com/vincengai/Binance-Market/blob/master/app/assets/images/homepage.png)
 
 
 ## Technologies 
@@ -18,7 +17,11 @@
 
 
 ## Features 
-* Fetches realtime data on crypto assets. 
+
+# Custom User Authentication
+Created a custom Rails back-end user authentication pattern with a BCrypt ruby gem. Bcrypt internally uses Blowfish encryption. The following is part of the auth pattern from the user model:
+
+
 * Fundementally, the API GET request is done through the frontend.
 * Parses through the information before rendering the information. 
 
