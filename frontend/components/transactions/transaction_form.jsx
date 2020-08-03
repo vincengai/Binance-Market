@@ -360,27 +360,14 @@ class TransactionForm extends React.Component {
             <div className='widget-trade'>
                     <div className='head-name'><img src={path} id='h-icon' /></div>
                 <div className='trade-top'>
-                    <h3>
-                        <a className={this.state.order_type === 'buy' ? 'active' : ''} onClick={() => this.updateType('buy')}>Buy {`${this.state.symbol}`}</a>
-                        {/* {this.renderSellButton()} */}
-                    </h3>
+                    <div>
+                        <a className={this.state.order_type === 'buy' ? 'active' : ''} onClick={() => this.updateType('buy')}>Trade {`${this.state.symbol}`}</a>
+                    </div>
                 </div>
                 <div className='trade-middle'>
                     <input type="text" placeholder={this.state.quantity} minLength='1' onChange={this.onChangeQuantity} />
                 <div>
                         {/* {errors go here} */}
-                    </div>
-
-
-                    <div className='trade-crypto-selector'>
-                        <p>
-                            Buy
-                        </p>
-                        <div>
-                            <div>
-                                <img src={path} />
-                            </div>
-                        </div>
                     </div>
 
                     <div className='modal-button'>

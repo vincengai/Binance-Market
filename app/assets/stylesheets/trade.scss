@@ -89,12 +89,9 @@
             font-weight: 400;
             min-height: 73px;
             max-height: 73px;
-            // max-width: 440px;
-            // width: min-content;
             width: 250px;
             box-shadow: none;
-            // padding: 0px;  this causes the input box to disappear for some reason?
-            // margin: 0px;
+
             border-width: initial;
             border-style: none;
             border-color: initial;
@@ -104,6 +101,7 @@
             background: rgb(255, 255, 255);
 
             margin-top: 60px; //actual coinbase doesn't have a margin
+            margin-bottom: 10px;
         }
 
         .trade-crypto-selector {

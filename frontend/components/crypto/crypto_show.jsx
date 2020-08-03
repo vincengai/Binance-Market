@@ -695,8 +695,8 @@ class CryptoShow extends React.Component {
 
                 <div className="show-header">
                     <div className='head-name'><img src={path} id='h-icon' /></div>
-                    <div>{this.props.coin}</div>
-                    <div>{this.state.currentPrice}</div>
+                    <div>{this.props.coin} </div>
+                    <div> {this.state.currentPrice}</div>
 
                 </div>
 
