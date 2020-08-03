@@ -232,8 +232,8 @@
 
 //         fetch1WeekInfo(symbol).then ( (response) => {
 //             return this.setState({
-//                 data: response.data.Data.Data, // Might need to go in one more level
-//                 // ["1W"]: response.data.Data.Data, // Might need to go in one more level 
+//                 data: response.data.Data.Data, 
+//                 // ["1W"]: response.data.Data.Data,  
 //                 "timePeriodActive": "week"
 //             });
 //         });
@@ -249,7 +249,7 @@
 
 //         fetch1MonthInfo(symbol).then ( (response) => {
 //             return this.setState({
-//                 data: response.data.Data.Data, // Might need to go in one more level
+//                 data: response.data.Data.Data, 
 //                 // ["1M"]: response.data.Data.Data,
 //                 "timePeriodActive": "month"
 //             });
@@ -267,7 +267,7 @@
 //         fetch1YearInfo(symbol).then ( (response) => {
 //             console.log(response)
 //             return this.setState({
-//                 data: response.data.Data.Data, // Might need to go in one more level
+//                 data: response.data.Data.Data, 
 //                 // ["1Y"]: response.data.Data.Data,
 //                 "timePeriodActive": "year"
 //             });
@@ -466,7 +466,6 @@ class CustomTooltip extends React.Component {
                 </div>
             );
         }
-        // return null;
     }
 }
 
@@ -601,12 +600,6 @@ class CryptoShow extends React.Component {
     get1DayPrices(symbol) {
         let { fetch1DayInfo } = this.props;
 
-        // this.setState({
-        //     dataPeriod: "1D",
-        //     dataActive: 'day-active'
-        // });
-
-        // console.log(response, 'thisisthenews')
         fetch1DayInfo(symbol).then((response) => {
             return this.setState({
                 ["1D"]: response.data.Data.Data,
@@ -619,15 +612,10 @@ class CryptoShow extends React.Component {
     get1WeekPrices(symbol) {
         let { fetch1WeekInfo } = this.props;
 
-        // this.setState({
-        //     dataPeriod: "1W",
-        //     dataActive: 'week-active'
-        // });
-
         fetch1WeekInfo(symbol).then((response) => {
             return this.setState({
                 ["1W"]: response.data.Data.Data,
-                data: response.data.Data.Data, // Might need to go in one more level
+                data: response.data.Data.Data, 
                 "timePeriodActive": "week"
             });
         });
@@ -636,15 +624,10 @@ class CryptoShow extends React.Component {
     get1MonthPrices(symbol) {
         let { fetch1MonthInfo } = this.props;
 
-        // this.setState({
-        //     dataPeriod: "1M",
-        //     dataActive: 'month-active'
-        // });
-
         fetch1MonthInfo(symbol).then((response) => {
             return this.setState({
                 ["1M"]: response.data.Data.Data,
-                data: response.data.Data.Data, // Might need to go in one more level
+                data: response.data.Data.Data, 
                 "timePeriodActive": "month"
             });
         });
@@ -653,15 +636,10 @@ class CryptoShow extends React.Component {
     get1YearPrices(symbol) {
         let { fetch1YearInfo } = this.props;
 
-        // this.setState({
-        //     dataPeriod: "1Y",
-        //     dataActive: 'year-active'
-        // });
-
         fetch1YearInfo(symbol).then((response) => {
             return this.setState({
                 ["1Y"]: response.data.Data.Data,
-                data: response.data.Data.Data, // Might need to go in one more level
+                data: response.data.Data.Data, 
                 "timePeriodActive": "year"
             });
         });
@@ -765,9 +743,9 @@ class CryptoShow extends React.Component {
                         <li className="timeframe-list" onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
                     </div>
 
-
-                    <button onClick={this.openSelectModal} className="trans-button">Transaction</button>
-
+                    <div className="right-column">
+                        <button onClick={this.openSelectModal} className="trans-button">Transaction</button>
+                    </div>
 
                     <div className="linechart-news">
                         <div className="linechart">

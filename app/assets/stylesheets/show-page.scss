@@ -38,8 +38,7 @@
   padding-right: 20px;
   padding-bottom: 10px;
   padding-left: 20px;
-  // left: 33%; 
-  flex-direction: column;
+  margin-top: 3%;
 }
 
 // .flex-row {
@@ -102,7 +101,7 @@
 
 .news-header {
   text-align: left; 
-  font-size: 20px;
+  font-size: 30px;
 }
 
 ul.news {
@@ -142,7 +141,7 @@ p.news-source, p.news-date, p.news-symbol {
   // width: 30%;
   // height: 30%;
 	width: 73px; 
-
+  padding-right: 5px;
   float: right; 
 }
 
