@@ -358,7 +358,6 @@ class TransactionForm extends React.Component {
         return (
 
             <div className='widget-trade'>
-                    <div className='head-name'><img src={path} id='h-icon' /></div>
                 <div className='trade-top'>
                     <div>
                         <a className={this.state.order_type === 'buy' ? 'active' : ''} onClick={() => this.updateType('buy')}>Trade {`${this.state.symbol}`}</a>
