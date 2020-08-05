@@ -1,9 +1,5 @@
 class Wallet < ApplicationRecord
-    validates :user_id, :currency_symbol, :name, presence: true 
-
-    # has_many :coins, 
-    # foreign_key: :coin_id,
-    # class_name: :Coin
+    validates :wallet_address, :user_id, presence: true 
 
     belongs_to :user, 
     foreign_key: :user_id,

@@ -26,9 +26,12 @@ class Api::WalletTransactionsController < ApplicationController
         if correct_user && (current_user.cash_balance >= total_price)
           #1) Grab proper wallet w/ methods defined in the Wallet Model
           wallet = Wallet.get_wallet(user_id, symbol)
+          
+          #BEGINNING MISSIN A END SOMEWHERE
           if wallet == nil 
             Wallet.new(user_id, symbol, name) # figure out the parameters 
             wallet.update_value(quantity)     # update_value quantity of said symbol
+          end
 
           #2) Because we are Buying, change Current_balance)
           current_user.cash_balance = current_user.cash_balance - total_price
@@ -45,7 +48,6 @@ class Api::WalletTransactionsController < ApplicationController
 
           #4) Return the updated User's cash_balance, portfolio, and transactions listing
           @wallet_transaction.save
-          debugger
           
           render json: {
             id: current_user.id,
@@ -56,11 +58,11 @@ class Api::WalletTransactionsController < ApplicationController
           }
 
         else 
-          # IF you can't buy, (not enough funds)
+          # Error (not enough funds)
           render json: ["Insufficient Funds to Complete the Transaction"], status: 401
         end
 
-      else quantity < 0 # AKA you're selling instead of buying...
+      else quantity < 0 # Negative. you're selling instead of buying...
         
         #Check if the current user even has the coins to sell....
         if current_user && current_user.has_enough_coins(symbol, quantity)
@@ -94,6 +96,7 @@ class Api::WalletTransactionsController < ApplicationController
         end
       end  
 
+    
         # If the quantity requested is sub zero 
       if correct_user && (quantity <= 0)
           render json: ["Cryptocurrency must be greater than 0"], status: 422

@@ -110,6 +110,42 @@ class CryptoIndex extends React.Component {
                 XRP
               </Link>
             </div>
+            <div id="btc-div">
+              <img src={window.imageUrl.XRP} id="c-icon3" />
+              <Link to="/coins/XRP" className="flex-name">
+                XRP
+              </Link>
+            </div>
+            <div id="btc-div">
+              <img src={window.imageUrl.XRP} id="c-icon3" />
+              <Link to="/coins/XRP" className="flex-name">
+                XRP
+              </Link>
+            </div>
+            <div id="btc-div">
+              <img src={window.imageUrl.XLM} id="c-icon3" />
+              <Link to="/coins/XLM" className="flex-name">
+                XLM
+              </Link>
+            </div>
+            <div id="btc-div">
+              <img src={window.imageUrl.DASH} id="c-icon3" />
+              <Link to="/coins/DASH" className="flex-name">
+                DASH
+              </Link>
+            </div>
+            {/* <div id="btc-div">
+              <img src={window.imageUrl.ONT} id="c-icon3" />
+              <Link to="/coins/ONT" className="flex-name">
+                ONT
+              </Link>
+            </div>
+            <div id="btc-div">
+              <img src={window.imageUrl.NEO} id="c-icon3" />
+              <Link to="/coins/NEO" className="flex-name">
+                NEO
+              </Link>
+            </div> */}
 
           </div>
 
@@ -138,6 +174,18 @@ class CryptoIndex extends React.Component {
             </div>
             <div>
               <img src={window.imageUrl.graphA} className="c-graph" />
+            </div>
+            <div>
+              <img src={window.imageUrl.graphB} className="c-graph" />
+            </div>
+            <div>
+              <img src={window.imageUrl.graphC} className="c-graph" />
+            </div>
+            <div>
+              <img src={window.imageUrl.graphA} className="c-graph" />
+            </div>
+            <div>
+              <img src={window.imageUrl.graphB} className="c-graph" />
             </div>
           </div>
         </div>
