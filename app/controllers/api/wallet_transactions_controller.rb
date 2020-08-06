@@ -102,6 +102,7 @@ class Api::WalletTransactionsController < ApplicationController
           render json: ["Cryptocurrency must be greater than 0"], status: 422
       end
     end
+  
 
     private
     def transaction_params 
