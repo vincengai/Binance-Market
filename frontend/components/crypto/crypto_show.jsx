@@ -752,16 +752,6 @@ class CryptoShow extends React.Component {
                             <LineChart width={550} height={405} data={this.state.data} margin={{ top: 0, right: 0, left: 0, bottom: 0 }} cursor="crosshair">
                                 <Tooltip content={<CustomTooltip />} offset={-65} animationDuration={100} />
 
-                                {/* <XAxis
-                                    hide={true}
-                                    tickLine={false} />
-                                <YAxis
-                                    hide={true}
-                                    domain={[dataMin => (dataMin * 0.80), dataMax => (dataMax * 1.05)]} />
-                                <Tooltip
-                                    cursor={false}
-                                    labelStyle={{ display: 'none' }}
-                                /> */}
                                 <XAxis dataKey="name" />
                                 <YAxis type="number" domain={['dataMin - 5', 'dataMax + 5']} />
                                 <Line

@@ -51,8 +51,47 @@
     display: flex;
     width: 550px;
     border-right: none;
+
+
+.custom-tooltip {
+	background: #002244;
+	color: white;
+	border-radius: 2px;
+	width: 130px;
+	height: 50px;
+
+	.tooltip-label, .tooltip-time {
+		text-align: center;
+	}
+	.tooltip-label {
+		margin: 0;
+		padding: 5px 0 0 0;
+		font-size: 1.25rem;
+	}
+	.tooltip-time {
+		margin: 0;
+		padding: 0 0 5px 0;
+		font-size: .85rem;
+	}
+}
 }
 
+
+.recharts-tooltip-wrapper {
+  // justify-content: center;
+  // border-radius: 3px;
+  // background-color: rgb(73, 75, 78);
+  // color: white;
+  // margin: 8px 0;
+  // border: none;
+  // cursor: pointer;
+  // font-size: 1em;
+    pointer-events: none;
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    transform: translate(433.333px, 5px);
+}
 .timeframe-list {
     padding: 10px 32px;
     border-top: 1px solid #eceff1;
