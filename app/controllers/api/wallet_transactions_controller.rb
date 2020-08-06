@@ -7,7 +7,7 @@ class Api::WalletTransactionsController < ApplicationController
       @transaction = Transaction.find(params[:id])
     end
 
-    #herokup
+    #heroku
     def create
       # When the POJO is passed in from the frontend, Key into the POJO to grab
       # The information that needs to be updated
