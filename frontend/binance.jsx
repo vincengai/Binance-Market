@@ -4,7 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 // import * as Crypto from './util/coin_api_util';
 import * as Crypto from './actions/coin_actions';
-
+//
 document.addEventListener("DOMContentLoaded", () => {
     // const store = configureStore();
     // window.fetchCoinsInfo = Crypto.fetchCoinsInfo;
