@@ -8,7 +8,7 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }, allow_nil: true
 
   after_initialize :ensure_session_token
-  # after_create :generate_wallets
+  after_create :generate_wallets
 
 
   has_many :wallets,
@@ -55,9 +55,9 @@ class User < ApplicationRecord
         'BTC', 'ETH', 'BCH', 'BNB', 'LTC', 'TRX', 'XRP',
         'XLM', 'DASH', 'ONT', 'NEO']
 
-        currencies.each do |symb|
+        currencies.each do |symbol|
           Wallet.create(
-            :symbol => symbol,
+            :currency_symbol => symbol,
             :user_id => self.id,
             :total_value => 0.00,
             :wallet_address => SecureRandom.hex(16)
@@ -89,7 +89,7 @@ class User < ApplicationRecord
       # Iterate thru all the wallets(symbol), and initialize a new Key if the value is > 0
       wallets.each_with_index do |ele, i|
         wallet = wallets[i]
-        symbol = wallet.symbol
+        symbol = wallet.currency_symbol
 
         if wallet.total_value > 0
           portfolio[symbol] = wallet.total_value
@@ -112,7 +112,7 @@ class User < ApplicationRecord
     quantity = quantity * -1 
 
     # Check if the quantity provided does not succeed Quantity in Portfolio Wallet 
-    if ( (portfolio[symbol] == nil) or (portfolio[symbol] < quantity))
+    if ( (portfolio[currency_symbol] == nil) or (portfolio[currency_symbol] < quantity))
         return false 
     end
     

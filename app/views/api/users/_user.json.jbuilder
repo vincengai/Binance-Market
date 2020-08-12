@@ -1,5 +1,6 @@
 json.extract! user, :id, :email, :cash_balance
 json.portfolio current_user.get_portfolio
+
 json.transactions do 
   json.array! current_user.wallet_transactions do |transaction|
     json.quantity transaction.quantity
