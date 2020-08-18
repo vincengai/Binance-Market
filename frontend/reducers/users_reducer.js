@@ -21,8 +21,8 @@ const usersReducer = (oldState = {}, action) => {
             return newState;
         
         case RECEIVE_SELL_INFO:
-            newState = merge({}, oldState, { [action.currentUser.id]: action.data});
-            newState[action.userData.id].portfolio = action.currentUser.portfolio; 
+            newState = merge({}, oldState, { [action.data.currentUser_id]: action.data});
+            newState[action.data.currentUser_id].portfolio = action.data.portfolio; 
 
             return newState; 
 
