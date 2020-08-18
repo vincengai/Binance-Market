@@ -8,13 +8,9 @@ const usersReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            return Object.assign({}, oldState, { [action.currentUser.id]: action.currentUser });
+            return Object.assign({}, oldState, { [action.user.id]: action.currentUser });
         
         case RECEIVE_BUY_INFO:
-			// action.userData ==  { id: 17, email: 'demo@gmail.com', cash_balance: 3000, portfolio: {'BTC': 1} }
-            // console.log(action.userData, "this is action.userData")
-            // debugger
-
             newState = merge( {}, oldState, { [action.data.currentUser_id]: action.data});      
             newState[action.data.currentUser_id].portfolio = action.data.portfolio;         
                                                                                        
