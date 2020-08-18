@@ -13,11 +13,11 @@ const usersReducer = (oldState = {}, action) => {
         case RECEIVE_BUY_INFO:
 			// action.userData ==  { id: 17, email: 'demo@gmail.com', cash_balance: 3000, portfolio: {'BTC': 1} }
             // console.log(action.userData, "this is action.userData")
-            debugger
+            // debugger
 
-            newState = merge( {}, oldState, { [action.data.currentUser_id]: action.data});      //  userData & curUser key doesn't exist
-            newState[action.data.currentUser_id].portfolio = action.data.portfolio;          // currentUser key doesn't
-                                                                                        // Updates Portfolio to update display in port tab?
+            newState = merge( {}, oldState, { [action.data.currentUser_id]: action.data});      
+            newState[action.data.currentUser_id].portfolio = action.data.portfolio;         
+                                                                                       
             return newState;
         
         case RECEIVE_SELL_INFO:
