@@ -151,7 +151,7 @@ class Api::WalletTransactionsController < ApplicationController
         # debugger
     
         render json: {
-          id: current_user.id,
+          currentUser_id: current_user.id,
           email: current_user.email,
           cash_balance: current_user.cash_balance,            # float
           portfolio: current_user.get_portfolio,              # object { 'BTC': 1, 'LTC': .5 } 
@@ -191,7 +191,7 @@ class Api::WalletTransactionsController < ApplicationController
         # debugger
         
         render json: {
-          id: current_user.id,
+          currentUser_id: current_user.id,
           email: current_user.email,
           cash_balance: current_user.cash_balance,            # float
           portfolio: current_user.get_portfolio,              # object { 'BTC': 1, 'LTC': .5 } 
