@@ -331,7 +331,7 @@ class TransactionForm extends React.Component {
             alert('Please enter a valid quantity');
             // debugger
         } else if (this.hasEnoughQuantity()) {                            // Validate that user has enough crypto to sell
-            this.props.sellCurrency(saleData);                              // Send POST (create new wallet transaction) to backend
+            this.props.sellCoin(saleData);                              // Send POST (create new wallet transaction) to backend
             alert(`${quantity} ${symbol} was sold from your account!`);
             this.props.toggleModal();                                       // close modal
         } else {

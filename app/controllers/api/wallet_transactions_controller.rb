@@ -165,7 +165,7 @@ class Api::WalletTransactionsController < ApplicationController
       # debugger
 
       # Validate user has enough currency to sell
-      if correct_user && current_user.has_enough_currency(symbol, quantity)
+      if correct_user && current_user.has_enough_coins(symbol, quantity)
         # debugger
 
         # Update correct wallet value

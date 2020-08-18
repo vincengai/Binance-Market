@@ -112,7 +112,7 @@ class User < ApplicationRecord
     quantity = quantity * -1 
 
     # Check if the quantity provided does not succeed Quantity in Portfolio Wallet 
-    if ( (portfolio[currency_symbol] == nil) or (portfolio[currency_symbol] < quantity))
+    if ( (portfolio[symbol] == nil) or (portfolio[symbol] < quantity))
         return false 
     end
     
