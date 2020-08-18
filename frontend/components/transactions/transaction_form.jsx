@@ -89,6 +89,11 @@ class TransactionForm extends React.Component {
             this.props.buyCoin(purchaseData);                       // Send POST (create new wallet transaction) to backend
             alert(`${quantity} ${symbol} was added to your account!`);
             this.props.closeModal();                                   // close modal
+        } else if (!userId) {
+            alert('You must be signed in to trade');
+            this.props.closeModal();                                   // close modal
+            this.props.history.push('/login');
+
         } else {
             alert('You do not have enough funding!');
         }
@@ -135,8 +140,9 @@ class TransactionForm extends React.Component {
         } else if (this.hasEnoughQuantity()) {                            // Validate that user has enough crypto to sell
             this.props.sellCoin(saleData);                              // Send POST (create new wallet transaction) to backend
             alert(`${quantity} ${symbol} was sold from your account!`);
-            this.props.toggleModal();      
-            debugger                                 // close modal
+            this.props.closeModal();     
+        } else if (!userId) {
+            alert('Please sign in first')
         } else {
             alert('You do not have enough to sell!');
         }
