@@ -88,10 +88,10 @@ class TransactionForm extends React.Component {
         } else if (this.hasEnoughCash(intPrice)) {                            // Validate that user cash balance is sufficient 
             this.props.buyCoin(purchaseData);                       // Send POST (create new wallet transaction) to backend
             alert(`${quantity} ${symbol} was added to your account!`);
-            this.props.closeModal();                                   // close modal
+            this.props.closeModal();                                  
         } else if (!userId) {
             alert('You must be signed in to trade');
-            this.props.closeModal();                                   // close modal
+            this.props.closeModal();                                  
             this.props.history.push('/login');
 
         } else {
