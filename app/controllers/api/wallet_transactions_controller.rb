@@ -6,7 +6,7 @@ class Api::WalletTransactionsController < ApplicationController
     price = trade_params[:price].to_f         # float
     total_price = quantity * price            # float   - will be negative if sell
     user_id = current_user.id                 # integer
-
+    #
     # Make sure correct user is logged in 
     # Check if user_id matches user_id in DB by session cookie 
     correct_user = logged_in? && (user_id == trade_params[:user_id].to_i)
