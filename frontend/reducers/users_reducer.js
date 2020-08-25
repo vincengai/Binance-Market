@@ -8,8 +8,9 @@ const usersReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            return Object.assign({}, oldState, { [action.currentUser.username]: action.currentUser });
-        
+            console.log(action)
+            return Object.assign({}, oldState, { [action.currentUser.id]: action.currentUser });
+            
         case RECEIVE_BUY_INFO:
 			// action.userData ==  { id: 17, email: 'demo@gmail.com', cash_balance: 3000, portfolio: {'BTC': 1} }
 
