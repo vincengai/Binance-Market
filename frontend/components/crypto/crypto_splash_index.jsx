@@ -19,10 +19,6 @@ class CryptoIndex extends React.Component {
     // this.interval = window.setInterval( () => this.currentPrice(), 1000);
   }
 
-  // componentWillUnmount() {
-  //     if (this.interval) window.clearInterval(this.interval);
-  // }
-
   currentPrice() {
     let coinsArr = Object.values(this.props.coins);
     return coinsArr.map((coinObj, i) => {
@@ -134,19 +130,6 @@ class CryptoIndex extends React.Component {
                 DASH
               </Link>
             </div>
-            {/* <div id="btc-div">
-              <img src={window.imageUrl.ONT} id="c-icon3" />
-              <Link to="/coins/ONT" className="flex-name">
-                ONT
-              </Link>
-            </div>
-            <div id="btc-div">
-              <img src={window.imageUrl.NEO} id="c-icon3" />
-              <Link to="/coins/NEO" className="flex-name">
-                NEO
-              </Link>
-            </div> */}
-
           </div>
 
           <div className="flex-table-price">{this.currentPrice()}</div>
@@ -186,6 +169,22 @@ class CryptoIndex extends React.Component {
             </div>
             <div>
               <img src={window.imageUrl.graphB} className="c-graph" />
+            </div>
+          </div>
+
+          <div className='trade-button-column'>
+            <div className="trade-table-name">
+              <div><Link to="/coins/BTC">TRADE</Link></div>
+              {/* <div id='c-icon3' /><Link to="/coins/ETH" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/BCH" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon2' /><Link to="/coins/BNB" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/LTC" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/TRX" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/XRP" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/XLM" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/DASH" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/ONT" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/NEO" className="flex-name">TRADE</Link></div> */}
             </div>
           </div>
         </div>

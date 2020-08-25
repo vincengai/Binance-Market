@@ -104,6 +104,22 @@ class CryptoIndex extends React.Component {
                         <div><img src={window.imageUrl.graphA} className='c-graph' /></div>
                         <div><img src={window.imageUrl.graphC} className='c-graph' /></div>
                     </div>
+
+                    <div className='trade-button-column'>
+                        <div className="trade-table-name">
+                            <div><Link to="/coins/BTC">TRADE</Link></div>
+                            {/* <div id='c-icon3' /><Link to="/coins/ETH" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/BCH" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon2' /><Link to="/coins/BNB" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/LTC" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/TRX" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/XRP" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/XLM" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/DASH" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/ONT" className="flex-name">TRADE</Link></div>
+                            <div id='c-icon3' /><Link to="/coins/NEO" className="flex-name">TRADE</Link></div> */}
+                        </div> 
+                    </div>
                 </div>
             </div>
         

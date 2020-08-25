@@ -20,7 +20,7 @@ const usersReducer = (oldState = {}, action) => {
         
         case RECEIVE_SELL_INFO:
             newState = merge({}, oldState, { [action.data.currentUser_id]: action.data});
-            newState[action.data.currentUser_id].portfolio = action.currentUser.portfolio; 
+            newState[action.data.currentUser_id].portfolio = action.data.portfolio; 
 
             return newState; 
 

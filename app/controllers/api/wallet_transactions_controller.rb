@@ -14,8 +14,15 @@ class Api::WalletTransactionsController < ApplicationController
     if quantity > 0   # BUY
       # Validate user has enough cash
       if correct_user && (current_user.cash_balance >= total_price)
-  
+        # debugger
+        
         # 1) Update correct wallet value
+        wallet = Wallet.get_wallet(user_id, symbol)
+
+        if wallet.nil?
+            current_user.generate_wallets
+        end
+
         wallet = Wallet.get_wallet(user_id, symbol)
         wallet.update_value(quantity)
         p wallet
