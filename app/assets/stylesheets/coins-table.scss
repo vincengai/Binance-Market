@@ -194,3 +194,22 @@
         cursor: default
     }
 }
+
+.trade-button-column {
+    text-decoration: none;
+    -webkit-box-align: center;
+    justify-content: center;
+    position: absolute;
+    font-weight: 500;
+    border-radius: 3px;
+    background-color: #F0B90B;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width: 9%;
+    height: fit-content;
+    font-size: 1em;
+    left: 52%;
+    top: 74%;
+}

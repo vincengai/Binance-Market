@@ -14,8 +14,6 @@ class CryptoIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchCoinsInfo();
-
-    // TRIED TO SET INTERVAL, BUT DOESNT WORK . NANI TF
     // this.interval = window.setInterval( () => this.currentPrice(), 1000);
   }
 
@@ -59,7 +57,8 @@ class CryptoIndex extends React.Component {
           <div className="flex-row-first">Name</div>
           <div className="flex-row">Last Price</div>
           <div className="flex-row">24h Change</div>
-          <div className="flex-row">Markets</div>
+          <div className="flex-row">Chart</div>
+          {/* <div className="flex-row">Trade</div> */}
         </div>
 
         <div className="table-column">
@@ -107,20 +106,8 @@ class CryptoIndex extends React.Component {
               </Link>
             </div>
             <div id="btc-div">
-              <img src={window.imageUrl.XRP} id="c-icon3" />
-              <Link to="/coins/XRP" className="flex-name">
-                XRP
-              </Link>
-            </div>
-            <div id="btc-div">
-              <img src={window.imageUrl.XRP} id="c-icon3" />
-              <Link to="/coins/XRP" className="flex-name">
-                XRP
-              </Link>
-            </div>
-            <div id="btc-div">
               <img src={window.imageUrl.XLM} id="c-icon3" />
-              <Link to="/coins/XLM" className="flex-name">
+              <Link to="/coins/XRP" className="flex-name">
                 XLM
               </Link>
             </div>
@@ -130,6 +117,18 @@ class CryptoIndex extends React.Component {
                 DASH
               </Link>
             </div>
+            <div id="btc-div">
+              <img src={window.imageUrl.ONT} id="c-icon3" />
+              <Link to="/coins/ONT" className="flex-name">
+                ONT
+              </Link>
+            </div>
+            <div id="btc-div">
+              <img src={window.imageUrl.NEO} id="c-icon3" />
+              <Link to="/coins/NEO" className="flex-name">
+                NEO
+              </Link>
+            </div>
           </div>
 
           <div className="flex-table-price">{this.currentPrice()}</div>
@@ -137,56 +136,33 @@ class CryptoIndex extends React.Component {
           <div className="flex-table-24hChange">{this.day24Change()}</div>
 
           <div className="flex-table-markets">
-            <div>
-              <img src={window.imageUrl.graphA} className="c-graph" />
-            </div>
-            <div>
-              <img src={window.imageUrl.graphB} className="c-graph" />
-            </div>
-            <div>
-              <img src={window.imageUrl.graphC} className="c-graph" />
-            </div>
-            <div>
-              <img src={window.imageUrl.graphA} className="c-graph" />
-            </div>
-            <div>
-              <img src={window.imageUrl.graphB} className="c-graph" />
-            </div>
-            <div>
-              <img src={window.imageUrl.graphC} className="c-graph" />
-            </div>
-            <div>
-              <img src={window.imageUrl.graphA} className="c-graph" />
-            </div>
-            <div>
-              <img src={window.imageUrl.graphB} className="c-graph" />
-            </div>
-            <div>
-              <img src={window.imageUrl.graphC} className="c-graph" />
-            </div>
-            <div>
-              <img src={window.imageUrl.graphA} className="c-graph" />
-            </div>
-            <div>
-              <img src={window.imageUrl.graphB} className="c-graph" />
-            </div>
+            <div><img src={window.imageUrl.graphA} className="c-graph" /></div>
+            <div><img src={window.imageUrl.graphB} className="c-graph" /></div>
+            <div><img src={window.imageUrl.graphC} className="c-graph" /></div>
+            <div><img src={window.imageUrl.graphA} className="c-graph" /></div>
+            <div><img src={window.imageUrl.graphB} className="c-graph" /></div>
+            <div><img src={window.imageUrl.graphC} className="c-graph" /></div>
+            <div><img src={window.imageUrl.graphA} className="c-graph" /></div>
+            <div><img src={window.imageUrl.graphB} className="c-graph" /></div>
+            <div><img src={window.imageUrl.graphC} className="c-graph" /></div>
+            <div> <img src={window.imageUrl.graphA} className="c-graph" /></div>
+            <div><img src={window.imageUrl.graphB} className="c-graph" /></div>
           </div>
 
-          <div className='trade-button-column'>
-            <div className="trade-table-name">
-              <div><Link to="/coins/BTC">TRADE</Link></div>
-              {/* <div id='c-icon3' /><Link to="/coins/ETH" className="flex-name">TRADE</Link></div>
-                            <div id='c-icon3' /><Link to="/coins/BCH" className="flex-name">TRADE</Link></div>
-                            <div id='c-icon2' /><Link to="/coins/BNB" className="flex-name">TRADE</Link></div>
-                            <div id='c-icon3' /><Link to="/coins/LTC" className="flex-name">TRADE</Link></div>
-                            <div id='c-icon3' /><Link to="/coins/TRX" className="flex-name">TRADE</Link></div>
-                            <div id='c-icon3' /><Link to="/coins/XRP" className="flex-name">TRADE</Link></div>
-                            <div id='c-icon3' /><Link to="/coins/XLM" className="flex-name">TRADE</Link></div>
-                            <div id='c-icon3' /><Link to="/coins/DASH" className="flex-name">TRADE</Link></div>
-                            <div id='c-icon3' /><Link to="/coins/ONT" className="flex-name">TRADE</Link></div>
-                            <div id='c-icon3' /><Link to="/coins/NEO" className="flex-name">TRADE</Link></div> */}
-            </div>
-          </div>
+          {/* <div className='trade-button-column'>
+              <div><Link to="/coins/BTC" className="trade-table-button">TRADE</Link></div>
+              <div><Link to="/coins/ETH" className="trade-table-button">TRADE</Link></div>
+              <div><Link to="/coins/BCH" className="trade-table-button">TRADE</Link></div>
+              <div><Link to="/coins/BNB" className="trade-table-button">TRADE</Link></div>
+              <div><Link to="/coins/LTC" className="trade-table-button">TRADE</Link></div>
+              <div><Link to="/coins/TRX" className="trade-table-button">TRADE</Link></div>
+              <div><Link to="/coins/XRP" className="trade-table-button">TRADE</Link></div>
+              <div><Link to="/coins/XLM" className="trade-table-button">TRADE</Link></div>
+              <div><Link to="/coins/DASH" className="trade-table-button">TRADE</Link></div>
+              <div><Link to="/coins/ONT" className="trade-table-button">TRADE</Link></div>
+              <div><Link to="/coins/NEO" className="trade-table-button">TRADE</Link></div>
+          </div> */}
+
         </div>
       </div>
     );
