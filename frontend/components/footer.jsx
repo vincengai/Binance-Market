@@ -17,8 +17,24 @@ class Foot extends React.Component {
         return (
             <div className="footer-container">
                 <h1 className='footer-sent'> Vince Ngai</h1> 
-                
-                <a href="https://vincengai.github.io/portfolio/" className="footer-submit">Portfolio</a>
+
+                <div className="nav-section" >
+                    <ul>
+                        <li>
+                            <a href="https://github.com/vincengai/Binance-Market"
+                                target="_blank" className="nav-word">Github</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/vince-ngai/"
+                                target="_blank" className="nav-word">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="https://vincengai.github.io/portfolio/"
+                                target="_blank" className="nav-word">Portfolio</a>
+                        </li>
+                    </ul>
+                </div>
+                {/* <a href="https://vincengai.github.io/portfolio/" className="footer-submit">Portfolio</a> */}
             </div>
         )
     }
