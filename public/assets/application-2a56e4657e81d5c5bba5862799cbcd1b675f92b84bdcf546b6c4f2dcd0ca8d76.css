@@ -1,0 +1,1233 @@
+/* line 6, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coin.scss */
+.flex-row {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+/* line 12, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coin.scss */
+#show-text {
+  color: black;
+}
+
+/* line 17, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coin.scss */
+.head-name {
+  align-items: center;
+}
+
+/* line 21, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coin.scss */
+#h-icon {
+  width: 37px;
+  height: 37px;
+  margin-right: 20px;
+  margin-bottom: 1px;
+}
+/* line 1, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+* {
+  font-size: 18px;
+}
+
+/* line 7, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.flex-table-header {
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  height: 20%;
+  justify-content: space-around;
+}
+
+/* line 15, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.flex-row-first {
+  padding-left: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  font-size: 20px;
+}
+
+/* line 23, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.flex-row {
+  padding-left: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 20px;
+  display: flex;
+}
+
+/* line 31, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.flex-table-row {
+  display: flex;
+  width: 80%;
+  height: 90ch;
+  justify-content: space-between;
+  text-align: center;
+  align-content: flex-start;
+}
+
+/* line 41, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.table-column {
+  display: flex;
+  width: 80%;
+  box-sizing: border-box;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/* line 49, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.flex-table-price,
+.flex-table-24hChange {
+  line-height: 23px;
+  width: 25%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-collapse: collapse;
+  border-top-color: #f2f2f2;
+  border-top-style: solid;
+  border-top-width: 0.994318px;
+  color: black;
+  flex-shrink: 1;
+  cursor: pointer;
+  display: table-cell;
+  text-align: left;
+  max-height: inherit;
+}
+/* line 66, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.flex-table-price > div,
+.flex-table-24hChange > div {
+  padding: 15px;
+  margin-top: 16px;
+  font-size: 20px;
+  border-bottom-color: #f2f2f2;
+  border-bottom-style: solid;
+  border-bottom-width: 0.994318px;
+  cursor: default;
+}
+
+/* line 77, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.flex-table-name {
+  line-height: 23px;
+  width: 25%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-collapse: collapse;
+  border-top-color: #f2f2f2;
+  border-top-style: solid;
+  border-top-width: 0.994318px;
+  color: black;
+  flex-shrink: 1;
+  cursor: pointer;
+  display: table-cell;
+  text-align: left;
+  max-height: inherit;
+}
+/* line 93, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.flex-table-name > div {
+  padding: 15px;
+  margin-bottom: -1px;
+  margin-top: 3px;
+  font-size: 20px;
+  border-bottom-color: #f2f2f2;
+  border-bottom-style: solid;
+  border-bottom-width: 1.994318px;
+}
+
+/* line 104, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.flex-name {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  height: 30px;
+}
+
+/* line 112, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.positivepct {
+  color: #70a800;
+}
+
+/* line 116, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.negativepct {
+  color: #ea0070;
+}
+
+/* line 120, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.table-column div {
+  text-align: center;
+}
+
+/* line 125, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+#c-icon {
+  width: 37px;
+  height: 37px;
+  margin-right: 20px;
+  margin-bottom: 1px;
+}
+
+/* line 132, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+#c-icon2 {
+  width: 31px;
+  height: 31px;
+  margin-right: 20px;
+}
+
+/* line 138, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+#c-icon3 {
+  width: 31px;
+  height: 31px;
+  margin-right: 20px;
+}
+
+/* line 145, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+#div-price {
+  border-top-color: #f2f2f2;
+  border-top-style: solid;
+  border-top-width: 0.994318px;
+}
+
+/* line 151, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+#btc-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+  border-bottom-color: #f2f2f2;
+  border-bottom-style: solid;
+  border-bottom-width: 0.994318px;
+  margin-bottom: 7px;
+}
+
+/* line 163, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.c-graph {
+  height: 35px;
+  width: 70px;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+/* line 170, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.flex-table-markets {
+  line-height: 23px;
+  width: 25%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-collapse: collapse;
+  border-top-color: #f2f2f2;
+  border-top-style: solid;
+  border-top-width: 0.994318px;
+  color: black;
+  flex-shrink: 1;
+  cursor: pointer;
+  display: table-cell;
+  text-align: left;
+  max-height: inherit;
+}
+/* line 186, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.flex-table-markets > div {
+  padding: 8px;
+  margin-bottom: 6px;
+  margin-top: 13px;
+  font-size: 20px;
+  border-bottom-color: #f2f2f2;
+  border-bottom-style: solid;
+  border-bottom-width: 0.994318px;
+  cursor: default;
+}
+
+/* line 198, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/coins-table.scss */
+.trade-button-column {
+  text-decoration: none;
+  -webkit-box-align: center;
+  justify-content: center;
+  position: absolute;
+  font-weight: 500;
+  border-radius: 3px;
+  background-color: #F0B90B;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 9%;
+  height: fit-content;
+  font-size: 1em;
+  left: 52%;
+  top: 74%;
+}
+/* line 1, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/footer.scss */
+.footer-container {
+  background-color: #1E2126;
+  width: 100%;
+  height: 10em;
+  position: relative;
+  overflow: hidden;
+  margin-top: 100px;
+  margin-bottom: 0px;
+  clear: both;
+  text-align: center;
+  color: white;
+  display: block;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* line 16, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/footer.scss */
+.footer-sent {
+  position: relative;
+  text-size-adjust: 100%;
+  font-size: 250%;
+  margin-right: 24px;
+  font-family: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
+}
+
+/* line 25, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/footer.scss */
+.footer-submit {
+  decoration: none;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  justify-content: center;
+  position: absolute;
+  font-weight: 500;
+  border-radius: 3px;
+  background-color: #F0B90B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 14%;
+  height: fit-content;
+  font-size: 1em;
+  width: 14%;
+  height: 20%;
+  font-size: 1em;
+  top: 50px;
+}
+/* line 1, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/modal.scss */
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(17, 51, 83, 0.6);
+  z-index: 10;
+  will-change: opacity;
+  overflow: scroll;
+  opacity: 1;
+  transition: opacity 250ms ease 0s;
+}
+
+/* line 15, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/modal.scss */
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 1, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+div#nav-container {
+  padding: 0px 0px;
+  background-color: #12161C;
+  box-sizing: border-box;
+  position: relative;
+  height: 80px;
+  font-family: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
+}
+
+/* line 10, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+.nav-logo {
+  height: fit-content;
+  margin: auto 1rem auto 7rem;
+}
+/* line 13, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+.nav-logo img {
+  width: 11rem;
+}
+
+/* line 18, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+.cur-comp-link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 23, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+#nav-container {
+  display: flex;
+}
+
+/* line 27, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+#nav-sections {
+  display: flex;
+  width: 100%;
+  margin-right: 7rem;
+}
+
+/* line 34, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+div.nav-section ul {
+  list-style-type: none;
+  font-size: 1em;
+  display: flex;
+  margin: auto 1em;
+  padding-left: 0;
+}
+/* line 40, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+div.nav-section ul li a {
+  text-transform: uppercase;
+  padding: 8px;
+  color: white;
+  margin-left: 0px;
+}
+/* line 47, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+div.nav-section ul a:hover {
+  text-decoration: underline;
+}
+
+/* line 57, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+#nav-left {
+  flex-grow: 1;
+  display: flex;
+}
+
+/* line 62, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+.nav-selected {
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
+/* line 68, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+.nav-word {
+  text-decoration: none;
+}
+/* line 71, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+.nav-word:hover {
+  text-decoration: underline;
+}
+
+/* line 75, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+#nav-right {
+  margin: auto 1em;
+}
+/* line 77, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+#nav-right div {
+  display: flex;
+}
+/* line 79, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+#nav-right div li a {
+  text-transform: uppercase;
+  padding: 8px;
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  margin-left: 0px;
+}
+/* line 86, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/nav_bar.scss */
+#nav-right div li a:hover {
+  text-decoration: underline;
+}
+/* line 1, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/reset.scss */
+body, header, nav, aside, h1, h2, figure, section, label, div, span {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  font-weight: inherit;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 13, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/reset.scss */
+body {
+  line-height: 1.5;
+}
+
+/* line 16, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/reset.scss */
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+  text-decoration: inherit;
+}
+
+/* line 21, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/reset.scss */
+ul, ol {
+  list-style: none;
+}
+
+/* line 24, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/reset.scss */
+img {
+  width: 100%;
+}
+/* line 1, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/sessions.scss */
+* {
+  font-family: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
+}
+
+/* line 5, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/sessions.scss */
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+/* line 11, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/sessions.scss */
+.login-form-container > .login-input {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 23, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/sessions.scss */
+.login-form-box {
+  max-width: 500px;
+  padding: 12px 20px;
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  justify-content: center;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* line 38, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/sessions.scss */
+.sign-in-error {
+  font-family: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
+  color: red;
+}
+
+/* line 43, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/sessions.scss */
+.login-title {
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin: 1em 0;
+}
+
+/* line 52, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/sessions.scss */
+.login-input {
+  box-sizing: border-box;
+  justify-content: center;
+  font-size: 1em;
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* line 63, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/sessions.scss */
+.session-submit {
+  justify-content: center;
+  background-color: #F0B90B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+}
+
+/* line 75, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/sessions.scss */
+.demo-login {
+  justify-content: center;
+  background-color: #92A0AD;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+}
+/* line 1, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.outter-most-show {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15%;
+}
+
+/* line 7, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.show-header {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 15%;
+  margin-top: 2%;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* line 18, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.show-header-right {
+  display: flex;
+}
+
+/* line 22, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.linechart {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
+  width: 550px;
+  height: 405px;
+}
+
+/* line 29, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.show-table-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
+  background-color: #FFF;
+  width: 80%;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  margin-top: 3%;
+}
+
+/* line 50, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.timeframe {
+  display: flex;
+  width: 550px;
+  border-right: none;
+}
+/* line 56, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.timeframe .custom-tooltip {
+  background: #002244;
+  color: white;
+  border-radius: 2px;
+  width: 130px;
+  height: 50px;
+}
+/* line 63, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.timeframe .custom-tooltip .tooltip-label, .timeframe .custom-tooltip .tooltip-time {
+  text-align: center;
+}
+/* line 66, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.timeframe .custom-tooltip .tooltip-label {
+  margin: 0;
+  padding: 5px 0 0 0;
+  font-size: 1.25rem;
+}
+/* line 71, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.timeframe .custom-tooltip .tooltip-time {
+  margin: 0;
+  padding: 0 0 5px 0;
+  font-size: .85rem;
+}
+
+/* line 80, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.recharts-tooltip-wrapper {
+  pointer-events: none;
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  transform: translate(433.333px, 5px);
+}
+
+/* line 95, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.timeframe-list {
+  padding: 10px 32px;
+  border-top: 1px solid #eceff1;
+  border-bottom: 1px solid #eceff1;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  width: 550px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  transition: background-size .5s, color .5s;
+  background-size: 0 0;
+  background-position: 50% 50%;
+  border-radius: 10px;
+}
+
+/* line 111, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.timeframe-list:hover {
+  background-color: #f0b90b;
+  color: white;
+}
+
+/* line 116, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.timeframe-list-active {
+  background-color: #f0b90b;
+}
+
+/* line 121, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.trans-button {
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  justify-content: center;
+  position: absolute;
+  font-weight: 500;
+  border-radius: 3px;
+  background-color: #F0B90B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 14%;
+  height: fit-content;
+  font-size: 1em;
+  bottom: -23%;
+  left: 64%;
+  top: 13%;
+}
+
+/* line 143, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.news-header {
+  text-align: left;
+  font-size: 30px;
+}
+
+/* line 148, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+ul.news {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 1rem;
+}
+/* line 153, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+ul.news li a {
+  text-decoration: none;
+  color: black;
+}
+/* line 158, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+ul.news li a:hover {
+  color: #458dc3;
+}
+
+/* line 163, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.news-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
+  margin-top: 5%;
+  width: 80%;
+}
+
+/* line 169, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.news-item {
+  display: flex;
+}
+
+/* line 173, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+p.news-source, p.news-date, p.news-symbol {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-top: 0;
+  color: #6f6f6f;
+}
+
+/* line 181, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.news-image {
+  width: 73px;
+  padding-right: 5px;
+  float: right;
+}
+
+/* line 189, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.news-title {
+  text-decoration: none;
+}
+
+/* line 193, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/show-page.scss */
+.news-body {
+  text-decoration: none;
+}
+/* line 1, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* line 5, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.splash-container {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0px 0px;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+/* line 17, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.splash-amount {
+  box-shadow: rgba(163, 78, 78, 0.1) 0px 0px 10px;
+  position: absolute;
+  font-size: 23px;
+  font-style: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
+  top: 75%;
+  left: 10%;
+  width: 265px;
+  height: 40px;
+  box-sizing: border-box;
+  color: white;
+  background: #373737;
+  border-radius: 3px;
+  border-style: none;
+  padding: 14px 20px;
+}
+
+/* line 37, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.splash-buy {
+  box-shadow: rgba(163, 78, 78, 0.1) 0px 0px 10px;
+  position: absolute;
+  font-size: 23px;
+  font-style: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
+  top: 75%;
+  left: 33%;
+  width: 265px;
+  height: 40px;
+  box-sizing: border-box;
+  color: white;
+  background: #373737;
+  border-radius: 3px;
+  border-style: none;
+  padding: 14px 20px;
+}
+
+/* line 58, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.splash-sent {
+  position: absolute;
+  line-height: 60px;
+  top: 17%;
+  left: 10%;
+  text-size-adjust: 100%;
+  font-size: 55px;
+  font-family: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
+}
+
+/* line 70, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.splash-subsent {
+  position: absolute;
+  font-size: 19px;
+  color: #787878;
+  top: 55%;
+  left: 10%;
+}
+
+/* line 78, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.splash-subsent2 {
+  position: absolute;
+  font-size: 15px;
+  color: white;
+  top: 66%;
+  left: 10%;
+}
+
+/* line 85, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.current-compare {
+  text-decoration: none;
+}
+
+/* line 88, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.cur-comp-link {
+  text-decoration: none;
+  font-size: large;
+  color: #787878;
+}
+
+/* line 97, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.splash-subsent3 {
+  position: absolute;
+  font-size: 15px;
+  color: white;
+  top: 66%;
+  left: 33%;
+}
+
+/* line 105, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.splash-logo {
+  height: 400px;
+  width: 100%;
+  margin: 00px;
+  justify-content: center;
+  background-color: #0b0e11;
+  text-align: center;
+  z-index: 1;
+  cursor: default;
+}
+
+/* line 119, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.ad-logo {
+  position: absolute;
+  top: 20%;
+  right: 6%;
+  height: 55%;
+  width: 30%;
+}
+
+/* line 128, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.megaphone {
+  width: 30px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+}
+
+/* line 133, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.table-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
+  background-color: #FFF;
+  width: 80%;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0 auto;
+  color: #848e9c;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+/* line 152, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.buy-button {
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  justify-content: center;
+  position: absolute;
+  font-weight: 500;
+  border-radius: 3px;
+  background-color: #F0B90B;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 9%;
+  height: fit-content;
+  font-size: 1em;
+  left: 52%;
+  top: 74%;
+}
+
+/* line 173, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/splash.scss */
+.transaction-line {
+  display: flex;
+  justify-content: space-around;
+}
+/* line 1, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade {
+  transition: z-index 0ms ease-out 1000ms;
+  margin: 40px;
+  font-size: 24px;
+  font-weight: 500;
+  height: min-content;
+  border: 1px solid #eceff1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 496px;
+  box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
+  background-color: white;
+  border-radius: 4px;
+  flex: 1 1 auto;
+  color: blue;
+}
+/* line 3, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade button:focus {
+  outline-color: blue;
+}
+/* line 33, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-top {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 64px;
+  align-items: center;
+}
+/* line 43, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-top div {
+  width: 100%;
+  text-align: center;
+  line-height: 64px;
+  border-bottom: 1px solid #eceff1;
+  color: rgba(17, 51, 83, 0.6);
+  font-size: 25px;
+  font-weight: 600;
+}
+/* line 52, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-top div:hover {
+  cursor: pointer;
+}
+/* line 56, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-top div:nth-of-type(1) {
+  border-right: 1px solid #eceff1;
+}
+/* line 59, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-top div:nth-of-type(2) {
+  border-right: 1px solid #eceff1;
+}
+/* line 63, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-top .active {
+  border-bottom: none;
+  color: blue;
+}
+/* line 69, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 0px;
+  padding-top: 48px;
+  flex: 1 0 0%;
+}
+/* line 80, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-middle input {
+  font-size: 62px;
+  text-align: center;
+  color: darkblue;
+  font-weight: 400;
+  min-height: 73px;
+  max-height: 73px;
+  width: 250px;
+  box-shadow: none;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  overflow: hidden;
+  outline: none;
+  background: white;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+/* line 106, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-middle .trade-crypto-selector {
+  display: flex;
+  cursor: pointer;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 16px;
+  min-width: 320px;
+  max-height: 56px;
+  margin-bottom: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eceff1;
+  border-image: initial;
+  border-radius: 4px;
+  margin-top: 88px;
+}
+/* line 128, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-middle .trade-crypto-selector p {
+  font-family: Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: rgba(17, 51, 83, 0.6);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 60px;
+}
+/* line 143, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-middle .trade-crypto-selector div {
+  display: flex;
+  max-height: 24px;
+}
+/* line 147, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-middle .trade-crypto-selector div img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+/* line 153, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-middle .trade-crypto-selector div p {
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #050f19;
+  padding: 0px;
+  margin: 0px 0px 0px 8px;
+}
+/* line 168, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-middle button {
+  padding: 24px;
+  border-radius: 4px;
+  text-align: center;
+  background: #f0b90b;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 180, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-trade .trade-middle button:hover {
+  cursor: pointer;
+}
+
+/* line 192, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-select {
+  overflow-y: scroll;
+  max-height: 494px;
+  transition: z-index 0ms ease-out 1000ms;
+  margin: 40px;
+  font-size: 24px;
+  font-weight: 500;
+  height: min-content;
+  border: 1px solid #eceff1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 370px;
+  max-width: 370px;
+  min-height: 496px;
+  box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
+  background-color: white;
+  border-radius: 4px;
+  flex: 1 1 auto;
+  color: darkblue;
+}
+/* line 221, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-select .select-top {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  min-height: 64px;
+  padding-top: 2px;
+}
+/* line 232, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-select .select-top div {
+  display: flex;
+  cursor: pointer;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 60px;
+  padding-left: 24px;
+}
+/* line 247, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-select .select-top div svg {
+  height: 18px;
+  width: 18px;
+}
+/* line 250, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-select .select-top div svg path {
+  fill: #8294af;
+}
+/* line 256, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-select .select-top span {
+  text-align: center;
+  pointer-events: none;
+  width: 75%;
+  display: inline-block;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 18px;
+  color: #050f19;
+  word-break: break-word;
+}
+/* line 270, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-select .select-bottom {
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0px 12px;
+  flex: 1 1 0%;
+}
+/* line 278, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-select .select-bottom div {
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  user-select: none;
+  height: 80px;
+  color: darkblue;
+  cursor: default;
+  border-radius: 4px;
+  padding: 12px;
+}
+/* line 296, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-select .select-bottom div img {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+}
+/* line 302, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-select .select-bottom div div {
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 0px 12px;
+  overflow: hidden;
+  align-items: flex-start;
+}
+/* line 311, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-select .select-bottom div div h4 {
+  line-height: 1.3;
+  color: #050f19;
+  font-size: 18px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  margin: 0px;
+}
+/* line 324, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-select .select-bottom div div p {
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: rgba(17, 51, 83, 0.6);
+  display: block;
+  margin: 0px;
+}
+/* line 334, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-select .select-bottom div:hover {
+  cursor: pointer;
+}
+/* line 339, /Users/Vince/Desktop/Coding Projects/Binance-Market/app/assets/stylesheets/trade.scss */
+.widget-select .select-bottom > div:hover {
+  background-color: rgba(17, 51, 83, 0.02);
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+ 

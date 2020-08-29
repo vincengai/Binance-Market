@@ -21,6 +21,10 @@ class Foot extends React.Component {
                 <div className="nav-section" >
                     <ul>
                         <li>
+                            <a href="mailto:vincew.ngai@gmail.com"
+                                target="_blank" className="nav-word">Email</a>
+                        </li>
+                        <li>
                             <a href="https://github.com/vincengai/Binance-Market"
                                 target="_blank" className="nav-word">Github</a>
                         </li>
