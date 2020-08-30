@@ -113,24 +113,24 @@ class CryptoIndex extends React.Component {
                 XLM
               </Link>
             </div>
-            <div id="btc-div">
+             <div id="btc-div">
               <img src={window.imageUrl.DASH} id="c-icon3" />
               <Link to="/coins/DASH" className="flex-name">
                 DASH
               </Link>
             </div>
-            <div id="btc-div">
-              <img src={window.imageUrl.ONT} id="c-icon3" />
-              <Link to="/coins/ONT" className="flex-name">
-                ONT
-              </Link>
-            </div>
-            <div id="btc-div">
-              <img src={window.imageUrl.NEO} id="c-icon3" />
-              <Link to="/coins/NEO" className="flex-name">
-                NEO
-              </Link>
-            </div>
+            {/* // <div id="btc-div">
+            //   <img src={window.imageUrl.ONT} id="c-icon3" />
+            //   <Link to="/coins/ONT" className="flex-name">
+            //     ONT
+            //   </Link>
+            // </div>
+            // <div id="btc-div">
+            //   <img src={window.imageUrl.NEO} id="c-icon3" />
+            //   <Link to="/coins/NEO" className="flex-name">
+            //     NEO
+            //   </Link>
+            // </div> */} 
           </div>
 
           <div className="flex-table-price">{this.currentPrice()}</div>
@@ -147,8 +147,8 @@ class CryptoIndex extends React.Component {
             <div><img src={window.imageUrl.graphA} className="c-graph" /></div>
             <div><img src={window.imageUrl.graphB} className="c-graph" /></div>
             <div><img src={window.imageUrl.graphC} className="c-graph" /></div>
-            <div> <img src={window.imageUrl.graphA} className="c-graph" /></div>
-            <div><img src={window.imageUrl.graphB} className="c-graph" /></div>
+            {/* <div> <img src={window.imageUrl.graphA} className="c-graph" /></div>
+            <div><img src={window.imageUrl.graphB} className="c-graph" /></div> */}
           </div>
 
           <div className='flex-table-trade'>
@@ -161,8 +161,8 @@ class CryptoIndex extends React.Component {
               <div><Link to="/coins/XRP" className="flex-table-trade-button">TRADE</Link></div>
               <div><Link to="/coins/XLM" className="flex-table-trade-button">TRADE</Link></div>
               <div><Link to="/coins/DASH" className="flex-table-trade-button">TRADE</Link></div>
-              <div><Link to="/coins/ONT" className="flex-table-trade-button">TRADE</Link></div>
-              <div><Link to="/coins/NEO" className="flex-table-trade-button">TRADE</Link></div>
+              {/* <div><Link to="/coins/ONT" className="flex-table-trade-button">TRADE</Link></div>
+              <div><Link to="/coins/NEO" className="flex-table-trade-button">TRADE</Link></div> */}
           </div>
 
         </div>
