@@ -18,7 +18,7 @@ class Foot extends React.Component {
             <div className="footer-container">
                 <h1 className='footer-sent'> Vince Ngai</h1> 
 
-                <div className="nav-section" >
+                <div className="footer-section" >
                     <ul>
                         <li>
                             <a href="mailto:vincew.ngai@gmail.com"

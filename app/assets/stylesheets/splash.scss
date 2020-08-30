@@ -17,12 +17,11 @@
 .splash-amount {
   box-shadow: rgba(163, 78, 78, 0.1) 0px 0px 10px;
   position:absolute;
-  // line-height: 28px;
   font-size: 23px;
   font-style: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
   top: 75%;
   left: 10%;
-  width: 265px;
+  width: 220px;
   height: 40px;
   box-sizing: border-box;
   color: rgb(255, 255, 255);
@@ -42,7 +41,7 @@
   font-style: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
   top: 75%;
   left: 33%;
-  width: 265px;
+  width: 220px;
   height: 40px;
   box-sizing: border-box;
   color: rgb(255, 255, 255);
@@ -133,7 +132,7 @@
 .table-container {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
   background-color: #FFF;
-  width: 80%;
+  width: 75%;
   display: flex; 
   box-sizing: border-box;
   margin: 0 auto;
@@ -145,7 +144,7 @@
   padding-right: 20px;
   padding-bottom: 10px;
   padding-left: 20px;
-  // left: 33%; 
+  // le
 }
 
 
@@ -173,4 +172,79 @@
 .transaction-line {
   display: flex; 
   justify-content: space-around;
+}
+
+
+///////////////////////////////
+
+div#table {
+    // margin-top: 2rem;
+    margin: 2rem 7rem 0 7rem;
+    width: available;
+    padding-bottom: 125px;
+    // background: pink;
+}
+
+table.currencies {
+    // margin: 0 auto;
+    margin: 0;
+    width: 100%;
+    border-collapse: collapse;
+    // background: lightgrey;
+
+    .currency-logo {
+        width: auto;
+        height: 3rem;
+    }
+
+    col.currency-id {
+        width: 2rem;
+    }
+    
+    th, td {
+        // background: transparent;
+        border-bottom: 1px solid #00000047;
+    }
+
+    tr {
+        padding: 0 1rem;
+        
+        th {
+            text-align: left;
+            
+        }
+        td {
+            padding: 0.5rem 0;
+            height: 3rem;
+            font-size: 1.1rem;
+            
+            &:nth-of-type(2) {
+                img.currency-logo {
+                    vertical-align: middle;
+                }
+                span {   
+                    margin-left: 1ex;
+                }
+            }
+        }
+    }
+
+    svg.currency-chart {
+        height: available;
+    }
+    
+    thead {
+        text-transform: uppercase;
+    }
+
+    button.currency-trade {
+        margin: 0;
+        padding: 1rem .8rem;
+        border-radius: 3px;
+    }
+}
+
+.mini-table-row:hover {
+    background: #80808075;
+    cursor: pointer;
 }

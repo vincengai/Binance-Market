@@ -14,6 +14,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     // Map thru SYMBOLS and return in the dispatched method?
     return {
+        fetchCoinInfo: (symbol) => dispatch(fetchCoinInfo(symbol)),
         fetchCoinsInfo: () => dispatch(fetchCoinsInfo())
     };
 };

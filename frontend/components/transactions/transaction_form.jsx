@@ -173,9 +173,8 @@ class TransactionForm extends React.Component {
                     </div>
                 </div>
                 <div className='trade-middle'>
-                    <input type="text" placeholder={this.state.quantity} minLength='1' maxLength='6' onChange={this.onChangeQuantity} />
+                    <input type="number" placeholder={this.state.quantity} minLength='1' maxLength='6' onChange={this.onChangeQuantity} />
                 <div>
-                        {/* {errors go here} */}
                     </div>
 
                     <div className='modal-button'>

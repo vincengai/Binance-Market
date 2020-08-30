@@ -46,6 +46,24 @@
 }
 
 .footer-section {
-    // display: flex;
-    // width: 100%;
+       ul {
+        list-style-type: none;
+        font-size: 1em;
+        display: flex;
+        margin: auto 1em;
+        padding-left: 0;
+       justify-content: center;
+
+        li a{
+            text-transform: uppercase;
+            padding: 8px;
+            // text-decoration: none;
+            color: white;
+            margin-left: 0px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
 }

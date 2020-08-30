@@ -59,6 +59,7 @@ class CryptoIndex extends React.Component {
         if (this.props.coins === undefined) return null;
 
         return (
+          
             <div className="table-container">
                 <div className="flex-table-header">
                     <div className="flex-row-first">Name</div>

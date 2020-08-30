@@ -35,11 +35,13 @@ class Splash extends React.Component {
                 type="number"
                 placeholder="Enter amount"
                 className="splash-amount"
+                minLength='1' maxLength='6'
               />
               <input
                 type="number"
                 placeholder="Enter amount"
                 className="splash-buy"
+                minLength='1' maxLength='6'
               />
               <NavLink className="buy-button" to="/coins/BTC">
                 Buy BTC

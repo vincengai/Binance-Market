@@ -14,11 +14,11 @@ class CryptoIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchCoinsInfo();
-    // this.interval = window.setInterval( () => this.currentPrice(), 1000);
   }
 
   currentPrice() {
     let coinsArr = Object.values(this.props.coins);
+
     return coinsArr.map((coinObj, i) => {
       return <div key={i}>{coinObj.USD.PRICE} </div>;
     });
@@ -26,6 +26,8 @@ class CryptoIndex extends React.Component {
 
   day24Change() {
     let coinsArr = Object.values(this.props.coins);
+    let counter = 0; 
+
     return coinsArr.map((coinObj, i) => {
       if (Math.sign(coinObj.USD.CHANGEPCTHOUR) === -1) {
         return (
@@ -58,7 +60,7 @@ class CryptoIndex extends React.Component {
           <div className="flex-row">Last Price</div>
           <div className="flex-row">24h Change</div>
           <div className="flex-row">Chart</div>
-          {/* <div className="flex-row">Trade</div> */}
+          <div className="flex-row">Trade</div>
         </div>
 
         <div className="table-column">
@@ -149,19 +151,19 @@ class CryptoIndex extends React.Component {
             <div><img src={window.imageUrl.graphB} className="c-graph" /></div>
           </div>
 
-          {/* <div className='trade-button-column'>
-              <div><Link to="/coins/BTC" className="trade-table-button">TRADE</Link></div>
-              <div><Link to="/coins/ETH" className="trade-table-button">TRADE</Link></div>
-              <div><Link to="/coins/BCH" className="trade-table-button">TRADE</Link></div>
-              <div><Link to="/coins/BNB" className="trade-table-button">TRADE</Link></div>
-              <div><Link to="/coins/LTC" className="trade-table-button">TRADE</Link></div>
-              <div><Link to="/coins/TRX" className="trade-table-button">TRADE</Link></div>
-              <div><Link to="/coins/XRP" className="trade-table-button">TRADE</Link></div>
-              <div><Link to="/coins/XLM" className="trade-table-button">TRADE</Link></div>
-              <div><Link to="/coins/DASH" className="trade-table-button">TRADE</Link></div>
-              <div><Link to="/coins/ONT" className="trade-table-button">TRADE</Link></div>
-              <div><Link to="/coins/NEO" className="trade-table-button">TRADE</Link></div>
-          </div> */}
+          <div className='flex-table-trade'>
+              <div><Link to="/coins/BTC" className="flex-table-trade-button">TRADE</Link></div>
+              <div><Link to="/coins/ETH" className="flex-table-trade-button">TRADE</Link></div>
+              <div><Link to="/coins/BCH" className="flex-table-trade-button">TRADE</Link></div>
+              <div><Link to="/coins/BNB" className="flex-table-trade-button">TRADE</Link></div>
+              <div><Link to="/coins/LTC" className="flex-table-trade-button">TRADE</Link></div>
+              <div><Link to="/coins/TRX" className="flex-table-trade-button">TRADE</Link></div>
+              <div><Link to="/coins/XRP" className="flex-table-trade-button">TRADE</Link></div>
+              <div><Link to="/coins/XLM" className="flex-table-trade-button">TRADE</Link></div>
+              <div><Link to="/coins/DASH" className="flex-table-trade-button">TRADE</Link></div>
+              <div><Link to="/coins/ONT" className="flex-table-trade-button">TRADE</Link></div>
+              <div><Link to="/coins/NEO" className="flex-table-trade-button">TRADE</Link></div>
+          </div>
 
         </div>
       </div>
