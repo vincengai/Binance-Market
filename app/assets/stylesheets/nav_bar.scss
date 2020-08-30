@@ -3,7 +3,7 @@ div#nav-container {
     background-color: #12161C;
     box-sizing: border-box;
     position: relative; 
-    height: 86px;
+    height: 65px;
     font-family: DINNext, IBMPlexSans, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif !important;
 }
 
@@ -11,7 +11,7 @@ div#nav-container {
     height: fit-content;
     margin: auto 1rem auto 7rem;           
     img {
-        width: 11rem;
+        width: 9rem;
     }
 
 }
@@ -84,6 +84,7 @@ div.nav-section {
                 text-decoration: none;
                 color: white;
                 margin-left: 0px;
+                font-size: 15px;
                 &:hover {
                     text-decoration: underline;
                 }
