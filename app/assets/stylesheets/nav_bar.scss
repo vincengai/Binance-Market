@@ -48,6 +48,10 @@ div.nav-section {
             text-decoration: underline;
         }
     }
+    // &#nav-left {
+        // flex-grow: 1;
+        // display: flex; 
+    // }
 }
 
 #nav-left {
@@ -76,11 +80,10 @@ div.nav-section {
             li a {
                 text-transform: uppercase;
                 padding: 8px;
-                // font-size: 1em;
+                font-size: 1em;
                 text-decoration: none;
                 color: white;
                 margin-left: 0px;
-                font-size: 13px; 
                 &:hover {
                     text-decoration: underline;
                 }

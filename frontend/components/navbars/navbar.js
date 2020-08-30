@@ -60,7 +60,7 @@ class navBar extends React.Component {
             <>
                     <div id="nav-container">
                             <NavLink to="/" className="nav-logo">
-                                <img src={window.imageUrl.binanceLogo} style="height: 70px" alt="binance-logo"/>
+                                <img src={window.imageUrl.binanceLogo} alt="binance-logo"/>
                             </NavLink>
                         <div className="nav-section" id="nav-left">
                             <ul>
