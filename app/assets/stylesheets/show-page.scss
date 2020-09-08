@@ -1,7 +1,10 @@
  .outter-most-show {   
-    display: flex;
-    flex-direction: column;
-    margin-left: 15%
+    // display: flex;
+    // flex-direction: column;
+    margin-left: 15%;
+    position:relative;
+    border: 1px ;
+    float: left;
  }
 
 .show-header {

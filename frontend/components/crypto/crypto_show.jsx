@@ -266,50 +266,13 @@ class CryptoShow extends React.Component {
                 </div>
 
                 <div className="outter-most-show">
-
-
-                    <div className="show-table-container">
-                        <div className="flex-table-header">
-                            <div className="flex-row"> Market Cap
-                                <div className='show-text'>
-                                    {this.state.marketCap}
-                                </div>
-                            </div>
-
-                            <div className="flex-row">24h Vol(Global)
-                                <div className='show-text'>
-                                    {this.state.volume24HRS}
-                                </div>
-                            </div>
-
-                            <div className="flex-row">Circulating Supply
-                                <div className='show-text'>
-                                    {this.state.supply}
-                                </div>
-                            </div>
-                            <div className="flex-row">Issue Date
-                                <div className='show-text'>
-                                    2008-10-31
-                                </div>
-                            </div>
-
-                            <div className="flex-row">Issue Price
-                                <div className='show-text'>
-                                    {this.state.currentPrice}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
                     <div className="right-column">
                         <button onClick={this.openSelectModal} className="trans-button">Transaction</button>
                     </div>
 
                     <div className="linechart-news">
                         <div className="linechart">
-                            <LineChart width={550} height={405} data={this.state.data} margin={{ top: 0, right: 0, left: 0, bottom: 0 }} cursor="crosshair">
+                            <LineChart width={650} height={405} data={this.state.data} margin={{ top: 0, right: 0, left: 20, bottom: 0 }} cursor="crosshair">
                                 <Tooltip content={<CustomTooltip />} offset={-65} animationDuration={100} />
 
                                 <XAxis dataKey="name" />
@@ -341,7 +304,39 @@ class CryptoShow extends React.Component {
                             <li className="timeframe-list" onClick={() => this.get1MonthPrices(symbol)}> 1M </li>
                             <li className="timeframe-list" onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
                         </div>
-                        
+
+                        <div className="show-table-container">
+                            <div className="flex-table-header">
+                                <div className="flex-row"> Market Cap
+                                <div className='show-text'>
+                                        {this.state.marketCap}
+                                    </div>
+                                </div>
+
+                                <div className="flex-row">Volume (24h)
+                                <div className='show-text'>
+                                        {this.state.volume24HRS}
+                                    </div>
+                                </div>
+
+                                <div className="flex-row">Circulating Supply
+                                <div className='show-text'>
+                                        {this.state.supply}
+                                    </div>
+                                </div>
+                                <div className="flex-row">Issue Date
+                                <div className='show-text'>
+                                        2008-10-31
+                                </div>
+                                </div>
+
+                                <div className="flex-row">Issue Price
+                                <div className='show-text'>
+                                        {this.state.currentPrice}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div className="news-container">
                             <div className="news-header">Top Stories</div>
                             <ul className="news">
