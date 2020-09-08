@@ -213,7 +213,7 @@ class CryptoShow extends React.Component {
 
 
     render() {
-
+        
         // News Articles to be rendered, code Snippet taken from Coin-space
         const newsArticles = this.state.news.map((article, idx) => {		// loop over array of 4 article objects, return an array of <li>'s
 
@@ -301,12 +301,7 @@ class CryptoShow extends React.Component {
                         </div>
                     </div>
 
-                    <div className="timeframe">
-                        <li className="timeframe-list" onClick={() => this.get1DayPrices(symbol)}> 1D </li>
-                        <li className="timeframe-list" onClick={() => this.get1WeekPrices(symbol)}> 1W </li>
-                        <li className="timeframe-list" onClick={() => this.get1MonthPrices(symbol)}> 1M </li>
-                        <li className="timeframe-list" onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
-                    </div>
+
 
                     <div className="right-column">
                         <button onClick={this.openSelectModal} className="trans-button">Transaction</button>
@@ -340,6 +335,13 @@ class CryptoShow extends React.Component {
                             </LineChart>
                         </div>
 
+                        <div className="timeframe">
+                            <li className="timeframe-list" onClick={() => this.get1DayPrices(symbol)}> 1D </li>
+                            <li className="timeframe-list" onClick={() => this.get1WeekPrices(symbol)}> 1W </li>
+                            <li className="timeframe-list" onClick={() => this.get1MonthPrices(symbol)}> 1M </li>
+                            <li className="timeframe-list" onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
+                        </div>
+                        
                         <div className="news-container">
                             <div className="news-header">Top Stories</div>
                             <ul className="news">

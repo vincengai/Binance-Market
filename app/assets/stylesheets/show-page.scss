@@ -20,7 +20,7 @@
 }
 
 .linechart {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
   width: 550px;
   height: 405px;
 }
@@ -113,7 +113,7 @@
   color: white; 
 }
 
-.timeframe-list-active {
+.timeframe-list.active {
   background-color: rgb(240, 185, 11);
 }
 
