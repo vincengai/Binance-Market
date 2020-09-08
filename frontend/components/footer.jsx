@@ -22,15 +22,15 @@ class Foot extends React.Component {
                     <ul>
                         <li>
                             <a href="mailto:vincew.ngai@gmail.com"
-                                target="_blank" className="nav-word">Email</a>
+                                target="_blank" className="nav-word">Email </a>
                         </li>
                         <li>
                             <a href="https://github.com/vincengai/Binance-Market"
-                                target="_blank" className="nav-word">Github</a>
+                                target="_blank" className="nav-word">Github </a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/in/vince-ngai/"
-                                target="_blank" className="nav-word">LinkedIn</a>
+                                target="_blank" className="nav-word">LinkedIn </a>
                         </li>
                         <li>
                             <a href="https://vincengai.github.io/portfolio/"
