@@ -273,7 +273,7 @@ class CryptoShow extends React.Component {
 
                     <div className="linechart-news">
                         <div className="linechart">
-                            <LineChart width={570} height={355} data={this.state.data} margin={{ top: 0, right: 0, left: 20, bottom: 0 }} cursor="crosshair">
+                            <LineChart width={570} height={305} data={this.state.data} margin={{ top: 0, right: 0, left: 20, bottom: 0 }} cursor="crosshair">
                                 <Tooltip content={<CustomTooltip />} offset={-65} animationDuration={100} />
 
                                 <XAxis dataKey="name" />
