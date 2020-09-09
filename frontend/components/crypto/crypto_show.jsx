@@ -262,7 +262,7 @@ class CryptoShow extends React.Component {
                     <div className='head-name'><img src={path} id='h-icon' /></div>
                     <div>{this.props.coin} </div>
                     <div> {this.state.currentPrice}</div>
-                    <button onClick={this.openSelectModal} className="trans-button">Transaction</button>
+                    <button onClick={this.openSelectModal} className="trans-button">Trade</button>
 
                 </div>
 
@@ -273,7 +273,7 @@ class CryptoShow extends React.Component {
 
                     <div className="linechart-news">
                         <div className="linechart">
-                            <LineChart width={550} height={405} data={this.state.data} margin={{ top: 0, right: 0, left: 20, bottom: 0 }} cursor="crosshair">
+                            <LineChart width={570} height={305} data={this.state.data} margin={{ top: 0, right: 0, left: 20, bottom: 0 }} cursor="crosshair">
                                 <Tooltip content={<CustomTooltip />} offset={-65} animationDuration={100} />
 
                                 <XAxis dataKey="name" />
