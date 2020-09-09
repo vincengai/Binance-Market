@@ -262,13 +262,14 @@ class CryptoShow extends React.Component {
                     <div className='head-name'><img src={path} id='h-icon' /></div>
                     <div>{this.props.coin} </div>
                     <div> {this.state.currentPrice}</div>
+                    <button onClick={this.openSelectModal} className="trans-button">Transaction</button>
 
                 </div>
 
                 <div className="outter-most-show">
-                    <div className="right-column">
+                    {/* <div className="right-column">
                         <button onClick={this.openSelectModal} className="trans-button">Transaction</button>
-                    </div>
+                    </div> */}
 
                     <div className="linechart-news">
                         <div className="linechart">
