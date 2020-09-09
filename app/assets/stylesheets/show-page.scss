@@ -55,7 +55,8 @@
     display: flex;
     width: 550px;
     border-right: none;
-
+    font-size: 13px
+}
 
 .custom-tooltip {
 	background: #002244;
@@ -78,7 +79,7 @@
 		font-size: .85rem;
 	}
 }
-}
+
 
 
 .recharts-tooltip-wrapper {
@@ -109,7 +110,7 @@
     transition: background-size .5s, color .5s; 
     background-size: 0 0;
     background-position: 50% 50%;
-    border-radius: 10px; 
+    border-radius: 100px; 
 }
 
 .timeframe-list:hover {
@@ -142,7 +143,8 @@
   bottom: -23%;
   left: 64%;
   top: 65px;
-  margin: 25px 0px 20px 193px
+  margin: 25px 0px 20px 193px;
+  font-size: 15px;
 }
 
 .news-header {
