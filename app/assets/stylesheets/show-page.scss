@@ -153,11 +153,11 @@
   // margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 14%;
+  width: 100px;
   height: fit-content;
   font-size: 1em;
   // bottom: -23%;
-  left: 64%;
+  left: 60%;
   top: 65px;
   margin: 25px 0px 20px 193px;
   font-size: 15px;
@@ -221,4 +221,10 @@ p.news-source, p.news-date, p.news-symbol {
 
 .linechart-news {
   margin-bottom: 100px;
+}
+
+.head-price {
+  margin-left: 15px;
+  line-height: 25px;
+  font-weight: bold;
 }
