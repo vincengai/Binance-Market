@@ -15,9 +15,7 @@ class navBar extends React.Component {
     renderLoggedInTabs() {
         return (
             <div>
-                <li>
-                    {/* <Link to="/coins">Market</Link> */}
-                </li>
+
                 <li>
                     <Link to="/dashboard">Wallet</Link>
                 </li>
@@ -31,9 +29,6 @@ class navBar extends React.Component {
     renderLoggedOutTabs() {
         return (
             <div>
-                <li>
-                    {/* <Link to="/coins">Market</Link> */}
-                </li>
                 <li>
                     <Link to="/login">Sign In</Link>
                 </li>
