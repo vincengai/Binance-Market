@@ -18,7 +18,7 @@ class navBar extends React.Component {
         return (
             <div>
                 <li>
-                    <Link to="/coins">Market</Link>
+                    {/* <Link to="/coins">Market</Link> */}
                 </li>
                 <li>
                     <Link to="/dashboard">Wallet</Link>
@@ -34,7 +34,7 @@ class navBar extends React.Component {
         return (
             <div>
                 <li>
-                    <Link to="/coins">Market</Link>
+                    {/* <Link to="/coins">Market</Link> */}
                 </li>
                 <li>
                     <Link to="/login">Sign In</Link>
