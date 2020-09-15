@@ -10,7 +10,7 @@ export const buyCoin = (buyInfo) => dispatch => {
     return Transaction_Util.buyCoin(buyInfo)
     .then( 
         (response) => {
-            console.log(response, "actions response")
+            // console.log(response, "actions response")
                 return dispatch(receiveBuyCoin(response))      // ? response == { id: 17, email: 'demo@gmail.com', cash_balance: 3000, portfolio: {'BTC': 1} }
             }
         )

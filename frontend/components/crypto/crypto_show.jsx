@@ -338,7 +338,7 @@ class CryptoShow extends React.Component {
                             </div>
                         </div>
                         <div className="news-container">
-                            <div className="news-header">Relevant News</div>
+                            <div className="news-header">Top News</div>
                             <ul className="news">
                                 {newsArticles}
                             </ul>
