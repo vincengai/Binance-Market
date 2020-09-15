@@ -10,9 +10,7 @@ class navBar extends React.Component {
         this.renderLoggedOutTabs = this.renderLoggedOutTabs.bind(this);
         this.renderSessionTabs = this.renderSessionTabs.bind(this);
     }
-
-    //NavLink vs Link to and 
-    // ActiveClassName vs ClassName 
+ 
 
     renderLoggedInTabs() {
         return (
