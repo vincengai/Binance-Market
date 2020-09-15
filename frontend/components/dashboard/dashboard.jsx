@@ -1,6 +1,6 @@
 import React from "react";
 const SUPPORTED_CURRENCIES = ['BTC', 'ETH', 'BCH', 'BNB', 'LTC', 'TRX', 'XRP', 'XLM', 'DASH']
-
+// now 
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
