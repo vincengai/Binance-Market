@@ -1,16 +1,16 @@
-import React from "react";
-const SUPPORTED_CURRENCIES = ['BTC', 'ETH', 'BCH', 'BNB', 'LTC', 'TRX', 'XRP', 'XLM', 'DASH']
-// now 
-class Dashboard extends React.Component {
-    constructor(props) {
-        super(props);
+// import React from "react";
+// const SUPPORTED_CURRENCIES = ['BTC', 'ETH', 'BCH', 'BNB', 'LTC', 'TRX', 'XRP', 'XLM', 'DASH']
+// // now 
+// class Dashboard extends React.Component {
+//     constructor(props) {
+//         super(props);
 
-        this.state = {
-            currentprices: null,
-        }
+//         this.state = {
+//             currentprices: null,
+//         }
 
-        this.getCurrentPrices = this.getCurrentPrices.bind(this);
-    }
+//         this.getCurrentPrices = this.getCurrentPrices.bind(this);
+//     }
 
 
 
