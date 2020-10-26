@@ -10,7 +10,7 @@ import Splash from './splash';
 import Foot from './footer';
 import Modal from '../components/crypto/modal';
 import ReactGA from 'react-ga';
-
+//
 function initializeReactGA() {
   ReactGA.initialize("G-RF73WL6GWF");
   ReactGA.pageview("/homepage");

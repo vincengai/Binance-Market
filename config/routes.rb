@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :api, defaults: {format: :json} do
-    # POST api/user (create user)
+
+    #This is Rails shortcut. instead of putting POST 'api/users', to: "users#CREATE" you can do this
     resources :users, only: [:create]
 
     # POST api/session ( to log in)
@@ -16,6 +17,15 @@ Rails.application.routes.draw do
 
     # POST api/transactions (create a new BUY/SELL transaction & update wallet)
     resources :wallet_transactions, only: [:create]
-
   end
+
+  #if you want to nest resources, like all comment
+
+  #if you wanted to have an admin privilege you;d put
+
+  #namespace :admin do 
+      #resources :transactions, :comments
+  #end
+
+  #this is how you'd setup admin routes that allows you to index all trans. and be able to update/patch them
 end
