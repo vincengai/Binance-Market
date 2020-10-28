@@ -10,9 +10,6 @@ import Splash from './splash';
 import Foot from './footer';
 import Modal from '../components/crypto/modal';
 //
-
-
-
 const App = () => (
     <div>
         <Modal />

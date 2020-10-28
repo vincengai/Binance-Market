@@ -5,7 +5,6 @@ import Root from './components/root';
 import * as Crypto from './actions/coin_actions';
 import ReactGA from 'react-ga';
 
-
 function initializeReactGA() {
     ReactGA.initialize("G-RF73WL6GWF");
     ReactGA.pageview("/#");
