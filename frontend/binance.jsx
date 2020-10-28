@@ -10,7 +10,7 @@ import ReactGA from 'react-ga';
 
 function initializeReactGA() {
     ReactGA.initialize("G-RF73WL6GWF");
-    ReactGA.pageview("/homepage");
+    ReactGA.pageview("/#");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
