@@ -19,6 +19,7 @@ function initializeReactGA() {
 
 const App = () => (
     <div>
+    {initializeReactGA()}
         <Modal />
         <header>
             <NavBarContainer />
