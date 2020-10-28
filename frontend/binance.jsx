@@ -3,12 +3,8 @@ import ReactDOM from "react-dom";
 import configureStore from './store/store';
 import Root from './components/root';
 import * as Crypto from './actions/coin_actions';
-import ReactGA from 'react-ga';
 
-function initializeReactGA() {
-    ReactGA.initialize("G-RF73WL6GWF");
-    ReactGA.pageview("/#");
-}
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // const store = configureStore();
