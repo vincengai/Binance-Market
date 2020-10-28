@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // const store = configureStore();
     // window.fetchCoinsInfo = Crypto.fetchCoinsInfo;
     window.fetchCoinsInfo = Crypto.fetchCoinsInfo; 
-    initializeReactGA()
     let store;
     if (window.currentUser) {
         const preloadedState = {

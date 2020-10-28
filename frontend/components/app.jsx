@@ -14,7 +14,7 @@ import ReactGA from 'react-ga';
 //
 function initializeReactGA() {
     ReactGA.initialize("G-RF73WL6GWF");
-    ReactGA.pageview("/#");
+    ReactGA.pageview("/homepage");
 }
 
 const App = () => (
