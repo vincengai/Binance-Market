@@ -51,16 +51,6 @@ class TransactionForm extends React.Component {
         });
     }
 
-    // price() {
-    //     let coinArr = Object.values(this.props.coinInfo);
-
-    //     coinArr.map((coinObj, i) => {
-    //         this.setState({
-    //             price: coinObj.USD.PRICE
-    //         });
-    //     })
-    // }
-
     handleBuy() {
         const {symbol, quantity, price} = this.state;
 
