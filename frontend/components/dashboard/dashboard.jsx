@@ -1,9 +1,9 @@
 import React from "react";
-// import PortfolioChart from './portfolio_chart';
+import PortfolioChart from './portfolio_chart';
 // import Watchlist from './watchlist';
 // import PortfolioWallets from './portfolio_wallets';
 // import Transactions from './transactions';
-import { fetchCoinInfo } from '../../util/prices_util';
+import { fetchCoinInfo } from '../../util/coin_api_util';
 
 
 const SUPPORTED_CURRENCIES = ['BTC', 'ETH', 'BCH', 'BNB', 'LTC', 'TRX', 'XRP', 'XLM', 'DASH']
@@ -20,7 +20,7 @@ class Dashboard extends React.Component {
     }
 
     componentDidMount() {
-        if (this.state.currentprices == null) {
+        if (this.state.currentPrices == null) {
             this.getCurrentPrices();
         }
     }
@@ -41,7 +41,7 @@ class Dashboard extends React.Component {
         const {
             cash_balance,
             portfolio,
-            transaction,
+            transactions,
         } = this.props.state.entities.users[userId] || {};
 
         const currentPrices = this.state.currentPrices || {};
@@ -52,6 +52,13 @@ class Dashboard extends React.Component {
                     <span id="portfolio-cash-balance">Cash Balance: </span>
                     <span id="portfolio-cash-balance-num">${(Number(cash_balance.toFixed(2))).toLocaleString()}</span>
                 </div>
+
+                <PortfolioChart
+                    cashBalance={cash_balance}
+                    portfolio={portfolio}
+                    currentPrices={currentPrices}
+                    transactions={transactions}
+                />
             </div>
         )
     }

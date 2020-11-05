@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink, Route } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 class navBar extends React.Component {
@@ -15,10 +15,9 @@ class navBar extends React.Component {
     renderLoggedInTabs() {
         return (
             <div>
-
-                {/* <li>
-                    <Link to="/dashboard">Wallet</Link>
-                </li> */}
+                <li>
+                    <Link to="/dashboard">Dashboard</Link>
+                </li>
                 <li>
                     <Link onClick={this.props.logout} to="/">Sign Out</Link>
                 </li>

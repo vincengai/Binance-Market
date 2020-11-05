@@ -1,4 +1,17 @@
-// import { connect } from 'react-redux';
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import CryptoIndex from './crypto_index';
+import { connect } from 'react-redux';
+import Dashboard from './dashboard';
+
+const mapStateToProps = (state) => {
+    return ({
+        state
+    });
+}
+
+
+const mapDispatchToProps = (dispatch) => {
+    return ({
+        test: {}
+    });
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)
