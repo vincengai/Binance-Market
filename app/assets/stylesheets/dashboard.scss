@@ -1,0 +1,153 @@
+#portfolio-cash-balance-container {
+  color: white;  
+  min-width: 750px;
+  width: 750px;
+  margin: 0 auto;
+  margin-bottom: .6rem;
+
+  #portfolio-cash-balance {
+    font-weight: 450;
+    font-size: 1.2rem;
+  }
+
+  span#portfolio-cash-balance-num {
+    color: grey;
+    font-size: 1.3rem;
+  }
+}
+
+#dashboard-container {
+  width: 100%;
+  margin-top: 3rem;
+  padding-bottom: 125px;
+
+  // COMPONENT 1 (top right)
+  #portfoliochart-container {
+    min-width: 750px;
+    width: 750px;
+    margin: 0 auto;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    padding: 5px;
+
+    #top-container {
+      // background: aliceblue;
+      #your-portfolio-value {
+        font-weight: bold;
+        color: gray;
+      }
+      .current-val {
+        font-weight: bold;
+        font-size: 1.3rem;
+        color:gray;
+      }
+      text-align: center;
+      #portfolio-timeframe {
+        margin-left: -23px;
+      }
+    }
+
+    // FOR TESTING
+    // #bottom-container {
+    //   // background: lightgray;
+    //   .recharts-wrapper {
+    //     // background: pink;
+    //   }
+    // }
+  }
+
+  // COMPONENTS 2/3 (bottom)
+  #wallets-transactions-container {
+    width: 50%;
+    min-width: 750px;
+    margin: 0 auto;
+    // background: lightblue;   // For Testing
+    display: flex;
+    color: white;
+    
+
+    // COMPONENTS 2 (bottom left)
+    #wallets {
+      // background: grey;    // For Testing
+      display: inline-block;
+      margin-right: 3rem;
+      border: 1px solid grey;
+      border-radius: 5px;
+      vertical-align: top;
+      padding: 5px;
+      width: 340px;
+      position: relative;
+
+      .wallets-table {
+        width: 100%;
+      }
+
+      .wallets-portfolio-val {
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  
+    // COMPONENTS 3 (bottom right)
+    #transactions {
+      // background: pink;    // For Testing
+      display: inline-block;
+      padding: 5px;
+      padding-bottom: 20px;
+      border: 1px solid grey;
+      border-radius: 10px;
+      width: 340px;
+      position: relative;
+      margin-left: auto;
+      margin-right: 0;
+
+      .transactions-table {
+        width: 100%;
+
+        // Component 3 bottom right, table header
+        .transactions-thead {
+          text-align: left;
+        }
+      }
+
+      .transactions-bottom {
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+        position: absolute;
+      }
+    }
+  }
+}
+
+
+
+#time-periods-dashboard {
+	li {
+		display: inline;
+		margin-right: 1rem;
+		color: #9b9a9a;							// LIGHT MODE
+		
+		.time-period-active {
+			// color: darkblue;					// LIGHT MODE
+			color: white;					    // LIGHT MODE
+		}
+
+		&:hover {
+			// color: black;				    // LIGHT MODE
+			color: #0066cc;				    // DARK MODE
+			cursor: pointer;
+		}
+
+		&.month-active, &.day-active, &.week-active, &.month-active, &.year-active  {
+			// color: black;						// LIGHT MODE
+			color: #0066cc;				    // DARK MODE
+		}
+	}
+}
+
+
+
