@@ -3,7 +3,7 @@ import PortfolioChart from './portfolio_chart';
 // import Watchlist from './watchlist';
 // import PortfolioWallets from './portfolio_wallets';
 // import Transactions from './transactions';
-import { fetchCoinInfo } from '../../util/coin_api_util';
+import { fetchCurrentPrices } from '../../util/coin_api_util';
 
 
 const SUPPORTED_CURRENCIES = ['BTC', 'ETH', 'BCH', 'BNB', 'LTC', 'TRX', 'XRP', 'XLM', 'DASH']
@@ -26,10 +26,10 @@ class Dashboard extends React.Component {
     }
 
     getCurrentPrices() {
-        fetchCoinInfo(SUPPORTED_CURRENCIES).then(
+        fetchCurrentPrices(SUPPORTED_CURRENCIES).then(
             (response) => {
                 return this.setState({
-                    currentPrices: response.RAW
+                    currentPrices: response.raw
                 })
             }
         )
@@ -37,7 +37,7 @@ class Dashboard extends React.Component {
 
     render() {
         const userId = this.props.state.session.id; 
-
+        console.log(this.props.state.entities)
         const {
             cash_balance,
             portfolio,

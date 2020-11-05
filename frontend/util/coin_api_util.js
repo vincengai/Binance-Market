@@ -24,6 +24,13 @@ export const fetch30DayInfo = (symbol) => {
     })
 }
 
+export const fetchCurrentPrices = (...symbols) => {   // 360 days, daily prices
+    return $.ajax({
+        method: 'GET',
+        url: `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${symbols}&tsyms=USD&api_key={7ad59177d6eecaad1ff76289dedcc3eaab4919b64401df4affc91e8a3be9196f}`
+    })
+}
+
 
 export const fetch1DayInfo = (symbol) => {
     return $.ajax ({
@@ -71,5 +78,12 @@ export const fetchCurrencyInfo = (symbols) => {   // 360 days, daily prices
     return $.ajax({
         method: 'GET',
         url: `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${symbols}&tsyms=USD&api_key={7ad59177d6eecaad1ff76289dedcc3eaab4919b64401df4affc91e8a3be9196f}`
+    })
+}
+
+export const fetchHistoricalPrices = (symbol, timeframe, interval) => {        // 1 day, minute prices (1440 minutes)
+    return $.ajax({
+        method: 'GET',
+        url: `https://min-api.cryptocompare.com/data/histo${interval}?fsym=${symbol}&tsym=USD&limit=${timeframe}&api_key={7ad59177d6eecaad1ff76289dedcc3eaab4919b64401df4affc91e8a3be9196f}`
     })
 }

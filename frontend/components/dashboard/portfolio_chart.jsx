@@ -1,6 +1,6 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, } from 'recharts';
-import { fetchCoinInfo } from '../../util/coin_api_util';
+import { fetchHistoricalPrices } from '../../util/coin_api_util';
 import { calculatePortfolioValues, currentPortfolioValue} from './portfolio_chart_util';
 
 
@@ -56,7 +56,7 @@ class PortfolioChart extends React.Component {
         // interval             == 'day', 'hour', or 'minute'
         // this.props.portfolio == { 'BTC': 1, 'LTC' }
         // transactions == { quantity: 1, price: 8143.05, transaction_type: "BUY", created_at: "2019-10-22T21:13:03.849Z", currency_symbol: 'BTC' }
-        // debugger
+        // 
 
         // current portfolio
         let portfolioArray = Object.keys(this.props.portfolio);
@@ -65,11 +65,11 @@ class PortfolioChart extends React.Component {
         // raw data of historical prices { BTC: [], LTC: [], ... }
         let priceData = {};
 
-        // debugger
+        // 
 
         // Promise.all takes an array of call backs
         Promise.all(portfolioArray.map((symbol) => {
-            return fetchCoinInfo(symbol, timeframe, interval).then(
+            return fetchHistoricalPrices(symbol, timeframe, interval).then(
                 (response) => {                                                         // response == currencyArray of objects
                     // response.Data == [ {time:1569801600, close:8000 }, {}, ... ]       // for 1 currency!
                     priceData[symbol] = response.Data;                                    // populate priceData object (outside of asynch func/loop) with currencyArray
@@ -90,7 +90,7 @@ class PortfolioChart extends React.Component {
 
 
     render() {
-        // debugger
+        // 
         const { portfolio, currentPrices, cashBalance } = this.props;
         const { timePeriodActive } = this.state;
 
@@ -114,7 +114,7 @@ class PortfolioChart extends React.Component {
                 xAxisTickCount = 30;                                                    // very 30 days, make a tick on x axis
         }
 
-        // debugger
+        // 
 
         return (
             <div id="portfoliochart-container">

@@ -26,7 +26,7 @@ export const currentPortfolioValue = (portfolio, currentPrices, cashBalance) => 
         portfolioValue += value;
     }
 
-    // debugger
+    // 
     // return portfolioValue.toFixed(2);
     portfolioValue = Number(portfolioValue.toFixed(2));
     // 10595.30
@@ -40,12 +40,12 @@ export const currentPortfolioValue = (portfolio, currentPrices, cashBalance) => 
 // returns => [ { time:1569801600, portfolioValue: 9000 }, { time:1569888000, portfolioValue: 9200 }, ... ]
 export const calculatePortfolioValues = (pricesData, transactions) => {
     // REUSABLE FUNCTION, priceData will always be populated!!! NOT EMPTY
-    // debugger
+    // 
     // pricesData   == { 'BTC': [ {time:1569888000, close: 8326.24,...}, ... ], 'LTC':[], ... ] }
     // portfolio    == { 'BTC': 1 }
     // cashBalance  == 1871.57
     // transactions == [ { quantity, price, transaction_type, created_at, currency_symbol } ]
-    // debugger
+    // 
 
     // All currency keys in priceData
     let currencySymbols = Object.keys(pricesData);
@@ -67,31 +67,31 @@ export const calculatePortfolioValues = (pricesData, transactions) => {
     // TO RETURN
     let portfolioValues = [];
     // => [ { time:1569801600, portfolioValue: 9000 }, { time:1569888000, portfolioValue: 9200 }, ... ]
-    // debugger
+    // 
 
     // Loop through each price in any of the price arrays (all should be same length)
     // Calculate Portfolio Value at time t in this loop, and push to outside array (return this array later)
     for (let t = 0; t < numDataPoints; t++) {
 
-        // debugger
+        // 
         let time = firstCurrency[t].time;
         // firstCurrency == [ {time:1569888000, close: 8326.24,...}, {}, ... ]
         // time == 1569888000
-        // debugger
+        // 
 
         // 1) GET ALL PRICES FOR EACH CURRENCY IN PORTFOLIO AT A PARTICULAR POINT IN TIME
         // Helper function 1
         let pricesAtTimeT = getPricesAtTimeT(t, pricesData);
         // t = 0, pricesData = { 'BTC': [ {time:1569888000, close: 8326.24,...}, ... ], 'LTC':[], ... ] }
         // pricesAtTimeT == { BTC:8326.24, LTC:164 }
-        // debugger
+        // 
 
         // 2) Determine portfolio price/quantites quantities @time = t use helper function 2
         // Helper function 2 takes in prices, transactionHistory, and time          //=> returns object with keys of currencies, values of quantities&prices @time = t
         // (pricesAtTimeT, transactionHistory, time                                 //=> { 'BTC':{price:8000, quantity:1}, 'USD':{price:1, quantity:1000} }
         let portfolioAtTimeT = getPortfolioAtTimeT(pricesAtTimeT, transactions, time);
         // portfolioAtTimeT == { 'BTC':{price:8000, quantity:1}, 'USD':{price:1, quantity:1000} }
-        // debugger
+        // 
 
         // 3) Determine portfolio value @ time = t use helper function 3
         // Helper function 3 Takes in prices data at point in time, and quantities, and returns portfolio value at that point in time
@@ -100,13 +100,13 @@ export const calculatePortfolioValues = (pricesData, transactions) => {
         //                                                                          //=> { time:1569801600, portfolioValue: 9000 }
         let portfolioValue = calculatePortfolioValueAtTimeT(time, portfolioAtTimeT);
         // portfolioValue == { time:1569801600, portfolioValue: 9000 }
-        debugger
+        
 
         // push each portfolio value object to outside array (parseable by Recharts Library)
         portfolioValues.push(portfolioValue);
     }
 
-    // debugger
+    // 
 
     return portfolioValues;
     // portfolioValues == [ { time:1569801600, portfolioValue: 9000 }, { time:1569888000, portfolioValue: 9200 }, ... ]
@@ -148,7 +148,7 @@ function getPricesAtTimeT(t, pricesData) {
 
         pricesObject[symbol] = priceAtTimeT;
         // priceObject == { 'BTC':8326.24 }
-        debugger
+        
     }
 
     return pricesObject;
@@ -182,24 +182,24 @@ function getPortfolioAtTimeT(pricesAtTimeT, transactions, time) {
     let portfolio = { 'USD': { price: 1, quantity: 10000 } };                        // all portfolio's start off with 10k
     // => { 'BTC':{price:8000, quantity:1}, 'USD':{price:1, quantity:1000} }
 
-    // debugger
+    // 
     let firstTransaction = new Date(transactions[0].created_at);
     let firstTransactionDayOfMonth = firstTransaction.getDate();
     // firstTransactionDayOfMonth = 22
     let firstTransactionMonth = firstTransaction.getMonth();
     // firstTransactionMonth = 9      (october)
     let firstTransactionYear = firstTransaction.getFullYear();
-    // debugger
+    // 
 
     // If input time comes before the first transaction in the input array, return empty object
     if (month < firstTransactionMonth && firstTransactionYear >= year) {
-        // debugger
+        // 
         return {};
     } else if (month === firstTransactionMonth && dayOfMonth < firstTransactionDayOfMonth) {
-        // debugger
+        // 
         return {};
     } else if (year < firstTransactionYear) {
-        // debugger
+        // 
         return {};
     }
 
@@ -212,52 +212,52 @@ function getPortfolioAtTimeT(pricesAtTimeT, transactions, time) {
         // i = 0: transactionDayOfMonth = 22
         let transactionMonth = transactionTime.getMonth();
         // i = 0: transactionMonth = 9    (october)
-        // debugger
+        // 
 
         // portfolio => { 'BTC':{price:8000, quantity:1}, 'USD':{price:1, quantity:1000} }
         // If user BUYS currency on this date, add currency to portfolio
         if (transaction.transaction_type === 'BUY') {
 
-            // debugger
+            // 
             // Add price and to portfolio
             portfolio[transaction.currency_symbol] = { price: transaction.price, quantity: transaction.quantity };
             // portfolio = {USD: {price:1, quantity: 10000}, BTC: {price: 8143, quantity:1} }
-            // debugger
+            // 
 
             // Decrease usd cash balance by purchase amount
             let purchaseAmount = transaction.price * transaction.quantity;
             portfolio.USD.quantity = portfolio.USD.quantity - purchaseAmount;
             // portfolio = {USD: {price:1, quantity: 1856.949}, BTC: {price: 8143, quantity:1} }
-            // debugger
+            // 
 
         } else {  // If user SELLS currency on this date
             // Remove currency quantity from portfolio
-            // debugger
+            // 
             let oldQuantity = portfolio[transaction.currency_symbol].quantity;
             // oldQUantity = 1
-            // debugger
+            // 
 
             // Reduce portoflio's oldQuantity by new quantity (+ add because quantity when selling is negative)
             portfolio[transaction.currency_symbol] = { price: transaction.price, quantity: oldQuantity + transaction.quantity };
-            // debugger
+            // 
 
             // Increase cash balance by sale amount
             let saleAmount = transaction.price * transaction.quantity;                // Will be negative bec. quantity is negative
             portfolio.USD.quantity = portfolio.USD.quantity - saleAmount;             // minus because sale amount is negative
-            // debugger
+            // 
         }
 
         // PORTFOLIO PRICES/VALUES ARE CALCULATED BASED ON CLOSING PRICE OF EXCHANGE NOT PURCHASE PRICE OF CURRENCY!!
         // Update prices in portfolio to current prices
         portfolio = updatePrices(portfolio, pricesAtTimeT);
-        // debugger
+        // 
 
         // If the transaction time matches the input time + 1 Day, exit loop (only get portfolio up to this point)
         // Portfolio value is calculated at the end of the Day (last transaction of the day)
         // if ((dayOfMonth === transactionDayOfMonth) && (month === transactionMonth)) {
         if ((dayOfMonth > transactionDayOfMonth + 1) && (month === transactionMonth)) {
             // 23 > 22        
-            // debugger
+            // 
             break;
         }
     }
@@ -309,7 +309,7 @@ function calculatePortfolioValueAtTimeT(time, portfolioAtTimeT) {
     let portfolioValue = { time: newTime };
 
     let runningTotalValue = 0;
-    debugger
+    
 
     // loop through each currency in portfolioAtTimeT
     for (let symbol in portfolioAtTimeT) {
@@ -319,11 +319,11 @@ function calculatePortfolioValueAtTimeT(time, portfolioAtTimeT) {
         if (portfolioAtTimeT[symbol].price != undefined) {
             runningTotalValue += portfolioAtTimeT[symbol].price * portfolioAtTimeT[symbol].quantity;
         }
-        debugger
+        
     }
 
     portfolioValue['portfolioValue'] = Number(runningTotalValue.toFixed(2));
-    debugger
+    
 
     return portfolioValue;
 }
