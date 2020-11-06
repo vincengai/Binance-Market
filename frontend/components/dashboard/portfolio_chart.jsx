@@ -93,7 +93,7 @@ class PortfolioChart extends React.Component {
         // 
         const { portfolio, currentPrices, cashBalance } = this.props;
         const { timePeriodActive } = this.state;
-
+        // console.log(this.props, 'this is my props')
         // Dynamically set css attribute name so active <li> is highlighted on appropriate chart
         let dayActive, weekActive, monthActive, yearActive, xAxisTickCount;
         switch (timePeriodActive) {
@@ -114,7 +114,6 @@ class PortfolioChart extends React.Component {
                 xAxisTickCount = 30;                                                    // very 30 days, make a tick on x axis
         }
 
-        // 
 
         return (
             <div id="portfoliochart-container">
