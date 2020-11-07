@@ -170,6 +170,8 @@ function getPortfolioAtTimeT(pricesAtTimeT, transactions, time) {
     // NOTE* TIME is in SECONDS from Jan 1, 1970, but new Date expects time stamp in MILISECONDS from Jan 1, 1970
     // so multiply by 1000:  https://stackoverflow.com/questions/49978130/format-crypto-api-date-to-datestring
     // ? UNIX Timestamp?
+    if (transactions[0] == undefined) return null;
+    
     let gmtTime = new Date(time * 1000);
     // gmtTime = Mon Sep 30 2019 20:00:00 GMT-0400 (Eastern Daylight Time)    <- DATE OBJECT NOT STRING
     let dayOfMonth = gmtTime.getDate();
@@ -182,6 +184,7 @@ function getPortfolioAtTimeT(pricesAtTimeT, transactions, time) {
     let portfolio = { 'USD': { price: 1, quantity: 10000 } };                        // all portfolio's start off with 10k
     // => { 'BTC':{price:8000, quantity:1}, 'USD':{price:1, quantity:1000} }
 
+    // console.log(transactions[0], 'debugging promise')
     // 
     let firstTransaction = new Date(transactions[0].created_at);
     let firstTransactionDayOfMonth = firstTransaction.getDate();

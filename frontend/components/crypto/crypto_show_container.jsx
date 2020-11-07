@@ -14,7 +14,10 @@ import {openModal} from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
     // console.log(state.entities.coins, 'mSTP')
+    // const currencyName = ownProps.match.params.currencyName || {};
+
     return {
+        // currencyName,
         coin: ownProps.match.params.symbol,
         coinInfo: state.entities.coins.DISPLAY
     }

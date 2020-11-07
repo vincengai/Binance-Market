@@ -70,7 +70,7 @@ class TransactionForm extends React.Component {
             quantity: quantity,
             price: intPrice      
         };
-    
+        
             // Display error if quantity is not a number or negative
         if (isNaN(quantity) || Number(quantity) <= 0) {
             alert('Please enter a valid quantity');
@@ -79,6 +79,7 @@ class TransactionForm extends React.Component {
             this.props.buyCoin(purchaseData);                       // Send POST (create new wallet transaction) to backend
             alert(`${quantity} ${symbol} was added to your account!`);
             this.props.closeModal();                                  
+            this.props.history.push('/dashboard');
         } else if (!userId) {
             alert('You must be signed in to trade');
             this.props.closeModal();                                  
@@ -88,24 +89,7 @@ class TransactionForm extends React.Component {
             alert('You do not have enough funding!');
         }
     }
-        
-
-    hasEnoughCash(intPrice) {
-        let { cashBalance } = this.props;
-        const quantity = Number(this.state.quantity);
-
-        // if (isNaN(intPrice)) {   // if price is a string ex. "$ 8,000.00", remove $ and ','
-        //     intPrice = Number(intPrice.slice(1).split(',').join(''));
-        // }
-
-        // Compute total purchase value = price * quantity
-        const totalPurchaseValue = intPrice * quantity;
-
-        // Check if user has enough cash to cover totalPurchaseValue
-        return (cashBalance >= totalPurchaseValue);
-    }
-
-
+    
     handleSell() {
         const { symbol, quantity, price } = this.state;
         let { userId } = this.props;
@@ -115,7 +99,6 @@ class TransactionForm extends React.Component {
                 price: Number(price.slice(1).split(',').join(''))
             })
         }
-        // debugger
 
         const saleData = {
             user_id: userId,
@@ -126,17 +109,35 @@ class TransactionForm extends React.Component {
 
         if (isNaN(quantity) || Number(quantity) <= 0) {
             alert('Please enter a valid quantity');
-            // debugger
+
         } else if (this.hasEnoughQuantity()) {                            // Validate that user has enough crypto to sell
             this.props.sellCoin(saleData);                              // Send POST (create new wallet transaction) to backend
             alert(`${quantity} ${symbol} was sold from your account!`);
             this.props.closeModal();     
+            this.props.history.push('/dashboard');
+
         } else if (!userId) {
-            alert('Please sign in first')
+            alert('You must be signed in to trade');
+            this.props.closeModal();
+            this.props.history.push('/login');
         } else {
             alert('You do not have enough to sell!');
+            this.props.history.push('/dashboard');
+
         }
     }
+
+    hasEnoughCash(intPrice) {
+        let { cashBalance } = this.props;
+        const quantity = Number(this.state.quantity);
+        // Compute total purchase value = price * quantity
+        const totalPurchaseValue = intPrice * quantity;
+
+        // Check if user has enough cash to cover totalPurchaseValue
+        return (cashBalance >= totalPurchaseValue);
+    }
+
+
 
     hasEnoughQuantity() {
         const { portfolio } = this.props;
