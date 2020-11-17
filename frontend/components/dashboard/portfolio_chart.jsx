@@ -38,34 +38,43 @@ class PortfolioChart extends React.Component {
             "1Y-values": [],
             "AllTime-values": [],
             portfolioSymbols: [],                      // portfolioSymbols == [ 'BTC', 'ETH ]
-            timePeriodActive: '',                                                     // will contain string representing which time period chart to render/bold for css
+            timePeriodActive: '',                                                    // will contain string representing which time period chart to render/bold for css
+            tester: 'k'
         }
 
         this.getPortfolioData = this.getPortfolioData.bind(this);
     }
 
 
-    componentDidMount() {                                                         // ONLY CALLED ONCE AFTER THE FIRST RENDER
+    // componentDidMount() {                                                         // ONLY CALLED ONCE AFTER THE FIRST RENDER
         // On initial page load, get all 1M data for each currency in portfolio
-        this.getPortfolioData("30", "day", "1M-values");                            // inputs = timeframe in days/min/or hours, interval, key to set state                                  
-        this.state.portfolioSymbols = Object.keys(this.props.portfolio)
+        // this.state.portfolioSymbols = Object.keys(this.props.portfolio)
+    // }
+
+
+    // PUT THIS IN THE SUBCOMPONENTS INSTEAD
+    componentDidUpdate(prevProps) {
+        const { transactions, portfolio } = this.props;
+
+        //compare prevProps w/ this.props , if its not the same setState on new props
+        if (this.props.transactions !== prevProps.transactions) {
+            console.log('this isnt working')
+            this.setState({
+                // transactions: prevProps.transactions,
+                // portfolio: prevProps.portfolio
+            })
+            // this.getPortfolioData("30", "day", "1M-values");                            // inputs = timeframe in days/min/or hours, interval, key to set state                                  
+        }
+
     }
-
-
 
     getPortfolioData(timeframe, interval, timeframeKey) {                         // timeframe in days, minutes, or hours (depends on api)
         const { transactions, portfolio } = this.props;
-        // timeframe            == '30'        On initial render, refers to 30 days
-        // interval             == 'day', 'hour', or 'minute'
-        // this.props.portfolio == { 'BTC': 1, 'LTC' }
-        // transactions == { quantity: 1, price: 8143.05, transaction_type: "BUY", created_at: "2019-10-22T21:13:03.849Z", currency_symbol: 'BTC' }
-        // debugger
 
         // current portfolio
+        if (!(this.props.portfolio)) return
         let portfolioArray = Object.keys(this.props.portfolio);
-        // portfolioArray == ['BTC', 'LTC']
 
-        // raw data of historical prices { BTC: [], LTC: [], ... }
         let priceData = {};
 
         // debugger
@@ -93,8 +102,8 @@ class PortfolioChart extends React.Component {
 
 
     render() {
-        // if (this.props.length === null) return null;
-        if (Object.keys(this.props.portfolio) === undefined) return null; 
+        if (!(this.props.portfolio)) return <div></div>;
+        // if (Object.keys(this.props.portfolio) == undefined ) return <div></div>; 
             
         const { portfolio, currentPrices, cashBalance } = this.props;
         const { timePeriodActive } = this.state;

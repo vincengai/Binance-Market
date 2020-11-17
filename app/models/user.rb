@@ -76,9 +76,7 @@ class User < ApplicationRecord
   end
 
 
-  # def calculate_buying_power 
 
-  # end
 
   def get_portfolio
       # Get all wallets for Current User , Returns an Array of Obj. 

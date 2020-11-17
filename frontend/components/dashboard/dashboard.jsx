@@ -64,8 +64,6 @@ class Dashboard extends React.Component {
                     transactions={transactions}
                 />
 
-                {/* <Watchlist /> */}
-
                 <div id="wallets-transactions-container">
                     <PortfolioWallets
                         cashBalance={cash_balance}

@@ -8,6 +8,9 @@ class Transactions extends React.Component {
         this.formatMonth = this.formatMonth.bind(this);
     }
 
+    componentDidUpdate(prevProps) {
+        
+    }
 
     formatMonth(month) {
         const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
