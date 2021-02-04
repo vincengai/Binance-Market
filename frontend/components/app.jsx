@@ -9,18 +9,10 @@ import CryptoShowContainer from './crypto/crypto_show_container';
 import Splash from './splash';
 import Foot from './footer';
 import Modal from '../components/crypto/modal';
-import ReactGA from 'react-ga';
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
-
-
-function initializeReactGA() {
-    ReactGA.initialize("G-RF73WL6GWF");
-    ReactGA.pageview("/homepage");
-}
+// import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <div>
-        {initializeReactGA()}
         <Modal />
         <header>
             <NavBarContainer />

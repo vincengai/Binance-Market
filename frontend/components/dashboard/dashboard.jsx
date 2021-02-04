@@ -20,9 +20,15 @@ class Dashboard extends React.Component {
 
 
     componentDidMount() {
-        if (this.state.currentPrices == null) {
-            this.getCurrentPrices();
-        }
+        fetchCurrencyInfo(SUPPORTED_CURRENCIES).then(
+            (response) => {
+                // response.RAW == {BTC: {USD: 7649.32, MKTCAP...}, ETH: {USD: 162.16, MKTCAP... }, ... }
+
+                return this.setState({
+                    currentPrices: response.RAW
+                });
+            }
+        )
     }
 
 

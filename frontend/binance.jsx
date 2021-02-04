@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // window.fetchCoinsInfo = Crypto.fetchCoinsInfo;
     window.fetchCoinsInfo = Crypto.fetchCoinsInfo; 
     let store;
+    
     if (window.currentUser) {
         const preloadedState = {
             entities: {
