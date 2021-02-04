@@ -58,7 +58,7 @@ class PortfolioChart extends React.Component {
 
         //compare prevProps w/ this.props , if its not the same setState on new props
         if (this.props.transactions !== prevProps.transactions) {
-            console.log('this isnt working')
+
             this.setState({
                 // transactions: prevProps.transactions,
                 // portfolio: prevProps.portfolio
