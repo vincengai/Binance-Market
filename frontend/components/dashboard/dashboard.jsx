@@ -18,7 +18,7 @@ class Dashboard extends React.Component {
         this.getCurrentPrices = this.getCurrentPrices.bind(this);
     }
 
-
+//
     componentDidMount() {
         fetchCurrencyInfo(SUPPORTED_CURRENCIES).then(
             (response) => {
