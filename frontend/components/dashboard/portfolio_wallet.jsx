@@ -112,7 +112,7 @@ class PortfolioWallets extends React.Component {
             return (
                 <tr key={i} className="wallets-tbody-tr">
                     <td>{currencyObj.symbol}</td>
-                    <td>%{currencyObj.percentAllocation * 100}</td>
+                    <td>{currencyObj.percentAllocation * 100}%</td>
                     <td>{formatValue(currencyObj.quantity)}</td>
                     <td>${formatValue(currencyObj.USDValue)}</td>
                 </tr>
