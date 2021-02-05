@@ -101,7 +101,7 @@ class PortfolioWallets extends React.Component {
     renderSortedRows() {  // sort by asset allocation % high to low, default to coin mkt cap
         let sortedPortfolio = this.sortPortfolioByQuantity();
         // sortedPortfolio == [ { symbol: 'ETH', quantity: 30 }, { symbol: 'BTC', quantity: 1 }, { symbol: 'LTC', quantity: 0.5 } ]
-
+        //////
         let portfolioAssetAllocation = this.calculateAssetAllocation(sortedPortfolio);
         // portfolioAssetAllocation == [ { symbol: 'USD', quantity: 1871.57, USDValue: 1871.57, percentAllocation: 0.20 }, { symbol: 'BTC', quantity: 1, USDValue: 7472, percentAllocation: .799 } ]
 
