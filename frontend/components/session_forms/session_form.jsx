@@ -40,14 +40,14 @@ class LoginForm extends React.Component{
             }
         }, intervalLength);
     }    
-
+//
    handleSubmit(e) {
        e.preventDefault();
        const user = Object.assign({}, this.state);
 
        setTimeout( () => 
                         this.props.action(user)
-                            .then( () => this.props.history.push("/coins/BTC")), this.totalTimer)
+                            .then( () => this.props.history.push("/coins/ETH")), this.totalTimer)
    };
 
    update(field) {
