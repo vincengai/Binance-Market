@@ -9,7 +9,7 @@ class Transactions extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        
+        this.renderTransactions();
     }
 
     formatMonth(month) {
