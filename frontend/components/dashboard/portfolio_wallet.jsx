@@ -80,7 +80,7 @@ class PortfolioWallets extends React.Component {
         let sortedPortfolio = [];
         // sortedPortfolio = [ { symbol: 'ETH', quantity: 30 }, { symbol: 'BTC', quantity: 1 }, { symbol: 'LTC', quantity: 0.5 } ]
 
-        // convert portfolio object to array of objects
+
         for (let symbol in portfolio) {
             sortedPortfolio.push({ symbol: symbol, quantity: portfolio[symbol] });
         }
