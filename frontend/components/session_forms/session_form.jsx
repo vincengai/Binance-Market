@@ -47,7 +47,7 @@ class LoginForm extends React.Component{
 
        setTimeout( () => 
                         this.props.action(user)
-                            .then( () => this.props.history.push("/")), this.totalTimer)
+                            .then( () => this.props.history.push("/coins/BTC")), this.totalTimer)
    };
 
    update(field) {
