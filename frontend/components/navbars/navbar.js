@@ -16,7 +16,7 @@ class navBar extends React.Component {
         return (
             <div>
                 <li>
-                    <Link to="/dashboard">Dashboard</Link>
+                    {/* <Link to="/dashboard">Dashboard</Link> */}
                 </li>
                 <li>
                     <Link onClick={this.props.logout} to="/">Sign Out</Link>
