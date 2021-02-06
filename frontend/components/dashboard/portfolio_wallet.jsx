@@ -71,7 +71,8 @@ class PortfolioWallets extends React.Component {
         //   {symbol: 'USD', quantity: 1000, USDValue: 1000, percentAllocation: .10 },
         // ]
     }
-
+//////////////asd//
+///////
 
     sortPortfolioByQuantity() {           // returns array of objects sorted by asset allocation % high to low, sort by quantity
         const portfolio = this.props.portfolio;
