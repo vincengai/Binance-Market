@@ -4,7 +4,7 @@ import {
   cardTitle
 } from "../../../../../assets/jss/material-kit-pro-react.js";
 
-import tooltipsStyle from "assets/jss/material-kit-pro-react/tooltipsStyle.js";
+import tooltipsStyle from "../../../material-kit-pro-react/tooltipsStyle.js";
 
 const sectionPillsStyle = {
   ...tooltipsStyle,

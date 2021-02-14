@@ -7,13 +7,14 @@ import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 import Icon from "@material-ui/core/Icon";
 
-import styles from "../../../app/assets/jss/material-kit-pro-react/components/infoStyle.js";
 
-
+import featuresStyle from '../../../app/assets/jss/material-kit-pro-react/components/infoStyle.js'
+const useStyles = makeStyles(featuresStyle);
 
 export default function InfoArea(props) {
   const { title, description, iconColor, vertical, className } = props;
   const classes = useStyles();
+  
   const iconWrapper = classNames({
     [classes.iconWrapper]: true,
     [classes[iconColor]]: true,

@@ -12,7 +12,7 @@ import {
 
 import imagesStyle from "assets/jss/material-kit-pro-react/imagesStyles.js";
 
-import tooltipsStyle from "assets/jss/material-kit-pro-react/tooltipsStyle.js";
+import tooltipsStyle from "../../material-kit-pro-react/tooltipsStyle.js";
 
 const profilePageStyle = {
   container,

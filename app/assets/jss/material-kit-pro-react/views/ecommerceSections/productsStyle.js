@@ -10,7 +10,7 @@ import {
 
 import customCheckboxRadioSwitch from "assets/jss/material-kit-pro-react/customCheckboxRadioSwitchStyle.js";
 
-import tooltipsStyle from "assets/jss/material-kit-pro-react/tooltipsStyle.js";
+import tooltipsStyle from "../../../material-kit-pro-react/tooltipsStyle.js";
 
 const styles = {
   ...customCheckboxRadioSwitch,

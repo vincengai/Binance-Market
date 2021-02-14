@@ -7,7 +7,7 @@ import {
   roseColor,
   grayColor,
   title
-} from "../../../../../assets/jss/material-kit-pro-react.js";
+} from '../../../jss/material-kit-pro-react'
 
 const infoStyle = {
   infoArea: {

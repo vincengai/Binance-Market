@@ -11,6 +11,7 @@
     "css-loader": "^5.0.2",
     "node-sass": "^5.0.0",
     "react": "^16.12.0",
+    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.12.0",
     "react-ga": "^3.2.0",
     "react-loader": "^2.4.6",

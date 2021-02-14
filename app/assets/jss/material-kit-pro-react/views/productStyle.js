@@ -10,7 +10,7 @@ import {
   roseColor
 } from "../../../../../assets/jss/material-kit-pro-react.js";
 
-import tooltipsStyle from "assets/jss/material-kit-pro-react/tooltipsStyle.js";
+import tooltipsStyle from "../../material-kit-pro-react/tooltipsStyle.js";
 import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
 import customSelectStyle from "assets/jss/material-kit-pro-react/customSelectStyle.js";
 

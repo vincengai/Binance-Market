@@ -4,7 +4,8 @@ import {
   cardTitle,
   grayColor,
   coloredShadow
-} from "../../../../../assets/jss/material-kit-pro-react.js";
+} from "../../../../../assets/jss/material-kit-pro-react";
+
 
 const sectionSimilarStoriesStyle = {
   container,

@@ -5,7 +5,7 @@ import {
   hexToRgb
 } from "../../../../../assets/jss/material-kit-pro-react.js";
 
-import tooltip from "assets/jss/material-kit-pro-react/tooltipsStyle.js";
+import tooltip from "../../material-kit-pro-react/tooltipsStyle.js";
 
 const headerLinksStyle = theme => ({
   list: {

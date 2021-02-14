@@ -36,6 +36,7 @@ const features = {
       margin: "60px auto 0"
     }
   },
+
   features5: {
     padding: "80px 0",
     backgroundSize: "cover",

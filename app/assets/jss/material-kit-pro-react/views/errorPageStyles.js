@@ -3,7 +3,7 @@ import {
   whiteColor,
   blackColor,
   hexToRgb
-} from ../../../"assets/jss/material-kit-pro-react.js";
+} from '../../material-kit-pro-react';
 
 const errorPageStyles = {
   contentCenter: {

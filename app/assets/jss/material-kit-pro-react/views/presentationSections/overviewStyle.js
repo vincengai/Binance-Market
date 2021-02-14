@@ -37,6 +37,7 @@ const overviewStyle = {
   features5: {
     ...section,
     backgroundRepeat: "no-repeat",
+    // background-image:
     position: "relative",
     padding: "80px 0px",
     textAlign: "center",
