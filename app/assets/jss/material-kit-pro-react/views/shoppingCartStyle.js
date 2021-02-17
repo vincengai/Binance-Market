@@ -8,10 +8,10 @@ import {
   whiteColor,
   grayColor,
   mlAuto
-} from "../../../../../assets/jss/material-kit-pro-react.js";
+} from "../../material-kit-pro-react";
 
-import buttonGroup from "assets/jss/material-kit-pro-react/buttonGroupStyle.js";
-import tooltips from "../../material-kit-pro-react/tooltipsStyle.js";
+import buttonGroup from "../../../jss/material-kit-pro-react/buttonGroupStyle";
+import tooltips from "../../material-kit-pro-react/tooltipsStyle";
 
 const styles = {
   main,

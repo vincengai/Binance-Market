@@ -1,6 +1,6 @@
-import { grayColor, title } from "../../../../../assets/jss/material-kit-pro-react.js";
+import { grayColor, title } from "../../../material-kit-pro-react";
 
-import tooltipsStyle from "../../../material-kit-pro-react/tooltipsStyle.js";
+import tooltipsStyle from "../../../material-kit-pro-react/tooltipsStyle";
 
 const sectionCommentsStyle = {
   ...tooltipsStyle,

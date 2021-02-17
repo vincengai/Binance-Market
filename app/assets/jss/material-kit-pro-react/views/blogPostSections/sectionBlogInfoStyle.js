@@ -1,4 +1,4 @@
-import { grayColor, cardTitle } from "../../../../../assets/jss/material-kit-pro-react.js";
+import { grayColor, cardTitle } from "../../../material-kit-pro-react";
 const sectionBlogInfoStyle = {
   section: {
     paddingTop: "30px",

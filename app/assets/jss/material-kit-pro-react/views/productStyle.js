@@ -8,11 +8,11 @@ import {
   cardTitle,
   grayColor,
   roseColor
-} from "../../../../../assets/jss/material-kit-pro-react.js";
+} from "../../material-kit-pro-react";
 
 import tooltipsStyle from "../../material-kit-pro-react/tooltipsStyle.js";
-import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
-import customSelectStyle from "assets/jss/material-kit-pro-react/customSelectStyle.js";
+import imagesStyles from "../../../../assets/jss/material-kit-pro-react/imagesStyles.js";
+import customSelectStyle from "../../../../assets/jss/material-kit-pro-react/customSelectStyle.js";
 
 const productStyle = {
   mlAuto,

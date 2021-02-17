@@ -7,7 +7,7 @@ import {
   roseColor,
   grayColor,
   defaultFont
-} from "../../../../../assets/jss/material-kit-pro-react.js";
+} from "../../material-kit-pro-react";
 
 const tableStyle = {
   warning: {

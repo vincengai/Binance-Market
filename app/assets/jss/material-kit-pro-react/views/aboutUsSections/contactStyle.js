@@ -3,8 +3,8 @@ import {
   description,
   mrAuto,
   mlAuto
-} from "../../../../../assets/jss/material-kit-pro-react.js";
-import customSelectStyle from "assets/jss/material-kit-pro-react/customSelectStyle.js";
+} from "../../../material-kit-pro-react";
+import customSelectStyle from "../../../material-kit-pro-react/customSelectStyle";
 
 const contactStyle = {
   title,

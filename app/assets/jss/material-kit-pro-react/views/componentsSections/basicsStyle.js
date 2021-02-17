@@ -4,9 +4,9 @@ import {
   title,
   mlAuto,
   mrAuto
-} from "../../../../../assets/jss/material-kit-pro-react.js";
-import customCheckboxRadioSwitch from "assets/jss/material-kit-pro-react/customCheckboxRadioSwitchStyle.js";
-import customSelectStyle from "assets/jss/material-kit-pro-react/customSelectStyle.js";
+} from "../../../material-kit-pro-react";
+import customCheckboxRadioSwitch from "../../../../jss/material-kit-pro-react/customCheckboxRadioSwitchStyle.js";
+import customSelectStyle from "../../../../jss/material-kit-pro-react/customSelectStyle.js";
 
 const basicsStyle = {
   mlAuto,

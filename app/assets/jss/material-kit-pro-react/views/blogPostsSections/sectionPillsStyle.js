@@ -2,7 +2,7 @@ import {
   whiteColor,
   hexToRgb,
   cardTitle
-} from "../../../../../assets/jss/material-kit-pro-react.js";
+} from "../../../material-kit-pro-react";
 
 import tooltipsStyle from "../../../material-kit-pro-react/tooltipsStyle.js";
 

@@ -1,4 +1,4 @@
-import { whiteColor, hexToRgb } from "../../../../../assets/jss/material-kit-pro-react.js";
+import { whiteColor, hexToRgb } from "../../../../assets/jss/material-kit-pro-react.js";
 
 const cardBodyStyle = {
   cardBody: {

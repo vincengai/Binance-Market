@@ -7,7 +7,7 @@ import {
   whiteColor,
   dangerColor,
   hexToRgb
-} from "../";
+} from "../../material-kit-pro-react";
 
 const paginationStyle = {
   pagination: {

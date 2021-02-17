@@ -1,4 +1,4 @@
-import { main } from "../../../../../assets/jss/material-kit-pro-react.js";
+import { main } from "../../material-kit-pro-react";
 
 const sectionsPageStyle = {
   main: {

@@ -20,21 +20,32 @@ module.exports = {
         },
       },
       {
-            test: /\.(sass|css|scss)$/,
-            use: [
-              'style-loader',
-              'css-loader',
-              {
-                loader: "postcss-loader",
-                options: {
-                  plugins: () => [
-                    require("autoprefixer")()
-                  ],
-                },
-              },
-              'sass-loader',
-            ]
+        test: /\.(sass|css|scss)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: () => [
+                require("autoprefixer")()
+              ],
+            },
           },
+          'sass-loader',
+        ]
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+             limit: 8192
+            },
+          },
+        ]
+      },
     ],
   },
   devtool: "inline-source-map",

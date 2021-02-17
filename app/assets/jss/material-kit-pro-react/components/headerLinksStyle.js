@@ -3,7 +3,7 @@ import {
   whiteColor,
   mlAuto,
   hexToRgb
-} from "../../../../../assets/jss/material-kit-pro-react.js";
+} from "../../material-kit-pro-react";
 
 import tooltip from "../../material-kit-pro-react/tooltipsStyle.js";
 
