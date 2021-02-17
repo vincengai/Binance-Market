@@ -20,17 +20,19 @@ import GridContainer from "./components/Grid/GridContainer.js";
 import GridItem from "./components/Grid/GridItem.js";
 import Button from "./components/CustomButtons/Button.js";
 // sections for this page
-import SectionDescription from "./views/PresentationPage/Sections/SectionDescription.js";
-import SectionComponents from "./views/PresentationPage/Sections/SectionComponents.js";
-import SectionCards from "./views/PresentationPage/Sections/SectionCards.js";
-import SectionContent from "./views/PresentationPage/Sections/SectionContent.js";
-import SectionSections from "./views/PresentationPage/Sections/SectionSections.js";
-import SectionExamples from "./views/PresentationPage/Sections/SectionExamples.js";
-import SectionFreeDemo from "./views/PresentationPage/Sections/SectionFreeDemo.js";
-import SectionOverview from "./views/PresentationPage/Sections/SectionOverview.js";
-import SectionPricing from "./views/PresentationPage/Sections/SectionPricing.js";
+import SectionDescription from "./views/SectionDescription.js";
+import SectionComponents from "./views/SectionComponents.js";
 
-import presentationStyle from "./assets/jss/material-kit-pro-react/views/presentationStyle.js";
+// Still have yet to add in the bottom files
+import SectionCards from "./views/SectionCards.js";
+import SectionContent from "./views/SectionContent.js";
+import SectionSections from "./views/SectionSections.js";
+import SectionExamples from "./views/SectionExamples.js";
+import SectionFreeDemo from "./views/SectionFreeDemo.js";
+import SectionOverview from "./views/SectionOverview.js";
+import SectionPricing from "./views/SectionPricing.js";
+
+import presentationStyle from "../../app/assets/jss/material-kit-pro-react/views/presentationStyle.js";
 
 const useStyles = makeStyles(presentationStyle);
 const COINS = [

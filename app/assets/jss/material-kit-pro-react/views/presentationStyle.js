@@ -6,8 +6,8 @@ import {
   grayColor,
   mainRaised,
   hexToRgb
-} from "../../../../../assets/jss/material-kit-pro-react.js";
-import footerStyle from "assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.js";
+} from "../../../../assets/jss/material-kit-pro-react.js";
+import footerStyle from "../../../../assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.js";
 
 const presentationStyle = {
   ...footerStyle,
