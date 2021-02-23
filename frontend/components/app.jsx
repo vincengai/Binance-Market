@@ -7,7 +7,7 @@ import CryptoIndexContainer from './crypto/crypto_index_container';
 import DashboardContainer from './dashboard/dashboard_container';
 import CryptoShowContainer from './crypto/crypto_show_container';
 import Splash from './splash';
-import Foot from './footer';
+import Footer from './footer';
 import Modal from '../components/crypto/modal';
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -30,7 +30,7 @@ const App = () => (
         </Switch>
 
         <footer>
-            <Foot/>
+            <Footer/>
         </footer>
     </div>
 );

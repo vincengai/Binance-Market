@@ -36,11 +36,14 @@ export default function SectionOverview() {
       <div
         className={classes.features5}
         style={{ 
-          backgroundImage: "url(" + feature5 + ")",
+          backgroundImage: "url(" + profilePic1 + ")",
           opacity: "1"
         }}
       >
-      {/* <div className="splash-img"></div> */}
+      {/* <div className="splash-img" style={{ 
+          backgroundImage: "url(" + feature5 + ")",
+          opacity: "1"}}> 
+      </div> */}
 
         <GridItem md={8} className={classNames(classes.mlAuto, classes.mrAuto)}>
           <h1 className={classes.title}>Learning how to invest has gotten that much easier</h1>
@@ -112,7 +115,7 @@ export default function SectionOverview() {
           </GridContainer>
         </div>
       </div>
-      <div className={classes.sectionTestimonials}>
+      <div className={classes.sectionTestimonials} style={{paddingBottom: 0}}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem
@@ -128,135 +131,6 @@ export default function SectionOverview() {
               </h5>
             </GridItem>
           </GridContainer>
-          <GridContainer>
-            <GridItem md={4} sm={4}>
-              <Card plain profile>
-                <GridContainer>
-                  <GridItem md={3} sm={3}>
-                    <CardHeader image plain>
-                      <a href="#pablo">
-                        <img src={profilePic1} alt="..." />
-                      </a>
-                      <div
-                        className={classes.coloredShadow}
-                        style={{
-                          backgroundImage: "url(" + profilePic1 + ")",
-                          opacity: "1"
-                        }}
-                      />
-                      <div
-                        className={classes.coloredShadow}
-                        style={{
-                          backgroundImage: "url(" + profilePic1 + ")",
-                          opacity: "1"
-                        }}
-                      />
-                    </CardHeader>
-                  </GridItem>
-                  <GridItem md={9} sm={9}>
-                    <CardBody plain className={classes.alignLeft}>
-                      <h4 className={classes.cardTitle}>Khaldi Yass</h4>
-                      <p className={classes.cardDescription}>
-                        {'"'}As soon as I saw this kit, everything else isn
-                        {"'"}t the same anymore, I just can{"'"}t describe it
-                        guys! Thank you for this work!{'"'}
-                      </p>
-                    </CardBody>
-                  </GridItem>
-                </GridContainer>
-              </Card>
-            </GridItem>
-            <GridItem md={4} sm={4}>
-              <Card plain profile>
-                <GridContainer>
-                  <GridItem md={3} sm={3}>
-                    <CardHeader image plain>
-                      <a href="#pablo">
-                        <img src={profilePic2} alt="..." />
-                      </a>
-                      <div
-                        className={classes.coloredShadow}
-                        style={{
-                          backgroundImage: "url(" + profilePic2 + ")",
-                          opacity: "1"
-                        }}
-                      />
-                      <div
-                        className={classes.coloredShadow}
-                        style={{
-                          backgroundImage: "url(" + profilePic2 + ")",
-                          opacity: "1"
-                        }}
-                      />
-                    </CardHeader>
-                  </GridItem>
-                  <GridItem md={9} sm={9}>
-                    <CardBody plain className={classes.alignLeft}>
-                      <h4 className={classes.cardTitle}>Josh Murray</h4>
-                      <p className={classes.cardDescription}>
-                        {'"'}Great kit! Used this for a client already and he is
-                        over the moon. Keep up the good work Creative Tim! 10/10
-                        for design, colours, and the feel of the kit.
-                        {'"'}
-                      </p>
-                    </CardBody>
-                  </GridItem>
-                </GridContainer>
-              </Card>
-            </GridItem>
-            <GridItem md={4} sm={4}>
-              <Card plain profile>
-                <GridContainer>
-                  <GridItem md={3} sm={3}>
-                    <CardHeader image plain>
-                      <a href="#pablo">
-                        <img src={profilePic3} alt="..." />
-                      </a>
-                      <div
-                        className={classes.coloredShadow}
-                        style={{
-                          backgroundImage: "url(" + profilePic3 + ")",
-                          opacity: "1"
-                        }}
-                      />
-                      <div
-                        className={classes.coloredShadow}
-                        style={{
-                          backgroundImage: "url(" + profilePic3 + ")",
-                          opacity: "1"
-                        }}
-                      />
-                    </CardHeader>
-                  </GridItem>
-                  <GridItem md={9} sm={9}>
-                    <CardBody plain className={classes.alignLeft}>
-                      <h4 className={classes.cardTitle}>Michael Onubogu</h4>
-                      <p className={classes.cardDescription}>
-                        {'"'}Damn Daniel!!! This Material UI Kit is fresh AF!
-                        Amazing work!{'"'}
-                      </p>
-                    </CardBody>
-                  </GridItem>
-                </GridContainer>
-              </Card>
-            </GridItem>
-          </GridContainer>
-          <div className={classes.ourClients}>
-            <GridContainer justify="center">
-              <GridItem md={3} sm={3}>
-                <img src={Vodafone} alt="vodafone" />
-              </GridItem>
-              <GridItem md={3} sm={3}>
-                <img src={Microsoft} alt="microsoft" />
-              </GridItem>
-              <GridItem md={3} sm={3}>
-                <img src={Harvard} alt="harvard" />
-              </GridItem>
-              <GridItem md={3} sm={3}>
-                <img src={Standford} alt="stanford" />
-              </GridItem>
-            </GridContainer>
-          </div>
         </div>
       </div>
     </div>

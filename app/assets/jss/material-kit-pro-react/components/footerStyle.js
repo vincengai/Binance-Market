@@ -11,6 +11,7 @@ import {
 } from "../../material-kit-pro-react";
 
 const footerStyle = {
+  padding: '0px',
   left: {
     float: "left!important",
     display: "block"

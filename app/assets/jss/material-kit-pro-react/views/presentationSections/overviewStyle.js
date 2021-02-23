@@ -12,7 +12,7 @@ import {
   grayColor,
   hexToRgb
 } from "../../../../../assets/jss/material-kit-pro-react.js";
-// import backgroundImage from '../../../../images/features5.jpg';
+
 const overviewStyle = {
   mrAuto,
   mlAuto,
