@@ -1,4 +1,6 @@
 import React from "react";
+import { Link, NavLink, Route } from 'react-router-dom';
+
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // core components
@@ -21,13 +23,13 @@ export default function SectionDescription() {
           sm={8}
           className={classNames(classes.mrAuto, classes.mlAuto)}
         >
-          <h5 className={classes.description}>
-            This is the paragraph where you can write more details about your
-            product. Keep you user engaged by providing meaningful information.
-            Remember that by this time, the user is curious, otherwise he wouldn
-            {"'"}t scroll to get here. Add a button if you want the user to see
-            more.
-          </h5>
+          <h4 className={classes.description}>
+                 Trade Bitcoin, Ethereum, and dozens of other cryptocurrencies in
+                 minutes! <br></br> This platform is solely dedicated for testing indicators and strategies without the monetary risk.{" "} <br></br>
+                 Every account is provided with $100,000 to start off with. 
+                 <br></br> Have fun investing!
+          </h4>
+
         </GridItem>
       </GridContainer>
     </div>

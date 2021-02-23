@@ -66,11 +66,11 @@ class navBar extends React.Component {
                                         href="https://www.linkedin.com/in/vince-ngai/"
                                     target="_blank" className="nav-word">LinkedIn</a>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a
                                         href="https://vincengai.github.io/portfolio/"
                                     target="_blank" className="nav-word">Portfolio</a>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
 

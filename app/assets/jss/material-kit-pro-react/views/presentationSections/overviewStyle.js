@@ -12,7 +12,7 @@ import {
   grayColor,
   hexToRgb
 } from "../../../../../assets/jss/material-kit-pro-react.js";
-
+// import backgroundImage from '../../../../images/features5.jpg';
 const overviewStyle = {
   mrAuto,
   mlAuto,
@@ -37,7 +37,6 @@ const overviewStyle = {
   features5: {
     ...section,
     backgroundRepeat: "no-repeat",
-    // background-image:
     position: "relative",
     padding: "80px 0px",
     textAlign: "center",

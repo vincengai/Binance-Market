@@ -35,7 +35,7 @@ import SectionOverview from "./views/SectionOverview.js";
 // import SectionPricing from "./views/SectionPricing.js";
 
 import presentationStyle from "../../app/assets/jss/material-kit-pro-react/views/presentationStyle.js";
-
+import steller from '../../app/assets/images/steller.gif'
 const useStyles = makeStyles(presentationStyle);
 
 const COINS = [
@@ -107,18 +107,7 @@ export default function Splash() {
 
   return (
       <div>
-        <Header
-          brand="Material Kit PRO React"
-          links={<HeaderLinks dropdownHoverColor="info" />}
-          fixed
-          color="transparent"
-          changeColorOnScroll={{
-            height: 400,
-            color: "info"
-          }}
-        />
-        <Parallax
-          image={require("../../app/assets/img/bg4.jpg")}
+        <Parallax image={window.imageUrl.stellar}
           className={classes.parallax}
         >
           <div className={classes.container}>
@@ -126,12 +115,13 @@ export default function Splash() {
               <GridItem>
                 <div className={classes.brand}>
                   <h1>
-                    Material Kit React
-                    <span className={classes.proBadge}>PRO</span>
+                    Binance-XChange 
+                    <span className={classes.proBadge}>2.0</span>
                   </h1>
                   <h3 className={classes.title}>
-                    A Badass Material-UI Kit based on Material Design.
+                    The World's Most Trustworthy Cryptocurrency Paper Trading Platform
                   </h3>
+                  <h4>Developed by Vince Ngai</h4>
                 </div>
               </GridItem>
             </GridContainer>

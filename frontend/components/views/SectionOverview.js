@@ -23,10 +23,10 @@ import Harvard from "../../../app/assets/img/assets-for-demo/ourClients/harvard.
 import Standford from "../../../app/assets/img/assets-for-demo/ourClients/stanford.jpg";
 import profilePic1 from "../../../app/assets/img/assets-for-demo/test1.jpg";
 import profilePic2 from "../../../app/assets/img/assets-for-demo/test2.jpg";
+
 import profilePic3 from "../../../app/assets/img/assets-for-demo/test3.jpg";
-
+// import feature5 from '../../../app/assets/img/assets-for-demo/features5.jpg';
 import overviewStyle from "../../../app/assets/jss/material-kit-pro-react/views/presentationSections/overviewStyle.js";
-
 const useStyles = makeStyles(overviewStyle);
 
 export default function SectionOverview() {
@@ -35,18 +35,37 @@ export default function SectionOverview() {
     <div className={classes.section}>
       <div
         className={classes.features5}
-        style={{
-          backgroundImage: `url(${require("../../../app/assets/img/assets-for-demo/features-5.jpg")})`
+        style={{ 
+          backgroundImage: "url(" + feature5 + ")",
+          opacity: "1"
         }}
       >
+      {/* <div className="splash-img"></div> */}
+
         <GridItem md={8} className={classNames(classes.mlAuto, classes.mrAuto)}>
-          <h2 className={classes.title}>Your work will get much easier</h2>
+          <h1 className={classes.title}>Learning how to invest has gotten that much easier</h1>
         </GridItem>
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem sm={3} className={classes.featuresShow}>
               <InfoArea
-                title="Material UI Grid"
+                title="Save Money"
+                description={
+                  <p>
+                    Come test out your theories, strategies or 
+                    indicators against the market. We are a paper trading app 
+                    that allows users to buy/sell Crypto without using your REAL 
+                    money.
+                  </p>
+                }
+                icon={AttachMoney}
+                iconColor="gray"
+                vertical={true}
+              />
+            </GridItem>
+            <GridItem sm={3} className={classes.featuresShow}>
+              <InfoArea
+                title="Simplistic UI"
                 description={
                   <p>
                     Enjoy the fluid grid system based on 12 columns. Material
@@ -89,21 +108,7 @@ export default function SectionOverview() {
                 vertical={true}
               />
             </GridItem>
-            <GridItem sm={3} className={classes.featuresShow}>
-              <InfoArea
-                title="Save Money"
-                description={
-                  <p>
-                    Creating your design from scratch with dedicated designers
-                    can be very expensive. Using a kit is the best option to
-                    start your development while bootstrapping your budget.
-                  </p>
-                }
-                icon={AttachMoney}
-                iconColor="gray"
-                vertical={true}
-              />
-            </GridItem>
+ 
           </GridContainer>
         </div>
       </div>
