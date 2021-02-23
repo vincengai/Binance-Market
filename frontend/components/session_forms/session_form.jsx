@@ -7,7 +7,7 @@ class LoginForm extends React.Component{
             username: "",
             password: "",
         };
-
+/////////////////////////////
         this.totalTimer = 0;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoLogin = this.demoLogin.bind(this);

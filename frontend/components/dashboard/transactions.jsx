@@ -9,7 +9,7 @@ class Transactions extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        
+        this.renderTransactions();
     }
 
     formatMonth(month) {
@@ -24,6 +24,8 @@ class Transactions extends React.Component {
         if (transactions == undefined) {
             return null;
         }
+//
+
 
         if (transactions.length === 0) {                              // if there are no transactions
             return null;
