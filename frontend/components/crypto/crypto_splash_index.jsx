@@ -1,18 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
-
+import 'babel-polyfill'
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Checkbox from "@material-ui/core/Checkbox";
 // @material-ui/core icons
-
+import Person from "@material-ui/icons/Person";
+import Edit from "@material-ui/icons/Edit";
+import Close from "@material-ui/icons/Close";
 import Check from "@material-ui/icons/Check";
+// import Remove from "@material-ui/icons/Remove";
+// import Add from "@material-ui/icons/Add";
+// import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
+// import Reply from "@material-ui/icons/Reply";
+// import Favorite from "@material-ui/icons/Favorite";
+
 // core components
 import GridContainer from "../Grid/GridContainer.js";
 import GridItem from "../Grid/GridItem.js";
 import Table from "../Table/Table.js";
 
+import Button from "../../components/button/Button.js";
+// import Media from "../../components/Media/Media.js";
+// import CustomInput from "../../components/CustomInput/CustomInput.js";
+// import Paginations from "../../components/Pagination/Pagination.js";
 import styles from "../../../app/assets/jss/material-kit-pro-react/components/tableStyle.js";
 
 
@@ -32,9 +44,31 @@ const fillButtons = [
       </Button>
     );
   });
-
+const roundButtons = [
+    { color: "info", icon: Person },
+    { color: "success", icon: Edit },
+    { color: "danger", icon: Close }
+  ].map((prop, key) => {
+    return (
+      <Button round justIcon size="sm" color={prop.color} key={key}>
+        <prop.icon />
+      </Button>
+    );
+  });
+    const simpleButtons = [
+    { color: "info", icon: Person },
+    { color: "success", icon: Edit },
+    { color: "danger", icon: Close }
+  ].map((prop, key) => {
+    return (
+      <Button simple justIcon size="sm" color={prop.color} key={key}>
+        <prop.icon />
+      </Button>
+    );
+  });
 const CryptoIndex = (props) => {
   const [coinsData, setCoinsData] = useState([]);
+  const [checked, setChecked] = React.useState([1, 3, 5]);
 
   useEffect( () => {
     const fetchCoinsDataAPI = async () => {
@@ -89,7 +123,7 @@ const CryptoIndex = (props) => {
   // if (this.props.coins === undefined) return null;
 
     return (
-              <GridContainer>
+        <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
             <h4>Simple Table</h4>
           </GridItem>
@@ -160,11 +194,11 @@ const CryptoIndex = (props) => {
               tableHead={[
                 "#",
                 "",
-                "Product Name",
-                "Type",
-                "Qty",
-                "Price",
-                "Amount"
+                "Cryptocurrency",
+                "Last Price",
+                "24h Change",
+                "Mkt Cap",
+                "Trade"
               ]}
               tableData={[
                 [
