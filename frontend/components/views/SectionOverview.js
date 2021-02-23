@@ -25,7 +25,7 @@ import profilePic1 from "../../../app/assets/img/assets-for-demo/test1.jpg";
 import profilePic2 from "../../../app/assets/img/assets-for-demo/test2.jpg";
 
 import profilePic3 from "../../../app/assets/img/assets-for-demo/test3.jpg";
-// import feature5 from '../../../app/assets/img/assets-for-demo/features5.jpg';
+import feature5 from '../../../app/assets/img/assets-for-demo/features5.jpg';
 import overviewStyle from "../../../app/assets/jss/material-kit-pro-react/views/presentationSections/overviewStyle.js";
 const useStyles = makeStyles(overviewStyle);
 
