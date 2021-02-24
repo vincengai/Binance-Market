@@ -21,7 +21,7 @@ import Vodafone from "../../../app/assets/img/assets-for-demo/ourClients/vodafon
 import Microsoft from "../../../app/assets/img/assets-for-demo/ourClients/microsoft.jpg";
 import Harvard from "../../../app/assets/img/assets-for-demo/ourClients/harvard.jpg";
 import Standford from "../../../app/assets/img/assets-for-demo/ourClients/stanford.jpg";
-import profilePic1 from "../../../app/assets/img/assets-for-demo/test1.jpg";
+import profilePic1 from "../../../app/assets/img/assets-for-demo/features-5.png";
 import profilePic2 from "../../../app/assets/img/assets-for-demo/test2.jpg";
 
 import profilePic3 from "../../../app/assets/img/assets-for-demo/test3.jpg";
@@ -36,7 +36,7 @@ export default function SectionOverview() {
       <div
         className={classes.features5}
         style={{ 
-          backgroundImage: "url(" + profilePic1 + ")",
+          backgroundImage: `${window.imageUrl.feature5}`,
           opacity: "1"
         }}
       >

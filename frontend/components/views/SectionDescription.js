@@ -23,7 +23,7 @@ export default function SectionDescription() {
           sm={8}
           className={classNames(classes.mrAuto, classes.mlAuto)}
         >
-          <h4 className={classes.description}>
+          <h4 className={classes.description} style={{color: "black"}}>
                  Trade Bitcoin, Ethereum, and dozens of other cryptocurrencies in
                  minutes! <br></br> This platform is solely dedicated for testing indicators and strategies without the monetary risk.{" "} <br></br>
                  Every account is provided with $100,000 to start off with. 

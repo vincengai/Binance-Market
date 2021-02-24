@@ -90,7 +90,7 @@ export default function SectionFooter() {
               <h4>Developer</h4>
               <div className={classes.galleryFeed}>
                 <h4>Vince Ngai</h4>
-                <img
+                <img style={{width: "40%"}}
                   src={window.imageUrl.profilepic}
                   className={classNames(
                     classes.img,
