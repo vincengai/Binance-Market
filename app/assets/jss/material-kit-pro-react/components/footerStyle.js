@@ -47,7 +47,8 @@ const footerStyle = {
       marginBottom: "0",
       padding: 0,
       listStyle: "none"
-    }
+    },
+    width: "100%"
   },
   big: {
     padding: "1.875rem 0",

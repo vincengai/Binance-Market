@@ -69,37 +69,42 @@ const CryptoIndex = (props) => {
   const [mktCap, setMktCap] = useState([]);
   const [checked, setChecked] = React.useState([1, 3, 5]);
 
+  
+
   useEffect( () => {
     const fetchCoinsDataAPI = async () => {
-      const initialCoinsData = fetchCoinsInfo();
-     
-      // setName(initialCoinsData.responseJSON.DISPLAY);
+      const initialCoinsData = await fetchCoinsInfo();
+      console.log(initialCoinsData)
+      
+      // setAndFormatPrice(initialCoinsData);
+      // setAndFormatName();
 
     };
 
     fetchCoinsDataAPI();
-    // console.log(initialCoinsData)
+    console.log(name)
   }, [])
   
   const coins = ['BTC','ETH','BCH','BNB','LTC','TRX','XRP','XLM','DASH']
 
-  const fillRows = () => {
-    return coins.map((ele, i) => {
-      return [
-              i,
-              <img style={{width: "2.5em"}}
-                src={window.imageUrl.ele}
-                alt="..."
-                className={classes.imgRoundedCircle + " " + classes.imgFluid}
-              />,
-              ele, //Name
-              price[i], // Price
-              dayChange[i],     // 24h Change
-              mktCap[i],   // Mkt Cap or Volume
-              "€ 1,225" // Trade
-            ]
-    });
-  }
+  // const fillRows = () => {
+  //   return coins.map((ele, i) => {
+  //     return [
+  //             i,
+  //             <img style={{width: "2.5em"}}
+  //               src={window.imageUrl.ele}
+  //               alt="..."
+  //               className={classes.imgRoundedCircle + " " + classes.imgFluid}
+  //             />,
+  //             ele, //Name
+  //             price[i], // Price
+  //             dayChange[i],     // 24h Change
+  //             mktCap[i],   // Mkt Cap or Volume
+  //             "€ 1,225" // Trade
+  //           ]
+  //   });
+  // }
+
   const currentPrice = () => {
     let coinsArr = Object.values(price);
 
@@ -140,7 +145,7 @@ const CryptoIndex = (props) => {
   // if (this.props.coins === undefined) return null;
 
     return (
-        <GridContainer style={{alignContent: 'center'}}>
+        <GridContainer style={{paddingBottom: "50px"}}>
           <GridItem xs={12} sm={12} md={12}>
           </GridItem>
           <GridItem
@@ -228,16 +233,8 @@ const CryptoIndex = (props) => {
                   "10",
                   "€ 599.00",
                   <Link to="/coins/LTC" className="flex-table-trade-button">TRADE</Link> // Trade
-                ],
-                {
-                  total: true,
-                  colspan: "5",
-                  amount: (
-                    <span>
-                      <small>€</small>12,999
-                    </span>
-                  )
-                }
+                ]
+               
               ]}
               customCellClasses={[
                 classes.textCenter,
