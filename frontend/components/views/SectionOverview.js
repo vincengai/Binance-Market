@@ -55,10 +55,8 @@ export default function SectionOverview() {
                 title="Save Money"
                 description={
                   <p>
-                    Come test out your theories, strategies or 
-                    indicators against the market. We are a paper trading app 
-                    that allows users to buy/sell Crypto without using your REAL 
-                    money.
+                    Binance-XChange paper trading app that allows users to trade against
+                    the market using CryptoCompare's API for live data.
                   </p>
                 }
                 icon={AttachMoney}
@@ -71,9 +69,9 @@ export default function SectionOverview() {
                 title="Risk Free"
                 description={
                   <p>
-                    Enjoy the fluid grid system based on 12 columns. Material
-                    Kit PRO is built over Bootstrap and has all the benefits
-                    that the framework comes with.
+                    We allot $100,000 to every new user. Giving you the freedom in 
+                    how you want to approach your investments. Whether it be swinging
+                    or day trading.
                   </p>
                 }
                 icon={Grid}
@@ -86,9 +84,8 @@ export default function SectionOverview() {
                 title="Fully Responsive"
                 description={
                   <p>
-                    This Material UI kit is built mobile-first and looks amazing
-                    on any device. Regardless of the screen size, the website
-                    content will naturally fit the given resolution.
+                    Trade on the go or at home. Binance-XChange's platoform is not limited
+                    to any platforms. 
                   </p>
                 }
                 icon={PhoneLink}
@@ -101,9 +98,8 @@ export default function SectionOverview() {
                 title="Save Time"
                 description={
                   <p>
-                    Using the Material Kit PRO will save you large amount of
-                    time. You don{"'"}t have to worry about customising the
-                    basic Bootstrap design or generating new components.
+                    Forget looking around for other payed platforms. Binance-XChange's
+                    free and simple UI is the one stop learning platform for you. 
                   </p>
                 }
                 icon={AccessTime}
