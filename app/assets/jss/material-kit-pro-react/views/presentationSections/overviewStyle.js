@@ -24,7 +24,7 @@ const overviewStyle = {
   },
   section: {
     ...section,
-    padding: "70px 0px"
+    padding: "20px 0px"
   },
   sectionTestimonials: {
     paddingTop: "50px",

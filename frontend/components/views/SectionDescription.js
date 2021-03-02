@@ -1,37 +1,58 @@
-import React from "react";
-import { Link, NavLink, Route } from 'react-router-dom';
 
-// nodejs library that concatenates classes
-import classNames from "classnames";
-// core components
-import GridContainer from "../Grid/GridContainer.js";
-import GridItem from "../Grid/GridItem.js";
+import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
-import descriptionStyle from "../../../app/assets/jss/material-kit-pro-react/views/aboutUsSections/descriptionStyle.js";
+// @material-ui/icons
+import Chat from "@material-ui/icons/Chat";
+import VerifiedUser from "@material-ui/icons/VerifiedUser";
+import Fingerprint from "@material-ui/icons/Fingerprint";
+// core components
+import GridContainer from "../Grid/GridContainer.js";
+import GridItem from "../Grid/GridItem.js";
+import InfoArea from "../../components/InfoArea/InfoArea";
 
-const useStyles = makeStyles(descriptionStyle);
+import productStyle from "../../../app/assets/jss/material-kit-pro-react/views/landingPageSections/productStyle.js";
+import { Divider } from "@material-ui/core";
 
-export default function SectionDescription() {
+const useStyles = makeStyles(productStyle);
+
+export default function SectionProduct() {
   const classes = useStyles();
   return (
-    <div className={classNames(classes.aboutDescription, classes.textCenter)}>
-      <GridContainer>
-        <GridItem
-          md={8}
-          sm={8}
-          className={classNames(classes.mrAuto, classes.mlAuto)}
-        >
-          <h4 className={classes.description} style={{color: "black"}}>
-                 Trade Bitcoin, Ethereum, and dozens of other cryptocurrencies in
-                 minutes! <br></br> This platform is solely dedicated for testing indicators and strategies without the monetary risk.{" "} <br></br>
-                 Every account is provided with $100,000 to start off with. 
-                 <br></br> Have fun investing!
-          </h4>
+    <div className={classes.section}>
 
-        </GridItem>
-      </GridContainer>
+      <div>
+        <GridContainer>
+          <GridItem xs={12} sm={4} md={4}>
+            <InfoArea
+              title="Free Chat"
+              description="This platform is for educational purposes. If you have any questions on how to use this application please feel free to reach out at anytime."
+              icon={Chat}
+              iconColor="info"
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={4} md={4}>
+            <InfoArea
+              title="Verified Users"
+              description="This is a free to use service. We will never ask for any personal information or credit card information."
+              icon={VerifiedUser}
+              iconColor="success"
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={4} md={4}>
+            <InfoArea
+              title="Secure"
+              description="We will never store any passwords in our backend. We put every password through BCrypt's password hashing function. "
+              icon={Fingerprint}
+              iconColor="danger"
+              vertical
+            />
+          </GridItem>
+        </GridContainer>
+      </div>
     </div>
   );
 }

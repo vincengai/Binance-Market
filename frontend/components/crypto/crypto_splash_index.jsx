@@ -145,9 +145,7 @@ const CryptoIndex = (props) => {
   // if (this.props.coins === undefined) return null;
 
     return (
-        <GridContainer style={{paddingBottom: "50px"}}>
-          <GridItem xs={12} sm={12} md={12}>
-          </GridItem>
+        <GridContainer style={{paddingBottom: "50px", paddingTop: "50px", justifyContent: "center", color: "black"}}>
           <GridItem
             xs={12}
             sm={10}
@@ -156,7 +154,7 @@ const CryptoIndex = (props) => {
           >
 
             {/* Return Index, Name, Last Price, 24h CHange, Mkt Cap, Trade */}
-            <Table
+            <Table 
               striped
               tableHead={[
                 "#",

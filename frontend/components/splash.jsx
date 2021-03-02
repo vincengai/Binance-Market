@@ -128,9 +128,9 @@ export default function Splash() {
           </div>
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
-          <SectionDescription />
-          <SectionOverview />
           <CryptoSplashIndexContainer />
+          <SectionOverview />
+          <SectionDescription />
         </div>
 
 
