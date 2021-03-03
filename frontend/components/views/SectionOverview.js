@@ -21,29 +21,32 @@ import Vodafone from "../../../app/assets/img/assets-for-demo/ourClients/vodafon
 import Microsoft from "../../../app/assets/img/assets-for-demo/ourClients/microsoft.jpg";
 import Harvard from "../../../app/assets/img/assets-for-demo/ourClients/harvard.jpg";
 import Standford from "../../../app/assets/img/assets-for-demo/ourClients/stanford.jpg";
-import profilePic1 from "../../../app/assets/img/assets-for-demo/test1.jpg";
+import profilePic1 from "../../../app/assets/img/assets-for-demo/test4.jpg";
+import test1 from '../../../app/assets/images/test1.jpg';
 import profilePic2 from "../../../app/assets/img/assets-for-demo/test2.jpg";
 
 import profilePic3 from "../../../app/assets/img/assets-for-demo/test3.jpg";
-// import feature5 from '../../../app/assets/img/assets-for-demo/features5.jpg';
 import overviewStyle from "../../../app/assets/jss/material-kit-pro-react/views/presentationSections/overviewStyle.js";
 const useStyles = makeStyles(overviewStyle);
-
+//
 export default function SectionOverview() {
   const classes = useStyles();
   return (
-    <div className={classes.section}>
+    <div className={classes.section} style={{padding: "0"}}>
       <div
         className={classes.features5}
         style={{ 
-          backgroundImage: "url(" + feature5 + ")",
-          opacity: "1"
+          backgroundImage: "url('https://images.hdqwalls.com/download/purple-night-sky-5k-65-1600x1200.jpg')",
+          opacity: "2"
         }}
       >
-      {/* <div className="splash-img"></div> */}
-
-        <GridItem md={8} className={classNames(classes.mlAuto, classes.mrAuto)}>
-          <h1 className={classes.title}>Learning how to invest has gotten that much easier</h1>
+        <GridItem md={8} className={classNames(classes.mlAuto, classes.mrAuto)} style={{padding: "5 0"}}>
+          <div className={classes.title} style={{fontSize: "2rem"}}>Let{"'"}s talk investing</div>
+          <h4 className={classes.title} style={{color: "white"}}>
+            This platform is solely dedicated for testing strategies and indicators without the monetary risk.{" "} <br></br>
+            Every account is provided with $100,000 to start off with. 
+            <br></br> Have fun investing!
+          </h4>
         </GridItem>
         <div className={classes.container}>
           <GridContainer justify="center">
@@ -52,10 +55,8 @@ export default function SectionOverview() {
                 title="Save Money"
                 description={
                   <p>
-                    Come test out your theories, strategies or 
-                    indicators against the market. We are a paper trading app 
-                    that allows users to buy/sell Crypto without using your REAL 
-                    money.
+                    Binance-XChange paper trading app that allows users to trade against
+                    the market using CryptoCompare's API for live data.
                   </p>
                 }
                 icon={AttachMoney}
@@ -65,12 +66,12 @@ export default function SectionOverview() {
             </GridItem>
             <GridItem sm={3} className={classes.featuresShow}>
               <InfoArea
-                title="Simplistic UI"
+                title="Risk Free"
                 description={
                   <p>
-                    Enjoy the fluid grid system based on 12 columns. Material
-                    Kit PRO is built over Bootstrap and has all the benefits
-                    that the framework comes with.
+                    We allot $100,000 to every new user. Giving you the freedom in 
+                    how you want to approach your investments. Whether it be swinging
+                    or day trading.
                   </p>
                 }
                 icon={Grid}
@@ -83,9 +84,8 @@ export default function SectionOverview() {
                 title="Fully Responsive"
                 description={
                   <p>
-                    This Material UI kit is built mobile-first and looks amazing
-                    on any device. Regardless of the screen size, the website
-                    content will naturally fit the given resolution.
+                    Trade on the go or at home. Binance-XChange's platoform is not limited
+                    to any platforms. 
                   </p>
                 }
                 icon={PhoneLink}
@@ -98,9 +98,8 @@ export default function SectionOverview() {
                 title="Save Time"
                 description={
                   <p>
-                    Using the Material Kit PRO will save you large amount of
-                    time. You don{"'"}t have to worry about customising the
-                    basic Bootstrap design or generating new components.
+                    Forget looking around for other payed platforms. Binance-XChange's
+                    free and simple UI is the one stop learning platform for you. 
                   </p>
                 }
                 icon={AccessTime}
@@ -110,153 +109,6 @@ export default function SectionOverview() {
             </GridItem>
  
           </GridContainer>
-        </div>
-      </div>
-      <div className={classes.sectionTestimonials}>
-        <div className={classes.container}>
-          <GridContainer>
-            <GridItem
-              md={8}
-              className={classNames(classes.mlAuto, classes.mrAuto)}
-            >
-              <h2 className={classes.title}>Trusted by 330.000+ People</h2>
-              <h5 className={classes.description}>
-                The UI Kits, Templates and Dashboards that we{"'"}ve created are
-                used by
-                <b> 330,000+ web developers</b> in over{" "}
-                <b> 576.000 Web Projects</b>. This is what some of them think:
-              </h5>
-            </GridItem>
-          </GridContainer>
-          <GridContainer>
-            <GridItem md={4} sm={4}>
-              <Card plain profile>
-                <GridContainer>
-                  <GridItem md={3} sm={3}>
-                    <CardHeader image plain>
-                      <a href="#pablo">
-                        <img src={profilePic1} alt="..." />
-                      </a>
-                      <div
-                        className={classes.coloredShadow}
-                        style={{
-                          backgroundImage: "url(" + profilePic1 + ")",
-                          opacity: "1"
-                        }}
-                      />
-                      <div
-                        className={classes.coloredShadow}
-                        style={{
-                          backgroundImage: "url(" + profilePic1 + ")",
-                          opacity: "1"
-                        }}
-                      />
-                    </CardHeader>
-                  </GridItem>
-                  <GridItem md={9} sm={9}>
-                    <CardBody plain className={classes.alignLeft}>
-                      <h4 className={classes.cardTitle}>Khaldi Yass</h4>
-                      <p className={classes.cardDescription}>
-                        {'"'}As soon as I saw this kit, everything else isn
-                        {"'"}t the same anymore, I just can{"'"}t describe it
-                        guys! Thank you for this work!{'"'}
-                      </p>
-                    </CardBody>
-                  </GridItem>
-                </GridContainer>
-              </Card>
-            </GridItem>
-            <GridItem md={4} sm={4}>
-              <Card plain profile>
-                <GridContainer>
-                  <GridItem md={3} sm={3}>
-                    <CardHeader image plain>
-                      <a href="#pablo">
-                        <img src={profilePic2} alt="..." />
-                      </a>
-                      <div
-                        className={classes.coloredShadow}
-                        style={{
-                          backgroundImage: "url(" + profilePic2 + ")",
-                          opacity: "1"
-                        }}
-                      />
-                      <div
-                        className={classes.coloredShadow}
-                        style={{
-                          backgroundImage: "url(" + profilePic2 + ")",
-                          opacity: "1"
-                        }}
-                      />
-                    </CardHeader>
-                  </GridItem>
-                  <GridItem md={9} sm={9}>
-                    <CardBody plain className={classes.alignLeft}>
-                      <h4 className={classes.cardTitle}>Josh Murray</h4>
-                      <p className={classes.cardDescription}>
-                        {'"'}Great kit! Used this for a client already and he is
-                        over the moon. Keep up the good work Creative Tim! 10/10
-                        for design, colours, and the feel of the kit.
-                        {'"'}
-                      </p>
-                    </CardBody>
-                  </GridItem>
-                </GridContainer>
-              </Card>
-            </GridItem>
-            <GridItem md={4} sm={4}>
-              <Card plain profile>
-                <GridContainer>
-                  <GridItem md={3} sm={3}>
-                    <CardHeader image plain>
-                      <a href="#pablo">
-                        <img src={profilePic3} alt="..." />
-                      </a>
-                      <div
-                        className={classes.coloredShadow}
-                        style={{
-                          backgroundImage: "url(" + profilePic3 + ")",
-                          opacity: "1"
-                        }}
-                      />
-                      <div
-                        className={classes.coloredShadow}
-                        style={{
-                          backgroundImage: "url(" + profilePic3 + ")",
-                          opacity: "1"
-                        }}
-                      />
-                    </CardHeader>
-                  </GridItem>
-                  <GridItem md={9} sm={9}>
-                    <CardBody plain className={classes.alignLeft}>
-                      <h4 className={classes.cardTitle}>Michael Onubogu</h4>
-                      <p className={classes.cardDescription}>
-                        {'"'}Damn Daniel!!! This Material UI Kit is fresh AF!
-                        Amazing work!{'"'}
-                      </p>
-                    </CardBody>
-                  </GridItem>
-                </GridContainer>
-              </Card>
-            </GridItem>
-          </GridContainer>
-          <div className={classes.ourClients}>
-            <GridContainer justify="center">
-              <GridItem md={3} sm={3}>
-                <img src={Vodafone} alt="vodafone" />
-              </GridItem>
-              <GridItem md={3} sm={3}>
-                <img src={Microsoft} alt="microsoft" />
-              </GridItem>
-              <GridItem md={3} sm={3}>
-                <img src={Harvard} alt="harvard" />
-              </GridItem>
-              <GridItem md={3} sm={3}>
-                <img src={Standford} alt="stanford" />
-              </GridItem>
-            </GridContainer>
-          </div>
         </div>
       </div>
     </div>

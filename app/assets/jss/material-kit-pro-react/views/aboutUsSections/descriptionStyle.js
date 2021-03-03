@@ -11,7 +11,7 @@ const descriptionStyle = {
     textAlign: "center"
   },
   aboutDescription: {
-    padding: "70px 0 0 0"
+    padding: "20px 0 0 0"
   },
   mrAuto,
   mlAuto,

@@ -11,6 +11,7 @@ import {
 } from "../../material-kit-pro-react";
 
 const footerStyle = {
+  padding: '0px',
   left: {
     float: "left!important",
     display: "block"
@@ -46,7 +47,8 @@ const footerStyle = {
       marginBottom: "0",
       padding: 0,
       listStyle: "none"
-    }
+    },
+    width: "100%"
   },
   big: {
     padding: "1.875rem 0",

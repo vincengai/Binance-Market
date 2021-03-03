@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import { boxShadow } from "../../../../../app/assets/jss/material-kit-pro-react";
 
 const styles = {
   grid: {
@@ -13,6 +14,7 @@ const styles = {
     paddingRight: "15px",
     paddingLeft: "15px"
     /* flexBasis: "auto" */
+   
   }
 };
 

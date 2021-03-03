@@ -1,174 +1,281 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCoinsInfo } from "../../util/coin_api_util";
 
-class CryptoIndex extends React.Component {
-  constructor(props) {
-    super(props);
+import 'babel-polyfill'
+// @material-ui/core components
+import { makeStyles } from "@material-ui/core/styles";
+// @material-ui/core icons
+import Person from "@material-ui/icons/Person";
+import Edit from "@material-ui/icons/Edit";
+import Close from "@material-ui/icons/Close";
+import Check from "@material-ui/icons/Check";
 
-    this.currentPrice = this.currentPrice.bind(this);
-    this.day24Change = this.day24Change.bind(this);
-    this.directShow = this.directShow.bind(this);
+// core components
+import GridContainer from "../Grid/GridContainer.js";
+import GridItem from "../Grid/GridItem.js";
+import Table from "../Table/Table.js";
 
-    // this.interval = false;
+import Button from "../../components/button/Button.js";
+import styles from "../../../app/assets/jss/material-kit-pro-react/components/tableStyle.js";
+
+
+///////
+const useStyles = makeStyles(styles);
+
+  const fillButtons = [
+    { color: "info", icon: Person },
+    { color: "success", icon: Edit },
+    { color: "danger", icon: Close }
+  ].map((prop, key) => {
+    return (
+      <Button justIcon size="sm" color={prop.color} key={key}>
+        <prop.icon />
+      </Button>
+    );
+  });
+  const roundButtons = [
+    { color: "info", icon: Person },
+    { color: "success", icon: Edit },
+    { color: "danger", icon: Close }
+  ].map((prop, key) => {
+    return (
+      <Button round justIcon size="sm" color={prop.color} key={key}>
+        <prop.icon />
+      </Button>
+    );
+  });
+  
+  const simpleButtons = [
+    { color: "info", icon: Person },
+    { color: "success", icon: Edit },
+    { color: "danger", icon: Close }
+  ].map((prop, key) => {
+    return (
+      <Button simple justIcon size="sm" color={prop.color} key={key}>
+        <prop.icon />
+      </Button>
+    );
+  });
+
+const symbols = ['BTC', 'ETH', 'ADA', 'BCH', 'LTC'];
+
+const CryptoIndex = (props) => {
+  const [name, setName] = useState([]);
+  const [price, setPrice] = useState([]);
+  const [dayChange, setDayChange] = useState([]);
+  const [dayPercentageChange, setDayPercentageChange] = useState([]);
+  const [mktCap, setMktCapChange] = useState([]);
+  
+  const classes = useStyles();
+
+  useEffect( () => {
+    const fetchCoinsDataAPI = async () => {
+      const initialCoinsData = await fetchCoinsInfo(symbols);      
+
+      setAndFormatName(initialCoinsData);
+      setAndFormatPrice(initialCoinsData);
+      setAndFormat24hChange(initialCoinsData);
+      setAndFormat24hPercentChange(initialCoinsData);
+      setAndFormatMktCap(initialCoinsData);
+    };
+
+    fetchCoinsDataAPI();
+  }, [])
+  
+  const setAndFormatName = (data) => {
+    let names = Object.keys(data.DISPLAY)
+    setName(names)
   }
 
-  componentDidMount() {
-    this.props.fetchCoinsInfo();
+  const setAndFormatPrice = (data) => {
+    let coinsArr = Object.values(data.DISPLAY);
+    let tempArr = [];
+
+    coinsArr.map( (coinObj, i) => {
+      tempArr.push(coinObj.USD.PRICE)
+    })
+    setPrice(tempArr)
   }
 
-  currentPrice() {
-    let coinsArr = Object.values(this.props.coins);
+  const setAndFormat24hChange = (data) => {
+    let coinsArr = Object.values(data.DISPLAY);
+    let tempArr = [];
 
-    return coinsArr.map((coinObj, i) => {
-      return <div key={i}>{coinObj.USD.PRICE} </div>;
-    });
+    coinsArr.map( (coinObj, i) => {
+      tempArr.push(coinObj.USD.CHANGEDAY)
+    })
+    setDayChange(tempArr)
   }
 
-  day24Change() {
-    let coinsArr = Object.values(this.props.coins);
-    let counter = 0; 
+  const setAndFormat24hPercentChange = (data) => {
+    let coinsArr = Object.values(data.DISPLAY);
+    let tempArr = [];
 
-    return coinsArr.map((coinObj, i) => {
-      if (Math.sign(coinObj.USD.CHANGEPCTHOUR) === -1) {
+    coinsArr.map( (coinObj, i) => {
+      tempArr.push(coinObj.USD.CHANGEPCTDAY)
+    })
+    setDayPercentageChange(tempArr)
+  }
+
+  const setAndFormatMktCap = (data) => {
+    let coinsArr = Object.values(data.DISPLAY);
+    let tempArr = [];
+
+    coinsArr.map( (coinObj, i) => {
+      tempArr.push(coinObj.USD.MKTCAP)
+    })
+    setMktCapChange(tempArr)
+  }
+
+  const formatColorPctData = (data) => {
+    if (Math.sign(data) === -1) {
         return (
-          <div className="negativepct" key={i}>
-            {coinObj.USD.CHANGEPCTHOUR}%{" "}
+          <div className="negativepct">
+             {data}%{" "}
           </div>
         );
       } else {
         return (
-          <div className="positivepct" key={i}>
-            {" "}
-            {coinObj.USD.CHANGEPCTHOUR}%{" "}
+          <div className="positivepct">
+            {"  "}+{data}%{" "}
           </div>
         );
       }
-    });
+  }
+  const formatColorDayData = (data) => {
+    if (Math.sign(data) === -1) {
+        return (
+          <div className="negativepct">
+             -{data}{" "}
+          </div>
+        );
+      } else {
+        return (
+          <div className="positivepct">
+            {"  "}+{data}{" "}
+          </div>
+        );
+      }
   }
 
-  directShow(symbol) {
-    this.props.history.push(`/coins/${symbol}`);
-  }
+  return (
 
-  render() {
-    if (this.props.coins === undefined) return null;
+    <GridContainer style={{paddingBottom: "50px", paddingTop: "50px", justifyContent: "center"}}>
+      <GridItem
+        xs={12}
+        sm={10}
+        md={8}
+        className={classes.mrAuto + " " + classes.mlAuto}
 
-    return (
-      <div className="table-container">
-        <div className="flex-table-header">
-          <div className="flex-row-first">Name</div>
-          <div className="flex-row">Last Price</div>
-          <div className="flex-row">24h Change</div>
-          <div className="flex-row">Chart</div>
-          <div className="flex-row">Trade</div>
-        </div>
+        style={{flexGrow: "1"}}
+      >
 
-        <div className="table-column">
-          <div className="flex-table-name">
-            <div id="btc-div">
-              <img src={window.imageUrl.BTC} id="c-icon" />
-              <Link to="/coins/BTC" className="flex-name">
-                BTC
-              </Link>
-            </div>
-            <div id="btc-div">
-              <img src={window.imageUrl.ETH} id="c-icon3" />
-              <Link to="/coins/ETH" className="flex-name">
-                ETH
-              </Link>
-            </div>
-            <div id="btc-div">
-              <img src={window.imageUrl.BCH} id="c-icon3" />
-              <Link to="/coins/BCH" className="flex-name">
-                BCH
-              </Link>
-            </div>
-            <div id="btc-div">
-              <img src={window.imageUrl.BNB} id="c-icon2" />
-              <Link to="/coins/BNB" className="flex-name">
-                BNB
-              </Link>
-            </div>
-            <div id="btc-div">
-              <img src={window.imageUrl.LTC} id="c-icon3" />
-              <Link to="/coins/LTC" className="flex-name">
-                LTC
-              </Link>
-            </div>
-            <div id="btc-div">
-              <img src={window.imageUrl.TRX} id="c-icon3" />
-              <Link to="/coins/TRX" className="flex-name">
-                TRX
-              </Link>
-            </div>
-            <div id="btc-div">
-              <img src={window.imageUrl.XRP} id="c-icon3" />
-              <Link to="/coins/XRP" className="flex-name">
-                XRP
-              </Link>
-            </div>
-            <div id="btc-div">
-              <img src={window.imageUrl.XLM} id="c-icon3" />
-              <Link to="/coins/XRP" className="flex-name">
-                XLM
-              </Link>
-            </div>
-             <div id="btc-div">
-              <img src={window.imageUrl.DASH} id="c-icon3" />
-              <Link to="/coins/DASH" className="flex-name">
-                DASH
-              </Link>
-            </div>
-            {/* // <div id="btc-div">
-            //   <img src={window.imageUrl.ONT} id="c-icon3" />
-            //   <Link to="/coins/ONT" className="flex-name">
-            //     ONT
-            //   </Link>
-            // </div>
-            // <div id="btc-div">
-            //   <img src={window.imageUrl.NEO} id="c-icon3" />
-            //   <Link to="/coins/NEO" className="flex-name">
-            //     NEO
-            //   </Link>
-            // </div> */} 
-          </div>
-
-          <div className="flex-table-price">{this.currentPrice()}</div>
-
-          <div className="flex-table-24hChange">{this.day24Change()}</div>
-
-          <div className="flex-table-markets">
-            <div><img src={window.imageUrl.graphA} className="c-graph" /></div>
-            <div><img src={window.imageUrl.graphB} className="c-graph" /></div>
-            <div><img src={window.imageUrl.graphC} className="c-graph" /></div>
-            <div><img src={window.imageUrl.graphA} className="c-graph" /></div>
-            <div><img src={window.imageUrl.graphB} className="c-graph" /></div>
-            <div><img src={window.imageUrl.graphC} className="c-graph" /></div>
-            <div><img src={window.imageUrl.graphA} className="c-graph" /></div>
-            <div><img src={window.imageUrl.graphB} className="c-graph" /></div>
-            <div><img src={window.imageUrl.graphC} className="c-graph" /></div>
-            {/* <div> <img src={window.imageUrl.graphA} className="c-graph" /></div>
-            <div><img src={window.imageUrl.graphB} className="c-graph" /></div> */}
-          </div>
-
-          <div className='flex-table-trade'>
-              <div><Link to="/coins/BTC" className="flex-table-trade-button">TRADE</Link></div>
-              <div><Link to="/coins/ETH" className="flex-table-trade-button">TRADE</Link></div>
-              <div><Link to="/coins/BCH" className="flex-table-trade-button">TRADE</Link></div>
-              <div><Link to="/coins/BNB" className="flex-table-trade-button">TRADE</Link></div>
-              <div><Link to="/coins/LTC" className="flex-table-trade-button">TRADE</Link></div>
-              <div><Link to="/coins/TRX" className="flex-table-trade-button">TRADE</Link></div>
-              <div><Link to="/coins/XRP" className="flex-table-trade-button">TRADE</Link></div>
-              <div><Link to="/coins/XLM" className="flex-table-trade-button">TRADE</Link></div>
-              <div><Link to="/coins/DASH" className="flex-table-trade-button">TRADE</Link></div>
-              {/* <div><Link to="/coins/ONT" className="flex-table-trade-button">TRADE</Link></div>
-              <div><Link to="/coins/NEO" className="flex-table-trade-button">TRADE</Link></div> */}
-          </div>
-
-        </div>
-      </div>
-    );
-  }
+        {/* Return Index, Name, Last Price, 24h CHange, Mkt Cap, Trade */}
+        <Table 
+          striped
+          tableHead={[
+            "#",
+            "",
+            "Cryptocurrency",
+            "Last Price",
+            "24h Change",
+            "% Change",
+            "Mkt Cap",
+            " "
+          ]}
+          tableData={
+          [
+            [
+              "1",
+              <img style={{width: "2.5em"}}
+                src={window.imageUrl.BTC}
+                alt="..."
+                className={classes.imgRoundedCircle + " " + classes.imgFluid}
+              />,
+              "BTC", //Name
+              price[0], // Price
+              formatColorDayData(dayChange[0]), // $ Change  
+              formatColorPctData(dayPercentageChange[0]),     // 24h Change
+              mktCap[0], // Mkt Cap or Volume,
+              <Link to="/coins/BTC" className="flex-table-trade-button">TRADE</Link> // Trade
+            ],
+            [
+              "2",
+              <img style={{width: "2.5em"}}
+                src={window.imageUrl.ETH}
+                alt="..."
+                className={classes.imgRoundedCircle + " " + classes.imgFluid}
+              />,
+              "ETH",
+              price[1], // Price
+              formatColorDayData(dayChange[1]), // $ Change  
+              formatColorPctData(dayPercentageChange[1]),     // 24h Change
+              mktCap[1], // Mkt Cap or Volume,
+              <Link to="/coins/ETH" className="flex-table-trade-button">TRADE</Link> // Trade
+            ],
+            [
+              "3",
+              <img style={{width: "2.5em"}}
+                src={window.imageUrl.ADA}
+                alt="..."
+                className={classes.imgRoundedCircle + " " + classes.imgFluid}
+              />,
+              "ADA",
+              price[2], // Price
+              formatColorDayData(dayChange[2]), // $ Change  
+              formatColorPctData(dayPercentageChange[2]),     // 24h Change
+              mktCap[2], // Mkt Cap or Volume,
+              <Link to="/coins/ADA" className="flex-table-trade-button">TRADE</Link> // Trade
+            ],
+            [
+              "4",
+              <img style={{width: "2.5em"}}
+                src={window.imageUrl.XRP}
+                alt="..."
+                className={classes.imgRoundedCircle + " " + classes.imgFluid}
+              />,
+              "XRP",
+              price[3], // Price
+              formatColorDayData(dayChange[3]), // $ Change  
+              formatColorPctData(dayPercentageChange[3]),     // 24h Change
+              mktCap[3], // Mkt Cap or Volume,
+              <Link to="/coins/XRP" className="flex-table-trade-button">TRADE</Link> // Trade
+            ],
+            [
+              "5",
+              <img style={{width: "2.5em"}}
+                src={window.imageUrl.XLM}
+                alt="..."
+                className={classes.imgRoundedCircle + " " + classes.imgFluid}
+              />,
+              "XLM",
+              price[4], // Price
+              formatColorDayData(dayChange[4]), // $ Change  
+              formatColorPctData(dayPercentageChange[4]),     // 24h Change
+              mktCap[4], // Mkt Cap or Volume,
+              <Link to="/coins/XLM" className="flex-table-trade-button">TRADE</Link> // Trade
+            ]
+          ]}
+          customCellClasses={[
+            classes.textCenter,
+            classes.padding0,
+            classes.textRight,
+            classes.textRight
+          ]}
+          customClassesForCells={[0, 1, 5, 6]}
+          customHeadCellClasses={[
+            classes.textCenter,
+            classes.textRight,
+            classes.textRight
+          ]}
+          customHeadClassesForCells={[0, 5, 6]}
+        />
+      </GridItem>
+    </GridContainer>
+  );
 }
+
 
 export default CryptoIndex;
