@@ -70,6 +70,7 @@ const CryptoIndex = (props) => {
   
   const classes = useStyles();
 
+  
   useEffect( () => {
     const fetchCoinsDataAPI = async () => {
       const initialCoinsData = await fetchCoinsInfo(symbols);      
@@ -274,6 +275,7 @@ const CryptoIndex = (props) => {
         />
       </GridItem>
     </GridContainer>
+
   );
 }
 

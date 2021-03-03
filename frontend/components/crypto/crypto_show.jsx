@@ -1,11 +1,34 @@
+import React, { useState, useEffect } from "react";
+import { NavLink, Link } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
 
-import React from 'react';
-import {
-    LineChart, Line, XAxis, YAxis, Tooltip
-} from 'recharts';
+// import {
+//     LineChart, Line, XAxis, YAxis, Tooltip
+// } from 'recharts';
 import { fetchCurrentPrice, fetchCurrencyInfo} from '../../util/coin_api_util';
-// import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 // import RechartContainer from '../chart/rechart_container'
+import 'babel-polyfill'
+// @material-ui/core components
+import { makeStyles } from "@material-ui/core/styles";
+// @material-ui/core icons
+import Person from "@material-ui/icons/Person";
+import Edit from "@material-ui/icons/Edit";
+import Close from "@material-ui/icons/Close";
+import Check from "@material-ui/icons/Check";
+
+// core components
+import GridContainer from "../Grid/GridContainer.js";
+import GridItem from "../Grid/GridItem.js";
+import Table from "../Table/Table.js";
+
+import Button from "../../components/button/Button.js";
+import styles from "../../../app/assets/jss/material-kit-pro-react/components/tableStyle.js";
+
+///////
+const useStyles = makeStyles(styles);
+
+
 
 class CustomTooltip extends React.Component {
 
@@ -33,6 +56,16 @@ class CustomTooltip extends React.Component {
         }
     }
 }
+// const CryptoShow = () => {
+//     const [day, setDay] = useState([]),
+//     const [week, setWeek] = useState([]),
+//     const [month, setMonth] = useState([]),
+//     const [year, setYear] = useState([]),
+//         const [name, setName] = useState([]);
+//         const [price, setPrice] = useState([]);
+//         const [dayChange, setDayChange] = useState([]);
+//         const [dayPercentageChange, setDayPercentageChange] = useState([]);
+//         const [mktCap, setMktCapChange] = useState([]);
 
 class CryptoShow extends React.Component {
     constructor(props) {
@@ -160,6 +193,7 @@ class CryptoShow extends React.Component {
                 });
             }
         )
+
     }
 
     get1DayPrices(symbol) {
@@ -213,7 +247,7 @@ class CryptoShow extends React.Component {
 
 
     render() {
-        
+
         // News Articles to be rendered, code Snippet taken from Coin-space
         const newsArticles = this.state.news.map((article, idx) => {		// loop over array of 4 article objects, return an array of <li>'s
 

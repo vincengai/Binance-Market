@@ -11,18 +11,11 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import GridContainer from "./advert/components/Grid/GridContainer";
 import GridItem from "./advert/components/Grid/GridItem.js";
-
 import Parallax from "./Parallax/Parallax";
-
-
 import SectionDescription from "./views/SectionDescription.js";
-
-
-import SectionComponents from "./views/SectionComponents.js";
-
-
 import SectionOverview from "./views/SectionOverview.js";
 
+import News from '../components/crypto/news/news';
 
 import presentationStyle from "../../app/assets/jss/material-kit-pro-react/views/presentationStyle.js";
 const useStyles = makeStyles(presentationStyle);
@@ -51,7 +44,7 @@ export default function Splash() {
                   <h3 className={classes.title}>
                     The World's Most Trustworthy Cryptocurrency Paper Trading Platform
                   </h3>
-                  <h4>Developed by Vince Ngai</h4>
+                  {/* <h4>Developed by Vince Ngai</h4> */}
                 </div>
               </GridItem>
             </GridContainer>
@@ -61,6 +54,7 @@ export default function Splash() {
           <CryptoSplashIndex />
           <SectionOverview />
           <SectionDescription />
+          <News />
         </div>
 
 
