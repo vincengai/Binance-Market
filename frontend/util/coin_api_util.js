@@ -1,9 +1,9 @@
 
     
 // Get all the info for ALL the coins 
-export const fetchCoinsInfo = () => {
+export const fetchCoinsInfo = (...symbols) => {
     return $.ajax ({
-        url: `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,BCH,BNB,LTC,TRX,XRP,XLM,DASH&tsyms=USD,EUR`,
+        url: `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${symbols}&tsyms=USD,EUR`,
         method: 'GET'
     })
 };

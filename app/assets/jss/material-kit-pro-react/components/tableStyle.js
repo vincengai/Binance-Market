@@ -55,7 +55,7 @@ const tableStyle = {
     lineHeight: "1.5em",
     padding: "12px 8px!important",
     verticalAlign: "middle",
-    fontSize: "0.875rem",
+    fontSize: "1rem",
     borderBottom: "none",
     borderTop: "1px solid " + grayColor[6],
     position: "relative",
