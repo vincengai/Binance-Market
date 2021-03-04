@@ -17,15 +17,6 @@ import AttachMoney from "@material-ui/icons/AttachMoney";
 import { makeStyles } from "@material-ui/core/styles";
 
 // images
-import Vodafone from "../../../app/assets/img/assets-for-demo/ourClients/vodafone.jpg";
-import Microsoft from "../../../app/assets/img/assets-for-demo/ourClients/microsoft.jpg";
-import Harvard from "../../../app/assets/img/assets-for-demo/ourClients/harvard.jpg";
-import Standford from "../../../app/assets/img/assets-for-demo/ourClients/stanford.jpg";
-import profilePic1 from "../../../app/assets/img/assets-for-demo/test4.jpg";
-import test1 from '../../../app/assets/images/test1.jpg';
-import profilePic2 from "../../../app/assets/img/assets-for-demo/test2.jpg";
-
-import profilePic3 from "../../../app/assets/img/assets-for-demo/test3.jpg";
 import overviewStyle from "../../../app/assets/jss/material-kit-pro-react/views/presentationSections/overviewStyle.js";
 const useStyles = makeStyles(overviewStyle);
 //

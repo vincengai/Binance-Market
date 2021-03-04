@@ -18,11 +18,13 @@ import cardBlog4 from "../../../../app/assets/img/examples/card-blog4.jpg";
 import office2 from "../../../../app/assets/img/office2.jpg";
 
 import { fetchNews } from "../../../util/coin_api_util";
+import { ContactsTwoTone } from "@material-ui/icons";
 
 
 const useStyles = makeStyles(blogsStyle);
+
 const News = (props) => { 
-    const [news, setNews] = useState([]);
+    const [newsData, setNewsData] = useState([]);
     const [symbol, setSymbol] = useState('BTC');
 
     const [title, setTitle] = useState([]);
@@ -36,82 +38,101 @@ const News = (props) => {
 
     useEffect( () => {
         const fetchNewsAPI = async () => {
-            const response = await fetchNews('BTC');
-            
-            //slice up to 4 to grab 5 top articles
-            setNews(response.responseJSON)
-            console.log(response, 'this is the response')
+            const res = await fetchNews('BTC');
+
+            setAndFormatData(res);
         }
+        
         fetchNewsAPI();
-        console.log(news, 'this is the news')
-    });
+    }, []);
+    
+    const setAndFormatData = (data) => {
+        let newsData = data.Data.slice(0,5)
+        console.log(data.Data,' come on data.Data')
+        let tempTitleArr = [];
+        let tempBodyArr = [];
+        let tempDateArr = [];
+        let tempSourceArr = [];
+        let tempImageUrlArr = [];
+        let tempGuidArr = [];
 
-    const showNews = () => {
+        newsData.map ( (article, idx) => {
+            let tempDate = new Date(article.published_on * 1000);		//=> Sun Jan 18 1970 21:48:07 GMT-0500 (Eastern Standard Time)		date object!
+            tempDate = date.toString().slice(4, 10);								//=> 'Jan 18'
+            let tempBody = article.body.slice(0, 130) + '...';
+            let { source, title, imageurl, guid } = article;       
 
-        return (
-            <div>
-                { news.map((article, idx) => {
-                    let date = new Date(article.published_on * 1000);		//=> Sun Jan 18 1970 21:48:07 GMT-0500 (Eastern Standard Time)		date object!
-                    date = date.toString().slice(4, 10);								//=> 'Jan 18'
-                    let body = article.body.slice(0, 130) + '...';
-                    let { source, title, imageurl, guid } = article;       
+            tempTitleArr.push(title);
+            tempBodyArr.push(tempBody);
+            tempDateArr.push(tempDate);
+            tempSourceArr.push(source);
+            tempImageUrlArr.push(imageurl);
+            tempGuidArr.push(guid);
+        })
+    
+        setTitle(tempTitleArr);
+        setBody(tempBodyArr);
+        setDate(tempDateArr);
+        setSource(tempSourceArr);
+        setImageurl(tempImageUrlArr);
+        setGuid(tempGuidArr);
+    };
 
-                        <Card plain blog className={classes.card}>
-                            <GridContainer>
-                            <GridItem xs={12} sm={4} md={4}>
-                                <CardHeader image plain>
-                                <a href={guid} onClick={e => e.preventDefault()}>
-                                    <img src={imageurl[idx]} alt="..." />
-                                </a>
-                                <div
-                                    className={classes.coloredShadow}
-                                    style={{
-                                    backgroundImage: `url(${imageurl[idx]})`,
-                                    opacity: "1"
-                                    }}
-                                />
-                                <div
-                                    className={classes.coloredShadow}
-                                    style={{
-                                    backgroundImage: `url(${imageurl[idx]})`,
-                                    opacity: "1"
-                                    }}
-                                />
-                                </CardHeader>
-                            </GridItem>
-                            <GridItem xs={12} sm={8} md={8}>
-                                <Info>
-                                <h6 className={classes.cardCategory}>ENTERPRISE</h6>
-                                </Info>
-                                <h3 className={classes.cardTitle}>
-                                <a href={guid} onClick={e => e.preventDefault()}>
-                                    {title[idx]}
-                                </a>
-                                </h3>
-                                <p className={classes.description}>
-                                    {body[idx]}
-                                <a href={guid} onClick={e => e.preventDefault()}>
-                                    {" "}
-                                    Read More{" "}
-                                </a>
-                                </p>
-                                <p className={classes.author}>
-                                by{" "}
-                                <a href={guid} onClick={e => e.preventDefault()}>
-                                    <b>{source[idx]}</b>
-                                </a>{" "}
-                                    {date[idx]}
-                                </p>
-                            </GridItem>
-                            </GridContainer>
-                        </Card>
-                    })
-                }  
-            </div>
-        )    
-    }
-
-    return  showNews();
+   
+    return (
+        <div>   
+            hi 
+                <Card plain blog className={classes.card}>
+                    <GridContainer>
+                    <GridItem xs={12} sm={4} md={4}>
+                        <CardHeader image plain>
+                        <a href={guid} onClick={e => e.preventDefault()}>
+                            <img src={imageurl[0]} alt="..." />
+                        </a>
+                        <div
+                            className={classes.coloredShadow}
+                            style={{
+                            backgroundImage: `url(${imageurl[0]})`,
+                            opacity: "1"
+                            }}
+                        />
+                        <div
+                            className={classes.coloredShadow}
+                            style={{
+                            backgroundImage: `url(${imageurl[0]})`,
+                            opacity: "1"
+                            }}
+                        />
+                        </CardHeader>
+                    </GridItem>
+                    <GridItem xs={12} sm={8} md={8}>
+                        <Info>
+                        <h6 className={classes.cardCategory}>ENTERPRISE</h6>
+                        </Info>
+                        <h3 className={classes.cardTitle}>
+                        <a href={guid[0]}>
+                            {title[0]}
+                        </a>
+                        </h3>
+                        <p className={classes.description}>
+                            {body[0]}
+                        <a href={guid[0]}>
+                            {" "}
+                            Read More{" "}
+                        </a>
+                        </p>
+                        <p className={classes.author}>
+                        by{" "}
+                        <a href={guid[0]} >
+                            <b>{source[0]}</b>
+                        </a>{" "}
+                            {date[0]}
+                        </p>
+                    </GridItem>
+                    </GridContainer>
+                </Card>
+        </div>   
+    )
 }
 
 export default News;
