@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 
 import NewsSection from '../crypto/news/news';
@@ -58,6 +58,7 @@ const useStyles = makeStyles(styles);
 //     }
 // }
 const CryptoShow = () => {
+    const [ticker, setTicker] = useState('');
     const [day, setDay] = useState([]);
     const [week, setWeek] = useState([]);
     const [month, setMonth] = useState([]);
@@ -68,7 +69,19 @@ const CryptoShow = () => {
     const [dayPercentageChange, setDayPercentageChange] = useState([]);
     const [mktCap, setMktCapChange] = useState([]);
 
-    return <NewsSection />
+    const history = useHistory();
+
+    useEffect ( () => {
+        let coin = history.location.pathname.slice(7);
+        setTicker(coin);
+    }, []);
+
+
+    console.log(ticker, 'ricker?')
+
+    return (
+        <NewsSection ticker={'BTC'}/>
+    )
 }
 // class CryptoShow extends React.Component {
 //     constructor(props) {

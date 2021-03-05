@@ -18,7 +18,7 @@ const blogsSection = {
   mrAuto,
   description,
   blog: {
-    padding: "50px 0"
+    padding: "5px 0"
   },
   cardCategory: {
     marginBottom: "0",

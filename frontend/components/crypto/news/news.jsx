@@ -23,10 +23,11 @@ import { ContactsTwoTone } from "@material-ui/icons";
 
 const useStyles = makeStyles(blogsStyle);
 
-const News = (props) => { 
+const News = ({ticker}) => { 
+    const classes = useStyles();
+
     const [newsData, setNewsData] = useState([]);
     const [symbol, setSymbol] = useState('BTC');
-
     const [title, setTitle] = useState([]);
     const [body, setBody] = useState([]);
     const [date, setDate] = useState([]);
@@ -34,13 +35,16 @@ const News = (props) => {
     const [imageurl, setImageurl] = useState([]);
     const [guid, setGuid] = useState([]);
 
-    const classes = useStyles();
+
 
     useEffect( () => {
+        setSymbol(ticker)
+
         const fetchNewsAPI = async () => {
-            const res = await fetchNews('BTC');
+            const res = await fetchNews(symbol);
 
             setAndFormatData(res);
+
         }
         
         fetchNewsAPI();
@@ -48,7 +52,6 @@ const News = (props) => {
     
     const setAndFormatData = (data) => {
         let newsData = data.Data.slice(0,5)
-        console.log(data.Data,' come on data.Data')
         let tempTitleArr = [];
         let tempBodyArr = [];
         let tempDateArr = [];
@@ -81,56 +84,59 @@ const News = (props) => {
    
     return (
         <div>   
-            hi 
-                <Card plain blog className={classes.card}>
-                    <GridContainer>
-                    <GridItem xs={12} sm={4} md={4}>
-                        <CardHeader image plain>
-                        <a href={guid} onClick={e => e.preventDefault()}>
-                            <img src={imageurl[0]} alt="..." />
-                        </a>
-                        <div
-                            className={classes.coloredShadow}
-                            style={{
-                            backgroundImage: `url(${imageurl[0]})`,
-                            opacity: "1"
-                            }}
-                        />
-                        <div
-                            className={classes.coloredShadow}
-                            style={{
-                            backgroundImage: `url(${imageurl[0]})`,
-                            opacity: "1"
-                            }}
-                        />
-                        </CardHeader>
-                    </GridItem>
-                    <GridItem xs={12} sm={8} md={8}>
-                        <Info>
-                        <h6 className={classes.cardCategory}>ENTERPRISE</h6>
-                        </Info>
-                        <h3 className={classes.cardTitle}>
-                        <a href={guid[0]}>
-                            {title[0]}
-                        </a>
-                        </h3>
-                        <p className={classes.description}>
-                            {body[0]}
-                        <a href={guid[0]}>
-                            {" "}
-                            Read More{" "}
-                        </a>
-                        </p>
-                        <p className={classes.author}>
-                        by{" "}
-                        <a href={guid[0]} >
-                            <b>{source[0]}</b>
-                        </a>{" "}
-                            {date[0]}
-                        </p>
-                    </GridItem>
-                    </GridContainer>
-                </Card>
+            <div className={classes.blog} >
+                <div className={classes.container}>
+                <h2 className={classes.title}>Latest News</h2>
+                {title.map((post, idx) => (
+                        <div key={idx}>
+
+                        <Card plain blog className={classes.card}>
+                            <GridContainer >
+                            <GridItem xs={12} sm={4} md={4} style={{maxWidth: '700px'}}>
+                                <CardHeader image plain>
+                                <a href={guid[idx]}>
+                                    <img src={imageurl[idx]} alt="..." style={{maxWidth: '15rem'}}/>
+                                </a>
+                                <div
+                                    className={classes.coloredShadow}
+                                    style={{
+                                    backgroundImage: `url(${imageurl[idx]})`,
+                                    opacity: "1",
+                                    maxWidth: '15rem'
+                                    }}
+                                />
+                                </CardHeader>
+                            </GridItem>
+                            <GridItem xs={12} sm={8} md={8}>
+                                <Info>
+                                <h6 className={classes.cardCategory}>ENTERPRISE</h6>
+                                </Info>
+                                <h3 className={classes.cardTitle}>
+                                <a href={guid[idx]}>
+                                    {title[idx]}
+                                </a>
+                                </h3>
+                                <p className={classes.description}>
+                                    {body[idx]}
+                                <a href={guid[idx]}>
+                                    {" "}
+                                    Read More{" "}
+                                </a>
+                                </p>
+                                <p className={classes.author}>
+                                by{" "}
+                                <a href={guid[idx]} >
+                                    <b>{source[idx]}</b>
+                                </a>{" "}
+                                    {date[idx]}
+                                </p>
+                            </GridItem>
+                            </GridContainer>
+                        </Card>
+                        </div>
+                ))}
+                </div>
+            </div>
         </div>   
     )
 }
