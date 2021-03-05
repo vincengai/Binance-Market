@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 
+import ReChartSection from '../crypto/recharts/rechart';
 import NewsSection from '../crypto/news/news';
 // import {
 //     LineChart, Line, XAxis, YAxis, Tooltip
@@ -31,32 +32,6 @@ const useStyles = makeStyles(styles);
 
 
 
-// class CustomTooltip extends React.Component {
-
-//     render() {
-//         if (!this.props.active || !this.props.payload) return null;
-//         const { active } = this.props || {};
-//         if (active) {
-//             const { payload } = this.props || [{}];
-
-//             let date = payload[0].payload.time;						//=> 1564358400
-//             let day = new Date(date * 1000);						//=> Sun Jul 28 2019 20:00:00 GMT-0400 (Eastern Daylight Time)		DATE OBJECT! NOT STRING
-
-//             let time = day.toLocaleTimeString();					//=> '8:00:00 PM'
-//             let amOrPm = time.slice(-2);							//=> 'PM'
-
-//             time = time.slice(0, 4) + ' ' + amOrPm;					//=> '8:00 PM'
-//             day = day.toString().slice(4, 10);						//=> 'Jul 28'
-
-//             return (
-//                 <div className="custom-tooltip">
-//                     <p className="tooltip-label">{`$ ${payload[0].value}`}</p>
-//                     <p className="tooltip-time">{`${day} ${time}`}</p>
-//                 </div>
-//             );
-//         }
-//     }
-// }
 const CryptoShow = () => {
     const [ticker, setTicker] = useState('');
     const [day, setDay] = useState([]);
@@ -70,17 +45,27 @@ const CryptoShow = () => {
     const [mktCap, setMktCapChange] = useState([]);
 
     const history = useHistory();
+    let coin = '';
 
     useEffect ( () => {
-        let coin = history.location.pathname.slice(7);
+        coin = history.location.pathname.slice(7);
         setTicker(coin);
+
+        const setCoin = async () => {
+            let coin = history.location.pathname.slice(7);
+            setTicker(coin);
+        }
+
+        setCoin();
     }, []);
 
 
 
-    
     return (
-        <NewsSection ticker={'BTC'}/>
+        <div>
+            <ReChartSection/>
+            <NewsSection />
+        </div>
     )
 }
 // class CryptoShow extends React.Component {
@@ -180,115 +165,12 @@ const CryptoShow = () => {
 //     }
 
 
-//     // Methods for ReChart Info
-
-//     calculateData() {
-//         let data = this.state.data;
-//         const prices = [];
-
-//         for (let i = 0; i < data.length; i++) {
-//             prices.push(parseFloat(data[i].close))
-//         }
-
-//         const min = Math.min(...prices);
-//         const max = Math.max(...prices);
-
-//         return {
-//             min,
-//             max,
-//         }
-//     };
-
-//     getNews(symbol) {
-//         let { fetchNewsInfo } = this.props;
-
-//         fetchNewsInfo(symbol).then((response) => {
-//             // if (response.data) {
-//                 return this.setState({
-//                     news: response.data.slice(0, 4) // Slide up til 5 to grab 5 top articles 
-//                 });
-//             }
-//         )
-
-//     }
-
-//     get1DayPrices(symbol) {
-//         let { fetch1DayInfo } = this.props;
-
-//         fetch1DayInfo(symbol).then((response) => {
-//             return this.setState({
-//                 ["1D"]: response.data.Data.Data,
-//                 data: response.data.Data.Data,
-//                 "timePeriodActive": "day"
-//             });
-//         });
-//     }
-
-//     get1WeekPrices(symbol) {
-//         let { fetch1WeekInfo } = this.props;
-
-//         fetch1WeekInfo(symbol).then((response) => {
-//             return this.setState({
-//                 ["1W"]: response.data.Data.Data,
-//                 data: response.data.Data.Data, 
-//                 "timePeriodActive": "week"
-//             });
-//         });
-//     }
-
-//     get1MonthPrices(symbol) {
-//         let { fetch1MonthInfo } = this.props;
-
-//         fetch1MonthInfo(symbol).then((response) => {
-//             return this.setState({
-//                 ["1M"]: response.data.Data.Data,
-//                 data: response.data.Data.Data, 
-//                 "timePeriodActive": "month"
-//             });
-//         });
-//     }
-
-//     get1YearPrices(symbol) {
-//         let { fetch1YearInfo } = this.props;
-
-//         fetch1YearInfo(symbol).then((response) => {
-//             return this.setState({
-//                 ["1Y"]: response.data.Data.Data,
-//                 data: response.data.Data.Data, 
-//                 "timePeriodActive": "year"
-//             });
-//         });
-//     }
 
 
 
 //     render() {
 
-//         // News Articles to be rendered, code Snippet taken from Coin-space
-//         const newsArticles = this.state.news.map((article, idx) => {		// loop over array of 4 article objects, return an array of <li>'s
 
-//             let date = new Date(article.published_on * 1000);		//=> Sun Jan 18 1970 21:48:07 GMT-0500 (Eastern Standard Time)		date object!
-//             date = date.toString().slice(4, 10);								//=> 'Jan 18'
-//             let body = article.body.slice(0, 130) + '...';
-//             let { source, title, imageurl, guid } = article;
-
-//             return (
-//                 <li key={idx} className="news-li">
-//                     <a href={guid}><h4 key={title} className="news-title">{title}</h4></a>
-//                     <div key={idx + 1} className="news-item">
-
-//                         <div key={idx + 2} className="news-left">
-//                             <a href={guid}><p key={idx + 3} className="news-body">{body}</p></a>
-//                             <p key={idx + 4} className="news-source">{source}</p>
-//                             <p key={idx + 5} className="news-date">{date}</p>
-//                             <p key={idx + 6} className="news-symbol">{symbol}</p>
-//                         </div>
-//                         <div key={idx + 7} className="news-right">
-//                             <a href={guid}><img key={imageurl} src={imageurl} alt="article-image" className="news-image" /></a>
-//                         </div>
-//                     </div>
-//                 </li>
-//             );
 //         });
 //         ;
 

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
@@ -23,11 +25,13 @@ import { ContactsTwoTone } from "@material-ui/icons";
 
 const useStyles = makeStyles(blogsStyle);
 
-const News = ({ticker}) => { 
+const News = () => { 
+    const history = useHistory();
+
     const classes = useStyles();
 
     const [newsData, setNewsData] = useState([]);
-    const [symbol, setSymbol] = useState('BTC');
+    const [symbol, setSymbol] = useState('');
     const [title, setTitle] = useState([]);
     const [body, setBody] = useState([]);
     const [date, setDate] = useState([]);
@@ -38,15 +42,17 @@ const News = ({ticker}) => {
 
 
     useEffect( () => {
-        setSymbol(ticker)
+        const coin = history.location.pathname.slice(7);
 
-        const fetchNewsAPI = async () => {
-            const res = await fetchNews(symbol);
+        setSymbol(coin);
+
+        const fetchNewsAPI = async (coin) => {
+            const res = await fetchNews(coin);
 
             setAndFormatData(res);
 
         }
-        
+
         fetchNewsAPI();
     }, []);
     
