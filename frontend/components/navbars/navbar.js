@@ -57,15 +57,13 @@ class navBar extends React.Component {
                         <div className="nav-section" id="nav-left">
                             <ul>
                                 <li>
-                                    <a
-                                        href="https://github.com/vincengai/Binance-Market"
-                                        target="_blank" className="nav-word">Github</a>
+                                    <Link to="/contact">Contact Us</Link>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a
                                         href="https://www.linkedin.com/in/vince-ngai/"
                                     target="_blank" className="nav-word">LinkedIn</a>
-                                </li>
+                                </li> */}
                                 {/* <li>
                                     <a
                                         href="https://vincengai.github.io/portfolio/"

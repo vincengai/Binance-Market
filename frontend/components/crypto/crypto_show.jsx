@@ -77,8 +77,8 @@ const CryptoShow = () => {
     }, []);
 
 
-    console.log(ticker, 'ricker?')
 
+    
     return (
         <NewsSection ticker={'BTC'}/>
     )

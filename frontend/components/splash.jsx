@@ -54,7 +54,6 @@ export default function Splash() {
           <CryptoSplashIndex />
           <SectionOverview />
           <SectionDescription />
-          <News />
         </div>
 
 
