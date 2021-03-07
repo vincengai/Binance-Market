@@ -2,36 +2,41 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import { fetchCurrentPrice, fetchCurrencyInfo, fetch1DayInfo} from '../../../util/coin_api_util';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer} from 'recharts';
 
-// const CustomTooltip = () => {
+import GridContainer from "../../Grid/GridContainer.js";
+import GridItem from "../../Grid/GridItem.js";
 
-//     if (!this.props.active || !this.props.payload) return null;
-//     const { active } = this.props || {};
-//     if (active) {
-//         const { payload } = this.props || [{}];
 
-//         let date = payload[0].payload.time;						//=> 1564358400
-//         let day = new Date(date * 1000);						//=> Sun Jul 28 2019 20:00:00 GMT-0400 (Eastern Daylight Time)		DATE OBJECT! NOT STRING
+import Button from "../../../components/button/Button.js";
+const CustomTooltip = () => {
 
-//         let time = day.toLocaleTimeString();					//=> '8:00:00 PM'
-//         let amOrPm = time.slice(-2);							//=> 'PM'
+    if (!this.props.active || !this.props.payload) return null;
+    const { active } = this.props || {};
+    if (active) {
+        const { payload } = this.props || [{}];
 
-//         time = time.slice(0, 4) + ' ' + amOrPm;					//=> '8:00 PM'
-//         day = day.toString().slice(4, 10);						//=> 'Jul 28'
+        let date = payload[0].payload.time;						//=> 1564358400
+        let day = new Date(date * 1000);						//=> Sun Jul 28 2019 20:00:00 GMT-0400 (Eastern Daylight Time)		DATE OBJECT! NOT STRING
 
-//         return (
-//             <div className="custom-tooltip">
-//                 <p className="tooltip-label">{`$ ${payload[0].value}`}</p>
-//                 <p className="tooltip-time">{`${day} ${time}`}</p>
-//             </div>
-//         );
-//     }
+        let time = day.toLocaleTimeString();					//=> '8:00:00 PM'
+        let amOrPm = time.slice(-2);							//=> 'PM'
+
+        time = time.slice(0, 4) + ' ' + amOrPm;					//=> '8:00 PM'
+        day = day.toString().slice(4, 10);						//=> 'Jul 28'
+
+        return (
+            <div className="custom-tooltip">
+                <p className="tooltip-label">{`$ ${payload[0].value}`}</p>
+                <p className="tooltip-time">{`${day} ${time}`}</p>
+            </div>
+        );
+    }
     
-// }
+}
 
 
-const Rechart = () => {
+const Rechart = ({ticker}) => {
     const history = useHistory();
 
     const [symbol, setSymbol] = useState('');
@@ -52,10 +57,9 @@ const Rechart = () => {
         fetchDayData();
     }, [])
 
-
+    
     const setAndFormatDayData = (data) => {
-        console.log(data, 'data for recahrts x 2')
-        // setData(data)
+        setData(data.Data.Data)
 
         // setData(data.Data.Data)
 
@@ -124,10 +128,12 @@ const Rechart = () => {
         });
     }
 
+    if (ticker === '') return null;
+            console.log('t2f')
 
     return (
             <div className="linechart-news">
-                <div className="linechart">
+                <ResponsiveContainer width="90%" height={400}>
                     <LineChart width={570} height={305} data={data} margin={{ top: 0, right: 0, left: 20, bottom: 0 }} cursor="crosshair">
                         {/* <Tooltip content={<CustomTooltip />} offset={-65} animationDuration={100} /> */}
 
@@ -150,8 +156,22 @@ const Rechart = () => {
                             activeDot={false}
                             name="$"
                         />
-
                     </LineChart>
+                </ResponsiveContainer>
+
+                {/* <GridContainer justify="center">
+                    <GridItem xs={12} sm={8} md={8}>
+                        <Button style={{backgroundColor: "#F0B90B"}} round>Daily</Button>
+                        <Button className="trans-button">Weekly</Button>
+                        <Button color="warning" round>Monthly</Button>
+                        <Button color="warning" round>Yearly</Button>
+                    </GridItem>
+                </GridContainer> */}
+                <div className="timeframe">
+                    <li className="timeframe-list" onClick={() => this.get1DayPrices(symbol)}> 1D </li>
+                    <li className="timeframe-list" onClick={() => this.get1WeekPrices(symbol)}> 1W </li>
+                    <li className="timeframe-list" onClick={() => this.get1MonthPrices(symbol)}> 1M </li>
+                    <li className="timeframe-list" onClick={() => this.get1YearPrices(symbol)}> 1Y </li>
                 </div>
             </div>
     )

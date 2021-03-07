@@ -48,6 +48,7 @@ const CryptoShow = () => {
     let coin = '';
 
     useEffect ( () => {
+        
         coin = history.location.pathname.slice(7);
         setTicker(coin);
 
@@ -63,8 +64,8 @@ const CryptoShow = () => {
 
     return (
         <div>
-            <ReChartSection/>
-            <NewsSection />
+            <ReChartSection price={price}/>
+            <NewsSection ticker={ticker}/>
         </div>
     )
 }

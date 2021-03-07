@@ -34,7 +34,7 @@ export const fetchCurrentPrices = (...symbols) => {   // 360 days, daily prices
 
 export const fetch1DayInfo = (symbol) => {
     return $.ajax ({
-        url: `https://min-api.cryptocompare.com/data/v2/histominute?fsym=${symbol}&tsym=GBP&limit=1440`,
+        url: `https://min-api.cryptocompare.com/data/v2/histohour?fsym=${symbol}&tsym=USD&limit=24`,
         method: 'GET'
     })
 }
