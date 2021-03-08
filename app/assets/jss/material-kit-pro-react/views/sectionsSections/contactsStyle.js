@@ -11,7 +11,7 @@ import {
   hexToRgb
 } from "../../../../../assets/jss/material-kit-pro-react.js";
 
-import customCheckboxRadioSwitch from "assets/jss/material-kit-pro-react/customCheckboxRadioSwitchStyle.js";
+import customCheckboxRadioSwitch from "../../../../../assets/jss/material-kit-pro-react/customCheckboxRadioSwitchStyle.js";
 
 const contactsSection = {
   ...customCheckboxRadioSwitch,

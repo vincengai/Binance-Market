@@ -202,7 +202,10 @@ p.news-source, p.news-date, p.news-symbol {
 
 
 .linechart-news {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  display:flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
 .head-price {
