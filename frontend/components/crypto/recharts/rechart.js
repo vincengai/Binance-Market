@@ -203,7 +203,7 @@ const Rechart = () => {
                         </GridContainer>
                     </div>
 
-                    <ResponsiveContainer width="85%" height={400} className="recharts-wrapper">
+                    <ResponsiveContainer width="80%" height={400} className="recharts-wrapper">
                         <LineChart width={570} height={305} data={data} margin={{ top: 10, right: 0, left: 30, bottom: 0 }} cursor="crosshair">
                             {/* <Tooltip content={<CustomTooltip />} offset={-65} animationDuration={100} /> */}
 
