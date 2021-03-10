@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {fetchCoinInfo} from '../../util/coin_api_util';
 class TransactionForm extends React.Component {
     constructor(props) {
         super(props);
@@ -19,7 +19,7 @@ class TransactionForm extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchCoinInfo(this.state.symbol).then( (result) => {
+        fetchCoinInfo(this.state.symbol).then( (result) => {
             let display = result.data.DISPLAY
             let coin = display[this.state.symbol]
 

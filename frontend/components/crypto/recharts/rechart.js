@@ -1,38 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { NavLink, Link } from "react-router-dom";
 
 import { fetchCoinInfo, fetch1DayInfo, fetch1WeekInfo, fetch1MonthInfo, fetch1YearInfo} from '../../../util/coin_api_util';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer} from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer} from 'recharts';
 import { makeStyles } from "@material-ui/core/styles";
+
+import TransactionForm from '../../transactions/transactionForm';
 
 import GridContainer from "../../Grid/GridContainer.js";
 import GridItem from "../../Grid/GridItem.js";
-import Table from "../../Table/Table.js";
-import Parallax from "../../../components/Parallax/Parallax.js";
-
 import InfoArea from "../../../components/InfoArea/InfoArea.js";
-import Card from "../../../components/advert/components/Card/Card.js";
-import CardHeader from "../../../components/advert/components/Card/CardHeader.js";
-import CardBody from "../../../components/advert/components/Card/CardBody.js";
-import CardFooter from "../../../components/advert/components/Card/CardFooter.js";
-import CustomInput from "../../../components/CustomInput/CustomInput.js";
 
-import Button from "../../../components/button/Button.js";
 import styles from "../../../../app/assets/jss/material-kit-pro-react/components/tableStyle.js";
+import presentationStyle from "../../../../app/assets/jss/material-kit-pro-react/views/presentationStyle.js";
 import contactsStyle from "../../../../app/assets/jss/material-kit-pro-react/views/sectionsSections/contactsStyle.js";
-
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-
 import PinDrop from "@material-ui/icons/PinDrop";
 import Phone from "@material-ui/icons/Phone";
-import Check from "@material-ui/icons/Check";
 
-import presentationStyle from "../../../../app/assets/jss/material-kit-pro-react/views/presentationStyle.js";
+
 const useStyles = makeStyles(styles);
 const useStyles2 = makeStyles(contactsStyle);
-
 const useStyles3 = makeStyles(presentationStyle);
 
 const CURRENCYNAMES = {'BTC': 'Bitcoin', 'ETH': 'Ethereum', 'ADA': 'Cardano',
@@ -67,7 +54,6 @@ class CustomTooltip extends React.Component {
     }
 }
 
-
 const Rechart = () => {
     const history = useHistory();
     const classes = useStyles();
@@ -80,7 +66,7 @@ const Rechart = () => {
     const [dayChange, setDayChange] = useState([]);
     const [dayPercentageChange, setDayPercentageChange] = useState([]);
     const [mktCap, setMktCapChange] = useState([]);
-
+    
     // Methods for ReChart Info
     const [data, setData] = useState([]);
 
@@ -101,14 +87,7 @@ const Rechart = () => {
         fetchDayData();
     }, [])
 
-    const setAndFormatPrice = (res) => {
-        // let coin = history.location.pathname.slice(7);
-        // let curPrice = res.DISPLAY.coin
-
-        console.log(res.DISPLAY, 'res.display')
-
-    }
-
+    // All methods below will be for recharts chart data 
     const handle1DayChange = async () => {
         let coin = history.location.pathname.slice(7);
 
@@ -146,6 +125,8 @@ const Rechart = () => {
         setData(data.Data.Data)
     }
 
+
+// All methods below will be in regards to display data 
   const formatColorPctData = (data) => {
     if (Math.sign(data) === -1) {
         return (
@@ -193,8 +174,6 @@ const Rechart = () => {
     //         max,
     //     }
     // };
-
-    
 
     if (symbol === '') return null;
 
@@ -286,77 +265,7 @@ const Rechart = () => {
                                 icon={Phone}
                             />
                             </GridItem>
-                            <GridItem xs={12} sm={5} md={5} className={classes2.mlAuto}>
-                            <Card className={classes2.card1}>
-                                <form>
-                                <CardHeader
-                                    contact
-                                    color="primary"
-                                    className={classes2.textCenter}
-                                    style={{background: "#F0B90B"}}
-                                >
-                                    <h4 className={classes2.cardTitle} style={{textDecoration: "underline"}}> Limit Order </h4>
-                                </CardHeader>
-                                <CardBody>
-                                    <GridContainer>
-                                    <GridItem xs={12} sm={6} md={6}>
-                                        <CustomInput
-                                        labelText="First Name"
-                                        id="first"
-                                        formControlProps={{
-                                            fullWidth: true
-                                        }}
-                                        />
-                                    </GridItem>
-                                    </GridContainer>
-                                    <CustomInput
-                                    labelText="Email Address"
-                                    id="email-address"
-                                    formControlProps={{
-                                        fullWidth: true
-                                    }}
-                                    />
-                                    <CustomInput
-                                    labelText="Your Message"
-                                    id="message"
-                                    formControlProps={{
-                                        fullWidth: true
-                                    }}
-                                    inputProps={{
-                                        multiline: true,
-                                        rows: 5
-                                    }}
-                                    />
-                                </CardBody>
-                                <CardFooter className={classes2.justifyContentBetween}>
-                                    <FormControlLabel
-                                    control={
-                                        <Checkbox
-                                        tabIndex={-1}
-                                        onClick={() => handleToggle(1)}
-                                        checkedIcon={
-                                            <Check className={classes2.checkedIcon} />
-                                        }
-                                        icon={<Check className={classes2.uncheckedIcon} />}
-                                        classes={{
-                                            checked: classes2.checked,
-                                            root: classes2.checkRoot
-                                        }}
-                                        />
-                                    }
-                                    classes={{ label: classes2.label }}
-                                    label="I'm not a robot"
-                                    />
-                                    <Button color="primary" className={classes2.pullRight}>
-                                    Buy
-                                    </Button>
-                                    <Button color="primary" className={classes2.pullRight}>
-                                    Sell
-                                    </Button>
-                                </CardFooter>
-                                </form>
-                            </Card>
-                            </GridItem>
+                            <TransactionForm />
                         </GridContainer>
                     </div>
                 </div>
