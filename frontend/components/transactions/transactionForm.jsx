@@ -34,35 +34,26 @@ const TransactionForm = () => {
                     <h4 className={classes2.cardTitle} style={{textDecoration: "underline"}}> Limit Order </h4>
                 </CardHeader>
                 <CardBody>
-                    <GridContainer>
+                    {/* <GridContainer>
                     <GridItem xs={12} sm={6} md={6}>
                         <CustomInput
-                        labelText="First Name"
+                        labelText="Site under Construction"
                         id="first"
                         formControlProps={{
                             fullWidth: true
                         }}
                         />
                     </GridItem>
-                    </GridContainer>
+                    </GridContainer> */}
                     <CustomInput
-                    labelText="Email Address"
+                    labelText="Site under Construction"
                     id="email-address"
                     formControlProps={{
                         fullWidth: true
                     }}
                     />
-                    <CustomInput
-                    labelText="Your Message"
-                    id="message"
-                    formControlProps={{
-                        fullWidth: true
-                    }}
-                    inputProps={{
-                        multiline: true,
-                        rows: 5
-                    }}
-                    />
+                   
+                    {/* /> */}
                 </CardBody>
                 <CardFooter className={classes2.justifyContentBetween}>
                     <Button color="primary" className={classes2.pullRight} style={{width: '40%', backgroundColor:'#003366'}}>

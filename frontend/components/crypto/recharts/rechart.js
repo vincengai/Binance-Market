@@ -235,8 +235,8 @@ const Rechart = () => {
                     <div className={classes2.container}>
                         <GridContainer>
                             <GridItem xs={12} sm={5} md={5}>
-                            <h2 className={classes2.title}>Get in Touch</h2>
-                            <h5 className={classes2.description}>
+                            <h2 className={classes2.title}>Transaction Form is Currently being Reworked...</h2>
+                            {/* <h5 className={classes2.description}>
                                 You need more information? Check what other persons are saying
                                 about our product. They are very happy with their purchase.
                             </h5>
@@ -263,7 +263,7 @@ const Rechart = () => {
                                 </span>
                                 }
                                 icon={Phone}
-                            />
+                            /> */}
                             </GridItem>
                             <TransactionForm />
                         </GridContainer>
