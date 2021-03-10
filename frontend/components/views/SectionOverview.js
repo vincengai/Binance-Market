@@ -75,8 +75,8 @@ export default function SectionOverview() {
                 title="Fully Responsive"
                 description={
                   <p>
-                    Trade on the go or at home. Binance-XChange's platoform is not limited
-                    to any platforms. 
+                    Trade on the go or at home. Binance-XChange's platform is not limited
+                    to any device. 
                   </p>
                 }
                 icon={PhoneLink}

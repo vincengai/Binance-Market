@@ -24,7 +24,7 @@ const contactStyle = {
     }
   },
   aboutUs: {
-    padding: "80px 0px"
+    padding: "40px 0px"
   }
 };
 

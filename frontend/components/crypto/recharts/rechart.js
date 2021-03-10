@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { NavLink, Link } from "react-router-dom";
 
-import { fetchCoinInfo, fetchCurrencyInfo, fetch1DayInfo, fetch1WeekInfo, fetch1MonthInfo, fetch1YearInfo} from '../../../util/coin_api_util';
+import { fetchCoinInfo, fetch1DayInfo, fetch1WeekInfo, fetch1MonthInfo, fetch1YearInfo} from '../../../util/coin_api_util';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer} from 'recharts';
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -35,31 +35,38 @@ const useStyles2 = makeStyles(contactsStyle);
 
 const useStyles3 = makeStyles(presentationStyle);
 
-const CustomTooltip = () => {
-    if (!this.props.active || !this.props.payload) return null;
-    const { active } = this.props || {};
-    if (active) {
-        const { payload } = this.props || [{}];
+const CURRENCYNAMES = {'BTC': 'Bitcoin', 'ETH': 'Ethereum', 'ADA': 'Cardano',
+                        'XRP': 'Ripple', 'XLM': 'Stellar' }
 
-        let date = payload[0].payload.time;						//=> 1564358400
-        let day = new Date(date * 1000);						//=> Sun Jul 28 2019 20:00:00 GMT-0400 (Eastern Daylight Time)		DATE OBJECT! NOT STRING
+class CustomTooltip extends React.Component {
 
-        let time = day.toLocaleTimeString();					//=> '8:00:00 PM'
-        let amOrPm = time.slice(-2);							//=> 'PM'
+    render() {
+        if (!this.props.active || !this.props.payload) return null;
+        const { active } = this.props || {};
+        if (active) {
+            const { payload } = this.props || [{}];
 
-        time = time.slice(0, 4) + ' ' + amOrPm;					//=> '8:00 PM'
-        day = day.toString().slice(4, 10);						//=> 'Jul 28'
+            let date = payload[0].payload.time;						//=> 1564358400
+            let day = new Date(date * 1000);						//=> Sun Jul 28 2019 20:00:00 GMT-0400 (Eastern Daylight Time)		DATE OBJECT! NOT STRING
 
-        return (
-            <div className="custom-tooltip">
-                <p className="tooltip-label">{`$ ${payload[0].value}`}</p>
-                <p className="tooltip-time">{`${day} ${time}`}</p>
-            </div>
-        );
+            let time = day.toLocaleTimeString();					//=> '8:00:00 PM'
+            let amOrPm = time.slice(-2);							//=> 'PM'
+
+            time = time.slice(0, 4) + ' ' + amOrPm;					//=> '8:00 PM'
+            day = day.toString().slice(4, 10);						//=> 'Jul 28'
+            let curPrice = payload[0].value;
+            let formatPrice = new Intl.NumberFormat('en').format(curPrice)
+
+            return (
+                <div className="custom-tooltip" style={{height: '3.5rem'}}>
+                    <p className="tooltip-label">{`$ ${formatPrice}`}</p>
+                    <p className="tooltip-time">{`${day} ${time}`}</p>
+                </div>
+            );
+        }
     }
 }
 
-const CURRENCYNAMES = {'BTC': 'Bitcoin'}
 
 const Rechart = () => {
     const history = useHistory();
@@ -83,14 +90,24 @@ const Rechart = () => {
         const fetchDayData = async () => {
             let coin = history.location.pathname.slice(7);
             const response = await fetch1DayInfo(coin)
+            const res = await fetchCoinInfo(coin);
 
             setSymbol(coin)
             setAndFormatData(response)
+            setPrice(res.DISPLAY[coin].USD.PRICE)
+
         }
 
         fetchDayData();
     }, [])
 
+    const setAndFormatPrice = (res) => {
+        // let coin = history.location.pathname.slice(7);
+        // let curPrice = res.DISPLAY.coin
+
+        console.log(res.DISPLAY, 'res.display')
+
+    }
 
     const handle1DayChange = async () => {
         let coin = history.location.pathname.slice(7);
@@ -185,19 +202,18 @@ const Rechart = () => {
             <div className="linechart-news">
                 
                 <div className={classes2.contacts + " " + classes2.section}
-                    style={{ width: "100%", display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+                    style={{ width: "100%", display: 'flex', flexDirection: 'column', alignItems: 'center', padding: "40px 0" }}
                 >
                     <div className={classes3.container} style={{zIndex: '2'}}>
                         <GridContainer>
                         <GridItem>
                             <div className={classes3.brand}>
-                            <h1 style={{fontSize: "2.5rem"}}>
+                            <h1 style={{fontSize: "2.5rem", color: 'rgb(240, 185, 11)'}}>
                                 {CURRENCYNAMES[`${symbol}`]}  ({symbol})
                             </h1>
-                            <h2 className={classes3.title}>
-                                ({symbol})
+                            <h2 className={classes3.title} style={{fontSize: "2rem", marginTop: "10px"}}>
+                                {price}
                             </h2>
-                            {/* <h4>Developed by Vince Ngai</h4> */}
                             </div>
                         </GridItem>
                         </GridContainer>
@@ -205,10 +221,10 @@ const Rechart = () => {
 
                     <ResponsiveContainer width="80%" height={400} className="recharts-wrapper">
                         <LineChart width={570} height={305} data={data} margin={{ top: 10, right: 0, left: 30, bottom: 0 }} cursor="crosshair">
-                            {/* <Tooltip content={<CustomTooltip />} offset={-65} animationDuration={100} /> */}
+                            <Tooltip content={<CustomTooltip />}  offset={-65} animationDuration={100} />
 
                             <XAxis dataKey="name" stroke="white"/>
-                            <YAxis type="number" domain={['dataMin - 5', 'dataMax + 5']} tick={{ fill: 'white' }} />
+                            <YAxis type="number" domain={['dataMin - (dataMin / 2)', 'dataMax + (dataMax / 2)']} tick={{ fill: 'white' }} />
                             <Line
                                 type="monotone"
                                 dataKey="close"
