@@ -3,7 +3,7 @@
 import React from 'react';
 import {fetchCoinInfo} from '../../util/coin_api_util';
 import { makeStyles } from "@material-ui/core/styles";
-
+/////////
 import GridContainer from "../Grid/GridContainer.js";
 import GridItem from "../Grid/GridItem.js";
 import Card from "../advert/components/Card/Card.js";
@@ -52,8 +52,8 @@ const TransactionForm = () => {
                         fullWidth: true
                     }}
                     />
-                   
-{/*  */}
+
+
                 </CardBody>
                 <CardFooter className={classes2.justifyContentBetween}>
                     <Button color="primary" className={classes2.pullRight} style={{width: '40%', backgroundColor:'#003366'}}>
