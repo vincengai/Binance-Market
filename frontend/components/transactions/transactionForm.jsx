@@ -22,7 +22,7 @@ const TransactionForm = () => {
     const classes2 = useStyles2();
 
     return(
-        <GridItem xs={12} sm={5} md={5} className={classes2.mlAuto}>
+        <GridItem xs={12} sm={5} md={5} className={classes2.mlAuto} style={{zIndex: 2, margin: 'auto'}}>
             <Card className={classes2.card1}>
                 <form>
                 <CardHeader
@@ -34,19 +34,19 @@ const TransactionForm = () => {
                     <h4 className={classes2.cardTitle} style={{textDecoration: "underline"}}> Limit Order </h4>
                 </CardHeader>
                 <CardBody>
-                    {/* <GridContainer>
+                    <GridContainer>
                     <GridItem xs={12} sm={6} md={6}>
                         <CustomInput
-                        labelText="Site under Construction"
+                        labelText="Transaction Form is currently being reworked"
                         id="first"
                         formControlProps={{
                             fullWidth: true
                         }}
                         />
                     </GridItem>
-                    </GridContainer> */}
+                    </GridContainer>
                     <CustomInput
-                    labelText="Site under Construction"
+                    labelText="Transaction Form is currently being reworked"
                     id="email-address"
                     formControlProps={{
                         fullWidth: true

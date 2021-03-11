@@ -101,21 +101,33 @@ const CryptoIndex = (props) => {
   }
 
   const setAndFormat24hChange = (data) => {
-    let coinsArr = Object.values(data.DISPLAY);
+    let coinsArr = Object.values(data.RAW);
     let tempArr = [];
 
     coinsArr.map( (coinObj, i) => {
-      tempArr.push(coinObj.USD.CHANGEDAY)
+      let num = coinObj.USD.CHANGEDAY
+      let formattedNumber = num.toLocaleString('en-US', {
+      minimumIntegerDigits: 2,
+      useGrouping: false
+      })      
+
+      tempArr.push(formattedNumber)
     })
     setDayChange(tempArr)
   }
 
   const setAndFormat24hPercentChange = (data) => {
-    let coinsArr = Object.values(data.DISPLAY);
+    let coinsArr = Object.values(data.RAW);
     let tempArr = [];
 
     coinsArr.map( (coinObj, i) => {
-      tempArr.push(coinObj.USD.CHANGEPCTDAY)
+      let num = coinObj.USD.CHANGEPCTDAY
+      let formattedNumber = num.toLocaleString('en-US', {
+      minimumIntegerDigits: 2,
+      useGrouping: false
+      })      
+
+      tempArr.push(formattedNumber)
     })
     setDayPercentageChange(tempArr)
   }
@@ -149,13 +161,13 @@ const CryptoIndex = (props) => {
     if (Math.sign(data) === -1) {
         return (
           <div className="negativepct">
-             -{data}{" "}
+              {data}{" "}$
           </div>
         );
       } else {
         return (
           <div className="positivepct">
-            {"  "}+{data}{" "}
+            {"  "}+ {data}{" "}$
           </div>
         );
       }

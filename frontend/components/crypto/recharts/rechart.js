@@ -3,9 +3,10 @@ import { useHistory } from "react-router-dom";
 
 import { fetchCoinInfo, fetch1DayInfo, fetch1WeekInfo, fetch1MonthInfo, fetch1YearInfo} from '../../../util/coin_api_util';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer} from 'recharts';
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 
 import TransactionForm from '../../transactions/transactionForm';
+import RechartsShowTable from './rechartsShowTable';
 
 import GridContainer from "../../Grid/GridContainer.js";
 import GridItem from "../../Grid/GridItem.js";
@@ -158,22 +159,6 @@ const Rechart = () => {
       }
   }
 
-    // const calculateData = () => {
-    //     let data = this.state.data;
-    //     const prices = [];
-
-    //     for (let i = 0; i < data.length; i++) {
-    //         prices.push(parseFloat(data[i].close))
-    //     }
-
-    //     const min = Math.min(...prices);
-    //     const max = Math.max(...prices);
-
-    //     return {
-    //         min,
-    //         max,
-    //     }
-    // };
 
     if (symbol === '') return null;
 
@@ -181,25 +166,28 @@ const Rechart = () => {
             <div className="linechart-news">
                 
                 <div className={classes2.contacts + " " + classes2.section}
-                    style={{ width: "100%", display: 'flex', flexDirection: 'column', alignItems: 'center', padding: "40px 0" }}
+                    style={{ width: "100%", display: 'flex', flexDirection: 'column', alignItems: 'center', padding: "15px 0" }}
                 >
-                    <div className={classes3.container} style={{zIndex: '2'}}>
-                        <GridContainer>
+                    <div className={classes3.container} style={{zIndex: '2', display: 'flex', justifyContent: 'center', maxWidth: '75%', margin: 'auto'}}>
+                        <GridContainer style={{width: '100%'}}>
                         <GridItem>
-                            <div className={classes3.brand}>
-                            <h1 style={{fontSize: "2.5rem", color: 'rgb(240, 185, 11)'}}>
+                            <div className={classes3.brand} style={{marginBottom: '0.5rem'}}>
+                            <h1 style={{fontSize: "2rem", color: 'rgb(240, 185, 11)'}}>
                                 {CURRENCYNAMES[`${symbol}`]}  ({symbol})
                             </h1>
-                            <h2 className={classes3.title} style={{fontSize: "2rem", marginTop: "10px"}}>
+                            {/* <h2 className={classes3.title} style={{fontSize: "1.5rem", marginTop: "10px", color: '#E8E8E8'}}>
                                 {price}
-                            </h2>
+                            </h2> */}
                             </div>
+      
+                            <RechartsShowTable style={{maxWidth: '80%'}}/>
+
                         </GridItem>
                         </GridContainer>
                     </div>
 
                     <ResponsiveContainer width="80%" height={400} className="recharts-wrapper">
-                        <LineChart width={570} height={305} data={data} margin={{ top: 10, right: 0, left: 30, bottom: 0 }} cursor="crosshair">
+                        <LineChart width={570} height={255} data={data} margin={{ top: 10, right: 0, left: 30, bottom: 0 }} cursor="crosshair">
                             <Tooltip content={<CustomTooltip />}  offset={-65} animationDuration={100} />
 
                             <XAxis dataKey="name" stroke="white"/>
@@ -236,7 +224,7 @@ const Rechart = () => {
                         <GridContainer>
                             <GridItem xs={12} sm={5} md={5}>
                             <h2 className={classes2.title}>Transaction Form is Currently being Reworked...</h2>
-                            {/* <h5 className={classes2.description}>
+                            <h5 className={classes2.description}>
                                 You need more information? Check what other persons are saying
                                 about our product. They are very happy with their purchase.
                             </h5>
@@ -263,7 +251,7 @@ const Rechart = () => {
                                 </span>
                                 }
                                 icon={Phone}
-                            /> */}
+                            />
                             </GridItem>
                             <TransactionForm />
                         </GridContainer>
