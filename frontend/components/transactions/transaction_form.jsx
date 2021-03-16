@@ -1,5 +1,6 @@
 import React from 'react';
 import {fetchCoinInfo} from '../../util/coin_api_util';
+
 class TransactionForm extends React.Component {
     constructor(props) {
         super(props);
@@ -29,15 +30,6 @@ class TransactionForm extends React.Component {
         })
     }
 
-    update(e) {
-        // this.setState({ num_shares: e.target.value });
-        // this.updateCost(e.target.value);
-    }
-
-    updateType(order_type) {
-        // being buying / selling 
-        // this.setState({ order_type });
-    }
 
     onChangeSymbol(event) {
         this.setState({

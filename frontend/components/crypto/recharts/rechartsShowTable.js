@@ -12,6 +12,19 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+
+import GridContainer from "../../Grid/GridContainer.js";
+import GridItem from "../../Grid/GridItem.js";
+import Card from "../../advert/components/Card/Card.js";
+import CardHeader from "../../advert/components/Card/CardHeader.js";
+import CardBody from "../../advert/components/Card/CardBody.js";
+import CardFooter from "../../advert/components/Card/CardFooter.js";
+import CustomInput from "../../CustomInput/CustomInput.js";
+
+
+import contactsStyle from "../../../../app/assets/jss/material-kit-pro-react/views/sectionsSections/contactsStyle.js";
+const useStyles2 = makeStyles(contactsStyle);
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -40,6 +53,22 @@ const rows = [
   createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
 
 ];
+const useStyleForShowData = makeStyles({
+  root: {
+    minWidth: 275,
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)',
+  },
+  title: {
+    fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
+  },
+});
 
 const useStyles = makeStyles({
   table: {
@@ -59,7 +88,9 @@ const useStyles = makeStyles({
   }
 });
 
+
 export default function CustomizedTables() {
+    const [symbol, setSymbol] = useState('');
     const [price, setPrice] = useState('');
     const [dayChange, setDayChange] = useState('');
     const [dayPercentageChange, setDayPercentageChange] = useState('');
@@ -67,7 +98,8 @@ export default function CustomizedTables() {
     
     const classes = useStyles();
     const history = useHistory();
-
+    const classes2 = useStyles2();
+    const classes3 = useStyleForShowData();
   
   useEffect( () => {
     const fetchCoinDataAPI = async () => {
@@ -154,29 +186,50 @@ export default function CustomizedTables() {
   }
 
   return (
-    <TableContainer component={Paper} style={{zIndex: 2, margin: 'auto', marginBottom: '20px', width: '62%'}}>
-      <Table className={classes.table} aria-label="customized table">
-        <TableHead className={classes.row}>
-          <TableRow>
-            <StyledTableCell className={classes.text}>Price</StyledTableCell>
-            <StyledTableCell className={classes.text}>24h Change</StyledTableCell>
-            <StyledTableCell className={classes.text}>% Change</StyledTableCell>
-            <StyledTableCell className={classes.text}>Volume</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody className={classes.row}>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell component="th" scope="row" className={classes.textBody}>
-                {price}
-              </StyledTableCell>
-              <StyledTableCell className={classes.textBody}>{formatColorDayData(dayChange)}</StyledTableCell>
-              <StyledTableCell className={classes.textBody}>{formatColorPctData(dayPercentageChange)}</StyledTableCell>
-              <StyledTableCell className={classes.textBody}>{volume}</StyledTableCell>
-            </StyledTableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <GridItem xs={12} sm={5} md={5} className={classes2.mlAuto} style={{zIndex: 2, margin: 'auto'}}>
+            <Card className={classes2.card1}>
+                <CardHeader
+                    contact
+                    color="primary"
+                    className={classes2.textCenter}
+                    style={{background: "#F0B90B"}}
+                >
+                    <h4 className={classes2.cardTitle} style={{textDecoration: "underline"}}> Info Table </h4>
+                </CardHeader>
+
+                <CardBody>  
+                  <Typography className={classes3.title} style={{paddingTop: "1rem"}} color="textSecondary" gutterBottom>
+                    Price
+                  </Typography>
+                  <Typography variant="h5" component="h2">
+                    {price}
+                  </Typography>
+                  <Typography className={classes3.title} style={{paddingTop: "1rem"}} color="textSecondary" gutterBottom>
+                    24h Change
+                  </Typography>
+                  <Typography variant="h5" component="h2">
+                    {formatColorDayData(dayChange)}
+                  </Typography>
+                  <Typography className={classes3.title} style={{paddingTop: "1rem"}} color="textSecondary" gutterBottom>
+                    % Change
+                  </Typography>
+                  <Typography variant="h5" component="h2">
+                    {formatColorPctData(dayPercentageChange)}
+                  </Typography>
+                  <Typography className={classes3.title} style={{paddingTop: "1rem"}} color="textSecondary" gutterBottom>
+                    Volume
+                  </Typography>
+                  <Typography variant="h5" component="h2">
+                    {volume}
+                  </Typography>
+                </CardBody>
+
+                <CardFooter className={classes2.justifyContentBetween}>
+                  <Typography className={classes3.title} style={{paddingTop: "1rem"}} color="textSecondary" gutterBottom>
+                    Data gathered from CryptoCompare API
+                  </Typography>
+                </CardFooter>
+            </Card>
+        </GridItem> 
   );
 }

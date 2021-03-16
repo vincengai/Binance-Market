@@ -180,7 +180,7 @@ const Rechart = () => {
                             </h2> */}
                             </div>
       
-                            <RechartsShowTable style={{maxWidth: '80%'}}/>
+                            {/* <RechartsShowTable style={{maxWidth: '80%'}}/> */}
 
                         </GridItem>
                         </GridContainer>
@@ -222,8 +222,10 @@ const Rechart = () => {
             
                     <div className={classes2.container}>
                         <GridContainer>
-                            <GridItem xs={12} sm={5} md={5}>
-                            <h2 className={classes2.title}>Transaction Form is Currently being Reworked...</h2>
+                            {/* <GridItem xs={12} sm={5} md={5}> */}
+                            <RechartsShowTable/>
+                            
+                            {/* <h2 className={classes2.title}>Transaction Form is Currently being Reworked...</h2>
                             <h5 className={classes2.description}>
                                 You need more information? Check what other persons are saying
                                 about our product. They are very happy with their purchase.
@@ -251,8 +253,8 @@ const Rechart = () => {
                                 </span>
                                 }
                                 icon={Phone}
-                            />
-                            </GridItem>
+                            /> */}
+                            {/* </GridItem> */}
                             <TransactionForm />
                         </GridContainer>
                     </div>
