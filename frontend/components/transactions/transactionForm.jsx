@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 
 function TextMaskCustom(props) {
   const { inputRef, ...other } = props;
-
+    console.log(inputRef, 'this is input ref. i believe this should be console loggin per input')
   return (
     <MaskedInput
       {...other}
@@ -55,6 +55,8 @@ TextMaskCustom.propTypes = {
 
 function NumberFormatCustom(props) {
   const { inputRef, onChange, ...other } = props;
+  let curValue = props.value;
+//   cosole.log(typeof curValue)
 
   return (
     <NumberFormat
@@ -125,7 +127,6 @@ export default function TransactionForm() {
     return(    
         <GridItem xs={12} sm={5} md={5} className={classes2.mlAuto} style={{zIndex: 2}}>
             <Card className={classes2.card1}>
-                <form>
                 <CardHeader
                     contact
                     color="primary"
@@ -134,23 +135,28 @@ export default function TransactionForm() {
                 >
                     <h4 className={classes2.cardTitle} style={{textDecoration: "underline"}}> Limit Order </h4>
                 </CardHeader>
+
+                {/* This is the input for Quantity. The onChange should update the state of quantity which should relfec in the change of  */}
+                {/* estimated amount value */}
                 <CardBody>
                     <GridContainer>
                     <GridItem xs={12} sm={6} md={6}>
                         <CustomInput
                         labelText={quantity}
+                        onChange={handleChange}
                         id="quantity"
                         type="number"
                         minLength='1' maxLength='6'
                         />
                     </GridItem>
+                    
+                    {/* Below will showcase Estimated Amount that will change everytime Quantity changes */}
                     <div className={classes.root}>
                         <TextField
                             label="Est. Amount Total"
-                            value={values.numberformat}
-                            onChange={handleChange}
+                            value={values.numberformat} // set this to a state that'll update wheenver quantity changes this will change
                             name="numberformat"
-                            disabled id="standard-disabled"
+                            // disabled id="standard-disabled"
                             InputProps={{ 
                             inputComponent: NumberFormatCustom,
                             }}
@@ -167,7 +173,6 @@ export default function TransactionForm() {
                     Sell
                     </Button>
                 </CardFooter>
-                </form>
             </Card>
         </GridItem> 
     )

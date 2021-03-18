@@ -194,7 +194,7 @@ export default function CustomizedTables() {
                     className={classes2.textCenter}
                     style={{background: "#F0B90B"}}
                 >
-                    <h4 className={classes2.cardTitle} style={{textDecoration: "underline"}}> Info Table </h4>
+                    <h4 className={classes2.cardTitle} style={{textDecoration: "underline"}}> Information Table </h4>
                 </CardHeader>
 
                 <CardBody>  
