@@ -143,10 +143,14 @@ const CryptoIndex = (props) => {
   }
 
   const formatColorPctData = (data) => {
+
+    if (data) {
+      data = data.slice(0,6)
+
     if (Math.sign(data) === -1) {
         return (
           <div className="negativepct">
-             {data}%{" "}
+              {data}%{" "}
           </div>
         );
       } else {
@@ -156,6 +160,7 @@ const CryptoIndex = (props) => {
           </div>
         );
       }
+    }
   }
   const formatColorDayData = (data) => {
     if (Math.sign(data) === -1) {

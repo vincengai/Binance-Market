@@ -140,12 +140,13 @@ export default function TransactionForm() {
             const val = e.currentTarget.value;
             let tempQuantity = parseInt(val);
             let tempTotal = tempQuantity * rawPrice;
-
+            let formatTempTotal = tempTotal.toFixed(2);
 
             switch (field) {
                 case 'quantity':
                     setQuantity(val);
-                    setAmountTotal(tempTotal);
+        
+                    setAmountTotal(formatTempTotal);
                     break;
                 default:
                     return;

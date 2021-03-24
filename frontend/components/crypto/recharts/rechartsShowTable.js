@@ -154,11 +154,15 @@ export default function CustomizedTables() {
     setVolumeChange(newData)
   }
 
-  const formatColorPctData = (data) => {
+  const formatColorPctData = (data) => { 
+    
+    if (data) {
+      data = data.slice(0,6)
+
     if (Math.sign(data) === -1) {
         return (
           <div className="negativepct">
-             {data}%{" "}
+              {data}%{" "}
           </div>
         );
       } else {
@@ -168,7 +172,9 @@ export default function CustomizedTables() {
           </div>
         );
       }
+    }
   }
+  
   const formatColorDayData = (data) => {
     if (Math.sign(data) === -1) {
         return (
