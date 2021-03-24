@@ -84,9 +84,12 @@ NumberFormatCustom.propTypes = {
 };
 
 export default function TransactionForm() {
-    const [quantity, setQuantity] = useState('Quantity');
+    const [quantity, setQuantity] = useState(0);
     const [symbol, setSymbol] = useState('');
     const [price, setPrice] = useState(0);
+    const [rawPrice, setRawPrice] = useState(0);
+    const [amountTotal, setAmountTotal] = useState(0);
+    // const [values, setValues] = useState({ numberformat: '100'})
     const [values, setValues] = React.useState({
         numberformat: '100',
     });
@@ -95,8 +98,15 @@ export default function TransactionForm() {
     const history = useHistory();
     const classes = useStyles();
 
+
+    // is the handleChange
   const handleChange = (event) => {
     
+    // deconstructing values, which means values is an array
+    // 
+    // setQuantity(event.target.value)
+    console.log(event.target.value, 'event target value')
+    console.log(event, 'event')
     setValues({
       ...values,
       [event.target.name]: event.target.value,
@@ -120,9 +130,28 @@ export default function TransactionForm() {
     const setAndFormatPrice = (data) => {
         let coin = history.location.pathname.slice(7);
         let newData = data.DISPLAY[coin].USD.PRICE
-
+        let rawData = data.RAW[coin].USD.PRICE
         setPrice(newData)
+        setRawPrice(rawData)
     }
+
+    const update = (field) => {
+        return (e) => {
+            const val = e.currentTarget.value;
+            let tempQuantity = parseInt(val);
+            let tempTotal = tempQuantity * rawPrice;
+
+
+            switch (field) {
+                case 'quantity':
+                    setQuantity(val);
+                    setAmountTotal(tempTotal);
+                    break;
+                default:
+                    return;
+            }
+        };
+	};
 
     return(    
         <GridItem xs={12} sm={5} md={5} className={classes2.mlAuto} style={{zIndex: 2}}>
@@ -136,31 +165,30 @@ export default function TransactionForm() {
                     <h4 className={classes2.cardTitle} style={{textDecoration: "underline"}}> Limit Order </h4>
                 </CardHeader>
 
-                {/* This is the input for Quantity. The onChange should update the state of quantity which should relfec in the change of  */}
-                {/* estimated amount value */}
                 <CardBody>
                     <GridContainer>
                     <GridItem xs={12} sm={6} md={6}>
-                        <CustomInput
-                        labelText={quantity}
-                        onChange={handleChange}
+                        <TextField
+                        label="Quantity"
+                        onChange={update('quantity')}
+                        value={quantity}
                         id="quantity"
                         type="number"
                         minLength='1' maxLength='6'
                         />
                     </GridItem>
                     {/*  */}
-                    {/* Below will showcase Estimated Amount that will change everytime Quantity changes */}
+
                     <div className={classes.root}>
                         <TextField
                             label="Est. Amount Total"
-                            value={values.numberformat} // set this to a state that'll update wheenver quantity changes this will change
+                            value={amountTotal} 
                             name="numberformat"
-                            // disabled id="standard-disabled"
+                            disabled id="standard-disabled"
                             InputProps={{ 
                             inputComponent: NumberFormatCustom,
                             }}
-                        />
+                        /> 
                         </div>
                     </GridContainer>
 
