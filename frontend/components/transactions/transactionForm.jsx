@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import {fetchCoinInfo} from '../../util/coin_api_util';
-import {buyCoin, sellCoin} from '../../util/transaction_api_util';
+import { useSelector, useDispatch } from 'react-redux';
 import { useHistory} from "react-router-dom";
+
+import {fetchCoinInfo} from '../../util/coin_api_util';
+import {buyCoin, sellCoin} from '../../actions/transaction_actions';
 
 import { makeStyles } from "@material-ui/core/styles";
 /////////
@@ -11,16 +13,12 @@ import Card from "../advert/components/Card/Card.js";
 import CardHeader from "../advert/components/Card/CardHeader.js";
 import CardBody from "../advert/components/Card/CardBody.js";
 import CardFooter from "../advert/components/Card/CardFooter.js";
-import CustomInput from "../CustomInput/CustomInput.js";
 import Button from "../button/Button.js";
 
 import PropTypes from 'prop-types';
 import MaskedInput from 'react-text-mask';
 import NumberFormat from 'react-number-format';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
 import TextField from '@material-ui/core/TextField';
-import FormControl from '@material-ui/core/FormControl';
 
 import contactsStyle from "../../../app/assets/jss/material-kit-pro-react/views/sectionsSections/contactsStyle.js";
 const useStyles2 = makeStyles(contactsStyle);
@@ -56,7 +54,6 @@ TextMaskCustom.propTypes = {
 function NumberFormatCustom(props) {
   const { inputRef, onChange, ...other } = props;
   let curValue = props.value;
-//   cosole.log(typeof curValue)
 
   return (
     <NumberFormat
@@ -94,14 +91,25 @@ export default function TransactionForm() {
         numberformat: '100',
     });
 
+    const dispatch = useDispatch();
     const classes2 = useStyles2();
     const history = useHistory();
     const classes = useStyles();
 
+    const cash_balance = useSelector( (state) => {
+      return state.entities.users[state.session.id].cash_balance
+    });
+
+    const userId = useSelector( (state) => {
+      return state.session.id
+    })
+
+    const loggedIn = useSelector( (state) => {
+      return state.entities.users
+    })
 
     // is the handleChange
   const handleChange = (event) => {
-    
     // deconstructing values, which means values is an array
     // 
     // setQuantity(event.target.value)
@@ -112,6 +120,31 @@ export default function TransactionForm() {
       [event.target.name]: event.target.value,
     });
   };
+
+  const handleBuy = (e) => {
+    const buyData = {
+      user_id: userId,
+      symbol: symbol,
+      quantity: quantity ,
+      price: rawPrice
+    };
+
+    if (loggedIn) {
+      dispatch(buyCoin(buyData));
+    }
+  }
+
+  const handleSell = () => {
+    const sellData = {
+      user_id: userId,
+      symbol: symbol,
+      quantity: quantity * -1.0 ,
+      price: rawPrice
+    }
+    if (loggedIn) {
+      dispatch(sellCoin(sellData));
+    }
+  }
 
     useEffect( () => {
         let coin = history.location.pathname.slice(7);
@@ -135,10 +168,18 @@ export default function TransactionForm() {
         setRawPrice(rawData)
     }
 
+    const hasEnoughCash = () => {
+      return (amountTotal >= cash_balance)
+    }
+
     const update = (field) => {
         return (e) => {
             const val = e.currentTarget.value;
-            let tempQuantity = parseInt(val);
+            var total_amount_int = parseFloat(
+              val.replace(/,/g, ".")
+            ).toFixed(5);
+
+            let tempQuantity = total_amount_int;
             let tempTotal = tempQuantity * rawPrice;
             let formatTempTotal = tempTotal.toFixed(2);
 
@@ -195,10 +236,10 @@ export default function TransactionForm() {
 
                 </CardBody>
                 <CardFooter className={classes2.justifyContentBetween}>
-                    <Button color="primary" className={classes2.pullRight} style={{width: '40%', backgroundColor:'#003366'}}>
+                    <Button color="primary" onClick={handleBuy} className={classes2.pullRight} style={{width: '40%', backgroundColor:'#003366'}}>
                     Buy
                     </Button>
-                    <Button color="primary" className={classes2.pullRight} style={{width: '40%', backgroundColor:'#003366'}}>
+                    <Button color="primary" onClick={handleSell} className={classes2.pullRight} style={{width: '40%', backgroundColor:'#003366'}}>
                     Sell
                     </Button>
                 </CardFooter>

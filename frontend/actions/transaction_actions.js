@@ -14,6 +14,11 @@ export const buyCoin = (buyInfo) => dispatch => {
                 return dispatch(receiveBuyCoin(response))      // ? response == { id: 17, email: 'demo@gmail.com', cash_balance: 3000, portfolio: {'BTC': 1} }
             }
         )
+    .catch(
+        (error) => {
+            // console.log(error)
+        }
+    )
 };
     
 export const sellCoin = (sellInfo) => dispatch => {

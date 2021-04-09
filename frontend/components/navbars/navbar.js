@@ -16,7 +16,7 @@ class navBar extends React.Component {
         return (
             <div>
                 <li>
-                    {/* <Link to="/dashboard">Dashboard</Link> */}
+                    <Link to="/dashboard">Portfolio</Link>
                 </li>
                 <li>
                     <Link onClick={this.props.logout} to="/">Sign Out</Link>
@@ -57,17 +57,12 @@ class navBar extends React.Component {
                         <div className="nav-section" id="nav-left">
                             <ul>
                                 <li>
-                                    <Link to="/contact">Contact Us</Link>
+                                    <Link to="/contact">About Us</Link>
                                 </li>
                                 {/* <li>
                                     <a
                                         href="https://www.linkedin.com/in/vince-ngai/"
                                     target="_blank" className="nav-word">LinkedIn</a>
-                                </li> */}
-                                {/* <li>
-                                    <a
-                                        href="https://vincengai.github.io/portfolio/"
-                                    target="_blank" className="nav-word">Portfolio</a>
                                 </li> */}
                             </ul>
                         </div>

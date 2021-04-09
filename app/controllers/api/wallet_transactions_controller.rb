@@ -11,6 +11,7 @@ class Api::WalletTransactionsController < ApplicationController
     # Check if user_id matches user_id in DB by session cookie 
     correct_user = logged_in? && (user_id == trade_params[:user_id].to_i)
 
+    # debugger
     if quantity > 0   # BUY
       # Validate user has enough cash
       if correct_user && (current_user.cash_balance >= total_price)
@@ -52,6 +53,7 @@ class Api::WalletTransactionsController < ApplicationController
           transactions: current_user.wallet_transactions      # [ {quantity:1, price:8143, currency_symbol:'BTC', created_at:... }, {}, ...]
         }
       else
+        # debugger
         # Send back error
         render json: ['Not enough cash balance, and/or invalid params'], status: 422
       end
@@ -91,6 +93,7 @@ class Api::WalletTransactionsController < ApplicationController
           portfolio: current_user.get_portfolio,              # object { 'BTC': 1, 'LTC': .5 } 
           transactions: current_user.wallet_transactions      # [ {quantity:1, price:8143, currency_symbol:'BTC', created_at:... }, {}, ...]
         }
+        
       else  # user does not have enough to sell
         render json: ['Not enough currency to sell, and/or invalid params'], status: 422
       end
