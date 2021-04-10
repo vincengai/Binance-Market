@@ -96,55 +96,28 @@ export default function TransactionForm() {
     const history = useHistory();
     const classes = useStyles();
 
-    const cash_balance = useSelector( (state) => {
-      return state.entities.users[state.session.id].cash_balance
-    });
+   
+    
 
     const userId = useSelector( (state) => {
       return state.session.id
-    })
-
-    const loggedIn = useSelector( (state) => {
-      return state.entities.users
-    })
-
-    // is the handleChange
-  const handleChange = (event) => {
-    // deconstructing values, which means values is an array
-    // 
-    // setQuantity(event.target.value)
-    console.log(event.target.value, 'event target value')
-    console.log(event, 'event')
-    setValues({
-      ...values,
-      [event.target.name]: event.target.value,
     });
-  };
-
-  const handleBuy = (e) => {
-    const buyData = {
-      user_id: userId,
-      symbol: symbol,
-      quantity: quantity ,
-      price: rawPrice
-    };
-
-    if (loggedIn) {
-      dispatch(buyCoin(buyData));
-    }
-  }
-
-  const handleSell = () => {
-    const sellData = {
-      user_id: userId,
-      symbol: symbol,
-      quantity: quantity * -1.0 ,
-      price: rawPrice
-    }
-    if (loggedIn) {
-      dispatch(sellCoin(sellData));
-    }
-  }
+    
+    const cash_balance = useSelector( (state) => {
+      // if (loggedIn) {
+        return state.entities.users[state.session.id].cash_balance
+      // } else {
+      //   return null;
+      // }
+    });
+    
+    const loggedIn = useSelector( (state) => {
+      if (state.entities.users) {
+        return true
+      } else {
+        return false
+      }
+    })
 
     useEffect( () => {
         let coin = history.location.pathname.slice(7);
@@ -160,16 +133,78 @@ export default function TransactionForm() {
     fetchCoinDataAPI();
     }, [])
 
-    const setAndFormatPrice = (data) => {
-        let coin = history.location.pathname.slice(7);
-        let newData = data.DISPLAY[coin].USD.PRICE
-        let rawData = data.RAW[coin].USD.PRICE
-        setPrice(newData)
-        setRawPrice(rawData)
-    }
 
-    const hasEnoughCash = () => {
-      return (amountTotal >= cash_balance)
+  const handleBuy = () => {
+    const buyData = {
+      user_id: userId,
+      symbol: symbol,
+      quantity: quantity ,
+      price: rawPrice
+    };
+
+    if (loggedIn) {
+      if (hasEnoughCash()) {
+        dispatch(buyCoin(buyData));
+        alert(`${quantity} ${symbol} was added to your account!`);
+        history.push('/dashboard')
+      } else if (!userId) {
+        alert('You must be signed in to trade');
+        history.push('/login');
+    } else {
+        alert('You do not have enough funding!');
+    }}
+  }
+
+  const handleSell = () => {
+    const sellData = {
+      user_id: userId,
+      symbol: symbol,
+      quantity: quantity * -1.0 ,
+      price: rawPrice
+    }
+    if (loggedIn) {
+      dispatch(sellCoin(sellData));
+      alert(`${quantity} ${symbol} was sold from your account!`);
+      history.push('/dashboard');
+    } else if (!userId) {
+      alert('You must be signed in to trade');
+      history.push('/login') 
+    } else {
+        alert('You do not have enough to sell!');
+        history.push('/dashboard');
+    }
+  }
+  
+  const hasEnoughCash = () => {
+    return (parseFloat(amountTotal) <= cash_balance)
+  }
+
+  const setAndFormatPrice = (data) => {
+      let coin = history.location.pathname.slice(7);
+      let newData = data.DISPLAY[coin].USD.PRICE
+      let rawData = data.RAW[coin].USD.PRICE
+      setPrice(newData)
+      setRawPrice(rawData)
+  }
+
+
+
+    const userCashBalance = () => {
+      if (loggedIn) {
+        return (
+          <div className={classes.root}>
+            <TextField
+                label="Current Cash Balance"
+                value={cash_balance.toFixed(2)} 
+                name="numberformat"
+                disabled id="standard-disabled"
+                InputProps={{ 
+                inputComponent: NumberFormatCustom,
+                }}
+            /> 
+          </div>
+        )
+      }
     }
 
     const update = (field) => {
@@ -186,7 +221,6 @@ export default function TransactionForm() {
             switch (field) {
                 case 'quantity':
                     setQuantity(val);
-        
                     setAmountTotal(formatTempTotal);
                     break;
                 default:
@@ -231,7 +265,9 @@ export default function TransactionForm() {
                             inputComponent: NumberFormatCustom,
                             }}
                         /> 
-                        </div>
+                    </div>
+
+                    {userCashBalance()}
                     </GridContainer>
 
                 </CardBody>
