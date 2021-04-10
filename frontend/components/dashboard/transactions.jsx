@@ -19,19 +19,19 @@ class Transactions extends React.Component {
 
 
     renderTransactions() {
+        debugger
         const { transactions } = this.props || {}                     // transactions == array of objects
-        // on first render, transactions will be undefined, so return null so we don't error out
+
         if (transactions == undefined) {
             return null;
         }
-//
 
 
         if (transactions.length === 0) {                              // if there are no transactions
             return null;
         } else {
             return (
-                transactions.splice(0,10).map((transaction, i) => {                   // transaction == object, ordered left/right oldest transactions first
+                transactions.reverse().splice(0,10).map((transaction, i) => {                   // transaction == object, ordered left/right oldest transactions first
                     let currency = transaction.currency_symbol;
                     let formattedDate = new Date(transaction.created_at);   // JS date object
                     let quantity = Math.abs(Number(transaction.quantity));
@@ -75,7 +75,6 @@ class Transactions extends React.Component {
                         {this.renderTransactions()}
                     </tbody>
                 </table>
-                <div className="transactions-bottom">View your accounts</div>
             </div>
         );
     }
