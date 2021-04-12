@@ -29,6 +29,7 @@ class Dashboard extends React.Component {
                 });
             }
         )
+
     }
 
 
@@ -54,7 +55,6 @@ class Dashboard extends React.Component {
         } = this.props.state.entities.users[userId] || {};
 
         const currentPrices = this.state.currentPrices || {};
-
 
         return (
             <div id="dashboard-container">

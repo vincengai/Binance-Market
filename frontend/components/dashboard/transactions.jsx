@@ -19,7 +19,7 @@ class Transactions extends React.Component {
 
 
     renderTransactions() {
-        debugger
+        // debugger
         const { transactions } = this.props || {}                     // transactions == array of objects
 
         if (transactions == undefined) {

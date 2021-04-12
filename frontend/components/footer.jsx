@@ -22,7 +22,7 @@ export default function SectionFooter() {
   const classes = useStyles();
 
   return (
-    <div className={classes.section} style={{paddingBottom: 0, paddingTop: 15}}>
+    <div className={classes.section} style={{paddingBottom: 0, paddingTop: 0}}>
       <div>
         <Footer
           theme="dark"

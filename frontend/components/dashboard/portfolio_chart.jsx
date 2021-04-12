@@ -46,22 +46,32 @@ class PortfolioChart extends React.Component {
     }
 
 
-    // componentDidMount() {                                                         // ONLY CALLED ONCE AFTER THE FIRST RENDER
+    componentDidMount() {                                                         // ONLY CALLED ONCE AFTER THE FIRST RENDER
         // On initial page load, get all 1M data for each currency in portfolio
         // this.state.portfolioSymbols = Object.keys(this.props.portfolio)
-    // }
+        
+    }
 
+//    componentDidUpdate(prevProps) {
+//         let {coin} = this.props;
+//         if (prevProps.coin !== coin) {
+//             this.getCurrentprice();
+//             this.updateCurrencyInfo();
+//             this.get1MonthPrices(coin);
+
+//         }
+//     }
 
     // PUT THIS IN THE SUBCOMPONENTS INSTEAD
     componentDidUpdate(prevProps) {
         const { transactions, portfolio } = this.props;
 
         //compare prevProps w/ this.props , if its not the same setState on new props
-        if (this.props.transactions !== prevProps.transactions) {
+        if (this.props.portfolio !== prevProps.portfolio) {
 
             this.setState({
-                // transactions: prevProps.transactions,
-                // portfolio: prevProps.portfolio
+                transactions: prevProps.transactions,
+                portfolio: prevProps.portfolio
             })
             // this.getPortfolioData("30", "day", "1M-values");                            // inputs = timeframe in days/min/or hours, interval, key to set state                                  
         }
