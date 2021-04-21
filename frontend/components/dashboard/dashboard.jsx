@@ -13,6 +13,7 @@ class Dashboard extends React.Component {
 
         this.state = {
             currentPrices: null,		// { BTC: 8000, ETH: 162... }
+            currentTransactions: null
         }
 
         this.getCurrentPrices = this.getCurrentPrices.bind(this);
@@ -20,18 +21,35 @@ class Dashboard extends React.Component {
 
 //
     componentDidMount() {
+        const userId = this.props.state.session.id;
+        const {
+            transactions
+        } = this.props.state.entities.users[userId]
+        let upToDateTransactions = transactions.reverse().splice(0,10)
+
+
         fetchCurrencyInfo(SUPPORTED_CURRENCIES).then(
             (response) => {
                 // response.RAW == {BTC: {USD: 7649.32, MKTCAP...}, ETH: {USD: 162.16, MKTCAP... }, ... }
 
                 return this.setState({
-                    currentPrices: response.RAW
+                    currentPrices: response.RAW,
+                    currentTransactions: upToDateTransactions
                 });
             }
         )
 
     }
 
+    formatTransactions () {
+        const userId = this.props.state.session.id;
+         const {
+            transactions
+        } = this.props.state.entities.users[userId]
+
+        let upToDateTransactions = transactions.reverse().splice(0,10)
+        return upToDateTransactions
+    }
 
     getCurrentPrices() {
         fetchCurrencyInfo(SUPPORTED_CURRENCIES).then(
@@ -77,7 +95,7 @@ class Dashboard extends React.Component {
                         currentPrices={currentPrices}
                     />
                     <Transactions
-                        transactions={transactions}
+                        transactions={this.state.currentTransactions}
                     /> 
                 </div>
             </div>

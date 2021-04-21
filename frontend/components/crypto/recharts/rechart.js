@@ -225,36 +225,6 @@ const Rechart = () => {
                             {/* <GridItem xs={12} sm={5} md={5}> */}
                             <RechartsShowTable/>
                             
-                            {/* <h2 className={classes2.title}>Transaction Form is Currently being Reworked...</h2>
-                            <h5 className={classes2.description}>
-                                You need more information? Check what other persons are saying
-                                about our product. They are very happy with their purchase.
-                            </h5>
-                            <InfoArea
-                                className={classes2.infoArea}
-                                title="Find us at the office"
-                                description={
-                                <span>
-                                    Bld Mihail Kogalniceanu, nr. 8,
-                                    <br /> 7652 Bucharest,
-                                    <br /> Romania
-                                </span>
-                                }
-                                icon={PinDrop}
-                            />
-                            <InfoArea
-                                className={classes2.infoArea}
-                                title="Give us a ring"
-                                description={
-                                <span>
-                                    Michael Jordan
-                                    <br /> +40 762 321 762
-                                    <br /> Mon - Fri, 8:00-22:00
-                                </span>
-                                }
-                                icon={Phone}
-                            /> */}
-                            {/* </GridItem> */}
                             <TransactionForm />
                         </GridContainer>
                     </div>

@@ -57,7 +57,7 @@ class navBar extends React.Component {
                         <div className="nav-section" id="nav-left">
                             <ul>
                                 <li>
-                                    <Link to="/contact">About Us</Link>
+                                    <Link to="/contact">Contact Us</Link>
                                 </li>
                                 {/* <li>
                                     <a

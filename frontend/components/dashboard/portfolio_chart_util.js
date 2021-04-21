@@ -1,17 +1,13 @@
-// returns => 11095.47
 export const currentPortfolioValue = (portfolio, currentPrices, cashBalance) => {
     // cashBalance    == 1871
     // portfolio      == { 'BTC': 1, 'LTC' }
-    // currentPrices object contains 7 keys (currency symbols) ? currentPrices data doesn't hit constructor on 2nd render of this component why? (does hit render method below 2nd time)
     // currentPrices  == {  
-    //                    'BTC': { 'USD': { 'PRICE': 9000 } }, 
-    //                    'ETH': { 'USD': { 'PRICE': 160 } }, 
-    //                    ... 
-    //                    }
+    //                    'BTC': { 'USD': { 'PRICE': 9000 } },
+    //                    'ETH': { 'USD': { 'PRICE': 160 } }
 
     let portfolioValue = cashBalance;
 
-    // On first render, currentPrices will be empty {}, so return null;
+    // CurrentPrices will be empty {}, so return null;
     if (Object.keys(currentPrices).length === 0) return null;
 
     // loop through each currency in portfolio
@@ -19,33 +15,25 @@ export const currentPortfolioValue = (portfolio, currentPrices, cashBalance) => 
         let quantity = portfolio[symbol];
         let price = currentPrices[symbol].USD.PRICE;
 
-        // get value = quantity * price
         let value = quantity * price;
 
-        // keep running total of value
+        // take portfolio of cryptos & add it into cash balance total
         portfolioValue += value;
     }
 
-    // 
-    // return portfolioValue.toFixed(2);
     portfolioValue = Number(portfolioValue.toFixed(2));
-    // 10595.30
 
     return portfolioValue.toLocaleString();
-    // "10,595.30"
 }
 
 
 
 // returns => [ { time:1569801600, portfolioValue: 9000 }, { time:1569888000, portfolioValue: 9200 }, ... ]
 export const calculatePortfolioValues = (pricesData, transactions) => {
-    // REUSABLE FUNCTION, priceData will always be populated!!! NOT EMPTY
-    // 
     // pricesData   == { 'BTC': [ {time:1569888000, close: 8326.24,...}, ... ], 'LTC':[], ... ] }
     // portfolio    == { 'BTC': 1 }
     // cashBalance  == 1871.57
     // transactions == [ { quantity, price, transaction_type, created_at, currency_symbol } ]
-    // 
 
     // All currency keys in priceData
     let currencySymbols = Object.keys(pricesData);
@@ -244,6 +232,7 @@ function getPortfolioAtTimeT(pricesAtTimeT, transactions, time) {
             // Reduce portoflio's oldQuantity by new quantity (+ add because quantity when selling is negative)
             portfolio[transaction.currency_symbol] = { price: transaction.price, quantity: oldQuantity + transaction.quantity };
             // 
+            
 
             // Increase cash balance by sale amount
             let saleAmount = transaction.price * transaction.quantity;                // Will be negative bec. quantity is negative

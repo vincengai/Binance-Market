@@ -8,7 +8,6 @@ class CustomTooltip extends React.Component {
 
 
         const { active, label } = this.props || {};
-        // debugger
 
         if (active && this.props.payload != null) {
             const { payload } = this.props || [{}];
@@ -87,7 +86,6 @@ class PortfolioChart extends React.Component {
 
         let priceData = {};
 
-        // debugger
 
         // Promise.all takes an array of call backs
         Promise.all(portfolioArray.map((symbol) => {
@@ -114,7 +112,8 @@ class PortfolioChart extends React.Component {
     render() {
         if (!(this.props.portfolio)) return <div></div>;
         // if (Object.keys(this.props.portfolio) == undefined ) return <div></div>; 
-            
+        //
+        //
         const { portfolio, currentPrices, cashBalance } = this.props;
         const { timePeriodActive } = this.state;
 
@@ -138,7 +137,7 @@ class PortfolioChart extends React.Component {
                 xAxisTickCount = 30;                                                    // very 30 days, make a tick on x axis
         }
 
-        // debugger
+
 
         return (
             <div id="portfoliochart-container">
@@ -162,11 +161,7 @@ class PortfolioChart extends React.Component {
                     <LineChart width={750} height={245} data={this.state[timePeriodActive]}>
                         {/* <Tooltip content={<CustomTooltip/>} coordinate={{x: -1000, y: 0}}/> */}
                         <Tooltip content={<CustomTooltip />} offset={-65} animationDuration={100} />
-                        {/* <Tooltip/>} */}
-                        {/* <Tooltip labelFormatter={() => 'hello'}/>} */}
-                        {/* <Tooltip formatter={(a, b, c) => { console.log(a, b, c) } } /> */}
-                        {/* <Tooltip separator="$"/> */}
-
+  
                         <XAxis dataKey="time" interval={xAxisTickCount} />
                         {/* <YAxis type="number" domain={['dataMin - 5', 'dataMax + 5']} /> */}
                         <YAxis type="number" domain={['dataMin', 'dataMax']} />

@@ -130,7 +130,7 @@ const ContactUs = () => {
                 />
                 <InfoArea
                   className={classes.info}
-                  title="Send us an Email"
+                  title="Send me an Email"
                   description={
                     <p>
                       Vince Ngai <br />                     
